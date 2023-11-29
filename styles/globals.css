@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -17,6 +18,7 @@
 }
 
 body {
+  font-family: 'Space Grotesk', sans-serif !important;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
