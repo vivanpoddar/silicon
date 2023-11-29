@@ -49,7 +49,7 @@ const Panel1 = (): JSX.Element => {
       <div className="w-1/2 flex items-center justify-center">
         <div className="p-24">
           <h1 className="text-7xl text-white">Realize your imagination at SSAHacks.</h1>
-          <LinkButton content="Claim your spot at SSAHacks 2023" href="SSA.hack();" />
+          <LinkButton content="Claim your spot at SSAHacks 2023" href="ssahack" />
         </div>
       </div>
       <div className="w-1/2 flex items-center justify-center relative " style={{ height: '100vh' }}>
