@@ -43,10 +43,10 @@ const Panel1 = (): JSX.Element => {
 
 const Panel2 = (): JSX.Element => {
     return (
-        <motion.div className="flex border-b">
+        <motion.div className="flex border-b border-white bg-black">
             <div className="w-1/2 flex items-center justify-center">
                 <div className="p-24">
-                    <h1 className="text-7xl">Win an internship at Pitt RST and more.</h1>
+                    <h1 className="text-7xl text-white">Win an internship at Pitt RST and more.</h1>
                     <LinkButton content="See the prizes" href="#" />
                 </div>
             </div>

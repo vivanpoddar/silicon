@@ -45,10 +45,10 @@ const Panel1 = (): JSX.Element => {
   // const spring = useSpring(0)
 
   return (
-    <motion.div className="flex">
+    <motion.div className="flex bg-black">
       <div className="w-1/2 flex items-center justify-center">
         <div className="p-24">
-          <h1 className="text-7xl">Realize your imagination at SSAHacks.</h1>
+          <h1 className="text-7xl text-white">Realize your imagination at SSAHacks.</h1>
           <LinkButton content="Claim your spot at SSAHacks 2023" href="SSA.hack();" />
         </div>
       </div>
@@ -81,10 +81,10 @@ const Panel3 = (): JSX.Element => {
   // const spring = useSpring(0)
 
   return (
-    <motion.div className="flex">
+    <motion.div className="bg-black flex">
       <div className="w-1/2 flex items-center justify-center">
         <div className="p-24">
-          <h1 className="text-7xl">We make student-led education a reality.</h1>
+          <h1 className="text-white text-7xl">We make student-led education a reality.</h1>
           <LinkButton content="Learn about Silicon's mission" href="about" />
         </div>
       </div>

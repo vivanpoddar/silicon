@@ -43,7 +43,7 @@ export default function Navbar({ current }: NavbarProps) {
                                     href={item.href}
                                     className={classNames(
                                         item.current ? 'border' : '',
-                                        'right-0 px-3 py-2 rounded text-sm font-medium'
+                                        'right-0 px-3 py-2 rounded text-sm font-medium text-white'
                                     )}
                                     aria-current={item.current ? 'page' : undefined}
                                 >

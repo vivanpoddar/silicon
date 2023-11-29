@@ -6,7 +6,7 @@ const Join = () => {
         <>
             <Navbar current="Contact"/>
             <div className="h-screen bg-black flex pt-24 justify-center">
-                <h1 className="text-7xl ">Meet our team</h1>
+                <h1 className="text-7xl text-white">Meet our team</h1>
             </div>
             <Footer />
         </>
