@@ -25,7 +25,7 @@ const Footer = (): JSX.Element => {
                     </ul>
                 </div>
                 <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-                <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <Link href="https://flowbite.com/" className="hover:underline">Silicon Foundation</Link><br></br>Website by Vivan Poddar</span>
+                <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <Link href="joinsilicon.org" className="hover:underline">Silicon Foundation</Link><br></br>Website by Vivan Poddar</span>
             </div>
         </footer>
     )
