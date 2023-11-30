@@ -32,7 +32,7 @@ export default function Navbar({ current }: NavbarProps) {
                                 src="/image.png"
                                 alt="Silicon"
                             />       
-                            <h1 className='pl-2 text-3xl font-medium'>Silicon</h1>                             
+                            <h1 className='pl-2 text-3xl text-white font-medium'>Silicon</h1>                             
                         </div>
                         <div className="absolute left-0 right-0 ml-auto mr-auto space-x-4 flex items-center justify-center">
                             {navigation.map((item) => (
