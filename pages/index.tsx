@@ -24,9 +24,9 @@ const Intro = (): JSX.Element => {
           <source src="https://github.com/vivanpoddar/random-assets/raw/master/video.mp4" type="video/mp4" />
         </video>
         <div className="bg-black rounded-lg p-4 z-10 flex">
-          <Link href="/"><h1 className="text-white text-7xl">Welcome to Silicon&nbsp;</h1></Link>
+          <Link href="/"><h1 className="text-white text-7xl">Welcome to&nbsp;</h1></Link>
           <img src="/image.png" className='h-16 w-auto' alt="Silicon" />
-          <h1 className="text-7xl text-white">.</h1>
+          <h1 className="text-7xl text-white font-medium">&nbsp;Silicon.</h1>
         </div>
         <div className="absolute bottom-0 mb-8 bg-black rounded-lg p-4">
           <h1 className='pb-2'>Learn more</h1>
