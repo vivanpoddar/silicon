@@ -25,12 +25,10 @@ const Intro = (): JSX.Element => {
         </video>
         <div className="bg-black rounded-lg p-4 z-10 flex">
           <Link href="/"><h1 className="text-white text-7xl">Welcome to&nbsp;</h1></Link>
-          <img src="/image.png" className='h-16 w-auto' alt="Silicon" />
-          <h1 className="text-7xl text-white font-medium">&nbsp;Silicon.</h1>
+          <h1 className="text-7xl text-white font-medium">Silicon</h1>
         </div>
-        <div className="absolute bottom-0 mb-8 bg-black rounded-lg p-4">
-          <h1 className='pb-2'>Learn more</h1>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-8 w-8 mx-auto text-white animate-bounce">
+        <div className="absolute bottom-0 mb-8 pt-6 bg-black rounded-lg p-4">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-8 text-white animate-bounce">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </div>
@@ -53,7 +51,9 @@ const Panel1 = (): JSX.Element => {
         </div>
       </div>
       <div className="w-1/2 flex items-center justify-center relative " style={{ height: '100vh' }}>
-        <img src="/panel1.jpg" className="h-1/2 w-auto" alt="dude laughing"></img>
+        <div className='h-1/2 w-auto'>
+          <Image src="/panel1.jpg" width={800} height={720} alt="dude laughing"></Image>
+        </div>
       </div>
     </motion.div>
   )
@@ -63,7 +63,9 @@ const Panel2 = (): JSX.Element => {
   return (
     <motion.div className="flex bg-white">
       <div className="w-1/2 flex items-center justify-center relative" style={{ height: '100vh' }}>
-        <img src="/panel2.jpg" className="h-1/2 w-auto" alt="dude laughing"></img>
+        <div className='h-1/2 w-auto'>
+          <Image src="/panel2.jpg" width={800} height={720} alt="dude laughing"></Image>
+        </div>
       </div>
       <div className="w-1/2 flex items-center justify-center">
         <div className="p-24">
@@ -89,7 +91,9 @@ const Panel3 = (): JSX.Element => {
         </div>
       </div>
       <div className="w-1/2 flex items-center justify-center relative" style={{ height: '100vh' }}>
-        <img src="/panel3.jpg" className="h-1/2 w-auto" alt="dude laughing"></img>
+        <div className='h-1/2 w-auto'>
+          <Image src="/panel3.jpg" width={800} height={720} alt="dude laughing"></Image>
+        </div>      
       </div>
     </motion.div>
   )

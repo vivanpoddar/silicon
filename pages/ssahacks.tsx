@@ -51,7 +51,9 @@ const Panel2 = (): JSX.Element => {
                 </div>
             </div>
             <div className="w-1/2 flex items-center justify-center relative " style={{ height: '100vh' }}>
-                <img src="/upitt.png" className="w-3/4" alt="dude laughing"></img>
+                <div className='h-1/2 w-auto'>
+                    <Image src="/upitt.png" width={800} height={720} alt="dude laughing"></Image>
+                </div>            
             </div>
         </motion.div>
     )

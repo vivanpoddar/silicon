@@ -15,7 +15,7 @@ interface NavbarProps {
 export default function Navbar({ current }: NavbarProps) { 
     const navigation = [
         { name: 'Home', href: '/', current: current === 'Home' },
-        { name: 'SSA.hack();', href: 'ssahacks', current: current === 'SSA.hack();' },
+        { name: 'SSAHack', href: 'ssahacks', current: current === 'SSA.hack();' },
         { name: 'Join', href: 'join', current: current === 'Join' },
         { name: 'About', href: 'about', current: current === 'About' },
         { name: 'Contact', href: 'contact', current: current === 'Contact' }
@@ -27,11 +27,15 @@ export default function Navbar({ current }: NavbarProps) {
                 <>
                     <div className="flex justify-between items-center h-16 ml-4 mr-4 w-full">
                         <div className="flex items-center">
-                            <img
-                                className='h-8 w-auto'
-                                src="/image.png"
-                                alt="Silicon"
-                            />       
+                            <div className='h-8 w-8'>
+                                <Image
+                                    src="/image.png"
+                                    alt="Silicon"
+                                    width={32}
+                                    height={64}
+                                    layout="responsive"
+                                />     
+                            </div>
                             <h1 className='pl-2 text-3xl text-white font-medium'>Silicon</h1>                             
                         </div>
                         <div className="absolute left-0 right-0 ml-auto mr-auto space-x-4 flex items-center justify-center">
