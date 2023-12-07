@@ -23,9 +23,10 @@ const Intro = (): JSX.Element => {
         >
           <source src="https://github.com/vivanpoddar/random-assets/raw/master/video.mp4" type="video/mp4" />
         </video>
-        <div className="bg-black rounded-lg p-4 z-10 flex">
-          <Link href="/"><h1 className="text-white text-7xl">Welcome to&nbsp;</h1></Link>
-          <h1 className="text-7xl text-white font-medium">Silicon</h1>
+        <div className='z-10'>
+          <div className="bg-black rounded-lg p-4">
+            <h1 className="text-white text-7xl">Welcome to Silicon</h1>
+          </div>
         </div>
         <div className="absolute bottom-0 mb-8 pt-6 bg-black rounded-lg p-4">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-8 text-white animate-bounce">
@@ -102,12 +103,14 @@ const Panel3 = (): JSX.Element => {
 export default function Home() {
   return (
     <>
-      <Navbar current="Home"/>
-      <Intro/>
-      <Panel1/>
-      <Panel2/>
-      <Panel3/>
-      <Footer/>
+      <div className="hidden lg:block">
+        <Navbar current="Home" />
+        <Intro />
+        <Panel1 />
+        <Panel2 />
+        <Panel3 />
+        <Footer />
+      </div>
     </>
   )
 }

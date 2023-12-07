@@ -15,9 +15,9 @@ interface PersonProps {
 
 const Person = ({ image, position, text, name, linkedin, email }: PersonProps) => {
     return (
-        <div className="w-80 h-auto border rounded-lg overflow-hidden p-4">
-            <div className="w-16">
-                <Image src={image} width={1280} height={720} alt={name} layout="responsive" />
+        <div className="w-64 h-auto border rounded-lg overflow-hidden p-4">
+            <div className="w-32 h-24 overflow-hidden">
+                <Image src={image} width={640} height={480} alt={name} layout="responsive" />
             </div>
             <h1 className="text-3xl text-white">{name}</h1>
             <h2 className="text-xl text-gray-400">{position}</h2>
@@ -38,15 +38,33 @@ const Join = () => {
     return (
         <>
             <Navbar current="Contact"/>
-            <div className="flex h-screen bg-black justify-center">
-                <div className="pt-24 flex-col justify-center">
-                    <div className="flex space-x-4">
-                        <Person image="/panel1.jpg" name="oijads Poddar" position="President" text="Hello" linkedin="https://www.linkedin.com/" email="mailto:vivanneil@outlook.com" />
-                        <Person image="/panel1.jpg" name="asdhjioajse gWang" position="President" text="Hello" linkedin="https://www.linkedin.com/" email="mailto:vivanneil@outlook.com" />
-                        <Person image="/panel1.jpg" name="Evaadsoijang" position="President" text="Hello" linkedin="https://www.linkedin.com/" email="mailto:vivanneil@outlook.com" />
-                        <Person image="/panel1.jpg" name="John Doe" position="President" text="Hello" linkedin="https://www.linkedin.com/" email="mailto:vivanneil@outlook.com" />
+            <div className="h-screen">
+                <div className="flex bg-black justify-center">
+                    <div className="pt-24 flex-col justify-center">
+                        <h1 className="text-2xl">Executive Management</h1>
+                        <div className="border-b w-full mb-2"></div>
+                        <div className="flex space-x-4">
+                            <Person image="/vivan.png" name="Vivan Poddar" position="Executive Director" text="" linkedin="https://www.linkedin.com/" email="mailto:vivanneil@outlook.com" />
+                            <Person image="/evan.png" name="Evan Xiang" position="Operations Director" text="" linkedin="https://www.linkedin.com/" email="mailto:vivanneil@outlook.com" />
+                            <Person image="/ethan.png" name="Ethan Chen" position="Financial Director" text="" linkedin="https://www.linkedin.com/" email="mailto:vivanneil@outlook.com" />
+                            <Person image="/thomas.png" name="Thomas Wang" position="Marketing Director" text="" linkedin="https://www.linkedin.com/" email="mailto:vivanneil@outlook.com" />
+                            <Person image="/kiran.png" name="Kiran Tevar" position="Expansion Director" text="" linkedin="https://www.linkedin.com/" email="mailto:vivanneil@outlook.com" />
+                            <Person image="/liam.png" name="Ziyu (Liam) Lin" position="Product Director" text="" linkedin="https://www.linkedin.com/" email="mailto:vivanneil@outlook.com" />
+                        </div>
+                        <h1 className="text-2xl pt-4">Regional Directors</h1>
+                        <div className="border-b w-full mb-2"></div>
+                        <div className="flex space-x-4">
+                            <Person image="/liam.png" name="Ziyu (Liam) Lin" position="China Director" text="" linkedin="https://www.linkedin.com/" email="mailto:vivanneil@outlook.com" />
+                        </div>
+                        <h1 className="text-2xl pt-4">Chapter Directors</h1>
+                        <div className="border-b w-full mb-2"></div>
+                        <div className="flex space-x-4">
+                            <Person image="/panel1.jpg" name="John Doe" position="A School District" text="" linkedin="https://www.linkedin.com/" email="mailto:vivanneil@outlook.com" />
+                        </div>
                     </div>
+                    <div></div>
                 </div>
+                <h1 className="flex text-2xl"></h1>
             </div>
             <Footer />
         </>
