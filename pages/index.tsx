@@ -111,9 +111,6 @@ export default function Home() {
         <Panel3 />
         <Footer />
       </div>
-      <div className='hidden sm:block'>
-        <p className='text-white'>Not available on mobile yet</p>
-      </div>
     </>
   )
 }
