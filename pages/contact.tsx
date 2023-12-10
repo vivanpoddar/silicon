@@ -1,5 +1,7 @@
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
+import { useState } from "react";
+import {TailSpin} from "react-loader-spinner";
 import Image from "next/image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faUser } from '@fortawesome/free-solid-svg-icons'
@@ -14,10 +16,13 @@ interface PersonProps {
 };
 
 const Person = ({ image, position, text, name, linkedin, email }: PersonProps) => {
+    const [isLoading, setIsLoading] = useState(true);
+
     return (
         <div className="w-auto h-auto border rounded-lg overflow-hidden p-4">
             <div className="w-32 h-24 overflow-hidden">
-                <Image src={image} width={640} height={480} alt={name} layout="responsive" />
+                isLoading ? <TailSpin color="white" radius={"1rem"} />
+                <Image src={image} width={640} height={480} alt={name} layout="responsive" style={{ display: isLoading ? 'none' : 'block' }} onLoad={() => setIsLoading(false)} />
             </div>
             <h1 className="text-3xl text-white">{name}</h1>
             <h2 className="text-xl text-gray-400">{position}</h2>
