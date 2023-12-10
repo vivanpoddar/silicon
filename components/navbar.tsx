@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import {motion} from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 
 function classNames(...classes: string[]): string {
     return classes.filter(Boolean).join(' ');
@@ -16,7 +17,7 @@ export default function Navbar({ current }: NavbarProps) {
     const navigation = [
         { name: 'Home', href: '/', current: current === 'Home' },
         { name: 'SSAHack', href: 'ssahacks', current: current === 'SSA.hack();' },
-        { name: 'Join', href: 'join', current: current === 'Join' },
+        //{ name: 'Join', href: 'join', current: current === 'Join' },
         { name: 'About', href: 'about', current: current === 'About' },
         { name: 'Contact', href: 'contact', current: current === 'Contact' }
     ]
@@ -40,19 +41,19 @@ export default function Navbar({ current }: NavbarProps) {
                         </div>
                         <div className="absolute left-0 right-0 ml-auto mr-auto space-x-4 flex items-center justify-center">
                             {navigation.map((item) => (
-                                <motion.a
-                                    whileHover={{ backgroundColor: '#FFFFFF', color: '#000000' }}
-                                    transition={{ duration: 0.25 }}
-                                    key={item.name}
-                                    href={item.href}
-                                    className={classNames(
-                                        item.current ? 'border' : '',
-                                        'right-0 px-3 py-2 rounded text-sm font-medium text-white'
-                                    )}
-                                    aria-current={item.current ? 'page' : undefined}
-                                >
-                                    {item.name}
-                                </motion.a>
+                                <Link href={item.href} key={item.name}>
+                                    <motion.a
+                                        whileHover={{ backgroundColor: '#FFFFFF', color: '#000000' }}
+                                        transition={{ duration: 0.25 }}
+                                        className={classNames(
+                                            item.current ? 'border' : '',
+                                            'right-0 px-3 py-2 rounded text-sm font-medium text-white'
+                                        )}
+                                        aria-current={item.current ? 'page' : undefined}
+                                    >
+                                        {item.name}
+                                    </motion.a>
+                                </Link>
                             ))}
                         </div>
                     </div>

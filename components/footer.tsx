@@ -27,7 +27,7 @@ const Footer = (): JSX.Element => {
                     </ul>
                 </div>
                 <hr className="my-6 text-white border-gray-700 lg:my-8" />
-                <span className="block text-sm text-white">© 2023 <Link href="joinsilicon.org" className="hover:underline">Silicon Foundation</Link><br></br>Website by Vivan Poddar</span>
+                <span className="block text-sm text-white">© 2023 <Link href="joinsilicon.org" className="hover:underline">Silicon Foundation</Link><br/>Website by Vivan Poddar - contact with issues</span>
             </div>
         </footer>
     )

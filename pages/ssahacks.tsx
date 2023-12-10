@@ -24,12 +24,12 @@ const Question = ({ question, answer }: QuestionProps) => {
 const Panel1 = (): JSX.Element => {
     return (
         //rgb(246, 196, 77)
-        <div className="flex bg-gradient-to-r from-blue-500 to-blue-300 text-white h-screen">
+        <div className="flex bg-blue-500 h-screen">
             <div className="absolute w-screen h-screen flex items-center justify-center flex-col" style={{ height: "100vh" }}>
                 <h1 className="text-7xl">SSAHack 2023</h1><br />
                 <div className="border-t border-white w-1/2 my-4"></div>
-                <TypeIt className="text-5xl">Hack for a <i>purpose.</i></TypeIt>
-                <button className="mt-4 bg-blue-500 text-white font-bold py-2 px-4 rounded text-2xl">Sign Up</button>
+                <TypeIt className="text-5xl">Hack for a <span className="text-yellow-500 italic">purpose.</span></TypeIt>
+                <button className="mt-4 bg-blue-800 text-white font-bold py-2 px-4 rounded text-2xl">Sign Up</button>
                 <div className="absolute bottom-0 mb-8 rounded-lg p-4">
                     <h1 className='pb-2'>Learn more</h1>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-8 w-8 mx-auto text-white animate-bounce">
@@ -64,42 +64,41 @@ const Content = (): JSX.Element => {
         //rgb(246, 196, 77)
         <div className="flex bg-black text-white ">
             <div className="w-screen h-screen flex items-center flex-col" style={{ height: "100vh" }}>
-                    <motion.div className="flex w-full">
-                        <div className="w-1/2 flex flex-col items-center justify-center relative" style={{ height: '100vh' }}>
-                            <div className="flex w-full h-full"> 
-                                <div className="w-1/2 h-full flex justify-center flex-col pr-4">
-                                    <ul className="text-4xl space-y-16 text-right">
-                                        <li>8:00</li>
-                                        <li>9:00</li>
-                                        <li>10:00</li>
-                                        <li>11:00</li>
-                                        <li>12:00</li>
-                                        <li>1:00</li>
-                                        <li>2:00</li>
-                                        <li>3:00</li>
-                                    </ul>
-                                </div>
-                                <div className="border-l border-blue-500 h-3/4 self-center"></div>
-                                <div className="w-1/2 h-full flex justify-center flex-col pl-4">
-                                    <ul className="text-4xl space-y-16 text-left">
-                                        <li>Commencement</li>
-                                        <li>9:00</li>
-                                        <li>10:00</li>
-                                        <li>11:00</li>
-                                        <li>12:00</li>
-                                        <li>1:00</li>
-                                        <li>2:00</li>
-                                        <li>3:00</li>
-                                    </ul>
-                                </div>
+                <div className="flex h-full w-full">
+                    <div className="w-1/2 h-full flex flex-col items-center justify-center">
+                        <span className="text-center pb-2 text-4xl text-yellow-500">March 2, 2024</span>
+                        <div className="flex text-4xl items-center justify-center">
+                            <div className="flex flex-col space-y-8">
+                                <span>7:30</span>
+                                <span>8:00</span>
+                                <span>9:00</span>
+                                <span>11:00</span>
+                                <span>13:00</span>
+                                <span>17:00</span>
+                                <span>17:30</span>
+                                <span>18:00</span>
+                            </div>
+                            <div className="h-full self-center border border-white mx-2"></div>
+                            <div className="flex flex-col space-y-8">
+                                <span>Topic Announcement</span>
+                                <span>Development Begins</span>
+                                <span>Masterclass: IoT</span>
+                                <span>Masterclass: AI</span>
+                                <span>Lunch</span>
+                                <span>Judging</span>
+                                <span>Closing Ceremony</span>
+                                <span>Teams Leave</span>
                             </div>
                         </div>
-                        <div className="w-1/2 flex items-center justify-center">
-                            <div className="p-24">
-                                <h1 className="text-blue-500 text-4xl">[text about the hackathon]</h1>
-                            </div>
+                    </div>
+                    <div className="w-1/2 flex items-center justify-center">
+                        <div className="p-24">
+                            <h1 className="text-blue-500 text-4xl pb-4">8 hours to solve one problem.</h1>
+                            <p className="text-lg">SSA.Hacks is a hackathon for high school students. Students will work in teams of up to 4 people to create a project that solves a problem. At the end of the 24 hours, students will present their projects to a panel of judges. The stakes are high.</p>
+                            <LinkButton content="Learn more" href="#" />
                         </div>
-                    </motion.div>
+                    </div>
+                </div>
             </div>
         </div>
     )
