@@ -66,19 +66,19 @@ const Content = (): JSX.Element => {
             <div className="w-screen h-screen flex items-center flex-col" style={{ height: "100vh" }}>
                 <div className="flex h-full w-full">
                     <div className="w-1/2 h-full flex flex-col items-center justify-center">
-                        <span className="text-center pb-2 text-4xl text-yellow-500">March 2, 2024</span>
+                        <span className="text-center pb-4 text-4xl text-yellow-500">Tentative Schedule on <b> March 2, 2024</b></span>
                         <div className="flex text-4xl items-center justify-center">
                             <div className="flex flex-col space-y-8">
-                                <span>7:30</span>
-                                <span>8:00</span>
-                                <span>9:00</span>
-                                <span>11:00</span>
-                                <span>13:00</span>
-                                <span>17:00</span>
-                                <span>17:30</span>
-                                <span>18:00</span>
+                                <span className="text-right">7:30</span>
+                                <span className="text-right">8:00</span>
+                                <span className="text-right">9:00</span>
+                                <span className="text-right">11:00</span>
+                                <span className="text-right">13:00</span>
+                                <span className="text-right">17:00</span>
+                                <span className="text-right">17:30</span>
+                                <span className="text-right">18:00</span>
                             </div>
-                            <div className="h-full self-center border border-white mx-2"></div>
+                            <div className="h-full self-center border border-white mx-4"></div>
                             <div className="flex flex-col space-y-8">
                                 <span>Topic Announcement</span>
                                 <span>Development Begins</span>
@@ -94,8 +94,8 @@ const Content = (): JSX.Element => {
                     <div className="w-1/2 flex items-center justify-center">
                         <div className="p-24">
                             <h1 className="text-blue-500 text-4xl pb-4">8 hours to solve one problem.</h1>
-                            <p className="text-lg">SSA.Hacks is a hackathon for high school students. Students will work in teams of up to 4 people to create a project that solves a problem. At the end of the 24 hours, students will present their projects to a panel of judges. The stakes are high.</p>
-                            <LinkButton content="Learn more" href="#" />
+                            <p className="text-lg">SSA.Hacks is a hackathon for high school students. Students will work in teams of up to 4 people to create a project that solves a problem. At the end of the 24 hours, students will present their projects to a panel of some of the most experienced judges in the Pittsburgh area. The stakes are high.</p>
+                            <LinkButton content="Meet the judges" href="#" />
                         </div>
                     </div>
                 </div>
