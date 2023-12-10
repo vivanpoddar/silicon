@@ -41,8 +41,9 @@ export default function Navbar({ current }: NavbarProps) {
                         </div>
                         <div className="absolute left-0 right-0 ml-auto mr-auto space-x-4 flex items-center justify-center">
                             {navigation.map((item) => (
-                                <Link href={item.href} key={item.name}>
-                                    <motion.a
+                                <Link>
+                                    <motion.div
+                                        href={item.href} key={item.name}
                                         whileHover={{ backgroundColor: '#FFFFFF', color: '#000000' }}
                                         transition={{ duration: 0.25 }}
                                         className={classNames(
@@ -52,8 +53,9 @@ export default function Navbar({ current }: NavbarProps) {
                                         aria-current={item.current ? 'page' : undefined}
                                     >
                                         {item.name}
-                                    </motion.a>
+                                    </motion.div>
                                 </Link>
+                                
                             ))}
                         </div>
                     </div>
