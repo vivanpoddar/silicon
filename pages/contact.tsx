@@ -17,7 +17,7 @@ const Person = ({ image, position, text, name, linkedin, email }: PersonProps) =
     return (
         <div className="w-auto h-auto border rounded-lg overflow-hidden p-4">
             <div className="w-32 h-24 overflow-hidden">
-                <Image src={image} width={640} height={480} alt={name} layout="responsive" />
+                <Image unoptimized src={image} width={640} height={480} alt={name} layout="responsive" />
             </div>
             <h1 className="text-3xl text-white">{name}</h1>
             <h2 className="text-xl text-gray-400">{position}</h2>
