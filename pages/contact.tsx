@@ -22,7 +22,7 @@ const Person = ({ image, position, text, name, linkedin, email }: PersonProps) =
         <div className="w-auto h-auto border rounded-lg overflow-hidden p-4">
             <div className="w-32 h-24 overflow-hidden">
                 {isLoading && <TailSpin color="white" radius={"1rem"} />}
-                <Image src={image} width={640} height={480} alt={name} layout="responsive" style={{ display: isLoading ? 'none' : 'block' }} onLoad={() => setIsLoading(false)} />
+                <Image src={image} width={640} height={480} alt={name} layout="responsive" onLoadingComplete={() => setIsLoading(false)} />
             </div>
             <h1 className="text-3xl text-white">{name}</h1>
             <h2 className="text-xl text-gray-400">{position}</h2>
