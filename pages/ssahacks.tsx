@@ -124,17 +124,13 @@ const Panel1 = (): JSX.Element => {
 
 const Panel2 = (): JSX.Element => {
     return (
-        <motion.div className="flex border-b border-white bg-white" style={{
-            backgroundImage: `url(/cool-background.svg)`,
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            height: '100vh',
-            width: '100vw'
+        <motion.div className="flex border-b border-white bg-black" style={{
+            backgroundImage: `url(/panelbg.png)`,
             }}>
             
             <div className="w-1/2 flex items-center justify-center">
                 <div className="p-24">
-                    <h1 className="text-7xl text-black">Win an internship at Pitt RST and more.</h1>
+                    <h1 className="text-7xl text-white">Win an internship at Pitt RST and more.</h1>
                     <LinkButton content="See the prizes" href="#" />
                 </div>
             </div>
@@ -150,7 +146,9 @@ const Panel2 = (): JSX.Element => {
 const Content = (): JSX.Element => {
     return (
         //rgb(246, 196, 77)
-        <div className="flex bg-black text-white ">
+        <div className="flex bg-black text-white" style={{
+            backgroundImage: `url(/panelbg.png)`,
+        }}>
             <div className="w-screen h-screen flex items-center flex-col" style={{ height: "100vh" }}>
                 <div className="flex h-full w-full">
                     <div className="w-1/2 h-full flex flex-col items-center justify-center">
@@ -194,7 +192,7 @@ const Content = (): JSX.Element => {
 
 const Questions = (): JSX.Element => {
     return (
-        <div>
+        <div >
             <div className="bg-black text-white">
                 <div className="flex items-center">
                     <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">FAQ</h1>
