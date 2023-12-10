@@ -4,7 +4,10 @@ import React from 'react'
 import {motion} from 'framer-motion'
 import Navbar from "../components/navbar";
 import LinkButton from "../components/linkbutton";
-import Link from "next/link";
+import Particles from "react-particles";
+import { useCallback } from "react";
+import type { Container, Engine } from "tsparticles-engine";
+import { loadSlim } from "tsparticles-slim";
 import Image from "next/image";
 
 interface QuestionProps {
@@ -22,9 +25,87 @@ const Question = ({ question, answer }: QuestionProps) => {
 };
 
 const Panel1 = (): JSX.Element => {
+    const particlesInit = useCallback(async (engine: Engine) => {
+        console.log(engine);
+        await loadSlim(engine);
+    }, []);
+
+
+    const particlesLoaded = useCallback(async (container: Container | undefined) => {
+        await console.log(container);
+    }, []);
+    
     return (
         //rgb(246, 196, 77)
-        <div className="flex bg-blue-500 h-screen">
+        <div className="bg-blue-500 h-screen">
+            <Particles
+                style={{position: "absolute"}}
+                id="tsparticles"
+                init={particlesInit}
+                loaded={particlesLoaded}
+                options={{
+                    fullScreen: {
+                        enable: false
+                    },
+                    fpsLimit: 60,
+                    interactivity: {
+                        events: {
+                            onHover: {
+                                enable: true,
+                                mode: "repulse",
+                            },
+                            resize: true,
+                        },
+                        modes: {
+                            push: {
+                                quantity: 4,
+                            },
+                            repulse: {
+                                distance: 200,
+                                duration: 0.4,
+                            },
+                        },
+                    },
+                    particles: {
+                        color: {
+                            value: "#ffffff",
+                        },
+                        links: {
+                            color: "#ffffff",
+                            distance: 150,
+                            enable: true,
+                            opacity: 0.5,
+                            width: 1,
+                        },
+                        move: {
+                            direction: "none",
+                            enable: true,
+                            outModes: {
+                                default: "bounce",
+                            },
+                            random: false,
+                            speed: 1,
+                            straight: false,
+                        },
+                        number: {
+                            density: {
+                                enable: true,
+                                area: 800,
+                            },
+                            value: 40,
+                        },
+                        opacity: {
+                            value: 0.5,
+                        },
+                        shape: {
+                            type: "circle",
+                        },
+                        size: {
+                            value: { min: 1, max: 5 },
+                        },
+                    },
+                }}
+            />
             <div className="absolute w-screen h-screen flex items-center justify-center flex-col" style={{ height: "100vh" }}>
                 <h1 className="text-7xl">SSAHack 2023</h1><br />
                 <div className="border-t border-white w-1/2 my-4"></div>
@@ -43,10 +124,17 @@ const Panel1 = (): JSX.Element => {
 
 const Panel2 = (): JSX.Element => {
     return (
-        <motion.div className="flex border-b border-white bg-black">
+        <motion.div className="flex border-b border-white bg-white" style={{
+            backgroundImage: `url(/cool-background.svg)`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            height: '100vh',
+            width: '100vw'
+            }}>
+            
             <div className="w-1/2 flex items-center justify-center">
                 <div className="p-24">
-                    <h1 className="text-7xl text-white">Win an internship at Pitt RST and more.</h1>
+                    <h1 className="text-7xl text-black">Win an internship at Pitt RST and more.</h1>
                     <LinkButton content="See the prizes" href="#" />
                 </div>
             </div>
@@ -141,7 +229,21 @@ const Prizes = (): JSX.Element => {
                 <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Prizes</h1>
                 <div className="border-t border-white flex-grow"></div>
             </div>
-            <div className="p-4">
+            <div className="flex w-full justify-between">
+                <div className="flex justify-center items-center space-x-8">
+                    <div>
+                        <h1 className="text-4xl">Internship Award</h1>
+                    </div>
+                    <div>
+                        <h1 className="text-4xl">Intenship Award</h1>
+                    </div>
+                    <div>
+                        <h1 className="text-4xl">Newcomer Award</h1>
+                    </div>
+                    <div>
+                        <h1 className="text-4xl">Participation</h1>
+                    </div>
+                </div>
             </div>
         </div>
     )

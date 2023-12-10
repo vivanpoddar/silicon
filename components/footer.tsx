@@ -3,7 +3,7 @@ import Image from "next/image"
 
 const Footer = (): JSX.Element => {
     return (
-        <footer className="bg-gray-800 shadow">
+        <footer className="bg-gray-800 shadow z-30 bottom-0 w-full">
             <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <Link href="/" className="flex items-center w-auto mb-4 space-x-2 rtl:space-x-reverse">
