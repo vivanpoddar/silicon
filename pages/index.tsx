@@ -102,22 +102,6 @@ const Panel3 = (): JSX.Element => {
 }
 
 export default function Home() {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  if (windowWidth < 1250) {
-    return (
-      <div className='w-[100vw] h-[100vh] text-xl flex flex-col justify-center items-center'>
-        <Image src="/image.png" alt="Silicon" width={50} height={50}/>
-        <span className='pt-4'>Please switch to a desktop view for a better experience.</span>
-      </div>
-    );
-  }
-  
   return ( 
     <>
       <div>
