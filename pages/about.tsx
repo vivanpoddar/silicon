@@ -18,7 +18,7 @@ const About = () => {
             <div className="h-[20vh] bg-white text-black flex flex-col p-2">
                 <div className="pl-40 pr-40">
                     <h1 className="text-4xl">Building Tech Leaders.</h1>
-                    <p>Lets connect more highschoolers with real-life experience. We're passionate about cultivating the next generation of tech leaders. Our programs focus on nurturing skills, fostering creativity, and instilling a sense of responsibility among the foundations's computer scientists.</p>
+                    <p>Lets connect more highschoolers with real-life experience. We&apos;re passionate about cultivating the next generation of tech leaders. Our programs focus on nurturing skills, fostering creativity, and instilling a sense of responsibility among the foundations&apos;s computer scientists.</p>
                 </div>
             </div>
             <div className="h-[20vh] bg-white text-black flex flex-col p-2">

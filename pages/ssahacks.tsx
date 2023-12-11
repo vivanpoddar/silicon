@@ -267,7 +267,7 @@ const Prizes = (): JSX.Element => {
                             <h1 className="text-4xl px-4 text-gray-300">The Connect Award</h1>
                             <div className="border-t w-full border-white flex-grow"></div>
                         </div>
-                        <p className="text-xl">Land a high-ranking position on Silicon's technical and product team.</p>
+                        <p className="text-xl">Land a high-ranking position on Silicon&apos;s technical and product team.</p>
                     </div>
                     <div>
                         <div className="flex flex-col">
