@@ -9,6 +9,7 @@ import { useCallback } from "react";
 import type { Container, Engine } from "tsparticles-engine";
 import { loadSlim } from "tsparticles-slim";
 import Image from "next/image";
+import Person from "@/components/person";
 
 interface QuestionProps {
     question: string;
@@ -107,7 +108,7 @@ const Panel1 = (): JSX.Element => {
                 }}
             />
             <div className="absolute w-screen h-screen flex items-center justify-center flex-col" style={{ height: "100vh" }}>
-                <h1 className="text-7xl">SSAHack 2023</h1><br />
+                <Image priority={true} className="text-7xl" src="/ssahack.png" alt="SSAHack 2023" width={800} height={300}></Image>
                 <div className="border-t border-white w-1/2 my-4"></div>
                 <TypeIt className="text-5xl">Hack for a <span className="text-yellow-500 italic">purpose.</span></TypeIt>
                 <button className="mt-4 bg-blue-800 text-white font-bold py-2 px-4 rounded text-2xl">Sign Up</button>
@@ -124,14 +125,11 @@ const Panel1 = (): JSX.Element => {
 
 const Panel2 = (): JSX.Element => {
     return (
-        <motion.div className="flex border-b border-white bg-black" style={{
-            backgroundImage: `url(/panelbg.png)`,
-            }}>
-            
+        <motion.div className="flex">
             <div className="w-1/2 flex items-center justify-center">
                 <div className="p-24">
                     <h1 className="text-7xl text-white">Win an internship at Pitt RST and more.</h1>
-                    <LinkButton content="See the prizes" href="#" />
+                    <LinkButton content="See the prizes" href="#prizes" />
                 </div>
             </div>
             <div className="w-1/2 flex items-center justify-center relative " style={{ height: '100vh' }}>
@@ -146,10 +144,8 @@ const Panel2 = (): JSX.Element => {
 const Content = (): JSX.Element => {
     return (
         //rgb(246, 196, 77)
-        <div className="flex bg-black text-white" style={{
-            backgroundImage: `url(/panelbg.png)`,
-        }}>
-            <div className="w-screen h-screen flex items-center flex-col" style={{ height: "100vh" }}>
+        <div className="flex text-white">
+            <div className="w-screen h-screen flex flex-col" style={{ height: "100vh" }}>
                 <div className="flex h-full w-full">
                     <div className="w-1/2 h-full flex flex-col items-center justify-center">
                         <span className="text-center pb-4 text-4xl text-yellow-500">Tentative Schedule on <b> March 2, 2024</b></span>
@@ -181,7 +177,7 @@ const Content = (): JSX.Element => {
                         <div className="p-24">
                             <h1 className="text-blue-500 text-4xl pb-4">8 hours to solve one problem.</h1>
                             <p className="text-lg">SSA.Hacks is a hackathon for high school students. Students will work in teams of up to 4 people to create a project that solves a problem. At the end of the 24 hours, students will present their projects to a panel of some of the most experienced judges in the Pittsburgh area. The stakes are high.</p>
-                            <LinkButton content="Meet the judges" href="#" />
+                            <LinkButton content="Meet the judges" href="/judges" />
                         </div>
                     </div>
                 </div>
@@ -193,12 +189,14 @@ const Content = (): JSX.Element => {
 const Questions = (): JSX.Element => {
     return (
         <div >
-            <div className="bg-black text-white">
+            <div className="text-white">
                 <div className="flex items-center">
                     <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">FAQ</h1>
                     <div className="border-t border-white flex-grow"></div>
                 </div>
                 <div className="p-4">
+                    <Question question="Is lunch, etc. included?" answer="Everything you might need will be included free of charge. However, if you would like to work with more advanced components you will be required to bring your own. However, if this is difficult to do, shoot us an email and we will be able to accomodate your needs ahead of time." />
+                    <Question question="I am a middle schooler. Can I succeed in this hackathon?" answer="No worries about skill gaps here. We will be hosting masterclasses that are tailored to newcomers (specifically younger people) that will bring you up to speed. In addition, we provide novice awards for people getting into the space." />
                     <Question question="What is a hackathon?" answer="A hackathon is a 24-hour event where students come together to create a project that solves a problem. Students can work individually or in teams of up to 4 people. At the end of the 24 hours, students will present their projects to a panel of judges. The best projects will win prizes!" />
                     <Question question="Who can participate?" answer="Any high school student can participate! You do not need to have any prior experience with coding or hackathons. We will be hosting workshops to help you get started on your project." />
                 </div>
@@ -209,12 +207,33 @@ const Questions = (): JSX.Element => {
 
 const Judges = (): JSX.Element => {
     return (
-        <div className="bg-black text-white">
+        <div id="judges" className=" text-white">
             <div className="flex items-center">
                 <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Judges & Masterclasses</h1>
                 <div className="border-t border-white flex-grow"></div>
             </div>
-            <div className="p-4">
+            <div className="p-4 px-80 flex flex-col space-y-4 ">
+                <div className="flex justify-between"> 
+                    <Person name="Dr. Dan Ding" position="Professor" text="Background info, etc." linkedin="" email="" image="/adamlee.jpg" />
+                    <Person name="Indrajit Poddar" position="Cloud Architect at AWS" text="" linkedin="" email="" image="/adamlee.jpg" />
+                    <Person name="Dawson Haytock" position="SSA Computer Department Chair" text="" linkedin="" email="" image="/adamlee.jpg" />
+                </div>
+                <div className="flex space-x-4 justify-between">
+                    <Person name="Judge 3 " position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />
+                    <Person name="Judge 4" position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />
+                    <Person name="Judge 5" position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />
+                </div>
+                <div className="flex space-x-4 justify-between">
+                    <Person name="Judge 6" position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />
+                    <Person name="Judge 7" position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />
+                    <Person name="Judge 8" position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />
+
+                </div>
+                <div className="flex space-x-4 justify-between">
+                    <Person name="Judge 9" position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />
+                    <Person name="Judge 10" position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />
+                    <Person name="Judge 11" position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />
+                </div>          
             </div>
         </div>
     )
@@ -222,24 +241,61 @@ const Judges = (): JSX.Element => {
 
 const Prizes = (): JSX.Element => {
     return (
-        <div className="bg-black text-white">
+        <div className=" text-white" id="prizes">
             <div className="flex items-center">
                 <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Prizes</h1>
                 <div className="border-t border-white flex-grow"></div>
             </div>
-            <div className="flex w-full justify-between">
-                <div className="flex justify-center items-center space-x-8">
+            <div className="flex w-full justify-center items-center">
+                <div className="flex flex-col space-y-8">
                     <div>
-                        <h1 className="text-4xl">Internship Award</h1>
+                        <div className="flex flex-col">
+                            <h1 className="text-4xl px-4 text-yellow-500">The Internship Award</h1>
+                            <div className="border-t w-full border-white flex-grow"></div>
+                        </div>
+                        <p className="text-xl">This award includes a part-time research internship in conjunction with the University of Pittsburgh Department of Rehabilitation Sciences and Technology.</p>
                     </div>
                     <div>
-                        <h1 className="text-4xl">Intenship Award</h1>
+                        <div className="flex flex-col">
+                            <h1 className="text-4xl px-4 text-gray-200">The Compute Award</h1>
+                            <div className="border-t w-full border-white flex-grow"></div>
+                        </div>
+                        <p className="text-xl">This award includes a part-time research internship in conjunction with the University of Pittsburgh Department of Rehabilitation Sciences and Technology.</p>
                     </div>
                     <div>
-                        <h1 className="text-4xl">Newcomer Award</h1>
+                        <div className="flex flex-col">
+                            <h1 className="text-4xl px-4 text-gray-300">The Connect Award</h1>
+                            <div className="border-t w-full border-white flex-grow"></div>
+                        </div>
+                        <p className="text-xl">Land a high-ranking position on Silicon's technical and product team.</p>
                     </div>
                     <div>
-                        <h1 className="text-4xl">Participation</h1>
+                        <div className="flex flex-col">
+                            <h1 className="text-4xl px-4 text-gray-400">The Innovate Award</h1>
+                            <div className="border-t w-full border-white flex-grow"></div>
+                        </div>
+                        <p className="text-xl">This award includes a part-time research internship in conjunction with the University of Pittsburgh Department of Rehabilitation Sciences and Technology.</p>
+                    </div>
+                    <div>
+                        <div className="flex flex-col">
+                            <h1 className="text-4xl px-4 text-pink-500">The Impact Novice Award</h1>
+                            <div className="border-t w-full border-white flex-grow"></div>
+                        </div>
+                        <p className="text-xl">This award includes a part-time research internship in conjunction with the University of Pittsburgh Department of Rehabilitation Sciences and Technology.</p>
+                    </div>
+                    <div>
+                        <div className="flex flex-col">
+                            <h1 className="text-4xl px-4 text-green-500">The Vision Novice Award</h1>
+                            <div className="border-t w-full border-white flex-grow"></div>
+                        </div>
+                        <p className="text-xl">This award includes a part-time research internship in conjunction with the University of Pittsburgh Department of Rehabilitation Sciences and Technology.</p>
+                    </div>
+                    <div>
+                        <div className="flex flex-col">
+                            <h1 className="text-4xl px-4 text-blue-600">2024 SSA.hack Attendee</h1>
+                            <div className="border-t w-full border-white flex-grow"></div>
+                        </div>
+                        <p className="text-xl">This award includes a part-time research internship in conjunction with the University of Pittsburgh Department of Rehabilitation Sciences and Technology.</p>
                     </div>
                 </div>
             </div>
@@ -249,7 +305,7 @@ const Prizes = (): JSX.Element => {
 
 const Sponsors = (): JSX.Element => {
     return (
-        <div className="bg-black text-white">
+        <div className=" text-white">
             <div className="flex items-center">
                 <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Sponsors</h1>
                 <div className="border-t border-white flex-grow"></div>
@@ -257,16 +313,20 @@ const Sponsors = (): JSX.Element => {
             <div className="p-4">
                 <div className="flex flex-col items-center">
                     <div className=" p-4 m-4">
-                        <h1 className="text-3xl text-blue-500">Proton Sponsors</h1>
+                        <h1 className="text-3xl ">Atomic Sponsors</h1>
+                        <div className="flex">
+                            <Image src="/pittrst.png" alt="Pitt RST" height={500} width={750}></Image>
+                        </div>
+                    </div>
+                    <div className=" p-4 m-4">
+                        <h1 className="text-3xl">Proton Sponsors</h1>
 
                     </div>
                     <div className=" p-4 m-4">
-                        <h1 className="text-3xl text-gray-400">Neutron Sponsors</h1>
-
-                    </div>
-                    <div className=" p-4 m-4">
-                        <h1 className="text-3xl text-yellow-500">Electron Sponsors</h1>
-
+                        <h1 className="text-3xl">Electron Sponsors</h1>
+                        <div className="flex">
+                            <Image src="/medpath.png" alt="Medpath" height={100} width={250} style={{backgroundColor: "white"}}></Image>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -278,13 +338,17 @@ const Ssahack = () => {
     return (
         <>
             <Navbar current="SSA.hack();"/> 
-            <Panel1 />
-            <Panel2 />
-            <Content />
-            <Prizes/>
-            <Questions />
-            <Judges/>
-            <Sponsors />
+            <div style={{
+                backgroundImage: `url(/panelbg.png)`,
+            }}>
+                <Panel1 />
+                <Panel2 />
+                <Content />
+                <Prizes />
+                <Questions />
+                <Judges />
+                <Sponsors />
+            </div>
             <Footer />
         </> 
     );
