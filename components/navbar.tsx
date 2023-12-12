@@ -39,7 +39,7 @@ export default function Navbar({ current }: NavbarProps) {
                             </div>
                             <h1 className='pl-2 text-3xl text-white font-medium'>Silicon</h1>                             
                         </div>
-                        <div className="absolute left-0 right-0 ml-auto mr-auto space-x-4 flex items-center justify-center">
+                        <div className="hidden absolute left-0 right-0 ml-auto mr-auto lg:flex space-x-4 items-center justify-center">
                             {navigation.map((item) => (
                                 <Link href={item.href} key={item.name}>
                                     <motion.div
@@ -56,26 +56,8 @@ export default function Navbar({ current }: NavbarProps) {
                                 </Link>
                             ))}
                         </div>
+
                     </div>
-                    <Disclosure.Panel className="sm:hidden">
-                        <div className="flex justify-between items-center">
-                                {navigation.map((item) => (
-                                    <motion.a
-                                        whileHover={{ backgroundColor: '#FFFFFF', color: '#000000' }}
-                                        transition={{ duration: 0.25 }}
-                                        key={item.name}
-                                        href={item.href}
-                                        className={classNames(
-                                            item.current ? 'bg-gray-300' : '',
-                                            'border px-3 py-2 text-sm font-medium'
-                                        )}
-                                        aria-current={item.current ? 'page' : undefined}
-                                    >
-                                        {item.name}
-                                    </motion.a>
-                                ))}
-                        </div>
-                    </Disclosure.Panel>
                 </>
             )}
         </Disclosure>

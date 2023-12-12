@@ -108,10 +108,14 @@ const Panel1 = (): JSX.Element => {
                 }}
             />
             <div className="absolute w-screen h-screen flex items-center justify-center flex-col" style={{ height: "100vh" }}>
-                <Image priority={true} className="text-7xl" src="/ssahack.png" alt="SSAHack 2023" width={800} height={300}></Image>
+                <Image priority={true} className="text-7xl" style={{filter: "invert(1)"}} src="/ssahack.png" alt="SSAHack 2023" width={800} height={300}></Image>
                 <div className="border-t border-white w-1/2 my-4"></div>
                 <TypeIt className="text-5xl">Hack for a <span className="text-yellow-500 italic">purpose.</span></TypeIt>
-                <button className="mt-4 bg-blue-800 text-white font-bold py-2 px-4 rounded text-2xl">Sign Up</button>
+                <div className="flex space-x-4">
+                    <button className="mt-4 bg-blue-800 text-white font-bold py-2 px-4 rounded text-2xl">Sign Up</button>
+                    <button className="mt-4 bg-blue-800 text-white font-bold py-2 px-4 rounded text-2xl">Competitive Handbook</button>
+                    <button className="mt-4 bg-blue-800 text-white font-bold py-2 px-4 rounded text-2xl">Contact</button>
+                </div>
                 <div className="absolute bottom-0 mb-8 rounded-lg p-4">
                     <h1 className='pb-2'>Learn more</h1>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-8 w-8 mx-auto text-white animate-bounce">
@@ -212,24 +216,24 @@ const Judges = (): JSX.Element => {
                 <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Judges & Masterclasses</h1>
                 <div className="border-t border-white flex-grow"></div>
             </div>
-            <div className="p-4 px-80 flex flex-col space-y-4 ">
-                <div className="flex justify-between"> 
+            <div className="p-4 flex flex-col space-y-4 justify-center items-center">
+                <div className="flex space-x-4"> 
                     <Person name="Dr. Dan Ding" position="Professor" text="Background info, etc." linkedin="" email="" image="/adamlee.jpg" />
                     <Person name="Indrajit Poddar" position="Cloud Architect at AWS" text="" linkedin="" email="" image="/adamlee.jpg" />
                     <Person name="Dawson Haytock" position="SSA Computer Department Chair" text="" linkedin="" email="" image="/adamlee.jpg" />
                 </div>
-                <div className="flex space-x-4 justify-between">
+                <div className="flex space-x-4">
                     <Person name="Judge 3 " position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />
                     <Person name="Judge 4" position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />
                     <Person name="Judge 5" position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />
                 </div>
-                <div className="flex space-x-4 justify-between">
+                <div className="flex space-x-4">
                     <Person name="Judge 6" position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />
                     <Person name="Judge 7" position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />
                     <Person name="Judge 8" position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />
 
                 </div>
-                <div className="flex space-x-4 justify-between">
+                <div className="flex space-x-4">
                     <Person name="Judge 9" position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />
                     <Person name="Judge 10" position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />
                     <Person name="Judge 11" position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />

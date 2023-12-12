@@ -22,7 +22,7 @@ const Join = () => {
                         <h1 className="text-2xl pt-4">Regional Directors</h1>
                         <div className="border-b w-full mb-2"></div>
                         <div className="flex space-x-4">
-                            <Person image="/liam.png" name="Ziyu (Liam) Lin" position="China Director" text="" linkedin="https://www.linkedin.com/" email="mailto:vivanneil@outlook.com" />
+                            <Person image="/liam.png" name="Ziyu (Liam) Lin" position="East Asia Region" text="" linkedin="https://www.linkedin.com/" email="mailto:vivanneil@outlook.com" />
                         </div>
                         <h1 className="text-2xl pt-4">Chapter Directors</h1>
                         <div className="border-b w-full mb-2"></div>
