@@ -9,8 +9,10 @@ import { useCallback } from "react";
 import type { Container, Engine } from "tsparticles-engine";
 import { loadSlim } from "tsparticles-slim";
 import Image from "next/image";
-import Person from "@/components/person";
 import Head from "next/head";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 interface QuestionProps {
     question: string;
@@ -210,6 +212,33 @@ const Questions = (): JSX.Element => {
     )
 }
 
+interface PersonProps {
+    image: string;
+    position: string;
+    text: string;
+    linkedin: string;
+    email: string;
+    name: string;
+};
+
+const Person = ({ image, position, text, name, linkedin, email }: PersonProps) => {
+    return (
+        <div className="w-auto h-auto border rounded-lg p-4">
+            <h1 className="text-3xl text-white">{name}</h1>
+            <h2 className="text-xl text-gray-400">{position}</h2>
+            <p className="text-white">{text}</p>
+            <div className="flex space-x-4">
+                <button onClick={() => window.location.href = `mailto:${email}`}>
+                    <FontAwesomeIcon icon={faEnvelope} />
+                </button>
+                <button onClick={() => window.location.href = linkedin}>
+                    <FontAwesomeIcon icon={faUser} />
+                </button>
+            </div>
+        </div>
+    );
+};
+
 const Judges = (): JSX.Element => {
     return (
         <div id="judges" className=" text-white">
@@ -219,25 +248,25 @@ const Judges = (): JSX.Element => {
             </div>
             <div className="p-4 flex flex-col space-y-4 justify-center items-center">
                 <div className="flex space-x-4"> 
-                    <Person name="Dr. Dan Ding" position="Professor" text="Background info, etc." linkedin="" email="" image="/adamlee.jpg" />
-                    <Person name="Indrajit Poddar" position="Cloud Architect at AWS" text="" linkedin="" email="" image="/adamlee.jpg" />
-                    <Person name="Dawson Haytock" position="SSA Computer Department Chair" text="" linkedin="" email="" image="/adamlee.jpg" />
+                    <Person name="Dr. Dan Ding" position="Professor" text="Background info, etc." linkedin="" email="" image="0" />
+                    <Person name="Indrajit Poddar" position="Cloud Architect at AWS" text="" linkedin="" email="" image="0" />
+                    <Person name="Dawson Haytock" position="SSA Computer Department Chair" text="" linkedin="" email="" image="0" />
                 </div>
                 <div className="flex space-x-4">
-                    <Person name="Judge 3 " position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />
-                    <Person name="Judge 4" position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />
-                    <Person name="Judge 5" position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />
+                    <Person name="Judge 3 " position="Position" text="" linkedin="" email="" image="0" />
+                    <Person name="Judge 4" position="Position" text="" linkedin="" email="" image="0" />
+                    <Person name="Judge 5" position="Position" text="" linkedin="" email="" image="0" />
                 </div>
                 <div className="flex space-x-4">
-                    <Person name="Judge 6" position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />
-                    <Person name="Judge 7" position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />
-                    <Person name="Judge 8" position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />
+                    <Person name="Judge 6" position="Position" text="" linkedin="" email="" image="0" />
+                    <Person name="Judge 7" position="Position" text="" linkedin="" email="" image="0" />
+                    <Person name="Judge 8" position="Position" text="" linkedin="" email="" image="0" />
 
                 </div>
                 <div className="flex space-x-4">
-                    <Person name="Judge 9" position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />
-                    <Person name="Judge 10" position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />
-                    <Person name="Judge 11" position="Position" text="" linkedin="" email="" image="/adamlee.jpg" />
+                    <Person name="Judge 9" position="Position" text="" linkedin="" email="" image="0" />
+                    <Person name="Judge 10" position="Position" text="" linkedin="" email="" image="0" />
+                    <Person name="Judge 11" position="Position" text="" linkedin="" email="" image="0" />
                 </div>          
             </div>
         </div>
