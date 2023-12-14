@@ -249,7 +249,7 @@ const Judges = (): JSX.Element => {
             <div className="p-4 flex flex-col space-y-4 justify-center items-center">
                 <div className="flex space-x-4"> 
                     <Person name="Dr. Dan Ding" position="Professor" text="Background info, etc." linkedin="" email="" image="0" />
-                    <Person name="Indrajit Poddar" position="Cloud Architect at AWS" text="" linkedin="" email="" image="0" />
+                    <Person name="Indrajit Poddar" position="Chief Cloud Architect at AWS" text="" linkedin="" email="" image="0" />
                     <Person name="Dawson Haytock" position="SSA Computer Department Chair" text="" linkedin="" email="" image="0" />
                 </div>
                 <div className="flex space-x-4">
@@ -280,7 +280,22 @@ const Prizes = (): JSX.Element => {
                 <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Prizes</h1>
                 <div className="border-t border-white flex-grow"></div>
             </div>
-            <div className="flex w-full justify-center items-center">
+            <div className="py-4 flex flex-col">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                    <div className="bg-orange-500 h-52 border flex flex-col justify-center items-center">
+                        <h1>The Internship Award</h1>
+                        <div className="border rounded p-1 mt-4 hidden hover:">Details</div>
+                    </div>
+                    <div className="bg-orange-500 h-52 border flex justify-center items-center"></div>
+                    <div className="bg-orange-500 h-52 border flex justify-center items-center"></div>
+                    <div className="bg-orange-500 h-52 border flex justify-center items-center"></div>
+                    <div className="bg-orange-500 h-52 border flex justify-center items-center"></div>
+                    <div className="bg-orange-500 h-52 border flex justify-center items-center"></div>
+                    <div className="bg-orange-500 h-52 border flex justify-center items-center"></div>
+                    <div className="bg-orange-500 h-52 border flex justify-center items-center"></div>
+                </div>
+            </div>
+            {/* <div className="flex w-full justify-center items-center">
                 <div className="flex flex-col space-y-8">
                     <div>
                         <div className="flex flex-col">
@@ -332,7 +347,7 @@ const Prizes = (): JSX.Element => {
                         <p className="text-xl">This award includes a part-time research internship in conjunction with the University of Pittsburgh Department of Rehabilitation Sciences and Technology.</p>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
