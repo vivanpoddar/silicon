@@ -18,7 +18,7 @@ const Person = ({ image, position, text, name, linkedin, email }: PersonProps) =
     const [isLoading, setIsLoading] = useState(true);
 
     return (
-        <div className="w-auto h-auto border rounded-lg overflow-hidden p-4">
+        <div className="w-auto h-auto border rounded-lg p-4">
             <div className="w-32 h-24 overflow-hidden">
                 {isLoading && <TailSpin color="white" radius={"1rem"} />}
                 <Image src={image} width={640} height={480} alt={name} layout="responsive" onLoadingComplete={() => setIsLoading(false)} />

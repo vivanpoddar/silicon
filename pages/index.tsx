@@ -4,6 +4,7 @@ import LinkButton from '../components/linkbutton'
 import Footer from '../components/footer'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
+import Head from 'next/head'
 
 import { motion, useScroll, useTransform, useSpring } from "framer-motion"
 import Link from 'next/link'
@@ -13,7 +14,10 @@ const inter = Inter({ subsets: ['latin'] })
 const Intro = (): JSX.Element => {
   return (
     <>
-      <motion.div className="h-screen overflow-hidden flex items-center justify-center">
+      <Head>
+        <title>Silicon | Home</title>
+      </Head>
+      <motion.div className="h-screen w-screen overflow-hidden flex items-center justify-center">
         <video
           autoPlay
           muted
@@ -26,7 +30,7 @@ const Intro = (): JSX.Element => {
         </video>
         <div className='z-10'>
           <div className="bg-black rounded-lg p-4">
-            <h1 className="text-white text-7xl">Welcome to Silicon</h1>
+            <h1 className="text-white text-3xl lg:text-7xl">Welcome to Silicon</h1>
           </div>
         </div>
         <div className="absolute bottom-0 mb-8 pt-6 bg-black rounded-lg p-4">
@@ -45,7 +49,7 @@ const Panel1 = (): JSX.Element => {
   // const spring = useSpring(0)
 
   return (
-    <motion.div className="flex bg-black">
+    <motion.div className="h-screen w-screen flex bg-black">
       <div className="w-1/2 flex items-center justify-center">
         <div className="p-24">
           <h1 className="text-7xl text-white">Realize your imagination at SSAHacks.</h1>
@@ -104,14 +108,12 @@ const Panel3 = (): JSX.Element => {
 export default function Home() {
   return ( 
     <>
-      <div>
-        <Navbar current="Home"/>
-        <Intro />
-        <Panel1 />
-        <Panel2 />
-        <Panel3 />
-        <Footer />
-      </div>
+      <Navbar current="Home"/>
+      <Intro />
+      <Panel1 />
+      <Panel2 />
+      <Panel3 />
+      <Footer />
     </>
   )
 }

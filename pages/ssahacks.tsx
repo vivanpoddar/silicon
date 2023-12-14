@@ -10,6 +10,7 @@ import type { Container, Engine } from "tsparticles-engine";
 import { loadSlim } from "tsparticles-slim";
 import Image from "next/image";
 import Person from "@/components/person";
+import Head from "next/head";
 
 interface QuestionProps {
     question: string;
@@ -341,6 +342,9 @@ const Sponsors = (): JSX.Element => {
 const Ssahack = () => {
     return (
         <>
+            <Head>
+                <title>SSA.hack 2024</title>
+            </Head>
             <Navbar current="SSA.hack();"/> 
             <div style={{
                 backgroundImage: `url(/panelbg.png)`,

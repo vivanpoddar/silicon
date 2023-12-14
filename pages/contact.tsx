@@ -1,14 +1,18 @@
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import Person from "@/components/person";
+import Head from "next/head";
 
 const Join = () => {
     return (
         <>
+            <Head>
+                <title>Silicon | Contact</title>
+            </Head>
             <Navbar current="Contact"/>
-            <div className="h-screen">
+            <div className="overflow-hidden">
                 <div className="flex bg-black justify-center">
-                    <div className="pt-24 flex-col justify-center">
+                    <div className="pt-24 pb-24 flex-col justify-center">
                         <h1 className="text-2xl">Board of Directors</h1>
                         <div className="border-b w-full mb-2"></div>
                         <div className="flex space-x-4">
@@ -30,9 +34,8 @@ const Join = () => {
                             <Person image="/anita.png" name="Anita Zhu" position="Deer Lakes School District" text="" linkedin="https://www.linkedin.com/" email="mailto:vivanneil@outlook.com" />
                         </div>
                     </div>
-                    <div></div>
+
                 </div>
-                <h1 className="flex text-2xl"></h1>
             </div>
             <Footer />
         </>

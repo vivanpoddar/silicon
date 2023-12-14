@@ -1,10 +1,14 @@
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import {motion} from "framer-motion";
+import Head from 'next/head'
 
 const About = () => {
     return (
         <>
+            <Head>
+                <title>Silicon | About</title>
+            </Head>
             <Navbar current="About"/>
             <div className="h-[40vh] bg-white flex flex-col justify-center items-center">
                 <h1 className="text-7xl text-black text-center">Compute. Connect. Innovate.</h1>
