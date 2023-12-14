@@ -13,6 +13,7 @@ import Head from "next/head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 interface QuestionProps {
     question: string;
@@ -274,18 +275,31 @@ const Judges = (): JSX.Element => {
 }
 
 const Prizes = (): JSX.Element => {
+    const [hover, setHover] = useState(false);
+
     return (
         <div className=" text-white" id="prizes">
             <div className="flex items-center">
-                <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Prizes</h1>
+                <motion.h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Prizes</motion.h1>
                 <div className="border-t border-white flex-grow"></div>
             </div>
             <div className="py-4 flex flex-col">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                    <div className="bg-orange-500 h-52 border flex flex-col justify-center items-center">
-                        <h1>The Internship Award</h1>
-                        <div className="border rounded p-1 mt-4 hidden hover:">Details</div>
-                    </div>
+                    <motion.div className="bg-orange-500 h-52 border flex flex-col justify-center items-center"
+                        onHoverStart={() => setHover(true)}
+                        onHoverEnd={() => setHover(false)}
+                        >
+                        <motion.h1 className="absolute"
+                            animate={hover ? { translateY: "-1rem" } : { scale: 1 }}
+                            transition={{ duration: 0.25 }}
+                        >
+                        The Internship Award</motion.h1>
+                        <motion.div className="border rounded px-1.5 py-0.5 text-white"
+                            initial={{ opacity: 0, display: "flex"}}
+                            animate={hover ? { opacity: 1, translateY: "1rem"} : { opacity: 0, scale: 0 }}
+                            transition={{ duration: 0.25 }}
+                        >Details</motion.div>
+                    </motion.div>
                     <div className="bg-orange-500 h-52 border flex justify-center items-center"></div>
                     <div className="bg-orange-500 h-52 border flex justify-center items-center"></div>
                     <div className="bg-orange-500 h-52 border flex justify-center items-center"></div>
