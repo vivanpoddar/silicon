@@ -17,24 +17,24 @@ const Intro = (): JSX.Element => {
       <Head>
         <title>Silicon | Home</title>
       </Head>
-      <motion.div className="h-screen w-screen overflow-hidden flex items-center justify-center">
+      <motion.div className="h-[100vh] w-auto md:h-screen md:w-screen flex flex-col md:flex bg-black items-center justify-center">
         <video
           autoPlay
           muted
           loop
           disablePictureInPicture
-          className="absolute w-full h-full z-0"
-          style={{ objectFit: 'cover' }}
+          className=" absolute w-full h-full z-0 object-cover"
         >
           <source src="https://github.com/vivanpoddar/random-assets/raw/master/video.mp4" type="video/mp4" />
         </video>
         <div className='z-10'>
           <div className="bg-black rounded-lg p-4">
-            <h1 className="text-white text-3xl lg:text-7xl">Welcome to Silicon</h1>
+            <h1 className="text-white text-3xl md:text-7xl">Welcome to Silicon</h1>
           </div>
+          <p className='text-center md:hidden'>Compute. Connect. Innovate.</p>
         </div>
-        <div className="absolute bottom-0 mb-8 pt-6 bg-black rounded-lg p-4">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-8 text-white animate-bounce">
+        <div className="hidden md:block md:absolute md:bottom-0 mb-8 md:pt-6 rounded-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-8 text-white bg-black rounded animate-bounce">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </div>
@@ -49,16 +49,14 @@ const Panel1 = (): JSX.Element => {
   // const spring = useSpring(0)
 
   return (
-    <motion.div className="h-screen w-screen flex bg-black">
-      <div className="w-1/2 flex items-center justify-center">
-        <div className="p-24">
-          <h1 className="text-7xl text-white">Realize your imagination at SSAHacks.</h1>
-          <LinkButton content="Claim your spot at SSAHacks 2023" href="ssahacks" />
-        </div>
+    <motion.div className="z-10 h-[75vh] md:h-screen w-screen flex flex-col-reverse md:flex-row bg-black">
+      <div className="md:w-1/2 h-1/2 md:h-full flex flex-col items-center justify-center">
+        <h1 className="md:text-7xl text-white text-center text-5xl">Solve problems at SSAHacks.</h1>
+        <LinkButton content="Claim your spot at SSAHacks 2023" href="ssahacks" />
       </div>
-      <div className="w-1/2 flex items-center justify-center relative " style={{ height: '100vh' }}>
-        <div className='h-1/2 w-auto'>
-          <Image src="/panel1.jpg" width={800} height={720} alt="dude laughing"></Image>
+      <div className="md:w-1/2 h-1/2 md:h-full flex items-center justify-center">
+        <div className='md:h-1/2 w-3/4 md:w-full flex items-center justify-center'>
+          <Image src="/panel1.jpg" width={800} height={0} alt="dude laughing"></Image>
         </div>
       </div>
     </motion.div>
@@ -66,18 +64,17 @@ const Panel1 = (): JSX.Element => {
 }
 
 const Panel2 = (): JSX.Element => {
+
   return (
-    <motion.div className="flex bg-white">
-      <div className="w-1/2 flex items-center justify-center relative" style={{ height: '100vh' }}>
-        <div className='h-1/2 w-auto'>
-          <Image src="/panel2.jpg" width={800} height={720} alt="dude laughing"></Image>
+    <motion.div className="z-10 h-[75vh] md:h-screen w-screen flex flex-col md:flex-row bg-white">
+      <div className="md:w-1/2 h-1/2 md:h-full flex items-center justify-center">
+        <div className='md:h-1/2 w-3/4 md:w-full flex items-center justify-center'>
+          <Image src="/panel2.jpg" width={800} height={0} alt="dude laughing"></Image>
         </div>
       </div>
-      <div className="w-1/2 flex items-center justify-center">
-        <div className="p-24">
-          <h1 className="text-black text-7xl">Jumpstart your career aspirations.</h1>
-          <LinkButton content="Start your journey with Silicon" href="join" />
-        </div>
+      <div className="md:w-1/2 h-1/2 md:h-full flex flex-col items-center justify-center">
+        <h1 className="md:text-7xl text-black text-center text-5xl">Jumpstart your career aspirations.</h1>
+        <LinkButton content="Start your journey with Silicon" href="#" />
       </div>
     </motion.div>
   )
@@ -89,17 +86,15 @@ const Panel3 = (): JSX.Element => {
   // const spring = useSpring(0)
 
   return (
-    <motion.div className="bg-black flex">
-      <div className="w-1/2 flex items-center justify-center">
-        <div className="p-24">
-          <h1 className="text-white text-7xl">We make student-led education a reality.</h1>
-          <LinkButton content="Learn about Silicon's mission" href="about" />
-        </div>
+    <motion.div className="z-10 h-[75vh] md:h-screen w-screen flex flex-col-reverse md:flex-row bg-black">
+      <div className="md:w-1/2 h-1/2 md:h-full flex flex-col items-center justify-center">
+        <h1 className="md:text-7xl text-white text-center text-5xl">Compute. Connect. Innovate.</h1>
+        <LinkButton content="Learn about our mission" href="ssahacks" />
       </div>
-      <div className="w-1/2 flex items-center justify-center relative" style={{ height: '100vh' }}>
-        <div className='h-1/2 w-auto'>
-          <Image src="/panel3.jpg" width={800} height={720} alt="dude laughing"></Image>
-        </div>      
+      <div className="md:w-1/2 h-1/2 md:h-full flex items-center justify-center">
+        <div className='md:h-1/2 w-3/4 md:w-full flex items-center justify-center'>
+          <Image src="/panel3.jpg" width={800} height={0} alt="dude laughing"></Image>
+        </div>
       </div>
     </motion.div>
   )
@@ -108,12 +103,12 @@ const Panel3 = (): JSX.Element => {
 export default function Home() {
   return ( 
     <>
-      <Navbar current="Home"/>
+      <Navbar current="Home" />
       <Intro />
       <Panel1 />
       <Panel2 />
       <Panel3 />
       <Footer />
-    </>
+   </>
   )
 }

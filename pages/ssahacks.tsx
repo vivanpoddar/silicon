@@ -112,7 +112,7 @@ const Panel1 = (): JSX.Element => {
                 }}
             />
             <div className="absolute w-screen h-screen flex items-center justify-center flex-col" style={{ height: "100vh" }}>
-                <Image priority={true} className="text-7xl" style={{filter: "invert(1)"}} src="/ssahack.png" alt="SSAHack 2023" width={800} height={300}></Image>
+                <Image priority={true} className="text-7xl" src="/ssahack.png" alt="SSAHack 2023" width={800} height={300}></Image>
                 <div className="border-t border-white w-1/2 my-4"></div>
                 <TypeIt className="text-5xl">Hack for a <span className="text-yellow-500 italic">purpose.</span></TypeIt>
                 <div className="flex space-x-4">
@@ -185,7 +185,7 @@ const Content = (): JSX.Element => {
                         <div className="p-24">
                             <h1 className="text-blue-500 text-4xl pb-4">8 hours to solve one problem.</h1>
                             <p className="text-lg">SSA.Hacks is a hackathon for high school students. Students will work in teams of up to 4 people to create a project that solves a problem. At the end of the 24 hours, students will present their projects to a panel of some of the most experienced judges in the Pittsburgh area. The stakes are high.</p>
-                            <LinkButton content="Meet the judges" href="/judges" />
+                            <LinkButton content="Meet the judges" href="#judges" />
                         </div>
                     </div>
                 </div>
@@ -278,7 +278,7 @@ const Prizes = (): JSX.Element => {
     const [hover, setHover] = useState(false);
 
     return (
-        <div className=" text-white" id="prizes">
+        <div className="text-white" id="prizes">
             <div className="flex items-center">
                 <motion.h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Prizes</motion.h1>
                 <div className="border-t border-white flex-grow"></div>
