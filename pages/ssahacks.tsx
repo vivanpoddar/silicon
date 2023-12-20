@@ -249,7 +249,7 @@ const Judges = (): JSX.Element => {
             <div className="p-4 grid grid-cols-2 md:grid-cols-4 gap-2">
                 <Person name="Dr. Dan Ding" position="Professor" text="Background info, etc." linkedin="" email="" image="0" />
                 <Person name="Indrajit Poddar" position="Chief Cloud Architect at AWS" text="" linkedin="" email="" image="0" />
-                <Person name="Dawson Haytock" position="SSA Computer Department Chair" text="" linkedin="" email="" image="0" />
+                <Person name="Dawson Haytock" position="SSA CS Department Chair" text="" linkedin="" email="" image="0" />
                 <Person name="Judge 3" position="Position" text="" linkedin="" email="" image="0" />
                 <Person name="Judge 4" position="Position" text="" linkedin="" email="" image="0" />
                 <Person name="Judge 5" position="Position" text="" linkedin="" email="" image="0" />
@@ -808,7 +808,9 @@ const Sponsors = (): JSX.Element => {
                     </div>
                     <div className=" p-4 m-4">
                         <h1 className="text-3xl">Proton Sponsors</h1>
-
+                        <div className="flex">
+                            <Image src="/acethetics.jpeg" alt="Pitt RST" height={250} width={200}></Image>
+                        </div>
                     </div>
                     <div className=" p-4 m-4">
                         <h1 className="text-3xl">Electron Sponsors</h1>
