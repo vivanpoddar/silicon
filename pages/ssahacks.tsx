@@ -378,7 +378,7 @@ const Prizes = (): JSX.Element => {
                                             className="inline-flex justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900"
                                             onClick={() => setInternshipOpen(false)}
                                         >
-                                            Let's win
+                                            Let&apos;s win
                                         </button>
                                     </div>
                                 </Dialog.Panel>
@@ -435,7 +435,7 @@ const Prizes = (): JSX.Element => {
                                             className="inline-flex justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900"
                                             onClick={() => setComputeOpen(false)}
                                         >
-                                            Let's win
+                                            Let&apos;s win
                                         </button>
                                     </div>
                                 </Dialog.Panel>
@@ -492,7 +492,7 @@ const Prizes = (): JSX.Element => {
                                             className="inline-flex justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900"
                                             onClick={() => setConnectOpen(false)}
                                         >
-                                            Let's win
+                                            Let&apos;s win
                                         </button>
                                     </div>
                                 </Dialog.Panel>
@@ -550,7 +550,7 @@ const Prizes = (): JSX.Element => {
                                             className="inline-flex justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900"
                                             onClick={() => setInnovateOpen(false)}
                                         >
-                                            Let's win
+                                            Let&apos;s win
                                         </button>
                                     </div>
                                 </Dialog.Panel>
@@ -608,7 +608,7 @@ const Prizes = (): JSX.Element => {
                                             className="inline-flex justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900"
                                             onClick={() => setImpactOpen(false)}
                                         >
-                                            Let's win
+                                            Let&apos;s win
                                         </button>
                                     </div>
                                 </Dialog.Panel>
@@ -666,7 +666,7 @@ const Prizes = (): JSX.Element => {
                                             className="inline-flex justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900"
                                             onClick={() => setVisionOpen(false)}
                                         >
-                                            Let's win
+                                            Let&apos;s win
                                         </button>
                                     </div>
                                 </Dialog.Panel>
@@ -724,7 +724,7 @@ const Prizes = (): JSX.Element => {
                                             className="inline-flex justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900"
                                             onClick={() => setUnravelOpen(false)}
                                         >
-                                            Let's win
+                                            Let&apos;s win
                                         </button>
                                     </div>
                                 </Dialog.Panel>
@@ -782,7 +782,7 @@ const Prizes = (): JSX.Element => {
                                             className="inline-flex justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900"
                                             onClick={() => set2024Open(false)}
                                         >
-                                            Let's win
+                                            Let&apos;s win
                                         </button>
                                     </div>
                                 </Dialog.Panel>
