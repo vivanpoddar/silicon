@@ -359,11 +359,11 @@ const Prizes = (): JSX.Element => {
                                         className="text-lg font-medium leading-6 text-gray-900"
                                     >
                                         <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to left', '#ffd89b, #19547b']}>2024 Internship Award</LinearGradient></h1>
-                                        <p className="text-xs text-gray-800">Presented by Faaris Kamal</p>
+                                        <p className="text-xs text-gray-800">Presented by the University of Pittsburgh</p>
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
-                                            This award is presented to the team that creates the best project that solves a problem in the field of computer science. The winning team will be awarded an internship with Pitt RST. - Detailed desc. coming soon
+                                            This award is presented to the team with the overall best project concerning the hackathon topic. The winning team will be awarded a research internship with Pitt RST as well as a stipend to further develop their idea. - Detailed desc. coming soon
                                         </p>
                                         <div className="flex flex-col">
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
@@ -420,13 +420,13 @@ const Prizes = (): JSX.Element => {
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
-                                            This award is presented to the team that creates the best project that solves a problem in the field of computer science. The winning team will be awarded an internship with Pitt RST. - Detailed desc. coming soon
+                                            This award is presented to the team with the project showcasing their technical skills in relation to the prompt. The project must be highly complex and also must represent a finished and highly developed product. - Detailed desc. coming soon
                                         </p>
                                         <div className="flex flex-col">
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>Pitt RST Internship</p>
+                                        <p>TBA</p>
                                     </div>
 
                                     <div className="mt-4">
@@ -477,13 +477,13 @@ const Prizes = (): JSX.Element => {
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
-                                            This award is presented to the team that creates the best project that solves a problem in the field of computer science. The winning team will be awarded an internship with Pitt RST. - Detailed desc. coming soon
+                                            This award is presented to the team with the most potential impact on our communities. The project must also showcase a certain depth of completion and stand out among other submissions. - Detailed desc. coming soon
                                         </p>
                                         <div className="flex flex-col">
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>Pitt RST Internship</p>
+                                        <p>TBA</p>
                                     </div>
 
                                     <div className="mt-4">
@@ -531,17 +531,16 @@ const Prizes = (): JSX.Element => {
                                         className="text-lg font-medium leading-6 text-gray-900"
                                     >
                                         <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to left', '#7b920a, #0f9b0f']}>Innovate Award</LinearGradient></h1>
-                                        <p className="text-xs text-gray-800">Presented by Faaris Kamal</p>
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
-                                            This award is presented to the team that creates the best project that solves a problem in the field of computer science. The winning team will be awarded an internship with Pitt RST. - Detailed desc. coming soon
+                                            This award is presented to the team with the most innovative and groundbreaking idea and solution. The project must also showcase a certain depth of completion and stand out among other submissions. - Detailed desc. coming soon 
                                         </p>
                                         <div className="flex flex-col">
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>Pitt RST Internship</p>
+                                        <p>TBA</p>
                                     </div>
 
                                     <div className="mt-4">
@@ -593,15 +592,14 @@ const Prizes = (): JSX.Element => {
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
-                                            This award is presented to the team that creates the best project that solves a problem in the field of computer science. The winning team will be awarded an internship with Pitt RST. - Detailed desc. coming soon
+                                            This award is presented to the team with the most potential impact on our communities. This award is solely to be awarded to beginners. - Detailed desc. coming soon
                                         </p>
                                         <div className="flex flex-col">
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>Pitt RST Internship</p>
+                                        <p>TBA</p>
                                     </div>
-
                                     <div className="mt-4">
                                         <button
                                             type="button"
@@ -647,17 +645,16 @@ const Prizes = (): JSX.Element => {
                                         className="text-lg font-medium leading-6 text-gray-900"
                                     >
                                         <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#396afc, #2948ff']}><span className="text-[0.75rem]" style={{ lineHeight: "1rem" }}>Novice </span>Vision Award</LinearGradient></h1>
-                                        <p className="text-xs text-gray-800">Presented by Faaris Kamal</p>
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
-                                            This award is presented to the team that creates the best project that solves a problem in the field of computer science. The winning team will be awarded an internship with Pitt RST. - Detailed desc. coming soon
+                                            This award is presented to the team with the most visionary idea. This award is solely to be awarded to beginners. - Detailed desc. coming soon
                                         </p>
                                         <div className="flex flex-col">
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>Pitt RST Internship</p>
+                                        <p>TBA</p>
                                     </div>
 
                                     <div className="mt-4">
@@ -705,17 +702,16 @@ const Prizes = (): JSX.Element => {
                                         className="text-lg font-medium leading-6 text-gray-900"
                                     >
                                         <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#F3904F, #fffc00']}><span className="text-[0.75rem]" style={{ lineHeight: "1rem" }}>Novice </span>Unravel Award</LinearGradient></h1>
-                                        <p className="text-xs text-gray-800">Presented by Faaris Kamal</p>
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
-                                            This award is presented to the team that creates the best project that solves a problem in the field of computer science. The winning team will be awarded an internship with Pitt RST. - Detailed desc. coming soon
+                                            This award is to be presented to the team that showcases the most growth from the beginning of the competition to the end. This award is solely to be awarded to beginners. - Detailed desc. coming soon
                                         </p>
                                         <div className="flex flex-col">
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>Pitt RST Internship</p>
+                                        <p>TBA</p>
                                     </div>
 
                                     <div className="mt-4">
@@ -767,13 +763,13 @@ const Prizes = (): JSX.Element => {
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
-                                            This award is presented to the team that creates the best project that solves a problem in the field of computer science. The winning team will be awarded an internship with Pitt RST. - Detailed desc. coming soon
+                                            Thank you to our participants! You will receive a list of items just for attending the hackathon. - Detailed desc. coming soon
                                         </p>
                                         <div className="flex flex-col">
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>Pitt RST Internship</p>
+                                        <p>TBA</p>
                                     </div>
 
                                     <div className="mt-4">
