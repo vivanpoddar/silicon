@@ -47,7 +47,6 @@ const Panel1 = (): JSX.Element => {
   // const { scrollYProgress } = useScroll();
   // const x = useTransform(scrollYProgress, [0, 1], ['0%', '-100%']);
   // const spring = useSpring(0)
-
   return (
     <motion.div className="z-10 h-[75vh] md:h-screen w-screen flex flex-col-reverse md:flex-row bg-black">
       <div className="md:w-1/2 h-1/2 md:h-full flex flex-col items-center justify-center">

@@ -21,6 +21,7 @@
     "react-dom": "^18",
     "react-loader-spinner": "^6.1.0",
     "react-particles": "^2.12.2",
+    "react-text-gradients": "^1.0.2",
     "tsparticles-slim": "^2.12.0",
     "typeit-react": "^2.6.4",
     "vercel": "^32.5.6"

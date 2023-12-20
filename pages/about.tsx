@@ -22,21 +22,21 @@ const About = () => {
                 </div>
                 <div className="space-y-24 bg-white">
                     <div className="pt-24 text-black flex flex-col p-2">
-                        <div className="pl-40 pr-40">
-                            <h1 className="text-4xl">Building Tech Leaders.</h1>
-                            <p>Lets connect more highschoolers with real-life experience. We&apos;re passionate about cultivating the next generation of tech leaders. Our programs focus on nurturing skills, fostering creativity, and instilling a sense of responsibility among the foundations&apos;s computer scientists.</p>
+                        <div className="md:pl-40 md:pr-40">
+                            <h1 className="text-4xl text-center">Building Tech Leaders.</h1>
+                            <p className="text-center">Lets connect more highschoolers with real-life experience. We&apos;re passionate about cultivating the next generation of tech leaders. Our programs focus on nurturing skills, fostering creativity, and instilling a sense of responsibility among the foundations&apos;s computer scientists.</p>
                         </div>
                     </div>
                     <div className=" bg-white text-black flex flex-col p-2">
-                        <div className="pl-40 pr-40">
-                            <h1 className="text-4xl">Products and Solutions for Social Good</h1>
-                            <p>At our nonprofit, we harness the potential of technology to create positive change in the world. Our organization works on various award-winning projects that aim to improve our world. From developing innovative solutions to addressing global challenges, we believe in the transformative power of computer science.</p>
+                        <div className="md:pl-40 md:pr-40">
+                            <h1 className="text-4xl text-center">Products and Solutions for Social Good</h1>
+                            <p className="text-center">At our nonprofit, we harness the potential of technology to create positive change in the world. Our organization works on various award-winning projects that aim to improve our world. From developing innovative solutions to addressing global challenges, we believe in the transformative power of computer science.</p>
                         </div>
                     </div>
                     <div className="pb-24 bg-white text-black flex flex-col p-2">
-                        <div className="pl-40 pr-40">
-                            <h1 className="text-4xl">Quality Tech Education in our Highschools</h1>
-                            <p>Our nonprofit believes that quality tech education should be accessible to everyone, regardless of background or socioeconomic status. Through scholarships, workshops, and online resources, we strive to democratize computer science education.</p>
+                        <div className="md:pl-40 md:pr-40">
+                            <h1 className="text-4xl text-center">Quality Tech Education in our Highschools</h1>
+                            <p className="text-center">Our nonprofit believes that quality tech education should be accessible to everyone, regardless of background or socioeconomic status. Through scholarships, workshops, and online resources, we strive to democratize computer science education.</p>
                         </div>
                     </div>
                 </div>

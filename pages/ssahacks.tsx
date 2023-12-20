@@ -5,7 +5,8 @@ import {motion} from 'framer-motion'
 import Navbar from "../components/navbar";
 import LinkButton from "../components/linkbutton";
 import Particles from "react-particles";
-import { useCallback } from "react";
+import {Dialog, Transition} from '@headlessui/react'
+import { useCallback, useState, Fragment, useEffect } from "react";
 import type { Container, Engine } from "tsparticles-engine";
 import { loadSlim } from "tsparticles-slim";
 import Image from "next/image";
@@ -13,7 +14,7 @@ import Head from "next/head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { LinearGradient } from "react-text-gradients";
 
 interface QuestionProps {
     question: string;
@@ -23,8 +24,8 @@ interface QuestionProps {
 const Question = ({ question, answer }: QuestionProps) => {
     return (
         <div className="border p-4 m-4">
-            <h1 className="text-3xl text-blue-500">{question}</h1>
-            <p className="text-lg">{answer}</p>
+            <h1 className="text-xl md:text-3xl text-blue-500">{question}</h1>
+            <p className="text-sm md:text-lg">{answer}</p>
         </div>
     );
 };
@@ -42,7 +43,7 @@ const Panel1 = (): JSX.Element => {
     
     return (
         //rgb(246, 196, 77)
-        <div className="bg-blue-500 h-screen">
+        <div className="bg-blue-500 h-screen w-screen">
             <Particles
                 style={{position: "absolute"}}
                 id="tsparticles"
@@ -112,13 +113,13 @@ const Panel1 = (): JSX.Element => {
                 }}
             />
             <div className="absolute w-screen h-screen flex items-center justify-center flex-col" style={{ height: "100vh" }}>
-                <Image priority={true} className="text-7xl" src="/ssahack.png" alt="SSAHack 2023" width={800} height={300}></Image>
+                <Image priority={true} className="md:w-1/2 w-[90vw]" src="/ssahack.png" alt="SSAHack 2023" width={800} height={300}></Image>
                 <div className="border-t border-white w-1/2 my-4"></div>
-                <TypeIt className="text-5xl">Hack for a <span className="text-yellow-500 italic">purpose.</span></TypeIt>
+                <TypeIt className="text-center text-5xl">Hack for a <span className="text-yellow-500 italic">purpose.</span></TypeIt>
                 <div className="flex space-x-4">
-                    <button className="mt-4 bg-blue-800 text-white font-bold py-2 px-4 rounded text-2xl">Sign Up</button>
-                    <button className="mt-4 bg-blue-800 text-white font-bold py-2 px-4 rounded text-2xl">Competitive Handbook</button>
-                    <button className="mt-4 bg-blue-800 text-white font-bold py-2 px-4 rounded text-2xl">Contact</button>
+                    <button className="mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Sign Up</button>
+                    <button className="mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Handbook</button>
+                    <button className="mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Contact</button>
                 </div>
                 <div className="absolute bottom-0 mb-8 rounded-lg p-4">
                     <h1 className='pb-2'>Learn more</h1>
@@ -133,17 +134,15 @@ const Panel1 = (): JSX.Element => {
 
 const Panel2 = (): JSX.Element => {
     return (
-        <motion.div className="flex">
-            <div className="w-1/2 flex items-center justify-center">
-                <div className="p-24">
-                    <h1 className="text-7xl text-white">Win an internship at Pitt RST and more.</h1>
-                    <LinkButton content="See the prizes" href="#prizes" />
-                </div>
+        <motion.div className="z-10 h-[75vh] md:h-screen w-screen flex flex-col-reverse md:flex-row">
+            <div className="md:w-1/2 h-1/2 md:h-full flex flex-col items-center justify-center md:p-24">
+                <h1 className="md:text-7xl text-white text-center text-5xl">Win an internship with Pitt RST.</h1>
+                <LinkButton content="Claim your spot at SSAHacks 2023" href="ssahacks" />
             </div>
-            <div className="w-1/2 flex items-center justify-center relative " style={{ height: '100vh' }}>
-                <div className='h-1/2 w-auto'>
-                    <Image src="/upitt.png" width={800} height={720} alt="dude laughing"></Image>
-                </div>            
+            <div className="md:w-1/2 h-1/2 md:h-full flex items-center justify-center">
+                <div className='md:h-1/2 w-3/4 md:w-full flex items-center justify-center'>
+                    <Image src="/upitt.png" width={800} height={0} alt="dude laughing"></Image>
+                </div>
             </div>
         </motion.div>
     )
@@ -152,12 +151,12 @@ const Panel2 = (): JSX.Element => {
 const Content = (): JSX.Element => {
     return (
         //rgb(246, 196, 77)
-        <div className="flex text-white">
-            <div className="w-screen h-screen flex flex-col" style={{ height: "100vh" }}>
-                <div className="flex h-full w-full">
-                    <div className="w-1/2 h-full flex flex-col items-center justify-center">
-                        <span className="text-center pb-4 text-4xl text-yellow-500">Tentative Schedule on <b> March 2, 2024</b></span>
-                        <div className="flex text-4xl items-center justify-center">
+        <div className="flex text-white py-24">
+            <div className="w-screen flex flex-col">
+                <div className="flex md:flex-row flex-col-reverse h-full w-full">
+                    <div className="md:w-1/2 h-full flex flex-col items-center justify-center">
+                        <span className="text-center pb-4 text-md:text-4xl text-yellow-500">Tentative Schedule on <b> March 2, 2024</b></span>
+                        <div className="flex md:text-4xl items-center justify-center">
                             <div className="flex flex-col space-y-8">
                                 <span className="text-right">7:30</span>
                                 <span className="text-right">8:00</span>
@@ -181,9 +180,9 @@ const Content = (): JSX.Element => {
                             </div>
                         </div>
                     </div>
-                    <div className="w-1/2 flex items-center justify-center">
-                        <div className="p-24">
-                            <h1 className="text-blue-500 text-4xl pb-4">8 hours to solve one problem.</h1>
+                    <div className="md:w-1/2 pb-24 md:pb-0 px-8 flex items-center justify-center">
+                        <div className="md:p-24">
+                            <h1 className="text-blue-500 text-xl font-bold md:text-4xl md:pb-4">8 hours to solve one problem.</h1>
                             <p className="text-lg">SSA.Hacks is a hackathon for high school students. Students will work in teams of up to 4 people to create a project that solves a problem. At the end of the 24 hours, students will present their projects to a panel of some of the most experienced judges in the Pittsburgh area. The stakes are high.</p>
                             <LinkButton content="Meet the judges" href="#judges" />
                         </div>
@@ -224,10 +223,10 @@ interface PersonProps {
 
 const Person = ({ image, position, text, name, linkedin, email }: PersonProps) => {
     return (
-        <div className="w-auto h-auto border rounded-lg p-4">
-            <h1 className="text-3xl text-white">{name}</h1>
-            <h2 className="text-xl text-gray-400">{position}</h2>
-            <p className="text-white">{text}</p>
+        <div className="w-auto h-auto border rounded-lg p-2 md:p-4">
+            <h1 className="md:text-3xl text-xl text-white">{name}</h1>
+            <h2 className="md:text-xl text-gray-400">{position}</h2>
+            <p className="text-white md:text-base text-sm">{text}</p>
             <div className="flex space-x-4">
                 <button onClick={() => window.location.href = `mailto:${email}`}>
                     <FontAwesomeIcon icon={faEnvelope} />
@@ -244,38 +243,49 @@ const Judges = (): JSX.Element => {
     return (
         <div id="judges" className=" text-white">
             <div className="flex items-center">
-                <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Judges & Masterclasses</h1>
+                <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Judges</h1>
                 <div className="border-t border-white flex-grow"></div>
             </div>
-            <div className="p-4 flex flex-col space-y-4 justify-center items-center">
-                <div className="flex space-x-4"> 
-                    <Person name="Dr. Dan Ding" position="Professor" text="Background info, etc." linkedin="" email="" image="0" />
-                    <Person name="Indrajit Poddar" position="Chief Cloud Architect at AWS" text="" linkedin="" email="" image="0" />
-                    <Person name="Dawson Haytock" position="SSA Computer Department Chair" text="" linkedin="" email="" image="0" />
-                </div>
-                <div className="flex space-x-4">
-                    <Person name="Judge 3 " position="Position" text="" linkedin="" email="" image="0" />
-                    <Person name="Judge 4" position="Position" text="" linkedin="" email="" image="0" />
-                    <Person name="Judge 5" position="Position" text="" linkedin="" email="" image="0" />
-                </div>
-                <div className="flex space-x-4">
-                    <Person name="Judge 6" position="Position" text="" linkedin="" email="" image="0" />
-                    <Person name="Judge 7" position="Position" text="" linkedin="" email="" image="0" />
-                    <Person name="Judge 8" position="Position" text="" linkedin="" email="" image="0" />
-
-                </div>
-                <div className="flex space-x-4">
-                    <Person name="Judge 9" position="Position" text="" linkedin="" email="" image="0" />
-                    <Person name="Judge 10" position="Position" text="" linkedin="" email="" image="0" />
-                    <Person name="Judge 11" position="Position" text="" linkedin="" email="" image="0" />
-                </div>          
+            <div className="p-4 grid grid-cols-2 md:grid-cols-4 gap-2">
+                <Person name="Dr. Dan Ding" position="Professor" text="Background info, etc." linkedin="" email="" image="0" />
+                <Person name="Indrajit Poddar" position="Chief Cloud Architect at AWS" text="" linkedin="" email="" image="0" />
+                <Person name="Dawson Haytock" position="SSA Computer Department Chair" text="" linkedin="" email="" image="0" />
+                <Person name="Judge 3" position="Position" text="" linkedin="" email="" image="0" />
+                <Person name="Judge 4" position="Position" text="" linkedin="" email="" image="0" />
+                <Person name="Judge 5" position="Position" text="" linkedin="" email="" image="0" />
+                <Person name="Judge 6" position="Position" text="" linkedin="" email="" image="0" />
+                <Person name="Judge 7" position="Position" text="" linkedin="" email="" image="0" />
+                <Person name="Judge 8" position="Position" text="" linkedin="" email="" image="0" />
+                <Person name="Judge 9" position="Position" text="" linkedin="" email="" image="0" />
+                <Person name="Judge 10" position="Position" text="" linkedin="" email="" image="0" />
+                <Person name="Judge 11" position="Position" text="" linkedin="" email="" image="0" />
             </div>
         </div>
     )
 }
 
 const Prizes = (): JSX.Element => {
-    const [hover, setHover] = useState(false);
+    let [isInternshipOpen, setInternshipOpen] = useState(false)
+    let [isComputeOpen, setComputeOpen] = useState(false)
+    let [isConnectOpen, setConnectOpen] = useState(false)
+    let [isInnovateOpen, setInnovateOpen] = useState(false)
+    let [isImpactOpen, setImpactOpen] = useState(false)
+    let [isVisionOpen, setVisionOpen] = useState(false)
+    let [isUnravelOpen, setUnravelOpen] = useState(false)
+    let [is2024Open, set2024Open] = useState(false)
+
+    useEffect(() => {
+        if (isConnectOpen || isInternshipOpen || isComputeOpen || isInnovateOpen || isImpactOpen || isVisionOpen || isUnravelOpen || is2024Open) {
+            document.body.classList.add('overflow-hidden');
+        } else {
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        // Clean up function
+        return () => {
+            document.body.classList.remove('overflow-hidden');
+        };
+    }, [isConnectOpen, isInternshipOpen, isComputeOpen, isInnovateOpen, isImpactOpen, isVisionOpen, isUnravelOpen, is2024Open]);
 
     return (
         <div className="text-white" id="prizes">
@@ -284,84 +294,503 @@ const Prizes = (): JSX.Element => {
                 <div className="border-t border-white flex-grow"></div>
             </div>
             <div className="py-4 flex flex-col">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                    <motion.div className="bg-orange-500 h-52 border flex flex-col justify-center items-center"
-                        onHoverStart={() => setHover(true)}
-                        onHoverEnd={() => setHover(false)}
-                        >
-                        <motion.h1 className="absolute"
-                            animate={hover ? { translateY: "-1rem" } : { scale: 1 }}
-                            transition={{ duration: 0.25 }}
-                        >
-                        The Internship Award</motion.h1>
-                        <motion.div className="border rounded px-1.5 py-0.5 text-white"
-                            initial={{ opacity: 0, display: "flex"}}
-                            animate={hover ? { opacity: 1, translateY: "1rem"} : { opacity: 0, scale: 0 }}
-                            transition={{ duration: 0.25 }}
-                        >Details</motion.div>
-                    </motion.div>
-                    <div className="bg-orange-500 h-52 border flex justify-center items-center"></div>
-                    <div className="bg-orange-500 h-52 border flex justify-center items-center"></div>
-                    <div className="bg-orange-500 h-52 border flex justify-center items-center"></div>
-                    <div className="bg-orange-500 h-52 border flex justify-center items-center"></div>
-                    <div className="bg-orange-500 h-52 border flex justify-center items-center"></div>
-                    <div className="bg-orange-500 h-52 border flex justify-center items-center"></div>
-                    <div className="bg-orange-500 h-52 border flex justify-center items-center"></div>
+                <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-8 mx-4 gap-2">
+                    <button className="h-28 border border-black flex flex-col justify-center bg-gray-900 items-center text-center rounded-xl" onClick={() => setInternshipOpen(true)}>
+                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to left', '#ffd89b, #19547b']}>Internship Award</LinearGradient></h1>
+                        <p className="text-xs text-gray-400 italic">(Click me)</p>
+                    </button>
+                    <button className="h-28 border border-black flex flex-col justify-center bg-gray-900 text-center items-center rounded-xl" onClick={() => setComputeOpen(true)}>
+                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to left', '#17acff, #ff68f0']}>Compute Award</LinearGradient></h1>
+                        <p className="text-xs text-gray-400 italic">(Click me)</p>
+                    </button>
+                    <button className="h-28 border border-black flex flex-col justify-center bg-gray-900 text-center items-center rounded-xl" onClick={() => setConnectOpen(true)}>
+                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to left', '#ad5389, #3c1053']}>Connect Award</LinearGradient></h1>
+                        <p className="text-xs text-gray-400 italic">(Click me)</p>
+                    </button>
+                    <button className="h-28 border border-black flex flex-col justify-center bg-gray-900  text-center items-center rounded-xl" onClick={() => setInnovateOpen(true)}>
+                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to left', '#7b920a, #0f9b0f']}>Innovate Award</LinearGradient></h1>
+                        <p className="text-xs text-gray-400 italic">(Click me)</p>
+                    </button>
+                    <button className="h-28 border flex border-black flex-col justify-center bg-gray-900  text-center items-center rounded-xl" onClick={() => setImpactOpen(true)}>
+                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#22c1c3, #fdbb2d']}><span className="text-[0.75rem]" style={{lineHeight: "1rem"}}>Novice </span>Impact Award</LinearGradient></h1>
+                        <p className="text-xs text-gray-400 italic">(Click me)</p>
+                    </button>
+                    <button className="h-28 border flex border-black flex-col justify-center bg-gray-900  text-center items-center rounded-xl" onClick={() => setVisionOpen(true)}>
+                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#396afc, #2948ff']}><span className="text-[0.75rem]" style={{ lineHeight: "1rem" }}>Novice </span>Vision Award</LinearGradient></h1>
+                        <p className="text-xs text-gray-400 italic">(Click me)</p>
+                    </button>
+                    <button className="h-28 border flex border-black flex-col justify-center bg-gray-900  text-center items-center rounded-xl" onClick={() => setUnravelOpen(true)}>
+                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#F3904F, #fffc00']}><span className="text-[0.75rem]" style={{ lineHeight: "1rem" }}>Novice </span>Unravel Award</LinearGradient></h1>
+                        <p className="text-xs text-gray-400 italic">(Click me)</p>
+                    </button>
+                    <button className="h-28 border flex border-black flex-col justify-center bg-gray-900  text-center items-center rounded-xl" onClick={() => set2024Open(true)}>
+                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#1C6FF8, #FEF720']}>2024 hacker()</LinearGradient></h1>
+                        <p className="text-xs text-gray-400 italic">(Click me)</p>
+                    </button>
                 </div>
             </div>
-            {/* <div className="flex w-full justify-center items-center">
-                <div className="flex flex-col space-y-8">
-                    <div>
-                        <div className="flex flex-col">
-                            <h1 className="text-4xl px-4 text-yellow-500">The Internship Award</h1>
-                            <div className="border-t w-full border-white flex-grow"></div>
+            <Transition appear show={isInternshipOpen} as={Fragment}>
+                <Dialog as="div" className="relative z-10" onClose={() => setInternshipOpen(false)}>
+                    <Transition.Child
+                        as={Fragment}
+                        enter="ease-out duration-300"
+                        enterFrom="opacity-0"
+                        enterTo="opacity-100"
+                        leave="ease-in duration-200"
+                        leaveFrom="opacity-100"
+                        leaveTo="opacity-0"
+                    >
+                        <div className="fixed inset-0 bg-black/25" />
+                    </Transition.Child>
+                    <div className="fixed inset-0 overflow-y-auto">
+                        <div className="flex min-h-full items-center justify-center p-4 text-center">
+                            <Transition.Child
+                                as={Fragment}
+                                enter="ease-out duration-300"
+                                enterFrom="opacity-0 scale-95"
+                                enterTo="opacity-100 scale-100"
+                                leave="ease-in duration-200"
+                                leaveFrom="opacity-100 scale-100"
+                                leaveTo="opacity-0 scale-95"
+                            >
+                                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white text-black p-6 text-left align-middle shadow-xl transition-all">
+                                    <Dialog.Title
+                                        as="h3"
+                                        className="text-lg font-medium leading-6 text-gray-900"
+                                    >
+                                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to left', '#ffd89b, #19547b']}>2024 Internship Award</LinearGradient></h1>
+                                        <p className="text-xs text-gray-800">Presented by Faaris Kamal</p>
+                                    </Dialog.Title>
+                                    <div className="mt-2">
+                                        <p className="text-sm text-gray-500">
+                                            This award is presented to the team that creates the best project that solves a problem in the field of computer science. The winning team will be awarded an internship with Pitt RST. - Detailed desc. coming soon
+                                        </p>
+                                        <div className="flex flex-col">
+                                            <div className="pr-2 pt-2 text-xl">Prize</div>
+                                            <div className="w-full border-b border-black"></div>
+                                        </div>
+                                        <p>Pitt RST Internship</p>
+                                    </div>
+
+                                    <div className="mt-4">
+                                        <button
+                                            type="button"
+                                            className="inline-flex justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900"
+                                            onClick={() => setInternshipOpen(false)}
+                                        >
+                                            Let's win
+                                        </button>
+                                    </div>
+                                </Dialog.Panel>
+                            </Transition.Child>
                         </div>
-                        <p className="text-xl">This award includes a part-time research internship in conjunction with the University of Pittsburgh Department of Rehabilitation Sciences and Technology.</p>
                     </div>
-                    <div>
-                        <div className="flex flex-col">
-                            <h1 className="text-4xl px-4 text-gray-200">The Compute Award</h1>
-                            <div className="border-t w-full border-white flex-grow"></div>
+                </Dialog>
+            </Transition>
+            <Transition appear show={isComputeOpen} as={Fragment}>
+                <Dialog as="div" className="relative z-10" onClose={() => setComputeOpen(false)}>
+                    <Transition.Child
+                        as={Fragment}
+                        enter="ease-out duration-300"
+                        enterFrom="opacity-0"
+                        enterTo="opacity-100"
+                        leave="ease-in duration-200"
+                        leaveFrom="opacity-100"
+                        leaveTo="opacity-0"
+                    >
+                        <div className="fixed inset-0 bg-black/25" />
+                    </Transition.Child>
+                    <div className="fixed inset-0 overflow-y-auto">
+                        <div className="flex min-h-full items-center justify-center p-4 text-center">
+                            <Transition.Child
+                                as={Fragment}
+                                enter="ease-out duration-300"
+                                enterFrom="opacity-0 scale-95"
+                                enterTo="opacity-100 scale-100"
+                                leave="ease-in duration-200"
+                                leaveFrom="opacity-100 scale-100"
+                                leaveTo="opacity-0 scale-95"
+                            >
+                                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white text-black p-6 text-left align-middle shadow-xl transition-all">
+                                    <Dialog.Title
+                                        as="h3"
+                                        className="text-lg font-medium leading-6 text-gray-900"
+                                    >
+                                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to left', '#17acff, #ff68f0']}>2024 Compute Award</LinearGradient></h1>
+                                    </Dialog.Title>
+                                    <div className="mt-2">
+                                        <p className="text-sm text-gray-500">
+                                            This award is presented to the team that creates the best project that solves a problem in the field of computer science. The winning team will be awarded an internship with Pitt RST. - Detailed desc. coming soon
+                                        </p>
+                                        <div className="flex flex-col">
+                                            <div className="pr-2 pt-2 text-xl">Prize</div>
+                                            <div className="w-full border-b border-black"></div>
+                                        </div>
+                                        <p>Pitt RST Internship</p>
+                                    </div>
+
+                                    <div className="mt-4">
+                                        <button
+                                            type="button"
+                                            className="inline-flex justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900"
+                                            onClick={() => setComputeOpen(false)}
+                                        >
+                                            Let's win
+                                        </button>
+                                    </div>
+                                </Dialog.Panel>
+                            </Transition.Child>
                         </div>
-                        <p className="text-xl">This award includes a part-time research internship in conjunction with the University of Pittsburgh Department of Rehabilitation Sciences and Technology.</p>
                     </div>
-                    <div>
-                        <div className="flex flex-col">
-                            <h1 className="text-4xl px-4 text-gray-300">The Connect Award</h1>
-                            <div className="border-t w-full border-white flex-grow"></div>
+                </Dialog>
+            </Transition>
+            <Transition appear show={isConnectOpen} as={Fragment}>
+                <Dialog as="div" className="relative z-10" onClose={() => setConnectOpen(false)}>
+                    <Transition.Child
+                        as={Fragment}
+                        enter="ease-out duration-300"
+                        enterFrom="opacity-0"
+                        enterTo="opacity-100"
+                        leave="ease-in duration-200"
+                        leaveFrom="opacity-100"
+                        leaveTo="opacity-0"
+                    >
+                        <div className="fixed inset-0 bg-black/25" />
+                    </Transition.Child>
+                    <div className="fixed inset-0 overflow-y-auto">
+                        <div className="flex min-h-full items-center justify-center p-4 text-center">
+                            <Transition.Child
+                                as={Fragment}
+                                enter="ease-out duration-300"
+                                enterFrom="opacity-0 scale-95"
+                                enterTo="opacity-100 scale-100"
+                                leave="ease-in duration-200"
+                                leaveFrom="opacity-100 scale-100"
+                                leaveTo="opacity-0 scale-95"
+                            >
+                                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white text-black p-6 text-left align-middle shadow-xl transition-all">
+                                    <Dialog.Title
+                                        as="h3"
+                                        className="text-lg font-medium leading-6 text-gray-900"
+                                    >
+                                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to left', '#ad5389, #3c1053']}>Connect Award</LinearGradient></h1>
+                                    </Dialog.Title>
+                                    <div className="mt-2">
+                                        <p className="text-sm text-gray-500">
+                                            This award is presented to the team that creates the best project that solves a problem in the field of computer science. The winning team will be awarded an internship with Pitt RST. - Detailed desc. coming soon
+                                        </p>
+                                        <div className="flex flex-col">
+                                            <div className="pr-2 pt-2 text-xl">Prize</div>
+                                            <div className="w-full border-b border-black"></div>
+                                        </div>
+                                        <p>Pitt RST Internship</p>
+                                    </div>
+
+                                    <div className="mt-4">
+                                        <button
+                                            type="button"
+                                            className="inline-flex justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900"
+                                            onClick={() => setConnectOpen(false)}
+                                        >
+                                            Let's win
+                                        </button>
+                                    </div>
+                                </Dialog.Panel>
+                            </Transition.Child>
                         </div>
-                        <p className="text-xl">Land a high-ranking position on Silicon&apos;s technical and product team.</p>
                     </div>
-                    <div>
-                        <div className="flex flex-col">
-                            <h1 className="text-4xl px-4 text-gray-400">The Innovate Award</h1>
-                            <div className="border-t w-full border-white flex-grow"></div>
+                </Dialog>
+            </Transition>
+            <Transition appear show={isInnovateOpen} as={Fragment}>
+                <Dialog as="div" className="relative z-10" onClose={() => setInnovateOpen(false)}>
+                    <Transition.Child
+                        as={Fragment}
+                        enter="ease-out duration-300"
+                        enterFrom="opacity-0"
+                        enterTo="opacity-100"
+                        leave="ease-in duration-200"
+                        leaveFrom="opacity-100"
+                        leaveTo="opacity-0"
+                    >
+                        <div className="fixed inset-0 bg-black/25" />
+                    </Transition.Child>
+                    <div className="fixed inset-0 overflow-y-auto">
+                        <div className="flex min-h-full items-center justify-center p-4 text-center">
+                            <Transition.Child
+                                as={Fragment}
+                                enter="ease-out duration-300"
+                                enterFrom="opacity-0 scale-95"
+                                enterTo="opacity-100 scale-100"
+                                leave="ease-in duration-200"
+                                leaveFrom="opacity-100 scale-100"
+                                leaveTo="opacity-0 scale-95"
+                            >
+                                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white text-black p-6 text-left align-middle shadow-xl transition-all">
+                                    <Dialog.Title
+                                        as="h3"
+                                        className="text-lg font-medium leading-6 text-gray-900"
+                                    >
+                                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to left', '#7b920a, #0f9b0f']}>Innovate Award</LinearGradient></h1>
+                                        <p className="text-xs text-gray-800">Presented by Faaris Kamal</p>
+                                    </Dialog.Title>
+                                    <div className="mt-2">
+                                        <p className="text-sm text-gray-500">
+                                            This award is presented to the team that creates the best project that solves a problem in the field of computer science. The winning team will be awarded an internship with Pitt RST. - Detailed desc. coming soon
+                                        </p>
+                                        <div className="flex flex-col">
+                                            <div className="pr-2 pt-2 text-xl">Prize</div>
+                                            <div className="w-full border-b border-black"></div>
+                                        </div>
+                                        <p>Pitt RST Internship</p>
+                                    </div>
+
+                                    <div className="mt-4">
+                                        <button
+                                            type="button"
+                                            className="inline-flex justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900"
+                                            onClick={() => setInnovateOpen(false)}
+                                        >
+                                            Let's win
+                                        </button>
+                                    </div>
+                                </Dialog.Panel>
+                            </Transition.Child>
                         </div>
-                        <p className="text-xl">This award includes a part-time research internship in conjunction with the University of Pittsburgh Department of Rehabilitation Sciences and Technology.</p>
                     </div>
-                    <div>
-                        <div className="flex flex-col">
-                            <h1 className="text-4xl px-4 text-pink-500">The Impact Novice Award</h1>
-                            <div className="border-t w-full border-white flex-grow"></div>
+                </Dialog>
+            </Transition>
+            <Transition appear show={isImpactOpen} as={Fragment}>
+                <Dialog as="div" className="relative z-10" onClose={() => setImpactOpen(false)}>
+                    <Transition.Child
+                        as={Fragment}
+                        enter="ease-out duration-300"
+                        enterFrom="opacity-0"
+                        enterTo="opacity-100"
+                        leave="ease-in duration-200"
+                        leaveFrom="opacity-100"
+                        leaveTo="opacity-0"
+                    >
+                        <div className="fixed inset-0 bg-black/25" />
+                    </Transition.Child>
+                    <div className="fixed inset-0 overflow-y-auto">
+                        <div className="flex min-h-full items-center justify-center p-4 text-center">
+                            <Transition.Child
+                                as={Fragment}
+                                enter="ease-out duration-300"
+                                enterFrom="opacity-0 scale-95"
+                                enterTo="opacity-100 scale-100"
+                                leave="ease-in duration-200"
+                                leaveFrom="opacity-100 scale-100"
+                                leaveTo="opacity-0 scale-95"
+                            >
+                                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white text-black p-6 text-left align-middle shadow-xl transition-all">
+                                    <Dialog.Title
+                                        as="h3"
+                                        className="text-lg font-medium leading-6 text-gray-900"
+                                    >
+                                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#22c1c3, #fdbb2d']}><span className="text-[0.75rem]" style={{ lineHeight: "1rem" }}>Novice </span>Impact Award</LinearGradient></h1>
+                                        <p className="text-xs text-gray-800">Presented by Faaris Kamal</p>
+                                    </Dialog.Title>
+                                    <div className="mt-2">
+                                        <p className="text-sm text-gray-500">
+                                            This award is presented to the team that creates the best project that solves a problem in the field of computer science. The winning team will be awarded an internship with Pitt RST. - Detailed desc. coming soon
+                                        </p>
+                                        <div className="flex flex-col">
+                                            <div className="pr-2 pt-2 text-xl">Prize</div>
+                                            <div className="w-full border-b border-black"></div>
+                                        </div>
+                                        <p>Pitt RST Internship</p>
+                                    </div>
+
+                                    <div className="mt-4">
+                                        <button
+                                            type="button"
+                                            className="inline-flex justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900"
+                                            onClick={() => setImpactOpen(false)}
+                                        >
+                                            Let's win
+                                        </button>
+                                    </div>
+                                </Dialog.Panel>
+                            </Transition.Child>
                         </div>
-                        <p className="text-xl">This award includes a part-time research internship in conjunction with the University of Pittsburgh Department of Rehabilitation Sciences and Technology.</p>
                     </div>
-                    <div>
-                        <div className="flex flex-col">
-                            <h1 className="text-4xl px-4 text-green-500">The Vision Novice Award</h1>
-                            <div className="border-t w-full border-white flex-grow"></div>
+                </Dialog>
+            </Transition>
+            <Transition appear show={isVisionOpen} as={Fragment}>
+                <Dialog as="div" className="relative z-10" onClose={() => setVisionOpen(false)}>
+                    <Transition.Child
+                        as={Fragment}
+                        enter="ease-out duration-300"
+                        enterFrom="opacity-0"
+                        enterTo="opacity-100"
+                        leave="ease-in duration-200"
+                        leaveFrom="opacity-100"
+                        leaveTo="opacity-0"
+                    >
+                        <div className="fixed inset-0 bg-black/25" />
+                    </Transition.Child>
+                    <div className="fixed inset-0 overflow-y-auto">
+                        <div className="flex min-h-full items-center justify-center p-4 text-center">
+                            <Transition.Child
+                                as={Fragment}
+                                enter="ease-out duration-300"
+                                enterFrom="opacity-0 scale-95"
+                                enterTo="opacity-100 scale-100"
+                                leave="ease-in duration-200"
+                                leaveFrom="opacity-100 scale-100"
+                                leaveTo="opacity-0 scale-95"
+                            >
+                                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white text-black p-6 text-left align-middle shadow-xl transition-all">
+                                    <Dialog.Title
+                                        as="h3"
+                                        className="text-lg font-medium leading-6 text-gray-900"
+                                    >
+                                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#396afc, #2948ff']}><span className="text-[0.75rem]" style={{ lineHeight: "1rem" }}>Novice </span>Vision Award</LinearGradient></h1>
+                                        <p className="text-xs text-gray-800">Presented by Faaris Kamal</p>
+                                    </Dialog.Title>
+                                    <div className="mt-2">
+                                        <p className="text-sm text-gray-500">
+                                            This award is presented to the team that creates the best project that solves a problem in the field of computer science. The winning team will be awarded an internship with Pitt RST. - Detailed desc. coming soon
+                                        </p>
+                                        <div className="flex flex-col">
+                                            <div className="pr-2 pt-2 text-xl">Prize</div>
+                                            <div className="w-full border-b border-black"></div>
+                                        </div>
+                                        <p>Pitt RST Internship</p>
+                                    </div>
+
+                                    <div className="mt-4">
+                                        <button
+                                            type="button"
+                                            className="inline-flex justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900"
+                                            onClick={() => setVisionOpen(false)}
+                                        >
+                                            Let's win
+                                        </button>
+                                    </div>
+                                </Dialog.Panel>
+                            </Transition.Child>
                         </div>
-                        <p className="text-xl">This award includes a part-time research internship in conjunction with the University of Pittsburgh Department of Rehabilitation Sciences and Technology.</p>
                     </div>
-                    <div>
-                        <div className="flex flex-col">
-                            <h1 className="text-4xl px-4 text-blue-600">2024 SSA.hack Attendee</h1>
-                            <div className="border-t w-full border-white flex-grow"></div>
+                </Dialog>
+            </Transition>
+            <Transition appear show={isUnravelOpen} as={Fragment}>
+                <Dialog as="div" className="relative z-10" onClose={() => setUnravelOpen(false)}>
+                    <Transition.Child
+                        as={Fragment}
+                        enter="ease-out duration-300"
+                        enterFrom="opacity-0"
+                        enterTo="opacity-100"
+                        leave="ease-in duration-200"
+                        leaveFrom="opacity-100"
+                        leaveTo="opacity-0"
+                    >
+                        <div className="fixed inset-0 bg-black/25" />
+                    </Transition.Child>
+                    <div className="fixed inset-0 overflow-y-auto">
+                        <div className="flex min-h-full items-center justify-center p-4 text-center">
+                            <Transition.Child
+                                as={Fragment}
+                                enter="ease-out duration-300"
+                                enterFrom="opacity-0 scale-95"
+                                enterTo="opacity-100 scale-100"
+                                leave="ease-in duration-200"
+                                leaveFrom="opacity-100 scale-100"
+                                leaveTo="opacity-0 scale-95"
+                            >
+                                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white text-black p-6 text-left align-middle shadow-xl transition-all">
+                                    <Dialog.Title
+                                        as="h3"
+                                        className="text-lg font-medium leading-6 text-gray-900"
+                                    >
+                                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#F3904F, #fffc00']}><span className="text-[0.75rem]" style={{ lineHeight: "1rem" }}>Novice </span>Unravel Award</LinearGradient></h1>
+                                        <p className="text-xs text-gray-800">Presented by Faaris Kamal</p>
+                                    </Dialog.Title>
+                                    <div className="mt-2">
+                                        <p className="text-sm text-gray-500">
+                                            This award is presented to the team that creates the best project that solves a problem in the field of computer science. The winning team will be awarded an internship with Pitt RST. - Detailed desc. coming soon
+                                        </p>
+                                        <div className="flex flex-col">
+                                            <div className="pr-2 pt-2 text-xl">Prize</div>
+                                            <div className="w-full border-b border-black"></div>
+                                        </div>
+                                        <p>Pitt RST Internship</p>
+                                    </div>
+
+                                    <div className="mt-4">
+                                        <button
+                                            type="button"
+                                            className="inline-flex justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900"
+                                            onClick={() => setUnravelOpen(false)}
+                                        >
+                                            Let's win
+                                        </button>
+                                    </div>
+                                </Dialog.Panel>
+                            </Transition.Child>
                         </div>
-                        <p className="text-xl">This award includes a part-time research internship in conjunction with the University of Pittsburgh Department of Rehabilitation Sciences and Technology.</p>
                     </div>
-                </div>
-            </div> */}
+                </Dialog>
+            </Transition>
+            <Transition appear show={is2024Open} as={Fragment}>
+                <Dialog as="div" className="relative z-10" onClose={() => set2024Open(false)}>
+                    <Transition.Child
+                        as={Fragment}
+                        enter="ease-out duration-300"
+                        enterFrom="opacity-0"
+                        enterTo="opacity-100"
+                        leave="ease-in duration-200"
+                        leaveFrom="opacity-100"
+                        leaveTo="opacity-0"
+                    >
+                        <div className="fixed inset-0 bg-black/25" />
+                    </Transition.Child>
+                    <div className="fixed inset-0 overflow-y-auto">
+                        <div className="flex min-h-full items-center justify-center p-4 text-center">
+                            <Transition.Child
+                                as={Fragment}
+                                enter="ease-out duration-300"
+                                enterFrom="opacity-0 scale-95"
+                                enterTo="opacity-100 scale-100"
+                                leave="ease-in duration-200"
+                                leaveFrom="opacity-100 scale-100"
+                                leaveTo="opacity-0 scale-95"
+                            >
+                                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white text-black p-6 text-left align-middle shadow-xl transition-all">
+                                    <Dialog.Title
+                                        as="h3"
+                                        className="text-lg font-medium leading-6 text-gray-900"
+                                    >
+                                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#1C6FF8, #FEF720']}>2024 hacker()</LinearGradient></h1>
+                                        <p className="text-xs text-gray-800">Presented by Faaris Kamal</p>
+                                    </Dialog.Title>
+                                    <div className="mt-2">
+                                        <p className="text-sm text-gray-500">
+                                            This award is presented to the team that creates the best project that solves a problem in the field of computer science. The winning team will be awarded an internship with Pitt RST. - Detailed desc. coming soon
+                                        </p>
+                                        <div className="flex flex-col">
+                                            <div className="pr-2 pt-2 text-xl">Prize</div>
+                                            <div className="w-full border-b border-black"></div>
+                                        </div>
+                                        <p>Pitt RST Internship</p>
+                                    </div>
+
+                                    <div className="mt-4">
+                                        <button
+                                            type="button"
+                                            className="inline-flex justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900"
+                                            onClick={() => set2024Open(false)}
+                                        >
+                                            Let's win
+                                        </button>
+                                    </div>
+                                </Dialog.Panel>
+                            </Transition.Child>
+                        </div>
+                    </div>
+                </Dialog>
+            </Transition>
         </div>
     )
 }
