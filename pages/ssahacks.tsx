@@ -117,9 +117,9 @@ const Panel1 = (): JSX.Element => {
                 <div className="border-t border-white w-1/2 my-4"></div>
                 <TypeIt className="text-center text-5xl">Hack for a <span className="text-yellow-500 italic">purpose.</span></TypeIt>
                 <div className="flex space-x-4">
-                    <button className="mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Sign Up</button>
-                    <button className="mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Handbook</button>
-                    <button className="mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Contact</button>
+                    <a href="https://forms.gle/1NkPHxKgb2HsR9b5A" className="mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Sign Up</a>
+                    <a className="mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Handbook</a>
+                    <a href="mailto:ssa.hack2024@gmail.com" className="mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Contact</a>
                 </div>
                 <div className="absolute bottom-0 mb-8 rounded-lg p-4">
                     <h1 className='pb-2'>Learn more</h1>
@@ -250,15 +250,15 @@ const Judges = (): JSX.Element => {
                 <Person name="Dr. Dan Ding" position="Professor" text="Background info, etc." linkedin="" email="" image="0" />
                 <Person name="Indrajit Poddar" position="Chief Cloud Architect at AWS" text="" linkedin="" email="" image="0" />
                 <Person name="Dawson Haytock" position="SSA CS Department Chair" text="" linkedin="" email="" image="0" />
-                <Person name="Judge 3" position="Position" text="" linkedin="" email="" image="0" />
-                <Person name="Judge 4" position="Position" text="" linkedin="" email="" image="0" />
-                <Person name="Judge 5" position="Position" text="" linkedin="" email="" image="0" />
-                <Person name="Judge 6" position="Position" text="" linkedin="" email="" image="0" />
-                <Person name="Judge 7" position="Position" text="" linkedin="" email="" image="0" />
-                <Person name="Judge 8" position="Position" text="" linkedin="" email="" image="0" />
-                <Person name="Judge 9" position="Position" text="" linkedin="" email="" image="0" />
-                <Person name="Judge 10" position="Position" text="" linkedin="" email="" image="0" />
-                <Person name="Judge 11" position="Position" text="" linkedin="" email="" image="0" />
+                <Person name="Lindsey Morris" position="Position" text="" linkedin="" email="" image="0" />
+                <Person name="Michael Huang" position="Position" text="" linkedin="" email="" image="0" />
+                <Person name="Adit Shah" position="Position" text="" linkedin="" email="" image="0" />
+                <Person name="Braelyn Styler" position="Position" text="" linkedin="" email="" image="0" />
+                <Person name="Siva Venkadesh" position="Position" text="" linkedin="" email="" image="0" />
+                <Person name="TBA" position="Position" text="" linkedin="" email="" image="0" />
+                <Person name="TBA" position="Position" text="" linkedin="" email="" image="0" />
+                <Person name="TBA" position="Position" text="" linkedin="" email="" image="0" />
+                <Person name="TBA" position="Position" text="" linkedin="" email="" image="0" />
             </div>
         </div>
     )
