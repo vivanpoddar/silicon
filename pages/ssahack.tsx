@@ -171,8 +171,8 @@ const Content = (): JSX.Element => {
                             <div className="flex flex-col space-y-8">
                                 <span>Topic Announcement</span>
                                 <span>Development Begins</span>
-                                <span>Masterclass: IoT</span>
-                                <span>Masterclass: AI</span>
+                                <span>Masterclass: AI Ignition</span>
+                                <span>Masterclass: Micro Launchpad</span>
                                 <span>Lunch</span>
                                 <span>Judging</span>
                                 <span>Closing Ceremony</span>
@@ -183,9 +183,38 @@ const Content = (): JSX.Element => {
                     <div className="md:w-1/2 pb-24 md:pb-0 px-8 flex items-center justify-center">
                         <div className="md:p-24">
                             <h1 className="text-blue-500 text-xl font-bold md:text-4xl md:pb-4">8 hours to solve one problem.</h1>
-                            <p className="text-lg">SSA.Hacks is a hackathon for high school students. Students will work in teams of up to 4 people to create a project that solves a problem. At the end of the 24 hours, students will present their projects to a panel of some of the most experienced judges in the Pittsburgh area. The stakes are high.</p>
+                            <p className="text-lg">Welcome to SSA.hack(), the premier highschool hackathon in the Pittsburgh area. During the event, competitors will have 8 hours to create
+                                a project to solve a relevant issue pertaining to a certain theme. The theme will be announced at the beginning of the event. Competitors will be able to work in teams of up to 4 people. 
+                                At the end of the event, competitors will present their projects to a panel of judges. The best projects will win huge prizes offered by our sponsors.
+                            </p>
                             <LinkButton content="Meet the judges" href="#judges" />
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+const Masterclass = (): JSX.Element => {
+    return (
+        <div >
+            <div className="text-white">
+                <div className="flex items-center">
+                    <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Masterclass</h1>
+                    <div className="border-t border-white flex-grow"></div>
+                </div>
+                <div className="p-4">
+                    <div>
+                        <h1 className="text-xl underline italic">AI Ignition: An Introduction to Artificial Intelligence</h1>
+                        <p>Embark on a thrilling journey into the world of artificial intelligence with our power-packed masterclass. This two-hour session is crafted for individuals ready to take the first step in their AI project for the hackathon, providing essential insights and practical guidance to kickstart your AI endeavors.
+                            By the end of "AI Ignition," you'll leave with the knowledge, confidence, and practical skills to embark on your AI project. Join us for an hour of inspiration, hands-on learning, and actionable insights as we guide you through the exciting world of artificial intelligence. Ignite your AI journey.
+                        </p>
+                    </div>
+                    <div>
+                        <h1 className="pt-2 text-xl underline italic">Micro Launchpad: An Introduction to Embedded Systems/Arduino</h1>
+                        <p>Embark on a swift and enlightening journey into the world of intelligent devices with our unique masterclass. This two-hour session will provide you with what you need to integrate physical electronics and programming at the intersection of engineering and computer science. Learn about the seamless integration of computing power into the fabric of our daily lives.
+                            By the end of this masterclass, you'll depart with newfound insights, practical skills, and a heightened appreciation for the transformative capabilities of embedded systems. Join us for an hour of exploration, innovation, and the elevation of your understanding of smart systems. Launch into the digital world. </p>
                     </div>
                 </div>
             </div>
@@ -840,6 +869,7 @@ const Ssahack = () => {
                 <Prizes />
                 <Questions />
                 <Judges />
+                <Masterclass />
                 <Sponsors />
             </div>
             <Footer />
