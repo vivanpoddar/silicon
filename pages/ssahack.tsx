@@ -208,7 +208,7 @@ const Masterclass = (): JSX.Element => {
                     <div>
                         <h1 className="text-xl underline italic">AI Ignition: An Introduction to Artificial Intelligence</h1>
                         <p>Embark on a thrilling journey into the world of artificial intelligence with our power-packed masterclass. This two-hour session is crafted for individuals ready to take the first step in their AI project for the hackathon, providing essential insights and practical guidance to kickstart your AI endeavors.
-                            By the end of "AI Ignition," you will leave with the knowledge, confidence, and practical skills to embark on your AI project. Join us for an hour of inspiration, hands-on learning, and actionable insights as we guide you through the exciting world of artificial intelligence. Ignite your AI journey.
+                            By the end of AI Ignition, you will leave with the knowledge, confidence, and practical skills to embark on your AI project. Join us for an hour of inspiration, hands-on learning, and actionable insights as we guide you through the exciting world of artificial intelligence. Ignite your AI journey.
                         </p>
                     </div>
                     <div>
