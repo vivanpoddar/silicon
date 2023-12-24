@@ -187,7 +187,7 @@ const Content = (): JSX.Element => {
                                 a project to solve a relevant issue pertaining to a certain theme. The theme will be announced at the beginning of the event. Competitors will be able to work in teams of up to 4 people. 
                                 At the end of the event, competitors will present their projects to a panel of judges. The best projects will win huge prizes offered by our sponsors.
                             </p>
-                            <LinkButton content="Meet the judges" href="#judges" />
+                            <LinkButton content="Learn more in the handbook" href="#" />
                         </div>
                     </div>
                 </div>
@@ -208,13 +208,13 @@ const Masterclass = (): JSX.Element => {
                     <div>
                         <h1 className="text-xl underline italic">AI Ignition: An Introduction to Artificial Intelligence</h1>
                         <p>Embark on a thrilling journey into the world of artificial intelligence with our power-packed masterclass. This two-hour session is crafted for individuals ready to take the first step in their AI project for the hackathon, providing essential insights and practical guidance to kickstart your AI endeavors.
-                            By the end of "AI Ignition," you'll leave with the knowledge, confidence, and practical skills to embark on your AI project. Join us for an hour of inspiration, hands-on learning, and actionable insights as we guide you through the exciting world of artificial intelligence. Ignite your AI journey.
+                            By the end of "AI Ignition," you will leave with the knowledge, confidence, and practical skills to embark on your AI project. Join us for an hour of inspiration, hands-on learning, and actionable insights as we guide you through the exciting world of artificial intelligence. Ignite your AI journey.
                         </p>
                     </div>
                     <div>
                         <h1 className="pt-2 text-xl underline italic">Micro Launchpad: An Introduction to Embedded Systems/Arduino</h1>
                         <p>Embark on a swift and enlightening journey into the world of intelligent devices with our unique masterclass. This two-hour session will provide you with what you need to integrate physical electronics and programming at the intersection of engineering and computer science. Learn about the seamless integration of computing power into the fabric of our daily lives.
-                            By the end of this masterclass, you'll depart with newfound insights, practical skills, and a heightened appreciation for the transformative capabilities of embedded systems. Join us for an hour of exploration, innovation, and the elevation of your understanding of smart systems. Launch into the digital world. </p>
+                            By the end of this masterclass, you will depart with newfound insights, practical skills, and a heightened appreciation for the transformative capabilities of embedded systems. Join us for an hour of exploration, innovation, and the elevation of your understanding of smart systems. Launch into the digital world. </p>
                     </div>
                 </div>
             </div>
