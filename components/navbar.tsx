@@ -50,7 +50,7 @@ export default function Navbar({ current }: NavbarProps) {
                                 <h1 className='pl-2 text-3xl text-white font-medium'>Silicon</h1>                             
                             </div>
                         </Link>
-                        <div className="absolute md:left-0 right-0 md:ml-auto md:mr-auto lg:flex md:space-x-4 items-center justify-center">
+                        <div className="absolute md:left-0 right-0 md:ml-auto md:mr-auto md:flex md:space-x-4 items-center justify-center">
                             <button onClick={openModal} type="button">
                                 <img src="/menu.svg" className='md:hidden h-8 w-8 mr-4 border p-1' style={{ filter: 'invert(100%)' }}></img>
                             </button>

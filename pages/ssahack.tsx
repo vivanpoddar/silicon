@@ -118,11 +118,11 @@ const Panel1 = (): JSX.Element => {
                 <TypeIt className="text-center text-5xl">Hack for a <span className="text-yellow-500 italic">purpose.</span></TypeIt>
                 <div className="flex space-x-4">
                     <a href="https://forms.gle/1NkPHxKgb2HsR9b5A" className="mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Sign Up</a>
-                    <a className="mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Handbook</a>
+                    {/* <a className="mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Handbook</a> */}
                     <a href="mailto:ssa.hack2024@gmail.com" className="mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Contact</a>
                 </div>
                 <div className="absolute bottom-0 mb-8 rounded-lg p-4">
-                    <h1 className='pb-2'>Learn more</h1>
+                    <h1 className='pb-2 text-white'>Learn more</h1>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-8 w-8 mx-auto text-white animate-bounce">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                     </svg>

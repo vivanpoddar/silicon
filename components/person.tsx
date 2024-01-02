@@ -27,12 +27,16 @@ const Person = ({ image, position, text, name, linkedin, email }: PersonProps) =
             <h2 className="text-xl text-gray-400">{position}</h2>
             <p className="text-white">{text}</p>
             <div className="flex space-x-4">
-                <button onClick={() => window.location.href = `mailto:${email}`}>
-                    <FontAwesomeIcon icon={faEnvelope} />
-                </button>
-                <button onClick={() => window.location.href = linkedin}>
-                    <FontAwesomeIcon icon={faUser} />
-                </button>
+                {email && (
+                    <button onClick={() => window.location.href = `mailto:${email}`}>
+                        <FontAwesomeIcon className="text-white" icon={faEnvelope} />
+                    </button>
+                )}
+                {linkedin && (
+                    <button onClick={() => window.location.href = linkedin}>
+                        <FontAwesomeIcon className="text-white" icon={faUser} />
+                    </button>
+                )}
             </div>
         </div>
     );
