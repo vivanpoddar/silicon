@@ -115,7 +115,7 @@ const Panel1 = (): JSX.Element => {
             <div className="absolute w-screen h-screen flex items-center justify-center flex-col" style={{ height: "100vh" }}>
                 <Image priority={true} className="md:w-1/2 w-[90vw]" src="/ssahack.png" alt="SSAHack 2023" width={800} height={300}></Image>
                 <div className="border-t border-white w-1/2 my-4"></div>
-                <TypeIt className="text-center text-5xl">Hack for a <span className="text-yellow-500 italic">purpose.</span></TypeIt>
+                <TypeIt className="text-center text-5xl text-black">Hack for a <span className="text-yellow-500 italic">purpose.</span></TypeIt>
                 <div className="flex space-x-4">
                     <a href="https://forms.gle/1NkPHxKgb2HsR9b5A" className="mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Sign Up</a>
                     {/* <a className="mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Handbook</a> */}
