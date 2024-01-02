@@ -276,18 +276,18 @@ const Judges = (): JSX.Element => {
                 <div className="border-t border-white flex-grow"></div>
             </div>
             <div className="p-4 grid grid-cols-2 md:grid-cols-4 gap-2">
-                <Person name="Dr. Dan Ding" position="Professor" text="Background info, etc." linkedin="" email="" image="0" />
+                <Person name="Dr. Dan Ding" position="Professor" text="" linkedin="" email="" image="0" />
                 <Person name="Indrajit Poddar" position="Chief Cloud Architect at AWS" text="" linkedin="" email="" image="0" />
                 <Person name="Dawson Haytock" position="SSA CS Department Chair" text="" linkedin="" email="" image="0" />
-                <Person name="Lindsey Morris" position="Position" text="" linkedin="" email="" image="0" />
-                <Person name="Michael Huang" position="Position" text="" linkedin="" email="" image="0" />
-                <Person name="Adit Shah" position="Position" text="" linkedin="" email="" image="0" />
-                <Person name="Braelyn Styler" position="Position" text="" linkedin="" email="" image="0" />
-                <Person name="Siva Venkadesh" position="Position" text="" linkedin="" email="" image="0" />
-                <Person name="TBA" position="Position" text="" linkedin="" email="" image="0" />
-                <Person name="TBA" position="Position" text="" linkedin="" email="" image="0" />
-                <Person name="TBA" position="Position" text="" linkedin="" email="" image="0" />
-                <Person name="TBA" position="Position" text="" linkedin="" email="" image="0" />
+                <Person name="Lindsey Morris" position="" text="" linkedin="" email="" image="0" />
+                <Person name="Michael Huang" position="" text="" linkedin="" email="" image="0" />
+                <Person name="Adit Shah" position="" text="" linkedin="" email="" image="0" />
+                <Person name="Braelyn Styler" position="" text="" linkedin="" email="" image="0" />
+                <Person name="Siva Venkadesh" position="" text="" linkedin="" email="" image="0" />
+                <Person name="TBA" position="" text="" linkedin="" email="" image="0" />
+                <Person name="TBA" position="" text="" linkedin="" email="" image="0" />
+                <Person name="TBA" position="" text="" linkedin="" email="" image="0" />
+                <Person name="TBA" position="" text="" linkedin="" email="" image="0" />
             </div>
         </div>
     )
