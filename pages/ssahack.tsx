@@ -120,6 +120,7 @@ const Panel1 = (): JSX.Element => {
                     <a href="https://forms.gle/1NkPHxKgb2HsR9b5A" className="mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Sign Up</a>
                     {/* <a className="mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Handbook</a> */}
                     <a href="mailto:ssa.hack2024@gmail.com" className="mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Contact</a>
+                    <a href="https://shadysideacademy-my.sharepoint.com/:w:/g/personal/26poddarv_shadysideacademy_org/EejCBZMdudNHoMtI7kxiPEEBrONOyJj2c5hBZFD8FIIWSw?e=uwkxSG" className="mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded"><Handbook></Handbook></a>
                 </div>
                 <div className="absolute bottom-0 mb-8 rounded-lg p-4">
                     <h1 className='pb-2 text-white'>Learn more</h1>
