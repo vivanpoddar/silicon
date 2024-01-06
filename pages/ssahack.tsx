@@ -835,9 +835,12 @@ const Sponsors = (): JSX.Element => {
             <div className="p-4">
                 <div className="flex flex-col items-center">
                     <div className=" p-4 m-4">
-                        <h1 className="text-3xl ">Atomic Sponsors</h1>
+                        <h1 className="text-3xl ">Atom Sponsors</h1>
                         <div className="flex">
                             <Image src="/pittrst.png" alt="Pitt RST" height={500} width={750}></Image>
+                        </div>
+                        <div className="flex">
+                            <Image src="Shady_Side_Academy_logo.svg.png" alt="Pitt RST" height={500} width={750}></Image>
                         </div>
                     </div>
                     <div className=" p-4 m-4">
@@ -850,6 +853,9 @@ const Sponsors = (): JSX.Element => {
                         <h1 className="text-3xl">Electron Sponsors</h1>
                         <div className="flex">
                             <Image src="/medpath.png" alt="Medpath" height={100} width={250} style={{backgroundColor: "white"}}></Image>
+                        </div>
+                        <div className="flex">
+                            <Image src="doclens_logo.jpg" alt="Pitt RST" height={500} width={750}></Image>
                         </div>
                     </div>
                 </div>
