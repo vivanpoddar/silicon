@@ -281,14 +281,14 @@ const Judges = (): JSX.Element => {
                 <div className="border-t border-white flex-grow"></div>
             </div>
             <div className="p-4 grid grid-cols-2 md:grid-cols-4 gap-2">
-                <Person name="Dr. Dan Ding" position="Professor" text="" linkedin="" email="" image="0" />
-                <Person name="Indrajit Poddar" position="Chief Cloud Architect at AWS" text="" linkedin="" email="" image="0" />
-                <Person name="Dawson Haytock" position="SSA CS Department Chair" text="" linkedin="" email="" image="0" />
-                <Person name="Lindsey Morris" position="" text="" linkedin="" email="" image="0" />
-                <Person name="Michael Huang" position="" text="" linkedin="" email="" image="0" />
-                <Person name="Adit Shah" position="" text="" linkedin="" email="" image="0" />
-                <Person name="Braelyn Styler" position="" text="" linkedin="" email="" image="0" />
-                <Person name="Siva Venkadesh" position="" text="" linkedin="" email="" image="0" />
+                <Person name="Dr. Dan Ding" position="Associate Professor and Vice Chair for Research at Pitt RST" text="" linkedin="" email="" image="0" />
+                <Person name="Indrajit Poddar" position="Senior Cloud Infrastructure Architect at AWS" text="" linkedin="" email="" image="0" />
+                <Person name="Dawson Haytock" position="Computer Science Department Chair at Shady Side Academy" text="" linkedin="" email="" image="0" />
+                <Person name="Lindsey Morris" position="Clinical Research Scientist at Pitt RST" text="" linkedin="" email="" image="0" />
+                <Person name="Michael Huang" position="Administrative Assistant at Pitt" text="" linkedin="" email="" image="0" />
+                <Person name="Adit Shah" position="Software Engineer at Pitt RST" text="" linkedin="" email="" image="0" />
+                <Person name="Breelyn Styler" position="VA Research Engineer at Human Engineering Research Laboratories" text="" linkedin="" email="" image="0" />
+                <Person name="Siva Venkadesh" position="Computational Neuroscience Researcher at Pitt Dept. of Neurological Surgery" text="" linkedin="" email="" image="0" />
                 <Person name="TBA" position="" text="" linkedin="" email="" image="0" />
                 <Person name="TBA" position="" text="" linkedin="" email="" image="0" />
                 <Person name="TBA" position="" text="" linkedin="" email="" image="0" />
