@@ -13,7 +13,7 @@ const About = () => {
             <Navbar current="About"/>
             <div>
                 <div className="pt-24 bg-white flex flex-col justify-center items-center">
-                    <h1 className="text-7xl text-black text-center">Compute. Connect. Innovate.</h1>
+                    <h1 className="md:text-7xl text-3xl text-black text-center">Compute. Connect. Innovate.</h1>
                     <motion.div
                         className="mb-4 w-3/4 h-1 bg-black mt-4"
                         initial={{ scaleX: 0 }}
@@ -23,11 +23,14 @@ const About = () => {
                 </div>
                 <div className=" bg-white">
                     <div className="justify-items-center items-center text-black flex flex-col p-2">
-                        <Image src="/panel3.jpg" width={800} height={0} alt="dude laughing"></Image>
+                        <Image src="/about.jpg" width={800} height={0} alt="dude laughing"></Image>
                         <div className="md:pl-40 md:pr-40">
-                            <h1 className="text-4xl font-bold text-center pt-4 pb-4">Building Tech Leaders.</h1>
-                            <p className="text-center text-4xl pb-4">
+                            <h1 className="md:text-4xl text-xl font-bold text-center pt-4 pb-4">Building Tech Leaders.</h1>
+                            <p className="text-center md:text-4xl pb-4">
                                 Silicon aims to foster the next generation of thoughtful, ethical, and interdisciplinary computer science leaders and create a universal awareness of the computer science that powers the modern world. More specifically, Silicon aims to produce leaders that can think outside the box, analyze computational solutions for potential harms to society and solve them, and connect knowledge in a breadth of fields to create new and novel solutions. Silicon also aims to provide the general public with the knowledge to understand the computer science that powers the modern digital world and how it affects them physiologically, emotionally, and psychologically.
+                            </p>
+                            <p className="text-center md:text-4xl">
+                               We are looking to begin our journey by hosting a hackathon in the summer of 2023, SSA.hack(). 
                             </p>
                         </div>
                     </div>
