@@ -20,7 +20,6 @@ const Join = () => {
                             <Person image="/evan.png" name="Evan Xiang" position="SSA.hack Director" text="" linkedin="https://www.linkedin.com/in/evan-xiang-4483b7231/" email="mailto:evankxiang@gmail.com" />
                             <Person image="/ethan.png" name="Ethan Chen" position="Finance, PR Director" text="" linkedin="https://www.linkedin.com/in/ethan-chen-065265283/" email="" />
                             <Person image="/thomas.png" name="Thomas Wang" position="Marketing Director" text="" linkedin="https://www.linkedin.com/in/thomas-jichen-wang-a0b427268/" email="" />
-                            <Person image="/kiran.png" name="Kiran Tevar" position="Expansion Director" text="" linkedin="https://www.linkedin.com/in/kiran-tevar-680304278/" email="" />
                             <Person image="/david.png" name="David Wang" position="Product Director" text="" linkedin="" email="" />
                         </div>
                         <h1 className="text-2xl pt-4 text-white">Regional Directors</h1>
