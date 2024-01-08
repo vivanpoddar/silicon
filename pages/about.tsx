@@ -26,10 +26,10 @@ const About = () => {
                         <Image src="/about.jpg" width={800} height={0} alt="dude laughing"></Image>
                         <div className="md:pl-40 md:pr-40">
                             <h1 className="md:text-4xl text-xl font-bold text-center pt-4 pb-4">Building Tech Leaders.</h1>
-                            <p className="text-center md:text-4xl pb-4">
+                            <p className="md:text-4xl pb-4">
                                 Silicon aims to foster the next generation of thoughtful, ethical, and interdisciplinary computer science leaders and create a universal awareness of the computer science that powers the modern world. More specifically, Silicon aims to produce leaders that can think outside the box, analyze computational solutions for potential harms to society and solve them, and connect knowledge in a breadth of fields to create new and novel solutions. Silicon also aims to provide the general public with the knowledge to understand the computer science that powers the modern digital world and how it affects them physiologically, emotionally, and psychologically.
                             </p>
-                            <p className="text-center md:text-4xl">
+                            <p className="md:text-4xl">
                                We are looking to begin our journey by hosting a hackathon in Spring of 2024, SSA.hack(). An interest form and more information will be available soon. 
                             </p>
                         </div>
