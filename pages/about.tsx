@@ -30,7 +30,7 @@ const About = () => {
                                 Silicon aims to foster the next generation of thoughtful, ethical, and interdisciplinary computer science leaders and create a universal awareness of the computer science that powers the modern world. More specifically, Silicon aims to produce leaders that can think outside the box, analyze computational solutions for potential harms to society and solve them, and connect knowledge in a breadth of fields to create new and novel solutions. Silicon also aims to provide the general public with the knowledge to understand the computer science that powers the modern digital world and how it affects them physiologically, emotionally, and psychologically.
                             </p>
                             <p className="text-center md:text-4xl">
-                               We are looking to begin our journey by hosting a hackathon in the summer of 2023, SSA.hack(). 
+                               We are looking to begin our journey by hosting a hackathon in Spring of 2024, SSA.hack(). An interest form and more information will be available soon. 
                             </p>
                         </div>
                     </div>
