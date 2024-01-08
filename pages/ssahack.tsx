@@ -284,7 +284,7 @@ const Judges = (): JSX.Element => {
                 <div className="border-t border-white flex-grow"></div>
             </div>
             <div className="p-4 grid grid-cols-2 md:grid-cols-4 gap-2">
-                <Person name="Dr. Dan Ding" position="Associate Professor and Vice Chair for Research at Pitt RST" text="" linkedin="" email="" image="0" />
+                <Person name="Dan Ding" position="Associate Professor and Vice Chair for Research at Pitt RST" text="" linkedin="" email="" image="0" />
                 <Person name="Indrajit Poddar" position="Senior Cloud Infrastructure Architect at AWS" text="" linkedin="" email="" image="0" />
                 <Person name="Dawson Haytock" position="Computer Science Department Chair at Shady Side Academy" text="" linkedin="" email="" image="0" />
                 <Person name="Lindsey Morris" position="Clinical Research Scientist at Pitt RST" text="" linkedin="" email="" image="0" />
