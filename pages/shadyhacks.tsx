@@ -853,9 +853,6 @@ const Sponsors = (): JSX.Element => {
                     <div className=" p-4 m-4">
                         <h1 className="text-3xl">Electron Sponsors</h1>
                         <div className="flex space-x-4">
-                            <div className="flex items-center">
-                                <Image src="/medpath.png" alt="Medpath" height={100} width={250} style={{ backgroundColor: "white" }}></Image>
-                            </div>
                             <div>
                                 <Image src="/doclens_logo.jpg" alt="Doclens" height={50} width={200}></Image>
                             </div>
