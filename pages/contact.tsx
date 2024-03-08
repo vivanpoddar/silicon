@@ -10,7 +10,7 @@ const Join = () => {
                 <title>Silicon | Contact</title>
             </Head>
             <Navbar current="Contact"/>
-            <div className="overflow-hidden">
+            <div className="overflow-hidden h-screen">
                 <div className="flex bg-black justify-center">
                     <div className="pt-24 pb-24 px-4 flex-col justify-center">
                         <h1 className="text-2xl text-white">Leadership</h1>
