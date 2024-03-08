@@ -159,7 +159,7 @@ const Content = (): JSX.Element => {
             <div className="w-screen flex flex-col">
                 <div className="flex md:flex-row flex-col-reverse h-full w-full">
                     <div className="md:w-1/2 h-full flex flex-col items-center justify-center">
-                        <span className="text-center pb-4 text-md:text-4xl text-yellow-500">Tentative Schedule on <b> March 2, 2024</b></span>
+                        <span className="text-center pb-4 text-md:text-4xl text-yellow-500">Tentative Schedule on <b> Apr 6, 2024</b></span>
                         <div className="flex md:text-4xl items-center justify-center">
                             <div className="flex flex-col space-y-8">
                                 <span className="text-right">7:30</span>
