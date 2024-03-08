@@ -1,11 +1,11 @@
 import TypeIt from "typeit-react";
 import Footer from "../components/footer";
 import React from 'react'
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 import Navbar from "../components/navbar";
 import LinkButton from "../components/linkbutton";
 import Particles from "react-particles";
-import {Dialog, Transition} from '@headlessui/react'
+import { Dialog, Transition } from '@headlessui/react'
 import { useCallback, useState, Fragment, useEffect } from "react";
 import type { Container, Engine } from "tsparticles-engine";
 import { loadSlim } from "tsparticles-slim";
@@ -40,12 +40,12 @@ const Panel1 = (): JSX.Element => {
     const particlesLoaded = useCallback(async (container: Container | undefined) => {
         await console.log(container);
     }, []);
-    
+
     return (
         //rgb(246, 196, 77)
         <div className="bg-blue-500 h-screen w-screen">
             <Particles
-                style={{position: "absolute"}}
+                style={{ position: "absolute" }}
                 id="tsparticles"
                 init={particlesInit}
                 loaded={particlesLoaded}
@@ -113,7 +113,7 @@ const Panel1 = (): JSX.Element => {
                 }}
             />
             <div className="absolute w-screen h-screen flex items-center justify-center flex-col" style={{ height: "100vh" }}>
-                <Image priority={true} className="md:w-1/2 w-[90vw]" src="/ssahack.png" alt="SSAHack 2023" width={800} height={300}></Image>
+                <Image priority={true} className="md:w-1/2 w-[90vw]" src="/ssahack.png" alt="shady.Hacks" width={800} height={300}></Image>
                 <div className="border-t border-white w-1/2 my-4"></div>
                 <TypeIt className="text-center text-5xl text-black">Hack for a <span className="text-yellow-500 italic">purpose.</span></TypeIt>
                 <div className="flex space-x-4">
@@ -123,7 +123,7 @@ const Panel1 = (): JSX.Element => {
                         <a href="https://shadysideacademy-my.sharepoint.com/:w:/g/personal/26poddarv_shadysideacademy_org/EejCBZMdudNHoMtI7kxiPEEBrONOyJj2c5hBZFD8FIIWSw?e=uwkxSG" className="text-center mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Handbook</a>
                         <a href="https://discord.gg/pxRjVRcmpz" className="text-center mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Discord</a>
                         <a href="https://shadysideacademy-my.sharepoint.com/:w:/g/personal/26poddarv_shadysideacademy_org/Ebt_MlC372lKomcSQHWLCDwBmhTnf4rH9yuzAzDTsqP6VA?e=HdiFw2" className="text-center mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Sponsor Info</a>
-                    </div>               
+                    </div>
                 </div>
                 <div className="absolute bottom-0 mb-8 rounded-lg p-4">
                     <h1 className='pb-2 text-white'>Learn more</h1>
@@ -140,8 +140,8 @@ const Panel2 = (): JSX.Element => {
     return (
         <motion.div className="z-10 h-[75vh] md:h-screen w-screen flex flex-col-reverse md:flex-row">
             <div className="md:w-1/2 h-1/2 md:h-full flex flex-col items-center justify-center md:p-24">
-                <h1 className="md:text-7xl text-white text-center text-5xl">Win an internship with Pitt RST.</h1>
-                <LinkButton content="Claim your spot at SSAHacks 2023" href="https://forms.gle/1NkPHxKgb2HsR9b5A" />
+                <h1 className="md:text-7xl text-white text-center text-5xl">Gain experience with mentors from AWS, CMU, and UPitt.</h1>
+                <LinkButton content="Claim your spot at shady.Hacks 2024" href="https://forms.gle/1NkPHxKgb2HsR9b5A" />
             </div>
             <div className="md:w-1/2 h-1/2 md:h-full flex items-center justify-center">
                 <div className='md:h-1/2 w-3/4 md:w-full flex items-center justify-center'>
@@ -187,8 +187,8 @@ const Content = (): JSX.Element => {
                     <div className="md:w-1/2 pb-24 md:pb-0 px-8 flex items-center justify-center">
                         <div className="md:p-24">
                             <h1 className="text-blue-500 text-xl font-bold md:text-4xl md:pb-4">8 hours to solve one problem.</h1>
-                            <p className="text-lg">Welcome to SSA.hack(), the premier highschool hackathon in the Pittsburgh area. During the event, competitors will have 8 hours to create
-                                a project to solve a relevant issue pertaining to a certain theme. The theme will be announced at the beginning of the event. Competitors will be able to work in teams of up to 4 people. 
+                            <p className="text-lg">Welcome to shady.Hacks, the premier highschool hackathon in the Pittsburgh area. During the event, competitors will have 8 hours to create
+                                a project to solve a relevant issue pertaining to a certain theme. The theme will be announced at the beginning of the event. Competitors will be able to work in teams of up to 4 people.
                                 At the end of the event, competitors will present their projects to a panel of judges. The best projects will win huge prizes offered by our sponsors.
                             </p>
                             <LinkButton content="Learn more in the handbook" href="#" />
@@ -237,7 +237,7 @@ const Questions = (): JSX.Element => {
                 <div className="p-4">
                     <Question question="Is lunch, etc. included?" answer="Everything you might need will be included free of charge. However, if you would like to work with more advanced components you will be required to bring your own. However, if this is difficult to do, shoot us an email and we will be able to accomodate your needs ahead of time." />
                     <Question question="I am a middle schooler. Can I succeed in this hackathon?" answer="No worries about skill gaps here. We will be hosting masterclasses that are tailored to newcomers (specifically younger people) that will bring you up to speed. In addition, we provide novice awards for people getting into the space." />
-                    <Question question="What is a hackathon?" answer="A hackathon is a 24-hour event where students come together to create a project that solves a problem. Students can work individually or in teams of up to 4 people. At the end of the 24 hours, students will present their projects to a panel of judges. The best projects will win prizes!" />
+                    <Question question="What is a hackathon?" answer="A hackathon is a 8-hour event where students come together to create a project that solves a problem. Students can work individually or in teams of up to 4 people. At the end of the 8 hours, students will present their projects to a panel of judges. The best projects will win prizes!" />
                     <Question question="Who can participate?" answer="Any high school student can participate! You do not need to have any prior experience with coding or hackathons. We will be hosting workshops to help you get started on your project." />
                 </div>
             </div>
@@ -349,7 +349,7 @@ const Prizes = (): JSX.Element => {
                         <p className="text-xs text-gray-400 italic">(Click me)</p>
                     </button>
                     <button className="h-28 border flex border-black flex-col justify-center bg-gray-900  text-center items-center rounded-xl" onClick={() => setImpactOpen(true)}>
-                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#22c1c3, #fdbb2d']}><span className="text-[0.75rem]" style={{lineHeight: "1rem"}}>Novice </span>Impact Award</LinearGradient></h1>
+                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#22c1c3, #fdbb2d']}><span className="text-[0.75rem]" style={{ lineHeight: "1rem" }}>Novice </span>Impact Award</LinearGradient></h1>
                         <p className="text-xs text-gray-400 italic">(Click me)</p>
                     </button>
                     <button className="h-28 border flex border-black flex-col justify-center bg-gray-900  text-center items-center rounded-xl" onClick={() => setVisionOpen(true)}>
@@ -571,7 +571,7 @@ const Prizes = (): JSX.Element => {
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
-                                            This award is presented to the team with the most innovative and groundbreaking idea and solution. The project must also showcase a certain depth of completion and stand out among other submissions. - Detailed desc. coming soon 
+                                            This award is presented to the team with the most innovative and groundbreaking idea and solution. The project must also showcase a certain depth of completion and stand out among other submissions. - Detailed desc. coming soon
                                         </p>
                                         <div className="flex flex-col">
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
@@ -872,9 +872,9 @@ const Ssahack = () => {
     return (
         <>
             <Head>
-                <title>SSA.hack 2024</title>
+                <title>shady.Hacks 2024</title>
             </Head>
-            <Navbar current="SSA.hack();"/> 
+            <Navbar current="ssahack" />
             <div style={{
                 backgroundImage: `url(/panelbg.png)`,
             }}>
@@ -888,7 +888,7 @@ const Ssahack = () => {
                 <Sponsors />
             </div>
             <Footer />
-        </> 
+        </>
     );
 }
 
