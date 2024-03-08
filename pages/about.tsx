@@ -1,7 +1,7 @@
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import {motion} from "framer-motion";
-import Head from 'next/head'
+import Head from "next/head";
 import Image from "next/image";
 
 const About = () => {
