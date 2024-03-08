@@ -50,8 +50,8 @@ const Panel1 = (): JSX.Element => {
   return (
     <motion.div className="z-10 h-[75vh] md:h-screen w-screen flex flex-col-reverse md:flex-row bg-black">
       <div className="md:w-1/2 h-1/2 md:h-full flex flex-col items-center justify-center">
-        <h1 className="md:text-7xl text-white text-center text-5xl">Solve problems at SSAHacks.</h1>
-        <LinkButton content="Claim your spot at SSAHacks 2023" href="shadyhacks" />
+        <h1 className="md:text-7xl text-white text-center text-5xl">Solve problems at shady.Hacks.</h1>
+        <LinkButton content="Claim your spot at shady.Hacks 2023" href="shadyhacks" />
       </div>
       <div className="md:w-1/2 h-1/2 md:h-full flex items-center justify-center">
         <div className='md:h-1/2 w-3/4 md:w-full flex items-center justify-center'>
