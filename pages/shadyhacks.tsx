@@ -125,7 +125,7 @@ const Panel1 = (): JSX.Element => {
                         <a href="https://discord.gg/pxRjVRcmpz" className="text-center mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Discord</a>
                         <a href="https://shadysideacademy-my.sharepoint.com/:w:/g/personal/26poddarv_shadysideacademy_org/Ebt_MlC372lKomcSQHWLCDwBmhTnf4rH9yuzAzDTsqP6VA?e=HdiFw2" className="text-center mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Sponsor Info</a>
                         <a href="https://www.instagram.com/ssa_hack/" className="text-center mt-4 bg-blue-800 text-white font-bold md:text-2xl rounded flex items-center justify-center">
-                            <FontAwesomeIcon icon={faInstagram} style={{ maxHeight: '30px' }} />
+                            Instagram
                         </a>                    
                     </div>
                 </div>
