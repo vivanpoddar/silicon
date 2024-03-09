@@ -220,9 +220,16 @@ const Masterclass = (): JSX.Element => {
                         </p>
                     </div>
                     <div>
-                        <h1 className="pt-2 text-xl underline italic">Micro Launchpad: An Introduction to Embedded Systems/Arduino</h1>
-                        <p>Embark on a swift and enlightening journey into the world of intelligent devices with our unique masterclass. This two-hour session will provide you with what you need to integrate physical electronics and programming at the intersection of engineering and computer science. Learn about the seamless integration of computing power into the fabric of our daily lives.
-                            By the end of this masterclass, you will depart with newfound insights, practical skills, and a heightened appreciation for the transformative capabilities of embedded systems. Join us for an hour of exploration, innovation, and the elevation of your understanding of smart systems. Launch into the digital world. </p>
+                        <h1 className="pt-2 text-xl underline italic">3D, AR, VR Workshop</h1>
+                        <p>Utilizing tools from Echo3D, you will learn the basics of 3D design and how we can implement these in our VR worlds. This course will be very hands on, with opportunities to use VR headsets and delve into a bit of game design.</p>
+                    </div>
+                    <div>
+                        <h1 className="pt-2 text-xl underline italic">Web Development</h1>
+                        <p>This masterclass will delve into the basics of Web Development, offering you the skills you will need to create a meaningful project to display to the judges. This course will be taught using SSA curriculum, and will give you the tools needed to succeed. </p>
+                    </div>
+                    <div>
+                        <h1 className="pt-2 text-xl underline italic">Computer Science Ethics</h1>
+                        <p>This masterclass will delve into the history and dynamics of the inetsection of computer science and ethics. You will explore the modern ramifications of AI, privacy, and social dynamics that have arisen as a result of the omni presence of Computer Science.</p>
                     </div>
                 </div>
             </div>
