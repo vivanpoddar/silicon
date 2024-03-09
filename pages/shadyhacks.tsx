@@ -193,7 +193,7 @@ const Content = (): JSX.Element => {
                             <h1 className="text-blue-500 text-xl font-bold md:text-4xl md:pb-4">8 hours to solve one problem.</h1>
                             <p className="text-lg">Welcome to shady.Hacks, the premier highschool hackathon in the Pittsburgh area. During the event, competitors will have 8 hours to create
                                 a project to solve a relevant issue pertaining to a certain theme. The theme will be announced at the beginning of the event. Competitors will be able to work in teams of up to 4 people.
-                                At the end of the event, competitors will present their projects to a panel of judges. The best projects will win huge prizes offered by our sponsors.
+                                At the end of the event, competitors will present their projects to a panel of judges. The best projects will win huge prizes offered by our sponsors, and every participant will receive a complementary shirt and certificate, for their participation.
                             </p>
                             <LinkButton content="Learn more in the handbook" href="#" />
                         </div>
@@ -329,17 +329,13 @@ const Prizes = (): JSX.Element => {
     }, [isConnectOpen, isInternshipOpen, isComputeOpen, isInnovateOpen, isImpactOpen, isVisionOpen, isUnravelOpen, is2024Open]);
 
     return (
-        <div className="text-white" id="prizes">
+        <div className="text-white w-[100vw]" id="prizes">
             <div className="flex items-center">
                 <motion.h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Prizes</motion.h1>
                 <div className="border-t border-white flex-grow"></div>
             </div>
             <div className="py-4 flex flex-col">
-                <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-8 mx-4 gap-2">
-                    <button className="h-28 border border-black flex flex-col justify-center bg-gray-900 items-center text-center rounded-xl" onClick={() => setInternshipOpen(true)}>
-                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to left', '#ffd89b, #19547b']}>Internship Award</LinearGradient></h1>
-                        <p className="text-xs text-gray-400 italic">(Click me)</p>
-                    </button>
+                <div className="items-center grid grid-cols-2 sm:grid-cols-1 md:grid-cols-3 mx-4 lg:grid-cols-6 gap-2">
                     <button className="h-28 border border-black flex flex-col justify-center bg-gray-900 text-center items-center rounded-xl" onClick={() => setComputeOpen(true)}>
                         <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to left', '#17acff, #ff68f0']}>Compute Award</LinearGradient></h1>
                         <p className="text-xs text-gray-400 italic">(Click me)</p>
@@ -360,17 +356,13 @@ const Prizes = (): JSX.Element => {
                         <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#396afc, #2948ff']}><span className="text-[0.75rem]" style={{ lineHeight: "1rem" }}>Novice </span>Vision Award</LinearGradient></h1>
                         <p className="text-xs text-gray-400 italic">(Click me)</p>
                     </button>
-                    <button className="h-28 border flex border-black flex-col justify-center bg-gray-900  text-center items-center rounded-xl" onClick={() => setUnravelOpen(true)}>
-                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#F3904F, #fffc00']}><span className="text-[0.75rem]" style={{ lineHeight: "1rem" }}>Novice </span>Unravel Award</LinearGradient></h1>
-                        <p className="text-xs text-gray-400 italic">(Click me)</p>
-                    </button>
                     <button className="h-28 border flex border-black flex-col justify-center bg-gray-900  text-center items-center rounded-xl" onClick={() => set2024Open(true)}>
                         <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#1C6FF8, #FEF720']}>2024 hacker()</LinearGradient></h1>
                         <p className="text-xs text-gray-400 italic">(Click me)</p>
                     </button>
                 </div>
             </div>
-            <Transition appear show={isInternshipOpen} as={Fragment}>
+            {/* Add later if possible <Transition appear show={isInternshipOpen} as={Fragment}>
                 <Dialog as="div" className="relative z-10" onClose={() => setInternshipOpen(false)}>
                     <Transition.Child
                         as={Fragment}
@@ -427,7 +419,7 @@ const Prizes = (): JSX.Element => {
                         </div>
                     </div>
                 </Dialog>
-            </Transition>
+            </Transition> */}
             <Transition appear show={isComputeOpen} as={Fragment}>
                 <Dialog as="div" className="relative z-10" onClose={() => setComputeOpen(false)}>
                     <Transition.Child
@@ -467,7 +459,7 @@ const Prizes = (): JSX.Element => {
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>TBA</p>
+                                        <p>$150 + An opportunity to join our team</p>
                                     </div>
 
                                     <div className="mt-4">
@@ -524,7 +516,7 @@ const Prizes = (): JSX.Element => {
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>TBA</p>
+                                        <p>$100</p>
                                     </div>
 
                                     <div className="mt-4">
@@ -581,7 +573,7 @@ const Prizes = (): JSX.Element => {
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>TBA</p>
+                                        <p>$50</p>
                                     </div>
 
                                     <div className="mt-4">
@@ -639,7 +631,7 @@ const Prizes = (): JSX.Element => {
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>TBA</p>
+                                        <p>4x Arduino Kits</p>
                                     </div>
                                     <div className="mt-4">
                                         <button
@@ -695,7 +687,7 @@ const Prizes = (): JSX.Element => {
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>TBA</p>
+                                        <p>Kinetic DIY light up speaker + gain early access to our projects</p>
                                     </div>
 
                                     <div className="mt-4">
@@ -810,7 +802,7 @@ const Prizes = (): JSX.Element => {
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>TBA</p>
+                                        <p>You will receive a shirt, certificate, Echo3d subscription, and other benefits.</p>
                                     </div>
 
                                     <div className="mt-4">
