@@ -13,6 +13,7 @@ import Image from "next/image";
 import Head from "next/head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { LinearGradient } from "react-text-gradients";
 
@@ -113,16 +114,19 @@ const Panel1 = (): JSX.Element => {
                 }}
             />
             <div className="absolute w-screen h-screen flex items-center justify-center flex-col" style={{ height: "100vh" }}>
-                <Image priority={true} className="md:w-1/2 w-[90vw]" src="/ssahack.png" alt="shady.Hacks" width={800} height={300}></Image>
+                <Image priority={true} className="md:w-1/4 w-[90vw]" src="/ssahack.png" alt="shady.Hacks" width={600} height={100}></Image>
                 <div className="border-t border-white w-1/2 my-4"></div>
                 <TypeIt className="text-center text-5xl text-black">Hack for a <span className="text-yellow-500 italic">purpose.</span></TypeIt>
                 <div className="flex space-x-4">
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-1 md:gap-4">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-1 md:gap-4">
                         <a href="https://forms.gle/1NkPHxKgb2HsR9b5A" className="text-center mt-4 bg-blue-800 text-yellow-500 font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Sign Up</a>
                         <a href="mailto:contact@joinsilicon.org" className="text-center mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Contact</a>
                         <a href="https://shadysideacademy-my.sharepoint.com/:w:/g/personal/26poddarv_shadysideacademy_org/EejCBZMdudNHoMtI7kxiPEEBrONOyJj2c5hBZFD8FIIWSw?e=uwkxSG" className="text-center mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Handbook</a>
                         <a href="https://discord.gg/pxRjVRcmpz" className="text-center mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Discord</a>
                         <a href="https://shadysideacademy-my.sharepoint.com/:w:/g/personal/26poddarv_shadysideacademy_org/Ebt_MlC372lKomcSQHWLCDwBmhTnf4rH9yuzAzDTsqP6VA?e=HdiFw2" className="text-center mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Sponsor Info</a>
+                        <a href="https://www.instagram.com/ssa_hack/" className="text-center mt-4 bg-blue-800 text-white font-bold md:text-2xl rounded flex items-center justify-center">
+                            <FontAwesomeIcon icon={faInstagram} style={{ maxHeight: '30px' }} />
+                        </a>                    
                     </div>
                 </div>
                 <div className="absolute bottom-0 mb-8 rounded-lg p-4">
