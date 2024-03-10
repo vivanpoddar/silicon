@@ -126,7 +126,7 @@ const Panel1 = (): JSX.Element => {
                         <a href="https://shadysideacademy-my.sharepoint.com/:w:/g/personal/26poddarv_shadysideacademy_org/Ebt_MlC372lKomcSQHWLCDwBmhTnf4rH9yuzAzDTsqP6VA?e=HdiFw2" className="text-center mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Sponsor Info</a>
                         <a href="https://www.instagram.com/ssa_hack/" className="text-center mt-4 bg-blue-800 text-white font-bold md:text-2xl rounded flex items-center justify-center">
                             Instagram
-                        </a>                    
+                        </a>
                     </div>
                 </div>
                 <div className="absolute bottom-0 mb-8 rounded-lg p-4">
@@ -163,22 +163,20 @@ const Content = (): JSX.Element => {
             <div className="w-screen flex flex-col">
                 <div className="flex md:flex-row flex-col-reverse h-full w-full">
                     <div className="md:w-1/2 h-full flex flex-col items-center justify-center">
-                        <span className="text-center pb-4 text-md:text-4xl text-yellow-500">Tentative Schedule on <b> Apr 6, 2024</b></span>
+                        <span className="text-center pb-4 text-md:text-4xl text-yellow-500"><b> Apr 6, 2024 Feel free to come late/leave early!</b></span>
                         <div className="flex md:text-4xl items-center justify-center">
                             <div className="flex flex-col space-y-8">
-                                <span className="text-right">7:30</span>
-                                <span className="text-right">8:00</span>
-                                <span className="text-right">9:00</span>
-                                <span className="text-right">11:00</span>
-                                <span className="text-right">13:00</span>
-                                <span className="text-right">17:00</span>
-                                <span className="text-right">17:30</span>
-                                <span className="text-right">18:00</span>
+                                <span className="text-right">10:00 AM</span>
+                                <span className="text-right">11:00 AM</span>
+                                <span className="text-right">12:00 PM</span>
+                                <span className="text-right">1:00 PM</span>
+                                <span className="text-right">2:30 PM</span>
+                                <span className="text-right">3:30 PM</span>
+                                <span className="text-right">4:00 PM</span>
                             </div>
                             <div className="h-full self-center border border-white mx-4"></div>
                             <div className="flex flex-col space-y-8">
                                 <span>Topic Announcement</span>
-                                <span>Development Begins</span>
                                 <span>Masterclass: AI Ignition</span>
                                 <span>Masterclass: Micro Launchpad</span>
                                 <span>Lunch</span>
@@ -190,9 +188,9 @@ const Content = (): JSX.Element => {
                     </div>
                     <div className="md:w-1/2 pb-24 md:pb-0 px-8 flex items-center justify-center">
                         <div className="md:p-24">
-                            <h1 className="text-blue-500 text-xl font-bold md:text-4xl md:pb-4">8 hours to solve one problem.</h1>
-                            <p className="text-lg">Welcome to shady.Hacks, the premier highschool hackathon in the Pittsburgh area. During the event, competitors will have 8 hours to create
-                                a project to solve a relevant issue pertaining to a certain theme. The theme will be announced at the beginning of the event. Competitors will be able to work in teams of up to 4 people.
+                            <h1 className="text-blue-500 text-xl font-bold md:text-4xl md:pb-4">6 hours to solve one problem.</h1>
+                            <p className="text-lg">Welcome to shady.Hacks, the premier highschool hackathon in the Pittsburgh area. During the event, competitors will have 6 hours to create
+                                a project that addresses one critical issue of the world. The prompt will be announced at the beginning of the event, but it will be very broad and does not limit your creativity. Competitors can use their skills in computer science, engineering, and entrepreneurship to create their project of their choice with no limitations, working in teams of up to 4 people, or by themselves.
                                 At the end of the event, competitors will present their projects to a panel of judges. The best projects will win huge prizes offered by our sponsors, and every participant will receive a complementary shirt and certificate, for their participation.
                             </p>
                             <LinkButton content="Learn more in the handbook" href="#" />
@@ -248,7 +246,7 @@ const Questions = (): JSX.Element => {
                 <div className="p-4">
                     <Question question="Is lunch, etc. included?" answer="Everything you might need will be included free of charge. However, if you would like to work with more advanced components you will be required to bring your own. However, if this is difficult to do, shoot us an email and we will be able to accomodate your needs ahead of time." />
                     <Question question="I am a middle schooler. Can I succeed in this hackathon?" answer="No worries about skill gaps here. We will be hosting masterclasses that are tailored to newcomers (specifically younger people) that will bring you up to speed. In addition, we provide novice awards for people getting into the space." />
-                    <Question question="What is a hackathon?" answer="A hackathon is a 8-hour event where students come together to create a project that solves a problem. Students can work individually or in teams of up to 4 people. At the end of the 8 hours, students will present their projects to a panel of judges. The best projects will win prizes!" />
+                    <Question question="What is a hackathon?" answer="A hackathon is a 6-hour event where students come together to create a project that solves a problem. Students can work individually or in teams of up to 4 people. At the end of the 6 hours, students will present their projects to a panel of judges. The best projects will win prizes!" />
                     <Question question="Who can participate?" answer="Any high school student can participate! You do not need to have any prior experience with coding or hackathons. We will be hosting workshops to help you get started on your project." />
                 </div>
             </div>
