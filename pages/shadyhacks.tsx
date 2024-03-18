@@ -245,7 +245,7 @@ const Questions = (): JSX.Element => {
                 </div>
                 <div className="p-4">
                     <Question question="Is lunch included?" answer="There will be a small $5 fee for lunch. Lunch will be cheese/pepperoni pizza or salad, water, and a snack. Feel free to bring your own lunch if desired." />
-                    <Question question="Technology and devices included?" answer="We will provide 3D Printers, Arduinos, MakeyMakey's, Assorted Censors, Controllers, Phones, VRs and more. You are welcome to bring any hardware and software you'd like to succeed!" />
+                    <Question question="Technology and devices included?" answer="We will provide 3D Printers, Arduinos, MakeyMakey's, Assorted Censors, Controllers, Phones, VR Headsets, Laptops and more. You are welcome to bring any hardware and software you'd like to succeed!" />
                     <Question question="I am a middle schooler. Can I succeed in this hackathon?" answer="No worries about skill gaps here. We will be hosting masterclasses that are tailored to beginners and younger competitors that will bring you up to speed. In addition, we provide novice awards for people getting into the space." />
                     <Question question="What is a hackathon?" answer="Our hackathon is a 6-hour event where students come together to create a project that solves a problem. Students can work individually or in teams of up to 4 people. At the end of the 6 hours, students will present their projects to a panel of judges. The best projects will win prizes!" />
                     <Question question="Who can participate?" answer="Any middle or high school student can participate! You do not need to have any prior experience with coding or hackathons. We will be hosting workshops to help you get started on your project." />
@@ -841,9 +841,8 @@ const Sponsors = (): JSX.Element => {
                 <div className="flex flex-col items-center">
                     <div className="p-4 m-4">
                         <h1 className="text-3xl ">Atom Sponsors</h1>
-                        <div className="flex space-x-4">
-                            <div className="flex items-center">
-                            </div>
+                        <div className="flex">
+                            <Image src="/acethetics.jpeg" alt="Pitt RST" height={250} width={200}></Image>
                         </div>
                     </div>
                     <div className=" p-4 m-4">
