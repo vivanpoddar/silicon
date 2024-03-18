@@ -465,7 +465,7 @@ const Prizes = (): JSX.Element => {
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>$150 + An opportunity to join our team</p>
+                                        <p>$150 + An internship with DocLens.ai </p>
                                     </div>
 
                                     <div className="mt-4">
