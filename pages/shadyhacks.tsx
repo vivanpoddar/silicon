@@ -843,8 +843,8 @@ const Sponsors = (): JSX.Element => {
                         <h1 className="text-3xl ">Atom Sponsors</h1>
                         <div className="flex">
                             <Image src="/doclens_logo.jpg" alt="Doclens" height={50} width={200}></Image>
-                            <Image src="/connectedhealth.png" alt="connectedhealth" height={20} width={400}></Image>
-                            <Image src="/echo.png" alt="echo" height={50} width={400}></Image>
+                            <Image src="/connectedhealth.png" alt="connectedhealth" height={10} width={600}></Image>
+                            <Image src="/echo.png" alt="echo" height={50} width={350}></Image>
                         </div>
                     </div>
                     <div className=" p-4 m-4">
