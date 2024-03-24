@@ -459,13 +459,13 @@ const Prizes = (): JSX.Element => {
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
-                                            This award is presented to the team with the project showcasing their technical skills in relation to the prompt. The project must be highly complex and also must represent a finished and highly developed product. - Detailed desc. coming soon
+                                            This award is presented to the team with the project showcasing their technical skills in relation to the prompt. The project must be highly complex and also must represent a finished and highly developed product. (Important: Ages 16+ only)
                                         </p>
                                         <div className="flex flex-col">
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>$150 + An internship with DocLens.ai </p>
+                                        <p>Internship with Enact Solar, stipend included.</p>
                                     </div>
 
                                     <div className="mt-4">
