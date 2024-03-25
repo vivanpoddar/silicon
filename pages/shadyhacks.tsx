@@ -171,7 +171,7 @@ const Content = (): JSX.Element => {
                                 <span className="text-right">11:00 AM</span>
                                 <span className="text-right">12:00 AM</span>
                                 <span className="text-right">12:30 PM</span>
-                                <span className="text-right">3:00</span>
+                                <span className="text-right">3:00 PM</span>
                                 <span className="text-right">4:00 PM</span>
                             </div>
                             <div className="h-full self-center border border-white mx-4"></div>
