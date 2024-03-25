@@ -166,23 +166,23 @@ const Content = (): JSX.Element => {
                         <span className="text-center pb-4 text-md:text-4xl text-yellow-500"><b> Apr 6, 2024 Feel free to come late/leave early!</b></span>
                         <div className="flex md:text-4xl items-center justify-center">
                             <div className="flex flex-col space-y-8">
-                                <span className="text-right">10:00 AM</span>
+                                <span className="text-right">9:00 AM</span>
+                                <span className="text-right">9:30 AM</span>
                                 <span className="text-right">11:00 AM</span>
-                                <span className="text-right">12:00 PM</span>
-                                <span className="text-right">1:00 PM</span>
-                                <span className="text-right">2:30 PM</span>
-                                <span className="text-right">3:30 PM</span>
+                                <span className="text-right">12:00 AM</span>
+                                <span className="text-right">12:30 PM</span>
+                                <span className="text-right">3:00</span>
                                 <span className="text-right">4:00 PM</span>
                             </div>
                             <div className="h-full self-center border border-white mx-4"></div>
                             <div className="flex flex-col space-y-8">
                                 <span>Topic Announcement</span>
-                                <span>Masterclass: AI Ignition</span>
-                                <span>Masterclass: Micro Launchpad</span>
-                                <span>Lunch</span>
+                                <span>Web Design </span>
+                                <span>Biotechnology</span>
+                                <span>Immunoengineering</span>
+                                <span>Lunch Opens</span>
                                 <span>Judging</span>
-                                <span>Closing Ceremony</span>
-                                <span>Teams Leave</span>
+                                <span>Awards </span>
                             </div>
                         </div>
                     </div>
