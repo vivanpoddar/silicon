@@ -169,7 +169,7 @@ const Content = (): JSX.Element => {
                                 <span className="text-right">9:00 AM</span>
                                 <span className="text-right">9:30 AM</span>
                                 <span className="text-right">11:00 AM</span>
-                                <span className="text-right">12:00 AM</span>
+                                <span className="text-right">12:00 PM</span>
                                 <span className="text-right">12:30 PM</span>
                                 <span className="text-right">1:00 PM</span>
                                 <span className="text-right">3:00 PM</span>
