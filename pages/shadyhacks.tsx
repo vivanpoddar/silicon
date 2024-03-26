@@ -171,16 +171,18 @@ const Content = (): JSX.Element => {
                                 <span className="text-right">11:00 AM</span>
                                 <span className="text-right">12:00 AM</span>
                                 <span className="text-right">12:30 PM</span>
+                                <span className="text-right">1:00 PM</span>
                                 <span className="text-right">3:00 PM</span>
                                 <span className="text-right">4:00 PM</span>
                             </div>
                             <div className="h-full self-center border border-white mx-4"></div>
                             <div className="flex flex-col space-y-8">
                                 <span>Topic Announcement</span>
-                                <span>Web Design </span>
-                                <span>Biotechnology</span>
-                                <span>Immunoengineering</span>
+                                <span>Masterclass: Web Design </span>
+                                <span>Masterclass: Biotechnology</span>
+                                <span>Masterclass: Immunoengineering</span>
                                 <span>Lunch Opens</span>
+                                <span>Masterclass: AI Ignite</span>
                                 <span>Judging</span>
                                 <span>Awards </span>
                             </div>
