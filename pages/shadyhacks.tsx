@@ -178,11 +178,11 @@ const Content = (): JSX.Element => {
                             <div className="h-full self-center border border-white mx-4"></div>
                             <div className="flex flex-col space-y-8">
                                 <span>Topic Announcement</span>
-                                <span>Masterclass: Web Design </span>
-                                <span>Masterclass: Biotechnology</span>
-                                <span>Masterclass: Immunoengineering</span>
+                                <span>Web Design </span>
+                                <span>Biotechnology</span>
+                                <span>Immunoengineering</span>
                                 <span>Lunch Opens</span>
-                                <span>Masterclass: AI Ignite</span>
+                                <span>AI Ignite</span>
                                 <span>Judging</span>
                                 <span>Awards </span>
                             </div>
