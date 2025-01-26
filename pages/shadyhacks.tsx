@@ -116,16 +116,41 @@ const Panel1 = (): JSX.Element => {
             <div className="absolute w-screen h-screen flex items-center justify-center flex-col" style={{ height: "100vh" }}>
                 <Image priority={true} className="md:w-1/4 w-[90vw]" src="/ssahack.png" alt="shady.Hacks" width={600} height={100}></Image>
                 <div className="border-t border-white w-1/2 my-4"></div>
-                <TypeIt className="text-center text-5xl text-black">Hack for a <span className="text-yellow-500 italic">purpose.</span></TypeIt>
+                <TypeIt className="text-center text-5xl text-black">Hack for a <span className="text-yellow-500 italic">tomorrow.</span></TypeIt>
+
+
+                <div className="fixed top-14 right-0 m-4 hidden md:block">
+                    <motion.div 
+                        initial={{ x: 300 }} 
+                        animate={{ x: 0 }}  
+                        transition={{ duration: 0.25 }}
+                        id="toast-default" 
+                        className="flex items-center w-full max-w-m p-4 text-gray-500 bg-white rounded-lg shadow-sm dark:text-gray-400 dark:bg-gray-800" 
+                    >
+                        <div className="inline-flex items-center justify-center shrink-0 w-8 h-8 text-blue-500 rounded-lg dark:text-blue-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
+                            </svg>
+                        </div>
+                        <div className="ms-3">shady.Hacks 2025 registrations are open. Schedules/awards are tentative.</div>
+                        <button type="button" className="ms-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex items-center justify-center h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700" data-dismiss-target="#toast-default" aria-label="Close">
+                            <span className="sr-only">Close</span>
+                            <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                            </svg>
+                        </button>
+                    </motion.div>
+                </div>
+
                 <div className="flex space-x-4">
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-1 md:gap-4">
-                        <a href="https://forms.gle/1NkPHxKgb2HsR9b5A" className="text-center mt-4 bg-blue-800 text-yellow-500 font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Sign Up</a>
-                        <a href="https://shadysideacademy-my.sharepoint.com/:w:/g/personal/26poddarv_shadysideacademy_org/EejCBZMdudNHoMtI7kxiPEEBrONOyJj2c5hBZFD8FIIWSw?e=uwkxSG" className="text-center mt-4 bg-blue-800 text-yellow-500 font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Handbook</a>
-                        <a href="mailto:contact@joinsilicon.org" className="text-center mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Contact</a>
-                        <a href="https://discord.gg/pxRjVRcmpz" className="text-center mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Discord</a>
-                        <a href="https://shadysideacademy-my.sharepoint.com/:w:/g/personal/26poddarv_shadysideacademy_org/Ebt_MlC372lKomcSQHWLCDwBmhTnf4rH9yuzAzDTsqP6VA?e=HdiFw2" className="text-center mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Sponsor Info</a>
-                        <a href="https://drive.google.com/drive/folders/1ixl2A1D_IjwNvjAvrnPSLaW9Bwja_usN?usp=drive_link" className="text-center mt-4 bg-blue-800 text-white font-bold py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Web Development</a>
-                        <a href="https://www.instagram.com/ssa_hack/" className="text-center mt-4 bg-blue-800 text-white py-1 px-2 font-bold md:text-2xl rounded flex items-center justify-center">
+                    <div className="grid grid-cols-2 md:-grid-cols-3 lg:grid-cols-4 pt-8 gap-1 md:gap-4">
+                        <a href="https://forms.gle/1NkPHxKgb2HsR9b5A" className="text-center mt-4 border text-yellow-500 font-medium py-1 md:py-2 md:px-4 md:text-2xl border-yellow-500 rounded">Sign Up</a>
+                        <a href="https://shadysideacademy-my.sharepoint.com/:w:/g/personal/26poddarv_shadysideacademy_org/EejCBZMdudNHoMtI7kxiPEEBrONOyJj2c5hBZFD8FIIWSw?e=uwkxSG" className="text-center mt-4 border border-yellow-500 text-yellow-500 font-medium py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Handbook</a>
+                        <a href="mailto:contact@joinsilicon.org" className="text-center mt-4 border text-white py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Contact</a>
+                        <a href="https://discord.gg/pxRjVRcmpz" className="text-center mt-4 border text-white py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Discord</a>
+                        <a href="https://shadysideacademy-my.sharepoint.com/:w:/g/personal/26poddarv_shadysideacademy_org/Ebt_MlC372lKomcSQHWLCDwBmhTnf4rH9yuzAzDTsqP6VA?e=HdiFw2" className="text-center mt-4 border  text-white py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Sponsor Info</a>
+                        <a href="https://drive.google.com/drive/folders/1ixl2A1D_IjwNvjAvrnPSLaW9Bwja_usN?usp=drive_link" className="text-center mt-4 border text-white py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Web Development</a>
+                        <a href="https://www.instagram.com/ssa_hack/" className="text-center mt-4 border text-white py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">
                             Instagram
                         </a>
                     </div>
@@ -143,10 +168,10 @@ const Panel1 = (): JSX.Element => {
 
 const Panel2 = (): JSX.Element => {
     return (
-        <motion.div className="z-10 h-[75vh] md:h-screen w-screen flex flex-col-reverse md:flex-row">
+        <motion.div className="z-10 h-[75vh] bg-gradient-to-b from-blue-500 to-black md:h-screen w-screen flex flex-col-reverse md:flex-row">
             <div className="md:w-1/2 h-1/2 md:h-full flex flex-col items-center justify-center md:p-24">
-                <h1 className="md:text-7xl text-white text-center text-5xl">Gain experience with mentors from AWS, CMU, and UPitt.</h1>
-                <LinkButton content="Claim your spot at shady.Hacks 2024" href="https://forms.gle/1NkPHxKgb2HsR9b5A" />
+                <h1 className="md:text-7xl text-white text-center text-5xl">The first highschool hackathon in the city of Pittsburgh.</h1>
+                <LinkButton content="Claim your spot at shady.Hacks 2025" href="https://forms.gle/1NkPHxKgb2HsR9b5A" />
             </div>
             <div className="md:w-1/2 h-1/2 md:h-full flex items-center justify-center">
                 <div className='md:h-1/2 w-3/4 md:w-full flex items-center justify-center'>
@@ -164,7 +189,8 @@ const Content = (): JSX.Element => {
             <div className="w-screen flex flex-col">
                 <div className="flex md:flex-row flex-col-reverse h-full w-full">
                     <div className="md:w-1/2 h-full flex flex-col items-center justify-center">
-                        <span className="text-center pb-4 text-md:text-4xl text-yellow-500"><b> Apr 6, 2024 Feel free to come late/leave early!</b></span>
+                        
+                        <span className="text-center pb-4 text-4xl text-yellow-500"><b> Apr 5, 2025</b></span>
                         <div className="flex md:text-4xl items-center justify-center">
                             <div className="flex flex-col space-y-8">
                                 <span className="text-right">9:00 AM</span>
@@ -173,17 +199,17 @@ const Content = (): JSX.Element => {
                                 <span className="text-right">12:00 PM</span>
                                 <span className="text-right">12:30 PM</span>
                                 <span className="text-right">1:00 PM</span>
-                                <span className="text-right">3:00 PM</span>
                                 <span className="text-right">4:00 PM</span>
+                                <span className="text-right">5:00 PM</span>
                             </div>
                             <div className="h-full self-center border border-white mx-4"></div>
                             <div className="flex flex-col space-y-8">
                                 <span>Topic Announcement</span>
-                                <span>Web Design </span>
-                                <span>Biotechnology</span>
-                                <span>Immunoengineering</span>
+                                <span>Masterclass 1</span>
+                                <span>Masterclass 2</span>
+                                <span>Masterclass 3</span>
                                 <span>Lunch Opens</span>
-                                <span>AI Ignite</span>
+                                <span>Masterclass 4</span>
                                 <span>Judging</span>
                                 <span>Awards </span>
                             </div>
@@ -192,9 +218,7 @@ const Content = (): JSX.Element => {
                     <div className="md:w-1/2 pb-24 md:pb-0 px-8 flex items-center justify-center">
                         <div className="md:p-24">
                             <h1 className="text-blue-500 text-xl font-bold md:text-4xl md:pb-4">6 hours to solve one problem.</h1>
-                            <p className="text-lg">Welcome to shady.Hacks, the premier highschool hackathon in the Pittsburgh area. During the event, competitors will have 6 hours to create
-                                a project that addresses one critical issue of the world. The prompt will be announced at the beginning of the event, but it will be very broad and does not limit your creativity. Competitors can use their skills in computer science, engineering, and entrepreneurship to create their project of their choice with no limitations, working in teams of up to 4 people, or by themselves.
-                                At the end of the event, competitors will present their projects to a panel of judges. The best projects will win huge prizes offered by our sponsors, and every participant will receive a complementary shirt and certificate, for their participation.
+                            <p className="text-lg">Welcome to the second year of shady.Hacks. Welcome to shady.Hacks 2025: Hack for a Tomorrow. shady.Hacks is an annual hackathon dedicated to empowering students and innovators around the Pittsburgh area to increase exposure to the field of computer science and entrepreneurship. Join shady.Hacks to meet like-minded individuals, learn new skills, and create something amazing. During the event, you will have 7 hours to create a project to a project that addresses one critical issue that will be announced at the start of the event. It will be broad, and we aim for your creativity to run freely. At the end of the event, competitors will present their projects to a panel of judges. The best projects will win prizes offered by our sponsors. Participants will receive compelementary shirts, certificates, and other goodies. Register now to secure your spot at shady.Hacks 2025. See the Q&A and handbook for more info.
                             </p>
                             <LinkButton content="Learn more in the handbook" href="#" />
                         </div>
@@ -215,22 +239,23 @@ const Masterclass = (): JSX.Element => {
                 </div>
                 <div className="p-4">
                     <div>
+                        <h1>2024 Masterclasses</h1>
                         <h1 className="text-xl underline italic">AI Ignition: An Introduction to Artificial Intelligence</h1>
                         <p>Embark on a thrilling journey into the world of artificial intelligence with our power-packed masterclass. This two-hour session is crafted for individuals ready to take the first step in their AI project for the hackathon, providing essential insights and practical guidance to kickstart your AI endeavors.
-                            By the end of AI Ignition, you will leave with the knowledge, confidence, and practical skills to embark on your AI project. Join us for an hour of inspiration, hands-on learning, and actionable insights as we guide you through the exciting world of artificial intelligence. Ignite your AI journey.
+                            By the end of AI Ignition, you will leave with the knowledge, confidence, and practical skills to embark on your AI project. Join us for an hour of inspiration, hands-on learning, and actionable insights as we guide you through the exciting world of artificial intelligence. Ignite your AI journey. Taught by Indrajit Poddar from AWS.
                         </p>
                     </div>
                     <div>
                         <h1 className="pt-2 text-xl underline italic">3D, AR, VR Workshop</h1>
-                        <p>Utilizing tools from Echo3D, you will learn the basics of 3D design and how we can implement these in our VR worlds. This course will be very hands on, with opportunities to use VR headsets and delve into a bit of game design.</p>
+                        <p>Utilizing tools from Echo3D, you will learn the basics of 3D design and how we can implement these in our VR worlds. This course will be very hands on, with opportunities to use VR headsets and delve into a bit of game design. Thanks to the Echo3D team.</p>
                     </div>
                     <div>
                         <h1 className="pt-2 text-xl underline italic">Web Development</h1>
-                        <p>This masterclass will delve into the basics of Web Development, offering you the skills you will need to create a meaningful project to display to the judges. This course will be taught using SSA curriculum, and will give you the tools needed to succeed. </p>
+                        <p>This masterclass will delve into the basics of Web Development, offering you the skills you will need to create a meaningful project to display to the judges. This course will be taught using SSA curriculum, and will give you the tools needed to succeed. Taught by SSA Computer Science Chair Mr. Dawson Haytock.</p>
                     </div>
                     <div>
-                        <h1 className="pt-2 text-xl underline italic">Computer Science Ethics</h1>
-                        <p>This masterclass will delve into the history and dynamics of the inetsection of computer science and ethics. You will explore the modern ramifications of AI, privacy, and social dynamics that have arisen as a result of the omni presence of Computer Science.</p>
+                        <h1 className="pt-2 text-xl underline italic">Bioengineering</h1>
+                        <p>Learn from renowned University of Pittsburgh professor Dr. Tim Chung. In this class, you will learn elementary techniques in Bioengineering and gain some suggestions for your hackathon project. This event will introduce you to the world of Bioengineering and the cutting edge innovations taking place in academia and our modern world.</p>
                     </div>
                 </div>
             </div>
@@ -315,7 +340,6 @@ const Person = ({ image, position, text, name, linkedin, email }: PersonProps) =
 // }
 
 const Prizes = (): JSX.Element => {
-    let [isInternshipOpen, setInternshipOpen] = useState(false)
     let [isComputeOpen, setComputeOpen] = useState(false)
     let [isConnectOpen, setConnectOpen] = useState(false)
     let [isInnovateOpen, setInnovateOpen] = useState(false)
@@ -325,7 +349,7 @@ const Prizes = (): JSX.Element => {
     let [is2024Open, set2024Open] = useState(false)
 
     useEffect(() => {
-        if (isConnectOpen || isInternshipOpen || isComputeOpen || isInnovateOpen || isImpactOpen || isVisionOpen || isUnravelOpen || is2024Open) {
+        if (isConnectOpen || isComputeOpen || isInnovateOpen || isImpactOpen || isVisionOpen || isUnravelOpen || is2024Open) {
             document.body.classList.add('overflow-hidden');
         } else {
             document.body.classList.remove('overflow-hidden');
@@ -335,7 +359,7 @@ const Prizes = (): JSX.Element => {
         return () => {
             document.body.classList.remove('overflow-hidden');
         };
-    }, [isConnectOpen, isInternshipOpen, isComputeOpen, isInnovateOpen, isImpactOpen, isVisionOpen, isUnravelOpen, is2024Open]);
+    }, [isConnectOpen, isComputeOpen, isInnovateOpen, isImpactOpen, isVisionOpen, isUnravelOpen, is2024Open]);
 
     return (
         <div className="text-white w-[100vw]" id="prizes">
@@ -462,13 +486,13 @@ const Prizes = (): JSX.Element => {
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
-                                            This award is presented to the team with the project showcasing their technical skills in relation to the prompt. The project must be highly complex and also must represent a finished and highly developed product. (Important: Ages 16+ only by the end of the academic year)
+                                            This award is presented to the team with the project showcasing the highest depth of technical skills in relation to the prompt. The project must be highly complex and also must represent a finished and highly developed product. A sponsor will offer the winner a summer internship opportunity.  (Important: Ages 16+ only by the end of the academic year)
                                         </p>
                                         <div className="flex flex-col">
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>Internship with Enact Solar, stipend included.</p>
+                                        <p>Internship, providing organization is tentative for 2025.</p>
                                     </div>
 
                                     <div className="mt-4">
@@ -519,13 +543,13 @@ const Prizes = (): JSX.Element => {
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
-                                            This award is presented to the team with the most potential impact on our communities. The project must also showcase a certain depth of completion and stand out among other submissions. - Detailed desc. coming soon
+                                            This award is presented to the team with the most potential impact on our communities. The project must also showcase a certain depth of completion and stand out among other submissions. Judges will be looking for a depth of project that is both highly developed and also has the potential to <span className="font-bold">connect with disadvantaged communities in the Pittsburgh area.</span>
                                         </p>
                                         <div className="flex flex-col">
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>$100</p>
+                                        <p>Stay tuned!</p>
                                     </div>
 
                                     <div className="mt-4">
@@ -576,13 +600,13 @@ const Prizes = (): JSX.Element => {
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
-                                            This award is presented to the team with the most innovative and groundbreaking idea and solution. The project must also showcase a certain depth of completion and stand out among other submissions. - Detailed desc. coming soon
+                                            This award is presented to the team with the most innovative and groundbreaking idea and solution. The project must also showcase a certain depth of completion and stand out among other submissions. Judges will be looking for primarily novelty and originality in addressing an issue pertaining to the prompt.
                                         </p>
                                         <div className="flex flex-col">
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>$50</p>
+                                        <p>Stay tuned!</p>
                                     </div>
 
                                     <div className="mt-4">
@@ -634,13 +658,13 @@ const Prizes = (): JSX.Element => {
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
-                                            This award is presented to the team with the most potential impact on our communities. This award is solely to be awarded to beginners. - Detailed desc. coming soon
+                                            This award is presented to the team with the most potential impact on our communities. This award is solely to be awarded to beginners. Judges will be looking for a project that showcases the growth of the competitors throughout the competition and a project that has the potential to reach people around the nation and further.
                                         </p>
                                         <div className="flex flex-col">
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>4x Arduino Kits</p>
+                                        <p>Stay tuned!</p>
                                     </div>
                                     <div className="mt-4">
                                         <button
@@ -690,13 +714,13 @@ const Prizes = (): JSX.Element => {
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
-                                            This award is presented to the team with the most visionary idea. This award is solely to be awarded to beginners. - Detailed desc. coming soon
+                                            This award is presented to the team with the most visionary idea. This award is solely to be awarded to beginners. Judges will be looking for a truly visionary project that reflects the skill level of the competitors.
                                         </p>
                                         <div className="flex flex-col">
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>Kinetic DIY light up speaker + gain early access to our projects</p>
+                                        <p>Stay tuned!</p>
                                     </div>
 
                                     <div className="mt-4">
@@ -805,13 +829,13 @@ const Prizes = (): JSX.Element => {
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
-                                            Thank you to our participants! You will receive a list of items just for attending the hackathon. - Detailed desc. coming soon
+                                            Thank you to our participants! You will receive a list of items just for attending the hackathon. 
                                         </p>
                                         <div className="flex flex-col">
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>You will receive a shirt, certificate, Echo3d subscription, and other benefits.</p>
+                                        <p>You will receive a shirt, certificate, and other benefits. The offerings are currently tentative.</p>
                                     </div>
 
                                     <div className="mt-4">
@@ -841,6 +865,7 @@ const Sponsors = (): JSX.Element => {
                 <div className="border-t border-white flex-grow"></div>
             </div>
             <div className="p-4">
+                <h1>2024 Sponsors</h1>
                 <div className="flex flex-col items-center">
                     <div className="p-4 m-4">
                         <h1 className="text-3xl ">Atom Sponsors</h1>
@@ -876,9 +901,7 @@ const Ssahack = () => {
                 <title>shady.Hacks 2024</title>
             </Head>
             <Navbar current="shady.Hacks" />
-            <div style={{
-                backgroundImage: `url(/panelbg.png)`,
-            }}>
+            <div>
                 <Panel1 />
                 <Panel2 />
                 <Content />
