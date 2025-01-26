@@ -199,10 +199,9 @@ const Carousel = () => {
 const Panel2 = (): JSX.Element => {
  
     return (
-        
         <div className="border-b relative h-[75vh] md:h-screen w-screen flex flex-col-reverse md:flex-row">
-            <div className="-z-10 absolute">
-                <Image src="/scribble.svg" alt="wave" width={100000} height={50} />
+            <div className="-z-10 absolute w-full h-full">
+                <Image src="/scribble.svg" alt="wave" layout="fill" objectFit="cover" />
             </div>
             <div className="md:w-1/2 h-1/2 md:h-full flex flex-col items-center justify-center md:p-24">
                 <h1 className="md:text-7xl text-white text-center text-5xl">The first highschool hackathon in the city of Pittsburgh.</h1>
@@ -210,7 +209,7 @@ const Panel2 = (): JSX.Element => {
             </div>
             <div className="md:w-1/2 h-1/2 md:h-full flex items-center justify-center">
                 <div className='md:h-1/2 w-3/4 md:w-full flex items-center justify-center'>
-                    <Carousel/>
+                    <Carousel />
                 </div>
             </div>
         </div>
@@ -303,9 +302,6 @@ const Masterclass = (): JSX.Element => {
 const Questions = (): JSX.Element => {
     return (
         <div className="relative">
-            <div className="top-0 right-0 absolute -z-10">
-                <Image src="/wave.svg" alt="wave" width={100000} height={50} />
-            </div>
             <div className="text-white">
                 <div className="flex items-center">
                     <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">FAQ</h1>
@@ -899,10 +895,13 @@ const Prizes = (): JSX.Element => {
 
 const Sponsors = (): JSX.Element => {
     return (
-        <div className=" text-white">
+        <div className="relative text-white">
             <div className="flex items-center">
                 <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Sponsors</h1>
                 <div className="border-t border-white flex-grow"></div>
+            </div>
+            <div className="-z-10 absolute w-full h-full">
+                <Image src="/wave.svg" alt="wave" layout="fill" objectFit="cover" />
             </div>
             <div className="p-4">
                 <h1>2024 Sponsors</h1>
