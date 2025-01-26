@@ -130,6 +130,10 @@ const Panel1 = (): JSX.Element => {
                         <a href="https://www.instagram.com/ssa_hack/" className="text-center mt-4 border text-white py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">
                             Instagram
                         </a>
+                        <a href="https://forms.gle/44is8Wv5BEezaF1F7" className="text-center mt-4 border text-white py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">
+                            Volunteer Form
+                        </a>
+                        
                     </div>
                 </div>
                 <div className="absolute bottom-0 mb-8 rounded-lg p-4">
