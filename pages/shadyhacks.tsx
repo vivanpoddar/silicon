@@ -941,11 +941,12 @@ const Ssahack = () => {
     return (
         <>
             <Head>
-                <title>shady.Hacks 2024</title>
+                <title>shady.Hacks 2025</title>
             </Head>
             <Navbar current="shady.Hacks" />
             <div>
                 <Notification text="shady.Hacks 2025 registrations are open. Schedules/awards are tentative."/>
+                
                 <Panel1 />
                 <Panel2 />
                 <Content />
