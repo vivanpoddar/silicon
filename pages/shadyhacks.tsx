@@ -16,6 +16,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { LinearGradient } from "react-text-gradients";
+import Notification from "../components/notification";
 
 interface QuestionProps {
     question: string;
@@ -44,7 +45,7 @@ const Panel1 = (): JSX.Element => {
 
     return (
         //rgb(246, 196, 77)
-        <div className="bg-blue-500 h-screen w-screen">
+        <div className="bg-gradient-to-b from-blue-500 to-black h-screen w-screen">
             <Particles
                 style={{ position: "absolute" }}
                 id="tsparticles"
@@ -118,30 +119,6 @@ const Panel1 = (): JSX.Element => {
                 <div className="border-t border-white w-1/2 my-4"></div>
                 <TypeIt className="text-center text-5xl text-black">Hack for a <span className="text-yellow-500 italic">tomorrow.</span></TypeIt>
 
-
-                <div className="fixed top-14 right-0 m-4 hidden md:block">
-                    <motion.div 
-                        initial={{ x: 300 }} 
-                        animate={{ x: 0 }}  
-                        transition={{ duration: 0.25 }}
-                        id="toast-default" 
-                        className="flex items-center w-full max-w-m p-4 text-gray-500 bg-white rounded-lg shadow-sm dark:text-gray-400 dark:bg-gray-800" 
-                    >
-                        <div className="inline-flex items-center justify-center shrink-0 w-8 h-8 text-blue-500 rounded-lg dark:text-blue-200">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
-                            </svg>
-                        </div>
-                        <div className="ms-3">shady.Hacks 2025 registrations are open. Schedules/awards are tentative.</div>
-                        <button type="button" className="ms-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex items-center justify-center h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700" data-dismiss-target="#toast-default" aria-label="Close">
-                            <span className="sr-only">Close</span>
-                            <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                            </svg>
-                        </button>
-                    </motion.div>
-                </div>
-
                 <div className="flex space-x-4">
                     <div className="grid grid-cols-2 md:-grid-cols-3 lg:grid-cols-4 pt-8 gap-1 md:gap-4">
                         <a href="https://forms.gle/1NkPHxKgb2HsR9b5A" className="text-center mt-4 border text-yellow-500 font-medium py-1 md:py-2 md:px-4 md:text-2xl border-yellow-500 rounded">Sign Up</a>
@@ -166,32 +143,92 @@ const Panel1 = (): JSX.Element => {
     )
 }
 
-const Panel2 = (): JSX.Element => {
+const Carousel = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const images = [
+        { src: '/DSC_9628.jpg', alt: 'Image 3' },
+        { src: '/DS307061.jpg', alt: 'Image 1' },
+        { src: '/DS307070.jpg', alt: 'Image 2' },
+        { src: '/DS307097.jpg', alt: 'Image 3' },
+        { src: '/DSC_9643.jpg', alt: 'Image 3' },
+        { src: '/DSC_9645.jpg', alt: 'Image 3' },
+    ];
+
+    const prevSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+    };
+
+    const nextSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+    };
+
     return (
-        <motion.div className="z-10 h-[75vh] bg-gradient-to-b from-blue-500 to-black md:h-screen w-screen flex flex-col-reverse md:flex-row">
+        <div className="mx-8 relative w-full max-w-4xl">
+            <div className="overflow-hidden relative rounded-xl border-4 border-black">
+            <div
+                className="flex transition-transform duration-500"
+                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+                {images.map((image, index) => (
+                <div key={index} className="min-w-full">
+                    <Image src={image.src} alt={image.alt} width={10000} height={500} />
+                </div>
+                ))}
+            </div>
+            </div>
+            <button
+            onClick={prevSlide}
+            className="absolute top-1/2 left-0 transform  text-black p-2 rounded-full"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-10 w-10">
+                <path fillRule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-4.28 9.22a.75.75 0 0 0 0 1.06l3 3a.75.75 0 1 0 1.06-1.06l-1.72-1.72h5.69a.75.75 0 0 0 0-1.5h-5.69l1.72-1.72a.75.75 0 0 0-1.06-1.06l-3 3Z" clipRule="evenodd" />
+            </svg>
+            </button>
+            <button
+            onClick={nextSlide}
+            className="absolute top-1/2 right-0 transform  text-black p-2 rounded-full"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-10 w-10">
+                <path fillRule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clipRule="evenodd" />
+            </svg>
+            </button>
+        </div>
+    );
+};
+
+const Panel2 = (): JSX.Element => {
+ 
+    return (
+        
+        <div className="border-b relative h-[75vh] md:h-screen w-screen flex flex-col-reverse md:flex-row">
+            <div className="-z-10 absolute">
+                <Image src="/scribble.svg" alt="wave" width={100000} height={50} />
+            </div>
             <div className="md:w-1/2 h-1/2 md:h-full flex flex-col items-center justify-center md:p-24">
                 <h1 className="md:text-7xl text-white text-center text-5xl">The first highschool hackathon in the city of Pittsburgh.</h1>
                 <LinkButton content="Claim your spot at shady.Hacks 2025" href="https://forms.gle/1NkPHxKgb2HsR9b5A" />
             </div>
             <div className="md:w-1/2 h-1/2 md:h-full flex items-center justify-center">
                 <div className='md:h-1/2 w-3/4 md:w-full flex items-center justify-center'>
-                    <Image src="/upitt.png" width={800} height={0} alt="dude laughing"></Image>
+                    <Carousel/>
                 </div>
             </div>
-        </motion.div>
+        </div>
     )
 }
 
 const Content = (): JSX.Element => {
     return (
         //rgb(246, 196, 77)
-        <div className="flex text-white py-24">
+        <div className="relative flex text-white py-24 z-0">
+            <div className="flex absolute right-1 top-5">
+                <Image src="/star.svg" alt="Star" width={500} height={50} />
+            </div>
             <div className="w-screen flex flex-col">
-                <div className="flex md:flex-row flex-col-reverse h-full w-full">
-                    <div className="md:w-1/2 h-full flex flex-col items-center justify-center">
-                        
+                <div className="flex xl:flex-row flex-col-reverse h-full w-full">
+                    <div className="xl:w-1/2 h-full flex flex-col items-center justify-center">
                         <span className="text-center pb-4 text-4xl text-yellow-500"><b> Apr 5, 2025</b></span>
-                        <div className="flex md:text-4xl items-center justify-center">
+                        <div className="flex xl:text-4xl items-center justify-center">
                             <div className="flex flex-col space-y-8">
                                 <span className="text-right">9:00 AM</span>
                                 <span className="text-right">9:30 AM</span>
@@ -215,10 +252,10 @@ const Content = (): JSX.Element => {
                             </div>
                         </div>
                     </div>
-                    <div className="md:w-1/2 pb-24 md:pb-0 px-8 flex items-center justify-center">
-                        <div className="md:p-24">
-                            <h1 className="text-blue-500 text-xl font-bold md:text-4xl md:pb-4">6 hours to solve one problem.</h1>
-                            <p className="text-lg">Welcome to the second year of shady.Hacks. Welcome to shady.Hacks 2025: Hack for a Tomorrow. shady.Hacks is an annual hackathon dedicated to empowering students and innovators around the Pittsburgh area to increase exposure to the field of computer science and entrepreneurship. Join shady.Hacks to meet like-minded individuals, learn new skills, and create something amazing. During the event, you will have 7 hours to create a project to a project that addresses one critical issue that will be announced at the start of the event. It will be broad, and we aim for your creativity to run freely. At the end of the event, competitors will present their projects to a panel of judges. The best projects will win prizes offered by our sponsors. Participants will receive compelementary shirts, certificates, and other goodies. Register now to secure your spot at shady.Hacks 2025. See the Q&A and handbook for more info.
+                    <div className="xl:w-1/2 pb-24 xl:pb-0 px-8 flex items-center justify-center relative">
+                        <div className="xl:p-24">
+                            <h1 className="text-blue-500 text-xl italic xl:text-4xl xl:pb-4">6 hours to solve one problem.</h1>
+                            <p className="text-lg">Welcome to the second year of shady.Hacks. Welcome to shady.Hacks 2025: Hack for a Tomorrow. shady.Hacks is an annual hackathon dedicated to empowering students and innovators around the Pittsburgh area to increase exposure to the field of computer science and entrepreneurship. Join shady.Hacks to meet like-minded individuals, learn new skills, and create something amazing. During the event, you will have 7 hours to create a project to a project that addresses one critical issue that will be announced at the start of the event. It will be broad, and we aim for your creativity to run freely. At the end of the event, competitors will present their projects to a panel of judges. The best projects will win prizes offered by our sponsors. Participants will receive complementary shirts, certificates, and other goodies. Register now to secure your spot at shady.Hacks 2025. See the FAQ and handbook for more info.
                             </p>
                             <LinkButton content="Learn more in the handbook" href="#" />
                         </div>
@@ -265,7 +302,10 @@ const Masterclass = (): JSX.Element => {
 
 const Questions = (): JSX.Element => {
     return (
-        <div >
+        <div className="relative">
+            <div className="top-0 right-0 absolute -z-10">
+                <Image src="/wave.svg" alt="wave" width={100000} height={50} />
+            </div>
             <div className="text-white">
                 <div className="flex items-center">
                     <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">FAQ</h1>
@@ -902,6 +942,7 @@ const Ssahack = () => {
             </Head>
             <Navbar current="shady.Hacks" />
             <div>
+                <Notification text="shady.Hacks 2025 registrations are open. Schedules/awards are tentative."/>
                 <Panel1 />
                 <Panel2 />
                 <Content />
