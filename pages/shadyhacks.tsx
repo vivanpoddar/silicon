@@ -117,7 +117,7 @@ const Panel1 = (): JSX.Element => {
             <div className="absolute w-screen h-screen flex items-center justify-center flex-col" style={{ height: "100vh" }}>
                 <Image priority={true} className="md:w-1/4 w-[90vw]" src="/ssahack.png" alt="shady.Hacks" width={600} height={100}></Image>
                 <div className="border-t border-white w-1/2 my-4"></div>
-                <TypeIt className="text-center text-5xl text-black">Hack for a <span className="text-yellow-500 italic">tomorrow.</span></TypeIt>
+                <TypeIt className="text-center text-5xl text-black">Hack for a <span className="text-yellow-500 italic">purpose.</span></TypeIt>
 
                 <div className="flex space-x-4">
                     <div className="grid grid-cols-2 md:-grid-cols-3 lg:grid-cols-4 pt-8 gap-1 md:gap-4">
@@ -151,7 +151,10 @@ const Carousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const images = [
         { src: '/DSC_9628.jpg', alt: 'Image 3' },
-        { src: '/DS307061.jpg', alt: 'Image 1' },
+        { src: '/DS307067.jpg', alt: 'Image 1' },
+        { src: '/DS307074.jpg', alt: 'Image 1' },
+        { src: '/DS307084.jpg', alt: 'Image 1' },
+        { src: '/DS307106.jpg', alt: 'Image 1' },
         { src: '/DS307070.jpg', alt: 'Image 2' },
         { src: '/DS307097.jpg', alt: 'Image 3' },
         { src: '/DSC_9643.jpg', alt: 'Image 3' },
@@ -208,7 +211,7 @@ const Panel2 = (): JSX.Element => {
                 <Image src="/scribble.svg" alt="wave" layout="fill" objectFit="cover" />
             </div>
             <div className="xl:w-1/2 h-1/2 xl:h-full flex flex-col items-center justify-center xl:p-24">
-                <h1 className="xl:text-7xl text-white text-center text-5xl">The first highschool hackathon in the city of Pittsburgh.</h1>
+                <h1 className="xl:text-7xl text-white text-center text-2xl">The first highschool hackathon in the city of Pittsburgh.</h1>
                 <LinkButton content="Claim your spot at shady.Hacks 2025" href="https://forms.gle/1NkPHxKgb2HsR9b5A" />
             </div>
             <div className="xl:w-1/2 h-1/2 xl:h-full flex items-center justify-center">
@@ -258,7 +261,7 @@ const Content = (): JSX.Element => {
                     <div className="xl:w-1/2 pb-24 xl:pb-0 px-8 flex items-center justify-center relative">
                         <div className="xl:p-24">
                             <h1 className="text-blue-500 text-xl italic xl:text-4xl xl:pb-4">6 hours to solve one problem.</h1>
-                            <p className="text-lg">Welcome to the second year of shady.Hacks. Welcome to shady.Hacks 2025: Hack for a Tomorrow. shady.Hacks is an annual hackathon dedicated to empowering students and innovators around the Pittsburgh area to increase exposure to the field of computer science and entrepreneurship. Join shady.Hacks to meet like-minded individuals, learn new skills, and create something amazing. During the event, you will have 7 hours to create a project to a project that addresses one critical issue that will be announced at the start of the event. It will be broad, and we aim for your creativity to run freely. At the end of the event, competitors will present their projects to a panel of judges. The best projects will win prizes offered by our sponsors. Participants will receive complementary shirts, certificates, and other goodies. Register now to secure your spot at shady.Hacks 2025. See the FAQ and handbook for more info.
+                            <p className="text-lg">We're excited to welcome you to shady.Hacks 2025. shady.Hacks is an annual hackathon dedicated to empowering students and innovators around the Pittsburgh area to increase exposure to the field of computer science and entrepreneurship. Join shady.Hacks to meet like-minded individuals, learn new skills, and create something amazing. During the event, you will have 7 hours to create a project to a project that addresses one critical issue that will be announced at the start of the event. It will be broad, and we aim for your creativity to run freely. At the end of the event, competitors will present their projects to a panel of judges. The best projects will win prizes offered by our sponsors. Participants will receive complementary shirts, certificates, and other goodies. Register now to secure your spot at shady.Hacks 2025. See the FAQ and handbook for more info.
                             </p>
                             <LinkButton content="Learn more in the handbook" href="#" />
                         </div>
@@ -944,7 +947,7 @@ const Ssahack = () => {
                 <title>shady.Hacks 2025</title>
             </Head>
             <Navbar current="shady.Hacks" />
-            <div>
+            <div className="bg-black">
                 <Notification text="shady.Hacks 2025 registrations are open. Schedules/awards are tentative."/>
                 
                 <Panel1 />
