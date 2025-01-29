@@ -947,7 +947,7 @@ const Ssahack = () => {
                 <title>shady.Hacks 2025</title>
             </Head>
             <Navbar current="shady.Hacks" />
-            <div className="bg-black">
+            <div className="">
                 <Notification text="shady.Hacks 2025 registrations are open. Schedules/awards are tentative."/>
                 
                 <Panel1 />
