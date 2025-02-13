@@ -16,7 +16,6 @@ export default function Navbar({ current }: NavbarProps) {
     const navigation = [
         { name: 'Home', href: '/', current: current === 'Home' },
         { name: 'shady.Hacks', href: 'shadyhacks', current: current === 'shady.Hacks' },
-        { name: 'About', href: 'about', current: current === 'About' },
         { name: 'Contact', href: 'contact', current: current === 'Contact' },
         { name: 'Join', href: 'join', current: current === 'Join' },
     ]

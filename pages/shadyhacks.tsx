@@ -125,7 +125,7 @@ const Panel1 = (): JSX.Element => {
                         <a href="https://shadysideacademy-my.sharepoint.com/:w:/g/personal/26poddarv_shadysideacademy_org/EejCBZMdudNHoMtI7kxiPEEBrONOyJj2c5hBZFD8FIIWSw?e=uwkxSG" className="text-center mt-4 border border-yellow-500 text-yellow-500 font-medium py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Handbook</a>
                         <a href="mailto:contact@joinsilicon.org" className="text-center mt-4 border text-white py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Contact</a>
                         <a href="https://discord.gg/pxRjVRcmpz" className="text-center mt-4 border text-white py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Discord</a>
-                        <a href="https://shadysideacademy-my.sharepoint.com/:w:/g/personal/26poddarv_shadysideacademy_org/Ebt_MlC372lKomcSQHWLCDwBmhTnf4rH9yuzAzDTsqP6VA?e=HdiFw2" className="text-center mt-4 border  text-white py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Sponsor Info</a>
+                        <a href="https://drive.google.com/file/d/19WojPMk4WdPRvx_JFe4piRdzQWok1blZ/view?usp=sharing" className="text-center mt-4 border  text-white py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Sponsor Info</a>
                         <a href="https://drive.google.com/drive/folders/1ixl2A1D_IjwNvjAvrnPSLaW9Bwja_usN?usp=drive_link" className="text-center mt-4 border text-white py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Web Development</a>
                         <a href="https://www.instagram.com/ssa_hack/" className="text-center mt-4 border text-white py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">
                             Instagram
