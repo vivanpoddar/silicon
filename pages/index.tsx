@@ -62,9 +62,9 @@ const Panel1 = (): JSX.Element => {
     <motion.div className="z-10 h-[75vh] md:h-screen w-screen flex flex-col-reverse md:flex-row bg-black">
       <div className="md:w-1/2 h-1/2 md:h-full flex flex-col items-center justify-center px-20">
         <div>
-          <h1 className="md:text-xl text-white text-xl">We&apos;re on a mission to bring Computer Science to the schools of Pittsburgh.</h1>
+          <h1 className="md:text-4xl text-white text-xl">We&apos;re on a mission to bring Computer Science to the schools of Pittsburgh.</h1>
           <p className='text-gray-500'>
-            Founded by two high school students in 2023, Silicon started with shady.Hacks, a local hackathon initiative to bring together the schools of Pittsburgh. We saw the issue: a severe lack of Computer Science education in Pittsburgh schools—then we found out this wasn&apos;t just a local issue.
+            Founded by <span className='font-bold'>two high school students</span> in 2023, Silicon started with shady.Hacks, a local hackathon initiative to bring together the schools of Pittsburgh. We saw the issue: a substantial gap of Computer Science education in Pittsburgh schools—<span className='font-bold'>then we found out this wasn&apos;t just a local issue</span>.
           </p>
           <LinkButton content="Claim your spot at shady.Hacks 2025" href="http://localhost:3000/shadyhacks" />
         </div>

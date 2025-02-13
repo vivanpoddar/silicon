@@ -2,6 +2,9 @@ import Footer from "../components/footer";
 import Head from "next/head";
 import Navbar from "../components/navbar";
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { database } from "../firebase";
+import { ref, push } from "firebase/database";
 
 const Join = () => {
     const [name, setName] = useState("");
@@ -9,8 +12,20 @@ const Join = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        // Handle form submission logic here
-        console.log("Name:", name, "Email:", email);
+
+        const formDataRef = ref(database, "formData");
+        push(formDataRef, {
+            name: name,
+            email: email,
+        })
+            .then(() => {
+                alert("Data saved successfully!");
+                setName("");
+                setEmail("");
+            })
+            .catch((error) => {
+                console.error("Error saving data:", error);
+            });
     };
 
     return (
@@ -21,7 +36,7 @@ const Join = () => {
             <Navbar current="Join" />
             <div className="h-screen bg-black flex items-center justify-center">
                 <form onSubmit={handleSubmit} className=" p-8 rounded-lg shadow-lg">
-                    <h1 className="text-2xl mb-4">Interested?</h1>
+                    <h1 className="text-2xl mb-4">Join the mission</h1>
                     <div className="mb-4">
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
                             Name
@@ -31,7 +46,7 @@ const Join = () => {
                             id="name"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-black"
                             required
                         />
                     </div>
@@ -44,17 +59,19 @@ const Join = () => {
                             id="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline bg-black"
                             required
                         />
                     </div>
                     <div className="flex items-center justify-between">
-                        <button
+                        <motion.button
                             type="submit"
-                            className="bg-blue-500 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            whileHover={{ backgroundColor: '#FFFFFF', color: '#000000' }}
+                            transition={{ duration: 0.25 }}
+                            className='border hidden md:block right-0 px-3 py-2 rounded text-sm font-medium text-white'
                         >
                             Submit
-                        </button>
+                        </motion.button>
                     </div>
                 </form>
             </div>
