@@ -60,11 +60,11 @@ const Panel1 = (): JSX.Element => {
   // const spring = useSpring(0)
   return (
     <motion.div className="z-10 h-[75vh] md:h-screen w-screen flex flex-col-reverse md:flex-row bg-black">
-      <div className="md:w-1/2 h-1/2 md:h-full flex flex-col items-center justify-center px-20">
+      <div className="md:w-1/2 h-1/2 md:h-full flex flex-col items-center justify-center px-5 sm:px-20">
         <div>
-          <h1 className="md:text-3xl text-white text-xl">We&apos;re on a mission to bring Computer Science to the schools of Pittsburgh.</h1>
+          <h1 className="md:text-3xl text-white text-lg sm:text-xl">We&apos;re on a mission to bring Computer Science to Pittsburgh schools.</h1>
           <p className='text-gray-500'>
-            Founded by <span className='font-bold'>two high school students</span> in 2023, Silicon started with shady.Hacks, a local hackathon initiative to bring together the schools of Pittsburgh. We saw the issue: a substantial gap of Computer Science education in Pittsburgh schools—<span className='font-bold'>then we found out this wasn&apos;t just a local issue</span>.
+            Founded by <span className='font-bold'>two high school students</span> in 2023, Silicon started with shady.Hacks, a local hackathon initiative for the schools of Pittsburgh. We saw the issue: a substantial gap of Computer Science interest<span className='font-bold'>then we found out this wasn&apos;t just a local issue</span>.
           </p>
           <LinkButton content="Claim your spot at shady.Hacks 2025" href="http://localhost:3000/shadyhacks" />
         </div>
@@ -87,11 +87,11 @@ const Panel2 = (): JSX.Element => {
           <Image src="/panel2.jpg" width={800} height={0} alt="dude laughing"></Image>
         </div>
       </div>
-      <div className="md:w-1/2 h-1/2 md:h-full flex flex-col items-center justify-center px-20">
+      <div className="md:w-1/2 md:h-full flex flex-col items-center justify-center px-5 sm:px-20">
         <div>
-          <h1 className="md:text-3xl text-black text-xl">So what&apos;s the deal?</h1>
+          <h1 className="md:text-3xl text-lg text-black sm:text-xl">So what&apos;s the deal?</h1>
           <p className='text-gray-500'>
-          In the United States, only 60% of schools offer foundational Computer Science courses as a part of their curriculum, even when it is mandated in 30 states nationwide (not including Pennsylvania). Of the number of schools that do, only 5.8% of the student body are enrolled in these classes. By 2030, the U.S. Bureau of Labor Statistics estimates that the CS-related job market will face a shortage of over 1.2 million candidates. </p>
+          In the United States, only 60% of schools offer Computer Science courses. Of the 30 states that mandate CS curriculum, only 5.8% of the student body are enrolled in these classes. By 2030, the U.S. Bureau of Labor Statistics estimates that the CS-related job market will face a shortage of over 1.2 million openings. </p>
           <LinkButton content="Learn more" href="https://www.edtechdigest.com/2023/01/19/whats-wrong-with-todays-cs-education/" />
         </div>
       </div>
@@ -105,16 +105,16 @@ const Panel3 = (): JSX.Element => {
   // const spring = useSpring(0)
 
   return (
-    <motion.div className="relative z-10 h-[75vh] md:h-screen w-screen flex flex-col-reverse md:flex-row ">
-      <div className="md:w-1/2 h-1/2 md:h-full flex flex-col items-center justify-center px-20">
+    <motion.div className="relative z-10 h-[75vh] md:h-screen w-screen flex flex-col-reverse md:flex-row bg-black">
+      <div className="md:w-1/2 h-1/2 md:h-full flex flex-col items-center justify-center px-5 sm:px-20">
         <div>
-          <h1 className="md:text-3xl text-white text-xl">Let&apos;s break down these barriers.</h1>
+          <h1 className="md:text-3xl text-white text-lg sm:text-xl">Let&apos;s break down these barriers.</h1>
           <p className='text-gray-500'>
             By breaking down these systemic barriers to entry at the high school level, the country can ensure a competitive workforce and population capable of driving technological advancements that uplift entire communities through their progress. </p>
           <LinkButton content="Fill our interest form" href="https://joinsilicon.org/join" />
         </div>
       </div>
-      <div className="md:w-1/2 h-1/2 md:h-full flex items-center justify-center">
+      <div className="md:w-1/2  md:h-full flex items-center justify-center">
         <div className='md:h-1/2 w-3/4 md:w-full flex items-center justify-center'>
           <Image src="/panel3.jpg" width={800} height={0} alt="dude laughing"></Image>
         </div>
@@ -132,10 +132,10 @@ const Panel4 = (): JSX.Element => {
           <Image src="/community.jpg" width={1000} height={0} alt="dude laughing"></Image>
         </div>
       </div>
-      <div className=" flex flex-col items-center justify-center px-20 relative z-10">
+      <div className=" flex flex-col items-center justify-center px-5 sm:px-20 relative z-10">
         <div>
-          <h1 className="md:text-5xl text-white text-xl">We can&apos;t do this alone.</h1>
-          <p className='text-gray-500 text-xl'>
+          <h1 className="sm:text-5xl text-white">We can&apos;t do this alone.</h1>
+          <p className='text-gray-500 sm:text-xl'>
             shady.Hacks, an initiative between both organization and Shady Side Academy, aims to expose Pittsburgh highschool students to Computer Science. However, we need community support to help us further our mission. Donations, enrollment, and volunteering, and all forms of support are central to the idea that we strive to make a reality.
           </p>
           <LinkButton content="Support today" href="https://drive.google.com/file/d/19WojPMk4WdPRvx_JFe4piRdzQWok1blZ/view?usp=sharing" />

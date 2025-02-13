@@ -116,8 +116,8 @@ const Panel1 = (): JSX.Element => {
             />
             <div className="absolute w-screen h-screen flex items-center justify-center flex-col" style={{ height: "100vh" }}>
                 <Image priority={true} className="md:w-1/4 w-[90vw]" src="/ssahack.png" alt="shady.Hacks" width={600} height={100}></Image>
-                <div className="border-t border-white w-1/2 my-4"></div>
-                <TypeIt className="text-center text-5xl text-black">Hack for a <span className="text-yellow-500 italic">purpose.</span></TypeIt>
+                <div className="border-t border-white w-1/2 md:my-4"></div>
+                <TypeIt className="text-center text-3xl md:text-5xl text-black">Hack for a <span className="text-yellow-500 italic">purpose.</span></TypeIt>
 
                 <div className="flex space-x-4">
                     <div className="grid grid-cols-2 xl:-grid-cols-3 lg:grid-cols-4 pt-8 gap-1 xl:gap-4">
@@ -206,16 +206,16 @@ const Carousel = () => {
 const Panel2 = (): JSX.Element => {
  
     return (
-        <div className="border-b relative h-[100vh] xl:h-screen w-screen flex flex-col-reverse xl:flex-row">
-            <div className="-z-10 absolute w-full h-full">
+        <div className="border-b relative h-[100vh] xl:h-screen w-screen flex flex-col-reverse xl:flex-row bg-black">
+            <div className="absolute w-full h-full">
                 <Image src="/scribble.svg" alt="wave" layout="fill" objectFit="cover" />
             </div>
-            <div className="xl:w-1/2 h-1/2 xl:h-full flex flex-col items-center justify-center xl:p-24">
-                <h1 className="xl:text-7xl text-white text-center text-2xl">The first highschool hackathon in the city of Pittsburgh.</h1>
+            <div className="z-10 xl:w-1/2 h-1/2 xl:h-full flex flex-col items-center justify-center xl:p-24">
+                <h1 className="xl:text-7xl text-white text-center mx-10 md:px-0 text-2xl">The first highschool hackathon in the city of Pittsburgh.</h1>
                 <LinkButton content="Claim your spot at shady.Hacks 2025" href="https://forms.gle/1NkPHxKgb2HsR9b5A" />
             </div>
-            <div className="xl:w-1/2 h-1/2 xl:h-full flex items-center justify-center">
-                <div className='xl:h-1/2 w-3/4 xl:w-full flex items-center justify-center'>
+            <div className="z-10 xl:w-1/2 h-1/2 xl:h-full flex items-center justify-center">
+                <div className='xl:h-1/2 xl:w-3/4 flex items-center justify-center'>
                     <Carousel />
                 </div>
             </div>
@@ -226,11 +226,11 @@ const Panel2 = (): JSX.Element => {
 const Content = (): JSX.Element => {
     return (
         //rgb(246, 196, 77)
-        <div className="relative flex text-white py-24 z-0">
+        <div className="relative flex text-white bg-black py-24 z-0">
             <div className="flex absolute right-1 top-5">
                 <Image src="/star.svg" alt="Star" width={500} height={50} />
             </div>
-            <div className="w-screen flex flex-col">
+            <div className="z-10 w-screen flex flex-col">
                 <div className="flex xl:flex-row flex-col-reverse h-full w-full">
                     <div className="xl:w-1/2 h-full flex flex-col items-center justify-center">
                         <span className="text-center pb-4 text-4xl text-yellow-500"><b> Apr 5, 2025</b></span>
@@ -275,7 +275,7 @@ const Content = (): JSX.Element => {
 const Masterclass = (): JSX.Element => {
     return (
         <div >
-            <div className="text-white">
+            <div className="text-white bg-black">
                 <div className="flex items-center">
                     <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Masterclass</h1>
                     <div className="border-t border-white flex-grow"></div>
@@ -308,7 +308,7 @@ const Masterclass = (): JSX.Element => {
 
 const Questions = (): JSX.Element => {
     return (
-        <div className="relative">
+        <div className="relative bg-black">
             <div className="text-white">
                 <div className="flex items-center">
                     <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">FAQ</h1>
@@ -405,7 +405,7 @@ const Prizes = (): JSX.Element => {
     }, [isConnectOpen, isComputeOpen, isInnovateOpen, isImpactOpen, isVisionOpen, isUnravelOpen, is2024Open]);
 
     return (
-        <div className="text-white w-[100vw]" id="prizes">
+        <div className="text-white w-[100vw] bg-black" id="prizes">
             <div className="flex items-center">
                 <motion.h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Prizes</motion.h1>
                 <div className="border-t border-white flex-grow"></div>
@@ -902,33 +902,33 @@ const Prizes = (): JSX.Element => {
 
 const Sponsors = (): JSX.Element => {
     return (
-        <div className="relative text-white">
-            <div className="flex items-center">
+        <div className="relative text-white bg-black">
+            <div className="flex items-center z-10">
                 <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Sponsors</h1>
                 <div className="border-t border-white flex-grow"></div>
             </div>
-            <div className="-z-10 absolute w-full h-full">
+            <div className="hidden sm:block absolute w-full h-full">
                 <Image src="/wave.svg" alt="wave" layout="fill" objectFit="cover" />
             </div>
-            <div className="p-4">
+            <div className="p-4 z-10">
                 <h1>2024 Sponsors</h1>
                 <div className="flex flex-col items-center">
                     <div className="p-4 m-4">
                         <h1 className="text-3xl ">Atom Sponsors</h1>
-                        <div className="flex">
+                        <div className="flex md:w-full w-1/2">
                             <Image src="/enact.jpg" alt="Enact" height={50} width={200}></Image>
                         </div>
                     </div>
                     <div className=" p-4 m-4">
                         <h1 className="text-3xl">Proton Sponsors</h1>
-                        <div className="flex">
+                        <div className="flex md:w-full w-1/2">
                             <Image src="/doclens_logo.jpg" alt="Doclens" height={50} width={200}></Image>
                             <Image src="/echo.png" alt="echo" height={50} width={350}></Image>
                         </div>
                     </div>
                     <div className=" p-4 m-4">
                         <h1 className="text-3xl">Electron Sponsors</h1>
-                        <div className="flex space-x-4">
+                        <div className="flex space-x-4 md:w-full w-1/2">
                             <div>
                                 <Image src="/acethetics.jpeg" alt="acethetics" height={250} width={200}></Image>
                             </div>
