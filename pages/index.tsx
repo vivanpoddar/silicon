@@ -134,7 +134,7 @@ const Panel4 = (): JSX.Element => {
       </div>
       <div className=" flex flex-col items-center justify-center px-5 sm:px-20 relative z-10">
         <div>
-          <h1 className="sm:text-5xl text-white">We can&apos;t do this alone.</h1>
+          <h1 className="sm:text-5xl text-lg text-white">We can&apos;t do this alone.</h1>
           <p className='text-gray-500 sm:text-xl'>
             shady.Hacks, an initiative between both organization and Shady Side Academy, aims to expose Pittsburgh highschool students to Computer Science. However, we need community support to help us further our mission. Donations, enrollment, and volunteering, and all forms of support are central to the idea that we strive to make a reality.
           </p>
