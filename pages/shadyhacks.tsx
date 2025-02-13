@@ -915,20 +915,20 @@ const Sponsors = (): JSX.Element => {
                 <div className="flex flex-col items-center">
                     <div className="p-4 m-4">
                         <h1 className="text-3xl ">Atom Sponsors</h1>
-                        <div className="flex md:w-full w-1/2">
+                        <div className="z-10 flex md:w-full w-1/2">
                             <Image src="/enact.jpg" alt="Enact" height={50} width={200}></Image>
                         </div>
                     </div>
                     <div className=" p-4 m-4">
                         <h1 className="text-3xl">Proton Sponsors</h1>
-                        <div className="flex md:w-full w-1/2">
+                        <div className="z-10 flex md:w-full w-1/2">
                             <Image src="/doclens_logo.jpg" alt="Doclens" height={50} width={200}></Image>
                             <Image src="/echo.png" alt="echo" height={50} width={350}></Image>
                         </div>
                     </div>
                     <div className=" p-4 m-4">
                         <h1 className="text-3xl">Electron Sponsors</h1>
-                        <div className="flex space-x-4 md:w-full w-1/2">
+                        <div className="z-10 flex space-x-4 md:w-full w-1/2">
                             <div>
                                 <Image src="/acethetics.jpeg" alt="acethetics" height={250} width={200}></Image>
                             </div>
