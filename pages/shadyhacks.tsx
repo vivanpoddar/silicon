@@ -120,17 +120,17 @@ const Panel1 = (): JSX.Element => {
                 <TypeIt className="text-center text-5xl text-black">Hack for a <span className="text-yellow-500 italic">purpose.</span></TypeIt>
 
                 <div className="flex space-x-4">
-                    <div className="grid grid-cols-2 md:-grid-cols-3 lg:grid-cols-4 pt-8 gap-1 md:gap-4">
-                        <a href="https://forms.gle/1NkPHxKgb2HsR9b5A" className="text-center mt-4 border text-yellow-500 font-medium py-1 md:py-2 md:px-4 md:text-2xl border-yellow-500 rounded">Sign Up</a>
-                        <a href="https://shadysideacademy-my.sharepoint.com/:w:/g/personal/26poddarv_shadysideacademy_org/EejCBZMdudNHoMtI7kxiPEEBrONOyJj2c5hBZFD8FIIWSw?e=uwkxSG" className="text-center mt-4 border border-yellow-500 text-yellow-500 font-medium py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Handbook</a>
-                        <a href="mailto:contact@joinsilicon.org" className="text-center mt-4 border text-white py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Contact</a>
-                        <a href="https://discord.gg/pxRjVRcmpz" className="text-center mt-4 border text-white py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Discord</a>
-                        <a href="https://drive.google.com/file/d/19WojPMk4WdPRvx_JFe4piRdzQWok1blZ/view?usp=sharing" className="text-center mt-4 border  text-white py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Sponsor Info</a>
-                        <a href="https://drive.google.com/drive/folders/1ixl2A1D_IjwNvjAvrnPSLaW9Bwja_usN?usp=drive_link" className="text-center mt-4 border text-white py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">Web Development</a>
-                        <a href="https://www.instagram.com/ssa_hack/" className="text-center mt-4 border text-white py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">
+                    <div className="grid grid-cols-2 xl:-grid-cols-3 lg:grid-cols-4 pt-8 gap-1 xl:gap-4">
+                        <a href="https://forms.gle/1NkPHxKgb2HsR9b5A" className="text-center mt-4 border text-yellow-500 font-medium py-1 xl:py-2 xl:px-4 xl:text-2xl border-yellow-500 rounded">Sign Up</a>
+                        <a href="https://shadysideacademy-my.sharepoint.com/:w:/g/personal/26poddarv_shadysideacademy_org/EejCBZMdudNHoMtI7kxiPEEBrONOyJj2c5hBZFD8FIIWSw?e=uwkxSG" className="text-center mt-4 border border-yellow-500 text-yellow-500 font-medium py-1 px-2 xl:py-2 xl:px-4 xl:text-2xl rounded">Handbook</a>
+                        <a href="mailto:contact@joinsilicon.org" className="text-center mt-4 border text-white py-1 px-2 xl:py-2 xl:px-4 xl:text-2xl rounded">Contact</a>
+                        <a href="https://discord.gg/pxRjVRcmpz" className="text-center mt-4 border text-white py-1 px-2 xl:py-2 xl:px-4 xl:text-2xl rounded">Discord</a>
+                        <a href="https://drive.google.com/file/d/19WojPMk4WdPRvx_JFe4piRdzQWok1blZ/view?usp=sharing" className="text-center mt-4 border  text-white py-1 px-2 xl:py-2 xl:px-4 xl:text-2xl rounded">Sponsor Info</a>
+                        <a href="https://drive.google.com/drive/folders/1ixl2A1D_IjwNvjAvrnPSLaW9Bwja_usN?usp=drive_link" className="text-center mt-4 border text-white py-1 px-2 xl:py-2 xl:px-4 xl:text-2xl rounded">Web Development</a>
+                        <a href="https://www.instagram.com/ssa_hack/" className="text-center mt-4 border text-white py-1 px-2 xl:py-2 xl:px-4 xl:text-2xl rounded">
                             Instagram
                         </a>
-                        <a href="https://forms.gle/44is8Wv5BEezaF1F7" className="text-center mt-4 border text-white py-1 px-2 md:py-2 md:px-4 md:text-2xl rounded">
+                        <a href="https://forms.gle/44is8Wv5BEezaF1F7" className="text-center mt-4 border text-white py-1 px-2 xl:py-2 xl:px-4 xl:text-2xl rounded">
                             Volunteer Form
                         </a>
                         
@@ -170,7 +170,7 @@ const Carousel = () => {
     };
 
     return (
-        <div className="mx-8 relative w-full max-w-4xl">
+        <div className="items-center justify-center mx-8 relative w-half max-w-lg xl:max-w-4xl">
             <div className="overflow-hidden relative rounded-xl border-4 border-black">
             <div
                 className="flex transition-transform duration-500"
@@ -178,7 +178,7 @@ const Carousel = () => {
             >
                 {images.map((image, index) => (
                 <div key={index} className="min-w-full">
-                    <Image src={image.src} alt={image.alt} width={10000} height={500} />
+                    <Image src={image.src} alt={image.alt} width={1000} height={500} />
                 </div>
                 ))}
             </div>
@@ -206,7 +206,7 @@ const Carousel = () => {
 const Panel2 = (): JSX.Element => {
  
     return (
-        <div className="border-b relative h-[75vh] xl:h-screen w-screen flex flex-col-reverse xl:flex-row">
+        <div className="border-b relative h-[100vh] xl:h-screen w-screen flex flex-col-reverse xl:flex-row">
             <div className="-z-10 absolute w-full h-full">
                 <Image src="/scribble.svg" alt="wave" layout="fill" objectFit="cover" />
             </div>
