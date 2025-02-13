@@ -13,18 +13,21 @@ const Footer = (): JSX.Element => {
                     </Link>
                     <ul className="flex flex-wrap items-center mb-6 text-sm font-medium">
                         <li>
-                            <Link href="/about" className="hover:underline me-4 md:me-6 text-white">About</Link>
+                            <Link href="/" className="hover:underline me-4 md:me-6 text-white">About</Link>
                         </li>
                         <li>
-                            <Link href="/ssahack" className="hover:underline me-4 md:me-6 text-white">SSA.hack</Link>
+                            <Link href="/shadyhacks" className="hover:underline me-4 md:me-6 text-white">shady.Hacks</Link>
                         </li>
                         <li>
-                            <Link href="/contact" className="hover:underline text-white">Contact</Link>
+                            <Link href="/contact" className="hover:underline me-4 md:me-6 text-white">Contact</Link>
+                        </li>
+                        <li>
+                            <Link href="/join" className="hover:underline text-white">Join</Link>
                         </li>
                     </ul>
                 </div>
                 <hr className="my-4 text-white border-gray-700" />
-                <span className="block text-sm text-white">© 2023 <Link href="joinsilicon.org" className="hover:underline">Silicon Foundation</Link><br/>Website by Vivan Poddar - contact with issues</span>
+                <span className="block text-sm text-white">Built by Vivan Poddar with Next.js and React.<br/></span>
             </div>
         </footer>
     )
