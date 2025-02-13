@@ -63,8 +63,8 @@ const Panel1 = (): JSX.Element => {
       <div className="md:w-1/2 h-1/2 md:h-full flex flex-col items-center justify-center px-5 sm:px-20">
         <div>
           <h1 className="md:text-3xl text-white text-lg sm:text-xl">We&apos;re on a mission to bring Computer Science to Pittsburgh schools.</h1>
-          <p className='text-gray-500'>
-            Founded by <span className='font-bold'>two high school students</span> in 2023, Silicon started with shady.Hacks, a local hackathon initiative for the schools of Pittsburgh. We saw the issue: a substantial gap of Computer Science interest<span className='font-bold'>then we found out this wasn&apos;t just a local issue</span>.
+          <p className='text-gray-500 sm:py-4'>
+            Founded by <span className='font-bold'>two high school students</span> in 2023, Silicon started with shady.Hacks, a local hackathon initiative for the schools of Pittsburgh. We saw the issue: a substantial gap of Computer Science interest—<span className='font-bold'>then we found out this wasn&apos;t just a local issue</span>.
           </p>
           <LinkButton content="Claim your spot at shady.Hacks 2025" href="http://localhost:3000/shadyhacks" />
         </div>
@@ -90,7 +90,7 @@ const Panel2 = (): JSX.Element => {
       <div className="md:w-1/2 md:h-full flex flex-col items-center justify-center px-5 sm:px-20">
         <div>
           <h1 className="md:text-3xl text-lg text-black sm:text-xl">So what&apos;s the deal?</h1>
-          <p className='text-gray-500'>
+          <p className='text-gray-500 sm:py-4'>
           In the United States, only 60% of schools offer Computer Science courses. Of the 30 states that mandate CS curriculum, only 5.8% of the student body are enrolled in these classes. By 2030, the U.S. Bureau of Labor Statistics estimates that the CS-related job market will face a shortage of over 1.2 million openings. </p>
           <LinkButton content="Learn more" href="https://www.edtechdigest.com/2023/01/19/whats-wrong-with-todays-cs-education/" />
         </div>
@@ -109,7 +109,7 @@ const Panel3 = (): JSX.Element => {
       <div className="md:w-1/2 h-1/2 md:h-full flex flex-col items-center justify-center px-5 sm:px-20">
         <div>
           <h1 className="md:text-3xl text-white text-lg sm:text-xl">Let&apos;s break down these barriers.</h1>
-          <p className='text-gray-500'>
+          <p className='text-gray-500 sm:py-4'>
             By breaking down these systemic barriers to entry at the high school level, the country can ensure a competitive workforce and population capable of driving technological advancements that uplift entire communities through their progress. </p>
           <LinkButton content="Fill our interest form" href="https://joinsilicon.org/join" />
         </div>
@@ -135,7 +135,7 @@ const Panel4 = (): JSX.Element => {
       <div className=" flex flex-col items-center justify-center px-5 sm:px-20 relative z-10">
         <div>
           <h1 className="sm:text-5xl text-lg text-white">We can&apos;t do this alone.</h1>
-          <p className='text-gray-500 sm:text-xl'>
+          <p className='text-gray-500 sm:text-xl sm:py-4'>
             shady.Hacks, an initiative between both organization and Shady Side Academy, aims to expose Pittsburgh highschool students to Computer Science. However, we need community support to help us further our mission. Donations, enrollment, and volunteering, and all forms of support are central to the idea that we strive to make a reality.
           </p>
           <LinkButton content="Support today" href="https://drive.google.com/file/d/19WojPMk4WdPRvx_JFe4piRdzQWok1blZ/view?usp=sharing" />
