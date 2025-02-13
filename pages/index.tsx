@@ -87,7 +87,7 @@ const Panel2 = (): JSX.Element => {
           <Image src="/panel2.jpg" width={800} height={0} alt="dude laughing"></Image>
         </div>
       </div>
-      <div className="md:w-1/2 md:h-full flex flex-col items-center justify-center px-5 sm:px-20">
+      <div className="md:w-1/2 h-1/2 md:h-full flex flex-col items-center justify-center px-5 sm:px-20">
         <div>
           <h1 className="md:text-3xl text-lg text-black sm:text-xl">So what&apos;s the deal?</h1>
           <p className='text-gray-500 sm:py-4'>
