@@ -19,7 +19,6 @@ const Join = () => {
             email: email,
         })
             .then(() => {
-                alert("Data saved successfully!");
                 setName("");
                 setEmail("");
             })
