@@ -6,7 +6,7 @@ interface NotificationProps {
 
 const Notification = ({ text }: NotificationProps) => {
     return (
-        <div className="fixed top-14 right-0 m-4 hidden md:block z-10">
+        <div className="z-20 fixed top-14 right-0 m-4 hidden md:block">
             <motion.div
                 initial={{ x: 300 }}
                 animate={{ x: 0 }}
