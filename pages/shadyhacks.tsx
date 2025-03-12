@@ -237,24 +237,22 @@ const Content = (): JSX.Element => {
                         <div className="flex xl:text-4xl items-center justify-center">
                             <div className="flex flex-col space-y-8">
                                 <span className="text-right">9:00 AM</span>
-                                <span className="text-right">9:30 AM</span>
-                                <span className="text-right">11:00 AM</span>
+                                <span className="text-right">9:10 AM</span>
+                                <span className="text-right">10:20 AM</span>
                                 <span className="text-right">12:00 PM</span>
                                 <span className="text-right">12:30 PM</span>
-                                <span className="text-right">1:00 PM</span>
-                                <span className="text-right">4:00 PM</span>
+                                <span className="text-right">4:30 PM</span>
                                 <span className="text-right">5:00 PM</span>
                             </div>
                             <div className="h-full self-center border border-white mx-4"></div>
                             <div className="flex flex-col space-y-8">
-                                <span>Topic Announcement</span>
-                                <span>Masterclass 1</span>
-                                <span>Masterclass 2</span>
-                                <span>Masterclass 3</span>
+                                <span>Opening Ceremony</span>
+                                <span>Web Development</span>
+                                <span>AI Ignition with Python</span>
                                 <span>Lunch Opens</span>
-                                <span>Masterclass 4</span>
+                                <span>Special Guest Masterclass</span>
                                 <span>Judging</span>
-                                <span>Awards </span>
+                                <span>Closing Ceremony </span>
                             </div>
                         </div>
                     </div>
@@ -282,23 +280,18 @@ const Masterclass = (): JSX.Element => {
                 </div>
                 <div className="p-4">
                     <div>
-                        <h1>2024 Masterclasses</h1>
-                        <h1 className="text-xl underline italic">AI Ignition: An Introduction to Artificial Intelligence</h1>
+                        <h1 className="text-xl underline italic">AI Ignition with Python: An Introduction to Python and AI</h1>
                         <p>Embark on a thrilling journey into the world of artificial intelligence with our power-packed masterclass. This two-hour session is crafted for individuals ready to take the first step in their AI project for the hackathon, providing essential insights and practical guidance to kickstart your AI endeavors.
-                            By the end of AI Ignition, you will leave with the knowledge, confidence, and practical skills to embark on your AI project. Join us for an hour of inspiration, hands-on learning, and actionable insights as we guide you through the exciting world of artificial intelligence. Ignite your AI journey. Taught by Indrajit Poddar from AWS.
+                            By the end of AI Ignition, you will leave with the knowledge, confidence, and practical skills to embark on your AI project. Join us for an hour of inspiration, hands-on learning, and actionable insights as we guide you through the exciting world of artificial intelligence. Ignite your AI journey. Taught by experienced industry leader Indrajit Poddar, Senior Technical Architect at AWS.
                         </p>
-                    </div>
-                    <div>
-                        <h1 className="pt-2 text-xl underline italic">3D, AR, VR Workshop</h1>
-                        <p>Utilizing tools from Echo3D, you will learn the basics of 3D design and how we can implement these in our VR worlds. This course will be very hands on, with opportunities to use VR headsets and delve into a bit of game design. Thanks to the Echo3D team.</p>
                     </div>
                     <div>
                         <h1 className="pt-2 text-xl underline italic">Web Development</h1>
                         <p>This masterclass will delve into the basics of Web Development, offering you the skills you will need to create a meaningful project to display to the judges. This course will be taught using SSA curriculum, and will give you the tools needed to succeed. Taught by SSA Computer Science Chair Mr. Dawson Haytock.</p>
                     </div>
                     <div>
-                        <h1 className="pt-2 text-xl underline italic">Bioengineering</h1>
-                        <p>Learn from renowned University of Pittsburgh professor Dr. Tim Chung. In this class, you will learn elementary techniques in Bioengineering and gain some suggestions for your hackathon project. This event will introduce you to the world of Bioengineering and the cutting edge innovations taking place in academia and our modern world.</p>
+                        <h1 className="pt-2 text-xl underline italic">Special Guest</h1>
+                        <p>Learn from a renowned CMU professor in a one-hour masterclass designed to introduce you to the cutting-edge innovations taking place in academia today. More details soon.</p>
                     </div>
                 </div>
             </div>
@@ -991,10 +984,10 @@ const Sponsors = (): JSX.Element => {
                     </div>
                     <div className="z-10 p-4 m-4">
                         <h1 className="text-3xl">Electron Sponsors</h1>
-                        <div className="z-10 flex space-x-4 md:w-full w-1/2">
-                            <div>
-                                <Image src="/acethetics.jpeg" alt="acethetics" height={250} width={200}></Image>
-                            </div>
+                        <div className="z-10 flex space-x-4 md:w-full">
+                            <Image src="/acethetics.jpeg" alt="acethetics" height={250} width={200}></Image>
+                            <Image src="/wolfram.png" alt="wolfram" height={250} width={200}></Image>
+                            <Image src="/aops.png" alt="aops" height={250} width={200}></Image>
                         </div>
                     </div>
                 </div>
