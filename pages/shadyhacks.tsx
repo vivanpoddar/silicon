@@ -412,7 +412,7 @@ const Prizes = (): JSX.Element => {
                 <div className="border-t border-white flex-grow"></div>
             </div>
             <div className="py-4 flex flex-col">
-                <div className="items-center grid grid-cols-2 sm:grid-cols-1 md:grid-cols-3 mx-4 lg:grid-cols-7 gap-2">
+                <div className="items-center grid grid-cols-2 sm:grid-cols-1 md:grid-cols-3 mx-4 lg:grid-cols-4 gap-2">
                     <button className="h-28 border border-black flex flex-col justify-center bg-gray-900 text-center items-center rounded-xl" onClick={() => setComputeOpen(true)}>
                         <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to left', '#17acff, #ff68f0']}>Compute Award</LinearGradient></h1>
                         <p className="text-xs text-gray-400 italic">(Click me)</p>
