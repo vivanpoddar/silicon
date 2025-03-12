@@ -22,11 +22,16 @@ const Join = () => {
                             <Person image="/boden.png" name="Boden Moraski" position="Outreach Director" text="" linkedin="https://www.linkedin.com/in/boden-moraski/overlay/contact-info/" email="bodenmoraski@gmail.com" />
                             {/* <Person image="/david.png" name="David Wang" position="Product Director" text="" linkedin="" email="" /> */}
                         </div>
-                        {/* <h1 className="text-2xl pt-4 text-white">Regional Directors</h1>
+                        <h1 className="text-2xl pt-4 text-white">Operations Team</h1>
                         <div className="border-b w-full mb-2"></div>
                         <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
+                            <Person image="" name="Abigail Mullin" position="Chaperones, Media" text="" linkedin="" email="" />
+                            <Person image="" name="Andrew Xing" position="Marketing" text="" linkedin="" email="" />
+                            <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
                         </div>
-                        <h1 className="text-2xl pt-4 text-white">Chapter Directors</h1>
+
+                        </div>
+                        {/* <h1 className="text-2xl pt-4 text-white">Chapter Directors</h1>
                         <div className="border-b w-full mb-2"></div>
                         <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
                         </div> */}

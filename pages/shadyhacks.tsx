@@ -940,6 +940,37 @@ const Sponsors = (): JSX.Element => {
     )
 }
 
+const Recap = (): JSX.Element => {
+    return (
+        <div className="text-white bg-black">
+            <div className="flex items-center">
+                <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Recap</h1>
+                <div className="border-t border-white flex-grow"></div>
+            </div>
+            <div className="p-4">
+                <div className="flex gap-4">
+                    <iframe
+                        className="w-1/2 rounded-xl"
+                        height="500"
+                        src="https://www.youtube.com/embed/n6WCVRFL61k"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    ></iframe>
+                    <iframe
+                        className="w-1/2 rounded-xl"
+                        height="500"
+                        src="https://www.youtube.com/embed/JTiOzo9jJgY"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 const Ssahack = () => {
     return (
         <>
@@ -954,9 +985,10 @@ const Ssahack = () => {
                 <Panel2 />
                 <Content />
                 <Prizes />
-                <Questions />
                 {/* <Judges /> */}
                 <Masterclass />
+                <Recap />
+                <Questions />
                 <Sponsors />
             </div>
             <Footer />

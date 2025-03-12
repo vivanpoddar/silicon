@@ -23,10 +23,11 @@ const Intro = (): JSX.Element => {
           muted
           loop
           disablePictureInPicture
-          className=" absolute w-full h-full z-0 object-cover"
+          className="absolute w-full h-full z-0 object-cover"
         >
-          <source src="https://www.pexels.com/download/video/853919/?fps=25.0&h=1080&w=1920" type="video/mp4" />
+          <source src="https://github.com/vivanpoddar/silicon/raw/6fe051af136cc5e44674ff91bfbe20346f01d816/public/videoplayback.mp4" type="video/mp4" />
         </video>
+        <div className="absolute w-full h-full z-1 bg-gradient-to-t from-black opacity-90"></div>
         <div className='z-10'>
             <div className="gap-20 flex flex-col items-center justify-center text-center rounded-lg p-4">
               <h1 className="italic text-white text-3xl md:text-7xl">Compete. Compute. Connect. </h1>
@@ -146,15 +147,15 @@ const Panel4 = (): JSX.Element => {
 }
 
 export default function Home() {
-  return ( 
-    <>
-      <Navbar current="Home" />
-      <Intro />
-      <Panel1 />
-      <Panel2 />
-      <Panel3 />
-      <Panel4 />
-      <Footer />
-   </>
-  )
+	return (
+		<>
+			<Navbar current="Home" />
+			<Intro />
+			<Panel1 />
+			<Panel2 />
+			<Panel3 />
+			<Panel4 />
+			<Footer />
+		</>
+	)
 }

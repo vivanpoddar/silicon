@@ -6,7 +6,7 @@ import { TailSpin } from "react-loader-spinner";
 import { useState } from "react";
 
 interface PersonProps {
-    image: string;
+    image?: string;
     position: string;
     text: string;
     linkedin: string;
@@ -19,10 +19,12 @@ const Person = ({ image, position, text, name, linkedin, email }: PersonProps) =
 
     return (
         <div className="w-auto h-auto border rounded-lg p-4">
-            <div className="w-32 h-24 overflow-hidden">
-                {isLoading && <TailSpin color="white" radius={"1rem"} />}
-                <Image src={image} width={640} height={480} alt={name} layout="responsive" onLoadingComplete={() => setIsLoading(false)} />
-            </div>
+            {image && (
+                <div className="w-32 h-24 overflow-hidden">
+                    {isLoading && <TailSpin color="white" radius={"1rem"} />}
+                    <Image src={image} width={640} height={480} alt={name} layout="responsive" onLoadingComplete={() => setIsLoading(false)} />
+                </div>
+            )}
             <h1 className="text-3xl text-white">{name}</h1>
             <h2 className="text-xl text-gray-400">{position}</h2>
             <p className="text-white">{text}</p>
