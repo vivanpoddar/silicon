@@ -20,6 +20,7 @@ const Intro = (): JSX.Element => {
       <motion.div className="h-[100vh] w-auto md:h-screen md:w-screen flex flex-col md:flex bg-black items-center justify-center">
         <video
           autoPlay
+          playsInline
           muted
           loop
           disablePictureInPicture
