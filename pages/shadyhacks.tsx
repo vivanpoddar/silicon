@@ -115,12 +115,12 @@ const Panel1 = (): JSX.Element => {
                 }}
             />
             <div className="absolute w-screen h-screen flex items-center justify-center flex-col" style={{ height: "100vh" }}>
-                <Image priority={true} className="md:w-1/4 w-[90vw]" src="/ssahack.png" alt="shady.Hacks" width={600} height={100}></Image>
-                <div className="border-t border-white w-1/2 md:my-4"></div>
-                <TypeIt className="text-center text-3xl md:text-5xl text-black">Hack for a <span className="text-yellow-500 italic">purpose.</span></TypeIt>
+                <Image priority={true} className="sm:w-1/2 w-[90vw]" src="/ssahack.png" alt="shady.Hacks" width={600} height={100}></Image>
+                <div className="border-t border-white w-1/2 md:mb-4"></div>
+                <TypeIt className="text-center text-3xl md:text-5xl text-white">Hack for a <span className="text-yellow-500 italic">purpose.</span></TypeIt>
 
                 <div className="flex space-x-4">
-                    <div className="grid grid-cols-2 xl:-grid-cols-3 lg:grid-cols-4 pt-8 gap-1 xl:gap-4">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 pt-2 gap-1 xl:gap-4">
                         <a href="https://forms.gle/1NkPHxKgb2HsR9b5A" className="text-center mt-4 border text-yellow-500 font-medium py-1 xl:py-2 xl:px-4 xl:text-2xl border-yellow-500 rounded">Sign Up</a>
                         <a href="https://shadysideacademy-my.sharepoint.com/:w:/g/personal/26poddarv_shadysideacademy_org/EejCBZMdudNHoMtI7kxiPEEBrONOyJj2c5hBZFD8FIIWSw?e=uwkxSG" className="text-center mt-4 border border-yellow-500 text-yellow-500 font-medium py-1 px-2 xl:py-2 xl:px-4 xl:text-2xl rounded">Handbook</a>
                         <a href="mailto:contact@joinsilicon.org" className="text-center mt-4 border text-white py-1 px-2 xl:py-2 xl:px-4 xl:text-2xl rounded">Contact</a>
@@ -388,11 +388,12 @@ const Prizes = (): JSX.Element => {
     let [isInnovateOpen, setInnovateOpen] = useState(false)
     let [isImpactOpen, setImpactOpen] = useState(false)
     let [isVisionOpen, setVisionOpen] = useState(false)
-    let [isUnravelOpen, setUnravelOpen] = useState(false)
+    let [isBreakthroughOpen, setBreakthroughOpen] = useState(false)
+    let [isKeystoneOpen, setKeystoneOpen] = useState(false)
     let [is2024Open, set2024Open] = useState(false)
 
     useEffect(() => {
-        if (isConnectOpen || isComputeOpen || isInnovateOpen || isImpactOpen || isVisionOpen || isUnravelOpen || is2024Open) {
+        if (isConnectOpen || isComputeOpen || isInnovateOpen || isImpactOpen || isVisionOpen || isBreakthroughOpen || isKeystoneOpen || is2024Open) {
             document.body.classList.add('overflow-hidden');
         } else {
             document.body.classList.remove('overflow-hidden');
@@ -402,7 +403,7 @@ const Prizes = (): JSX.Element => {
         return () => {
             document.body.classList.remove('overflow-hidden');
         };
-    }, [isConnectOpen, isComputeOpen, isInnovateOpen, isImpactOpen, isVisionOpen, isUnravelOpen, is2024Open]);
+    }, [isConnectOpen, isComputeOpen, isInnovateOpen, isImpactOpen, isVisionOpen, isBreakthroughOpen, isKeystoneOpen, is2024Open]);
 
     return (
         <div className="text-white w-[100vw] bg-black" id="prizes">
@@ -411,21 +412,29 @@ const Prizes = (): JSX.Element => {
                 <div className="border-t border-white flex-grow"></div>
             </div>
             <div className="py-4 flex flex-col">
-                <div className="items-center grid grid-cols-2 sm:grid-cols-1 md:grid-cols-3 mx-4 lg:grid-cols-6 gap-2">
+                <div className="items-center grid grid-cols-2 sm:grid-cols-1 md:grid-cols-3 mx-4 lg:grid-cols-7 gap-2">
                     <button className="h-28 border border-black flex flex-col justify-center bg-gray-900 text-center items-center rounded-xl" onClick={() => setComputeOpen(true)}>
                         <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to left', '#17acff, #ff68f0']}>Compute Award</LinearGradient></h1>
                         <p className="text-xs text-gray-400 italic">(Click me)</p>
                     </button>
                     <button className="h-28 border border-black flex flex-col justify-center bg-gray-900 text-center items-center rounded-xl" onClick={() => setConnectOpen(true)}>
-                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to left', '#ad5389, #3c1053']}>Connect Award</LinearGradient></h1>
+                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to left', '#ad5389, #3c1053']}>Compete Award</LinearGradient></h1>
                         <p className="text-xs text-gray-400 italic">(Click me)</p>
                     </button>
                     <button className="h-28 border border-black flex flex-col justify-center bg-gray-900  text-center items-center rounded-xl" onClick={() => setInnovateOpen(true)}>
-                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to left', '#7b920a, #0f9b0f']}>Innovate Award</LinearGradient></h1>
+                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to left', '#073000, #0f9b0f']}>Connect Award</LinearGradient></h1>
+                        <p className="text-xs text-gray-400 italic">(Click me)</p>
+                    </button>
+                    <button className="h-28 border flex border-black flex-col justify-center bg-gray-900  text-center items-center rounded-xl" onClick={() => setBreakthroughOpen(true)}>
+                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#f2b4f1, #9a1811']}>Breakthrough Award</LinearGradient></h1>
                         <p className="text-xs text-gray-400 italic">(Click me)</p>
                     </button>
                     <button className="h-28 border flex border-black flex-col justify-center bg-gray-900  text-center items-center rounded-xl" onClick={() => setImpactOpen(true)}>
                         <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#22c1c3, #fdbb2d']}><span className="text-[0.75rem]" style={{ lineHeight: "1rem" }}>Novice </span>Impact Award</LinearGradient></h1>
+                        <p className="text-xs text-gray-400 italic">(Click me)</p>
+                    </button>
+                    <button className="h-28 border flex border-black flex-col justify-center bg-gray-900  text-center items-center rounded-xl" onClick={() => setKeystoneOpen(true)}>
+                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#a1a1a1, #33ff33']}><span className="text-[0.75rem]" style={{ lineHeight: "1rem" }}>Novice </span>AOPS Award</LinearGradient></h1>
                         <p className="text-xs text-gray-400 italic">(Click me)</p>
                     </button>
                     <button className="h-28 border flex border-black flex-col justify-center bg-gray-900  text-center items-center rounded-xl" onClick={() => setVisionOpen(true)}>
@@ -582,17 +591,16 @@ const Prizes = (): JSX.Element => {
                                         as="h3"
                                         className="text-lg font-medium leading-6 text-gray-900"
                                     >
-                                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to left', '#ad5389, #3c1053']}>Connect Award</LinearGradient></h1>
+                                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to left', '#ad5389, #3c1053']}>Compete Award</LinearGradient></h1>
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
-                                            This award is presented to the team with the most potential impact on our communities. The project must also showcase a certain depth of completion and stand out among other submissions. Judges will be looking for a depth of project that is both highly developed and also has the potential to <span className="font-bold">connect with disadvantaged communities in the Pittsburgh area.</span>
-                                        </p>
+                                            This award is given to the team whose project demonstrates the most significant potential impact on our communities. The project should exhibit a high level of completion and distinguish itself from other submissions. Judges will evaluate the <span className="font-bold">effectiveness of the pitch</span>  in convincingly highlighting the project's potential and innovation.                                        </p>
                                         <div className="flex flex-col">
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>Stay tuned!</p>
+                                        <p>$150</p>
                                     </div>
 
                                     <div className="mt-4">
@@ -639,17 +647,17 @@ const Prizes = (): JSX.Element => {
                                         as="h3"
                                         className="text-lg font-medium leading-6 text-gray-900"
                                     >
-                                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to left', '#7b920a, #0f9b0f']}>Innovate Award</LinearGradient></h1>
+                                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to left', '#7b920a, #0f9b0f']}>Connect Award</LinearGradient></h1>
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
-                                            This award is presented to the team with the most innovative and groundbreaking idea and solution. The project must also showcase a certain depth of completion and stand out among other submissions. Judges will be looking for primarily novelty and originality in addressing an issue pertaining to the prompt.
+                                            This award is presented to the team with the most potential impact on our communities. The project must also showcase a certain depth of completion and stand out among other submissions. Judges will be looking for a depth of project that is both highly developed and also has the potential to <span className="font-bold">connect with disadvantaged communities in the Pittsburgh area.</span>
                                         </p>
                                         <div className="flex flex-col">
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>Stay tuned!</p>
+                                        <p>$150</p>
                                     </div>
 
                                     <div className="mt-4">
@@ -657,6 +665,62 @@ const Prizes = (): JSX.Element => {
                                             type="button"
                                             className="inline-flex justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900"
                                             onClick={() => setInnovateOpen(false)}
+                                        >
+                                            Let&apos;s win
+                                        </button>
+                                    </div>
+                                </Dialog.Panel>
+                            </Transition.Child>
+                        </div>
+                    </div>
+                </Dialog>
+            </Transition>
+            <Transition appear show={isBreakthroughOpen} as={Fragment}>
+                <Dialog as="div" className="relative z-10" onClose={() => setInnovateOpen(false)}>
+                    <Transition.Child
+                        as={Fragment}
+                        enter="ease-out duration-300"
+                        enterFrom="opacity-0"
+                        enterTo="opacity-100"
+                        leave="ease-in duration-200"
+                        leaveFrom="opacity-100"
+                        leaveTo="opacity-0"
+                    >
+                        <div className="fixed inset-0 bg-black/25" />
+                    </Transition.Child>
+                    <div className="fixed inset-0 overflow-y-auto">
+                        <div className="flex min-h-full items-center justify-center p-4 text-center">
+                            <Transition.Child
+                                as={Fragment}
+                                enter="ease-out duration-300"
+                                enterFrom="opacity-0 scale-95"
+                                enterTo="opacity-100 scale-100"
+                                leave="ease-in duration-200"
+                                leaveFrom="opacity-100 scale-100"
+                                leaveTo="opacity-0 scale-95"
+                            >
+                                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white text-black p-6 text-left align-middle shadow-xl transition-all">
+                                    <Dialog.Title
+                                        as="h3"
+                                        className="text-lg font-medium leading-6 text-gray-900"
+                                    >
+                                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#f2b4f1, #9a1811']}>Breakthrough Award</LinearGradient></h1>
+                                    </Dialog.Title>
+                                    <div className="mt-2">
+                                        <p className="text-sm text-gray-500">
+This award recognizes projects that make you go "Wow!" Judged primarily on their sheer coolness, this award celebrates teams that push the boundaries of creativity, innovation, and technical flair. It's all about impressing the judges and your peers with mind-blowing ideas and jaw-dropping implementations.                                        </p>
+                                        <div className="flex flex-col">
+                                            <div className="pr-2 pt-2 text-xl">Prize</div>
+                                            <div className="w-full border-b border-black"></div>
+                                        </div>
+                                        <p>$150</p>
+                                    </div>
+
+                                    <div className="mt-4">
+                                        <button
+                                            type="button"
+                                            className="inline-flex justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900"
+                                            onClick={() => setBreakthroughOpen(false)}
                                         >
                                             Let&apos;s win
                                         </button>
@@ -697,7 +761,7 @@ const Prizes = (): JSX.Element => {
                                         className="text-lg font-medium leading-6 text-gray-900"
                                     >
                                         <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#22c1c3, #fdbb2d']}><span className="text-[0.75rem]" style={{ lineHeight: "1rem" }}>Novice </span>Impact Award</LinearGradient></h1>
-                                        <p className="text-xs text-gray-800">Presented by Faaris Kamal</p>
+                                        <p className="text-xs text-gray-800"></p>
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
@@ -707,7 +771,7 @@ const Prizes = (): JSX.Element => {
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>Stay tuned!</p>
+                                        <p>$100</p>
                                     </div>
                                     <div className="mt-4">
                                         <button
@@ -763,7 +827,7 @@ const Prizes = (): JSX.Element => {
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>Stay tuned!</p>
+                                        <p>$100</p>
                                     </div>
 
                                     <div className="mt-4">
@@ -781,8 +845,8 @@ const Prizes = (): JSX.Element => {
                     </div>
                 </Dialog>
             </Transition>
-            <Transition appear show={isUnravelOpen} as={Fragment}>
-                <Dialog as="div" className="relative z-10" onClose={() => setUnravelOpen(false)}>
+            <Transition appear show={isKeystoneOpen} as={Fragment}>
+                <Dialog as="div" className="relative z-10" onClose={() => setKeystoneOpen(false)}>
                     <Transition.Child
                         as={Fragment}
                         enter="ease-out duration-300"
@@ -810,24 +874,23 @@ const Prizes = (): JSX.Element => {
                                         as="h3"
                                         className="text-lg font-medium leading-6 text-gray-900"
                                     >
-                                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#F3904F, #fffc00']}><span className="text-[0.75rem]" style={{ lineHeight: "1rem" }}>Novice </span>Unravel Award</LinearGradient></h1>
+                                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#a1a1a1, #33ff33']}><span className="text-[0.75rem]" style={{ lineHeight: "1rem" }}>Novice </span>AOPS Award</LinearGradient></h1>
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
-                                            This award is to be presented to the team that showcases the most growth from the beginning of the competition to the end. This award is solely to be awarded to beginners. - Detailed desc. coming soon
-                                        </p>
+This award celebrates the team that has shown the most remarkable improvement in their skills throughout the hackathon. This award recognizes those who have embraced challenges, learned new technologies, and demonstrated significant growth in their technical and collaborative abilities.                                        </p>
                                         <div className="flex flex-col">
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>TBA</p>
+                                        <p>$75 in discounts from the <a href="https://artofproblemsolving.com/" target="_blank" className="underline" rel="noopener noreferrer">Art of Problem Solving</a></p>
                                     </div>
 
                                     <div className="mt-4">
                                         <button
                                             type="button"
                                             className="inline-flex justify-center rounded-md border border-transparent bg-gray-200 px-4 py-2 text-sm font-medium text-gray-900"
-                                            onClick={() => setUnravelOpen(false)}
+                                            onClick={() => setKeystoneOpen(false)}
                                         >
                                             Let&apos;s win
                                         </button>
@@ -868,7 +931,7 @@ const Prizes = (): JSX.Element => {
                                         className="text-lg font-medium leading-6 text-gray-900"
                                     >
                                         <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#1C6FF8, #FEF720']}>2024 hacker()</LinearGradient></h1>
-                                        <p className="text-xs text-gray-800">Presented by Faaris Kamal</p>
+                                        <p className="text-xs text-gray-800">Presented by Perkin Showalter '26</p>
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
@@ -878,7 +941,7 @@ const Prizes = (): JSX.Element => {
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>You will receive a shirt, certificate, and other benefits. The offerings are currently tentative.</p>
+                                        <p>You will receive a shirt, certificate, and other benefits.</p>
                                     </div>
 
                                     <div className="mt-4">
