@@ -588,7 +588,7 @@ const Prizes = (): JSX.Element => {
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
-                                            This award is given to the team whose project demonstrates the most significant potential impact on our communities. The project should exhibit a high level of completion and distinguish itself from other submissions. Judges will evaluate the <span className="font-bold">effectiveness of the pitch</span>  in convincingly highlighting the project's potential and innovation.                                        </p>
+                                            This award is given to the team whose project demonstrates the most significant potential impact on our communities. The project should exhibit a high level of completion and distinguish itself from other submissions. Judges will evaluate the <span className="font-bold">effectiveness of the pitch</span>  in convincingly highlighting the project&apos;s potential and innovation.                                        </p>
                                         <div className="flex flex-col">
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
@@ -701,7 +701,7 @@ const Prizes = (): JSX.Element => {
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
-This award recognizes projects that make you go "Wow!" Judged primarily on their sheer coolness, this award celebrates teams that push the boundaries of creativity, innovation, and technical flair. It's all about impressing the judges and your peers with mind-blowing ideas and jaw-dropping implementations.                                        </p>
+This award recognizes projects that make you go &quot;Wow!&quot; Judged primarily on their sheer coolness, this award celebrates teams that push the boundaries of creativity, innovation, and technical flair. It&apos;s all about impressing the judges and your peers with mind-blowing ideas and jaw-dropping implementations.                                        </p>
                                         <div className="flex flex-col">
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
@@ -924,7 +924,7 @@ This award celebrates the team that has shown the most remarkable improvement in
                                         className="text-lg font-medium leading-6 text-gray-900"
                                     >
                                         <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#1C6FF8, #FEF720']}>2024 hacker()</LinearGradient></h1>
-                                        <p className="text-xs text-gray-800">Presented by Perkin Showalter '26</p>
+                                        <p className="text-xs text-gray-800">Presented by Perkin Showalter &apos;26</p>
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
