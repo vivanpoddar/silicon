@@ -132,7 +132,6 @@ const Panel1 = (): JSX.Element => {
                         <a href="https://forms.gle/44is8Wv5BEezaF1F7" className="text-center mt-4 border text-white py-1 px-2 xl:py-2 xl:px-4 xl:text-2xl rounded">
                             Volunteer Form
                         </a>
-                        
                     </div>
                 </div>
                 <div className="absolute bottom-0 mb-8 rounded-lg p-4">
@@ -307,7 +306,7 @@ const Questions = (): JSX.Element => {
                     <div className="border-t border-white flex-grow"></div>
                 </div>
                 <div className="p-4">
-                    <Question question="Is lunch included?" answer="Lunch is included in your registration! Lunch will be cheese/pepperoni pizza or salad, water, and a snack. Feel free to bring your own lunch if desired." />
+                    <Question question="Is lunch included?" answer="Lunch is included in your registration! Lunch will be cheese/pepperoni pizza or salad, water, and a snack. Feel free to bring your own lunch if desired. We will also be running a paid concession stand during the event." />
                     <Question question="Technology and devices included?" answer="We will provide 3D Printers, Arduinos, MakeyMakey's, Assorted Censors, Controllers, Phones, VR Headsets, Laptops and more. You are welcome to bring any hardware and software you'd like to succeed!" />
                     <Question question="I am a middle schooler. Can I succeed in this hackathon?" answer="No worries about skill gaps here. We will be hosting masterclasses that are tailored to beginners and younger competitors that will bring you up to speed. In addition, we provide novice awards for people getting into the space." />
                     <Question question="What is a hackathon?" answer="Our hackathon is a 6-hour event where students come together to create a project that solves a problem. Students can work individually or in teams of up to 4 people. At the end of the 6 hours, students will present their projects to a panel of judges. The best projects will win prizes!" />
@@ -962,34 +961,17 @@ const Sponsors = (): JSX.Element => {
                 <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Sponsors</h1>
                 <div className="border-t border-white flex-grow"></div>
             </div>
-            <div className="hidden z-0 sm:block absolute w-full h-full">
-                <Image src="/wave.svg" alt="wave" layout="fill" objectFit="cover" />
+            <div className="p-4 w-full flex justify-center">
+shady.Hacks is completely funded through the generous donations of our sponsors. Thank you for making shady.Hacks possible!
             </div>
-            <div className="p-4 z-10">
-                <h1>2024 Sponsors</h1>
-                <div className="flex flex-col items-center">
-                    <div className="p-4 m-4">
-                        <h1 className="text-3xl ">Atom Sponsors</h1>
-                        <div className="z-10 flex md:w-full w-1/2">
-                            <Image src="/enact.jpg" alt="Enact" height={50} width={200}></Image>
-                        </div>
-                    </div>
-                    <div className="z-10 p-4 m-4">
-                        <h1 className="text-3xl">Proton Sponsors</h1>
-                        <div className="z-10 flex md:w-full w-1/2">
-                            <Image className="z-10" src="/doclens_logo.jpg" alt="Doclens" height={50} width={200}></Image>
-                            <Image className="z-10" src="/echo.png" alt="echo" height={50} width={350}></Image>
-                        </div>
-                    </div>
-                    <div className="z-10 p-4 m-4">
-                        <h1 className="text-3xl">Electron Sponsors</h1>
-                        <div className="z-10 flex space-x-4 md:w-full">
-                            <Image src="/acethetics.jpeg" alt="acethetics" height={250} width={200}></Image>
-                            <Image src="/wolfram.png" alt="wolfram" height={250} width={200}></Image>
-                            <Image src="/aops.png" alt="aops" height={250} width={200}></Image>
-                        </div>
-                    </div>
-                </div>
+            <div className="p-4 w-full flex justify-center">
+                <Image
+                    className="z-10 rounded-xl"
+                    src="/atom.png"
+                    alt="Sponsors"
+                    width={800}
+                    height={1000}
+                />
             </div>
         </div>
     )
@@ -999,7 +981,7 @@ const Recap = (): JSX.Element => {
     return (
         <div className="text-white bg-black">
             <div className="flex items-center">
-                <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Recap</h1>
+                <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Media</h1>
                 <div className="border-t border-white flex-grow"></div>
             </div>
             <div className="p-4">
@@ -1034,7 +1016,7 @@ const Ssahack = () => {
             </Head>
             <Navbar current="shady.Hacks" />
             <div className="">
-                <Notification text="shady.Hacks 2025 registrations are open. Schedules/awards are tentative."/>
+                <Notification text="Less than one week away from shady.Hacks 2025!"/>
                 
                 <Panel1 />
                 <Panel2 />
