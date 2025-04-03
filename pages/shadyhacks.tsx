@@ -240,7 +240,8 @@ const Content = (): JSX.Element => {
                                 <span className="text-right">12:00 PM</span>
                                 <span className="text-right">12:30 PM</span>
                                 <span className="text-right">4:30 PM</span>
-                                <span className="text-right">5:00 PM</span>
+                                <span className="text-right">5:30 PM</span>
+                                <span className="text-right">6:00 PM</span>
                             </div>
                             <div className="h-full self-center border border-white mx-4"></div>
                             <div className="flex flex-col space-y-8">
@@ -251,6 +252,7 @@ const Content = (): JSX.Element => {
                                 <span>Special Guest Masterclass</span>
                                 <span>Judging</span>
                                 <span>Closing Ceremony </span>
+                                <span>Teams Leave </span>
                             </div>
                         </div>
                     </div>
