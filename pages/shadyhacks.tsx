@@ -284,8 +284,7 @@ const Masterclass = (): JSX.Element => {
                 <div className="p-4">
                     <div>
                         <h1 className="text-xl underline italic">AI Ignition with Python: An Introduction to Python and AI</h1>
-                        <p>Embark on a thrilling journey into the world of artificial intelligence with our power-packed masterclass. This two-hour session is crafted for individuals ready to take the first step in their AI project for the hackathon, providing essential insights and practical guidance to kickstart your AI endeavors.
-                            By the end of AI Ignition, you will leave with the knowledge, confidence, and practical skills to embark on your AI project. Join us for an hour of inspiration, hands-on learning, and actionable insights as we guide you through the exciting world of artificial intelligence. Ignite your AI journey. Taught by experienced industry leader Indrajit Poddar, Senior Technical Architect at AWS.
+                        <p>Embark on a thrilling journey into the world of artificial intelligence with our power-packed masterclass. This session is for individuals ready to begin an AI project for the hackathon by using APIs for rapid development. Ignite your AI journey. Taught by industry leader Indrajit Poddar, Senior Technical Architect at AWS.
                         </p>
                     </div>
                     <div>
@@ -293,8 +292,8 @@ const Masterclass = (): JSX.Element => {
                         <p>This masterclass will delve into the basics of Web Development, offering you the skills you will need to create a meaningful project to display to the judges. This course will be taught using SSA curriculum, and will give you the tools needed to succeed. Taught by SSA Computer Science Chair Mr. Dawson Haytock.</p>
                     </div>
                     <div>
-                        <h1 className="pt-2 text-xl underline italic">Special Guest</h1>
-                        <p>Learn from a renowned CMU professor in a one-hour masterclass designed to introduce you to the cutting-edge innovations taking place in academia today. More details soon.</p>
+                        <h1 className="pt-2 text-xl underline italic">BhashaX Introduction to Programming</h1>
+                        <p>BhashaX is a pioneering system that enables programming for beginners. This innovative approach has been recognized by World Bank, Intel, MIT, Broadcom, and many more. Through this session, participants will get hands-on experience to programming by trying BhashaX.</p>
                     </div>
                 </div>
             </div>
