@@ -251,7 +251,10 @@ const Content = (): JSX.Element => {
                                 <span>Lunch Opens</span>
                                 <span>Special Guest Masterclass</span>
                                 <span>Judging</span>
-                                <span>Closing Ceremony </span>
+                                <div className="flex flex-col">
+                                    <p className="text-[0.7em]/[1]">Closing Speech</p>
+                                    <p className="text-[0.3em]/[1] text-gray-400">featuring State Representative Arvind Venkat</p>
+                                </div>
                                 <span>Teams Leave </span>
                             </div>
                         </div>
@@ -969,7 +972,7 @@ shady.Hacks is completely funded through the generous donations of our sponsors.
             <div className="p-4 w-full flex justify-center">
                 <Image
                     className="z-10 rounded-xl"
-                    src="/atom.png"
+                    src="/Atom.png"
                     alt="Sponsors"
                     width={800}
                     height={1000}
