@@ -123,14 +123,14 @@ const Panel1 = (): JSX.Element => {
                         <a href="https://forms.gle/1NkPHxKgb2HsR9b5A" className="text-center mt-4 border text-yellow-500 font-medium py-1 xl:py-2 xl:px-4 xl:text-2xl border-yellow-500 rounded">Sign Up</a>
                         <a href="https://shadysideacademy-my.sharepoint.com/:w:/g/personal/26poddarv_shadysideacademy_org/EejCBZMdudNHoMtI7kxiPEEBrONOyJj2c5hBZFD8FIIWSw?e=uwkxSG" className="text-center mt-4 border border-yellow-500 text-yellow-500 font-medium py-1 px-2 xl:py-2 xl:px-4 xl:text-2xl rounded">Handbook</a>
                         <a href="mailto:contact@joinsilicon.org" className="text-center mt-4 border text-white py-1 px-2 xl:py-2 xl:px-4 xl:text-2xl rounded">Contact</a>
-                        <a href="https://discord.gg/pxRjVRcmpz" className="text-center mt-4 border text-white py-1 px-2 xl:py-2 xl:px-4 xl:text-2xl rounded">Discord</a>
+                        <a href="https://photos.google.com/share/AF1QipOQiYLZIbpk57qZWq49Y-rL0xRnqVo0glFUySvHSEUEGUtcjJjtQ0PbMZTszdOFNA?key=cXpvWl9aMGtqeUFuaHNTQm5PUU1DOXZZbWQ0OTNB" className="text-center mt-4 border text-white py-1 px-2 xl:py-2 xl:px-4 xl:text-2xl rounded">2025 Pictures</a>
                         <a href="https://drive.google.com/file/d/1X0Jd8n0rW3EhQhP_2tSPOMt7C3oB6zjz/view" className="text-center mt-4 border  text-white py-1 px-2 xl:py-2 xl:px-4 xl:text-2xl rounded">Sponsor Info</a>
                         <a href="https://drive.google.com/drive/folders/1ixl2A1D_IjwNvjAvrnPSLaW9Bwja_usN?usp=drive_link" className="text-center mt-4 border text-white py-1 px-2 xl:py-2 xl:px-4 xl:text-2xl rounded">Web Development</a>
                         <a href="https://www.instagram.com/ssa_hack/" className="text-center mt-4 border text-white py-1 px-2 xl:py-2 xl:px-4 xl:text-2xl rounded">
                             Instagram
                         </a>
-                        <a href="https://forms.gle/44is8Wv5BEezaF1F7" className="text-center mt-4 border text-white py-1 px-2 xl:py-2 xl:px-4 xl:text-2xl rounded">
-                            Volunteer Form
+                        <a href="https://docs.google.com/spreadsheets/d/1czqJASUVv4osy-QzJjEv47Oe3O1dsVbYxdkkwsTscTU/edit?usp=sharing" className="text-center mt-4 border text-white py-1 px-2 xl:py-2 xl:px-4 xl:text-2xl rounded">
+                            2025 Scores
                         </a>
                     </div>
                 </div>
