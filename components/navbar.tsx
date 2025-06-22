@@ -16,8 +16,8 @@ export default function Navbar({ current }: NavbarProps) {
     const navigation = [
         { name: 'Home', href: '/', current: current === 'Home' },
         { name: 'shady.Hacks', href: 'shadyhacks', current: current === 'shady.Hacks' },
+        { name: 'Hackathons', href: 'hackathons', current: current === 'Hackathons' },
         { name: 'Contact', href: 'contact', current: current === 'Contact' },
-        { name: 'Join', href: 'join', current: current === 'Join' },
     ]
     
     let [isOpen, setIsOpen] = useState(false)
