@@ -298,7 +298,7 @@ const Panel1 = (): JSX.Element => {
               <span className="bg-gray-900 px-3 py-1 rounded-full text-sm">World Stage</span>
             </div>
             <p className='text-gray-200 text-lg sm:text-xl leading-relaxed text-center'>
-              There's DECA, there's NSDA, there's HOSA, but where are the competitions for national and global-level high school Computer Science? The Silicon League is the <span className="font-semibold text-white">first-ever global hackathon tournament</span> designed exclusively for high school students. It's your chance to compete against the world's brightest young minds and launch your tech career before you even graduate.
+              There&apos;s DECA, there&apos;s NSDA, there&apos;s HOSA, but where are the competitions for national and global-level high school Computer Science? The Silicon League is the <span className="font-semibold text-white">first-ever global hackathon tournament</span> designed exclusively for high school students. It&apos;s your chance to compete against the world&apos;s brightest young minds and launch your tech career before you even graduate.
             </p>
           </div>
           <div className="text-center ">
