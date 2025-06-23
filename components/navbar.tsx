@@ -17,6 +17,7 @@ export default function Navbar({ current }: NavbarProps) {
         { name: 'Home', href: '/', current: current === 'Home' },
         { name: 'shady.Hacks', href: 'shadyhacks', current: current === 'shady.Hacks' },
         { name: 'Hackathons', href: 'hackathons', current: current === 'Hackathons' },
+        { name: 'About', href: 'about', current: current === 'About' },
         { name: 'Contact', href: 'contact', current: current === 'Contact' },
     ]
     

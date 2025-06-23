@@ -44,7 +44,6 @@ const Panel1 = (): JSX.Element => {
     }, []);
 
     return (
-        //rgb(246, 196, 77)
         <div className="bg-gradient-to-b from-blue-500 to-black h-screen w-screen">
             <Particles
                 style={{ position: "absolute" }}
@@ -114,29 +113,31 @@ const Panel1 = (): JSX.Element => {
                     },
                 }}
             />
-            <div className="absolute w-screen h-screen flex items-center justify-center flex-col" style={{ height: "100vh" }}>
-                <Image priority={true} className="md:w-1/4 w-1/2" src="/ssahack.png" alt="shady.Hacks" width={600} height={100}></Image>
-                <div className="border-t border-white w-1/2 md:mb-4"></div>
-                <TypeIt className="text-center text-3xl md:text-5xl text-white">Hack for a <span className="text-yellow-500 italic">purpose.</span></TypeIt>
-                <div className="flex space-x-4">
-                    <div className="grid grid-cols-2 sm:grid-cols-4 pt-2 gap-1 xl:gap-4">
-                        <a href="https://forms.gle/1NkPHxKgb2HsR9b5A" className="text-center mt-4 border text-yellow-500 font-medium py-1 xl:py-2 xl:px-4 xl:text-2xl border-yellow-500 rounded">Sign Up</a>
-                        <a href="https://shadysideacademy-my.sharepoint.com/:w:/g/personal/26poddarv_shadysideacademy_org/EejCBZMdudNHoMtI7kxiPEEBrONOyJj2c5hBZFD8FIIWSw?e=uwkxSG" className="text-center mt-4 border border-yellow-500 text-yellow-500 font-medium py-1 px-2 xl:py-2 xl:px-4 xl:text-2xl rounded">Handbook</a>
-                        <a href="mailto:contact@joinsilicon.org" className="text-center mt-4 border text-white py-1 px-2 xl:py-2 xl:px-4 xl:text-2xl rounded">Contact</a>
-                        <a href="https://photos.google.com/share/AF1QipOQiYLZIbpk57qZWq49Y-rL0xRnqVo0glFUySvHSEUEGUtcjJjtQ0PbMZTszdOFNA?key=cXpvWl9aMGtqeUFuaHNTQm5PUU1DOXZZbWQ0OTNB" className="text-center mt-4 border text-white py-1 px-2 xl:py-2 xl:px-4 xl:text-2xl rounded">2025 Pictures</a>
-                        <a href="https://drive.google.com/file/d/1X0Jd8n0rW3EhQhP_2tSPOMt7C3oB6zjz/view" className="text-center mt-4 border  text-white py-1 px-2 xl:py-2 xl:px-4 xl:text-2xl rounded">Sponsor Info</a>
-                        <a href="https://drive.google.com/drive/folders/1ixl2A1D_IjwNvjAvrnPSLaW9Bwja_usN?usp=drive_link" className="text-center mt-4 border text-white py-1 px-2 xl:py-2 xl:px-4 xl:text-2xl rounded">Web Development</a>
-                        <a href="https://www.instagram.com/ssa_hack/" className="text-center mt-4 border text-white py-1 px-2 xl:py-2 xl:px-4 xl:text-2xl rounded">
+            <div className="absolute w-full h-full flex items-center justify-center flex-col px-4">
+                <div className="w-full max-w-lg mb-4">
+                    <Image priority={true} className="w-full h-auto" src="/ssahack.png" alt="shady.Hacks" width={600} height={100}></Image>
+                </div>
+                <div className="border-t border-white w-3/4 sm:w-1/2 mb-4"></div>
+                <TypeIt className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-6">Hack for a <span className="text-yellow-500 italic">purpose.</span></TypeIt>
+                <div className="w-full max-w-4xl">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4">
+                        <a href="https://forms.gle/1NkPHxKgb2HsR9b5A" className="text-center border text-yellow-500 font-medium py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl border-yellow-500 rounded hover:bg-yellow-500 hover:text-black transition-colors">Sign Up</a>
+                        <a href="https://shadysideacademy-my.sharepoint.com/:w:/g/personal/26poddarv_shadysideacademy_org/EejCBZMdudNHoMtI7kxiPEEBrONOyJj2c5hBZFD8FIIWSw?e=uwkxSG" className="text-center border border-yellow-500 text-yellow-500 font-medium py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-yellow-500 hover:text-black transition-colors">Handbook</a>
+                        <a href="mailto:contact@joinsilicon.org" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">Contact</a>
+                        <a href="https://photos.google.com/share/AF1QipOQiYLZIbpk57qZWq49Y-rL0xRnqVo0glFUySvHSEUEGUtcjJjtQ0PbMZTszdOFNA?key=cXpvWl9aMGtqeUFuaHNTQm5PUU1DOXZZbWQ0OTNB" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">2025 Pictures</a>
+                        <a href="https://drive.google.com/file/d/1X0Jd8n0rW3EhQhP_2tSPOMt7C3oB6zjz/view" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">Sponsor Info</a>
+                        <a href="https://drive.google.com/drive/folders/1ixl2A1D_IjwNvjAvrnPSLaW9Bwja_usN?usp=drive_link" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">Web Development</a>
+                        <a href="https://www.instagram.com/ssa_hack/" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">
                             Instagram
                         </a>
-                        <a href="https://docs.google.com/spreadsheets/d/1czqJASUVv4osy-QzJjEv47Oe3O1dsVbYxdkkwsTscTU/edit?usp=sharing" className="text-center mt-4 border text-white py-1 px-2 xl:py-2 xl:px-4 xl:text-2xl rounded">
+                        <a href="https://docs.google.com/spreadsheets/d/1czqJASUVv4osy-QzJjEv47Oe3O1dsVbYxdkkwsTscTU/edit?usp=sharing" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">
                             2025 Scores
                         </a>
                     </div>
                 </div>
-                <div className="absolute bottom-0 mb-8 rounded-lg p-4">
-                    <h1 className='pb-2 text-white'>Learn more</h1>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-8 w-8 mx-auto text-white animate-bounce">
+                <div className="absolute bottom-8 rounded-lg p-4 text-center">
+                    <h1 className='pb-2 text-white text-sm sm:text-base'>Learn more</h1>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6 sm:h-8 sm:w-8 mx-auto text-white animate-bounce">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                     </svg>
                 </div>
@@ -223,7 +224,6 @@ const Panel2 = (): JSX.Element => {
 
 const Content = (): JSX.Element => {
     return (
-        //rgb(246, 196, 77)
         <div className="relative flex text-white bg-black py-24 z-0">
             <div className="flex absolute right-1 top-5">
                 <Image src="/star.svg" alt="Star" width={500} height={50} />
@@ -352,31 +352,6 @@ const Person = ({ image, position, text, name, linkedin, email }: PersonProps) =
     );
 };
 
-// const Judges = (): JSX.Element => {
-//     return (
-//         <div id="judges" className=" text-white">
-//             <div className="flex items-center">
-//                 <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Judges</h1>
-//                 <div className="border-t border-white flex-grow"></div>
-//             </div>
-//             <div className="p-4 grid grid-cols-2 md:grid-cols-4 gap-2">
-//                 <Person name="Dan Ding" position="Associate Professor and Vice Chair for Research at Pitt RST" text="" linkedin="" email="" image="0" />
-//                 <Person name="Indrajit Poddar" position="Senior Cloud Infrastructure Architect at AWS" text="" linkedin="" email="" image="0" />
-//                 <Person name="Dawson Haytock" position="Computer Science Department Chair at Shady Side Academy" text="" linkedin="" email="" image="0" />
-//                 <Person name="Lindsey Morris" position="Clinical Research Scientist at Pitt RST" text="" linkedin="" email="" image="0" />
-//                 <Person name="Michael Huang" position="Administrative Assistant at Pitt" text="" linkedin="" email="" image="0" />
-//                 <Person name="Adit Shah" position="Software Engineer at Pitt RST" text="" linkedin="" email="" image="0" />
-//                 <Person name="Breelyn Styler" position="VA Research Engineer at Human Engineering Research Laboratories" text="" linkedin="" email="" image="0" />
-//                 <Person name="Siva Venkadesh" position="Computational Neuroscience Researcher at Pitt Dept. of Neurological Surgery" text="" linkedin="" email="" image="0" />
-//                 <Person name="TBA" position="" text="" linkedin="" email="" image="0" />
-//                 <Person name="TBA" position="" text="" linkedin="" email="" image="0" />
-//                 <Person name="TBA" position="" text="" linkedin="" email="" image="0" />
-//                 <Person name="TBA" position="" text="" linkedin="" email="" image="0" />
-//             </div>
-//         </div>
-//     )
-// }
-
 const Prizes = (): JSX.Element => {
     let [isComputeOpen, setComputeOpen] = useState(false)
     let [isConnectOpen, setConnectOpen] = useState(false)
@@ -394,7 +369,6 @@ const Prizes = (): JSX.Element => {
             document.body.classList.remove('overflow-hidden');
         }
 
-        // Clean up function
         return () => {
             document.body.classList.remove('overflow-hidden');
         };
