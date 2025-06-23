@@ -85,7 +85,7 @@ export default function Hackathons() {
             location: "Shady Side Academy, Pittsburgh",
             description: "Our high school hackathon brings together the brightest young minds in Pittsburgh to compete, compute, and connect. Build innovative solutions and network with peers.",
             logo: "/ssahack.png",
-            landscapeImage: "/community.jpg",
+            landscapeImage: "/shadysidepic.jpg",
             registrationLink: "/shadyhacks",
             status: 'upcoming'
         },
