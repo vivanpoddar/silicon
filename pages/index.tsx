@@ -876,7 +876,7 @@ const Panel4 = (): JSX.Element => {
           </div>
           <div className="bg-gradient-to-br from-gray-900/80 via-gray-800/80 to-gray-900/60 p-6 sm:p-8 rounded-2xl border border-gray-700/60 shadow-xl backdrop-blur-md">
             <p className="text-gray-200 text-lg sm:text-xl leading-relaxed text-center mb-6">
-              Our May championship becomes a <span className="font-semibold text-white">celebration of young innovation</span> streamed live to families, schools, and tech communities worldwide. Experience <span className="font-semibold text-white">one week of creative coding</span> with industry mentorship, multiple skill tracks, and the chance to compete with the best of the best of high school Computer Science talent.
+              Our championship, taking place in May TBA, is a <span className="font-semibold text-white">celebration of young innovation</span> aiming to support the top hackathon competitors. Competitors receive free goodies and will experience <span className="font-semibold text-white">one week of creative coding</span> with industry mentorship, multiple skill tracks, and the chance to compete with the best of the best of high school Computer Science talent.
             </p>
           </div>
           <div className="text-center">
