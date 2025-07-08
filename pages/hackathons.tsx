@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from "next/head";
 import { motion } from 'framer-motion';
 import Image from "next/image";
@@ -38,12 +38,7 @@ const HackathonCard = ({ title, date, location, description, image, logo, landsc
     };
 
     return (
-        <motion.div 
-            className="bg-gray-900 border border-gray-700 rounded-lg p-4 sm:p-6 m-2 sm:m-4 hover:border-blue-500 transition-colors duration-300"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-        >
+        <div className="bg-gray-900 border border-gray-700 rounded-lg p-4 sm:p-6 m-2 sm:m-4 hover:border-blue-500 transition-colors duration-300 flex flex-col">
             {landscapeImage && (
                 <div className="w-full h-32 sm:h-40 mb-4 overflow-hidden rounded-lg relative">
                     <Image src={landscapeImage} fill alt={`${title} landscape`} className="object-cover" />
@@ -60,7 +55,9 @@ const HackathonCard = ({ title, date, location, description, image, logo, landsc
             <div className="flex flex-col sm:flex-row justify-between items-start mb-2 gap-2">
                 <div className="flex items-center gap-2 flex-1">
                     {logo && (
-                        <Image src={logo} width={40} height={40} alt={`${title} logo`} className="rounded opacity-60 flex-shrink-0" />
+                        <div className="w-10 h-10 flex-shrink-0 rounded overflow-hidden">
+                            <Image src={logo} width={40} height={40} alt={`${title} logo`} className="w-full h-full object-contain opacity-60" />
+                        </div>
                     )}
                     <h2 className="text-xl sm:text-2xl text-white font-bold leading-tight">{title}</h2>
                 </div>
@@ -75,22 +72,89 @@ const HackathonCard = ({ title, date, location, description, image, logo, landsc
                     <LinkButton content="Register Now" href={registrationLink} />
                 </div>
             )}
-        </motion.div>
+        </div>
+    );
+};
+
+const HackathonLine = ({ title, date, location, description, image, logo, landscapeImage, registrationLink, status }: HackathonProps) => {
+    const getStatusColor = () => {
+        switch (status) {
+            case 'upcoming': return 'text-green-400';
+            case 'ongoing': return 'text-yellow-400';
+            case 'completed': return 'text-gray-400';
+            default: return 'text-white';
+        }
+    };
+
+    const getStatusText = () => {
+        switch (status) {
+            case 'upcoming': return 'Upcoming';
+            case 'ongoing': return 'Ongoing';
+            case 'completed': return 'Completed';
+            default: return '';
+        }
+    };
+
+    return (
+        <div className="bg-gray-900 border border-gray-700 rounded-lg p-4 hover:border-blue-500 transition-colors duration-300 flex items-center gap-4">
+            <div className="flex items-center gap-4 flex-1">
+                {logo && (
+                    <div className="w-12 h-12 flex-shrink-0 rounded overflow-hidden">
+                        <Image src={logo} width={48} height={48} alt={`${title} logo`} className="w-full h-full object-contain opacity-60" />
+                    </div>
+                )}
+                <div className="flex-1 min-w-0">
+                    <h3 className="text-lg font-bold text-white leading-tight truncate">{title}</h3>
+                    <p className="text-gray-400 text-sm">{date} • {location}</p>
+                </div>
+            </div>
+            
+            <div className="flex items-center gap-4">
+                <span className={`text-sm font-semibold ${getStatusColor()} flex-shrink-0`}>
+                    {getStatusText()}
+                </span>
+                {registrationLink && status === 'upcoming' && (
+                    <LinkButton content="Register" href={registrationLink} />
+                )}
+            </div>
+        </div>
     );
 };
 
 export default function Hackathons() {
+    const [viewMode, setViewMode] = useState<'cards' | 'lines'>('cards');
+    
     const hackathons: HackathonProps[] = [
         {
             title: "shady.Hacks 2025-2026",
             date: "December 1-2, 2025",
-            location: "Shady Side Academy, Pittsburgh",
-            description: "Our high school hackathon brings together the brightest young minds in Pittsburgh to compete, compute, and connect. Build innovative solutions and network with peers.",
+            location: "Pittsburgh, PA",
+            description: "This December, join us at Shady Side Academy for a Saturday filled with innovation and creativity. Our high school hackathon brings together the brightest young minds in Pittsburgh to compete, compute, and connect. Build innovative solutions and network with peers.",
             logo: "/ssahack.png",
             landscapeImage: "/shadysidepic.jpg",
             registrationLink: "/shadyhacks",
             status: 'upcoming'
         },
+        {
+            title: "Hack the Nest",
+            date: "April",
+            location: "Tysons Corner, VA",
+            description: "This April, join 200 hackers for the DMV area's largest high school hackathon. Hack the Nest is a collaborative coding event where participants (also called hackers) bring their innovative ideas to life in just one weekend. Whether it's 2am-debugging with cookies or karaoke, our ultimate goal is to host an unforgettable experience for an audience normally barred from hackathons.",
+            logo: "/Hack_the_Nest_Logo.webp",
+            landscapeImage: "/hackthenestbackground.png",
+            registrationLink: "https://hackthenest.org",
+            status: 'upcoming'
+        },
+        {
+            title: "HackNA",
+            date: "March",
+            location: "Wexford, PA",
+            description: "HackNA is a high school hackathon, hosted by the team from North Allegheny Senior High School. During the competition, you will create a software or hardware project from scratch based on a central theme revealed at the opening ceremony. No prior experience is required – we welcome anyone interested and will be providing workshops and mentor expertise to help you get started! At the end of the competition, teams will pitch their project to a panel of judges in a chance to win sponsored prizes and rewards.",
+            logo: "hacknalogo.svg",
+            landscapeImage: "/hacknabanner.jpg",
+            registrationLink: "https://hackna.org",
+            status: 'upcoming'
+        }
     ];
 
     return (
@@ -118,28 +182,72 @@ export default function Hackathons() {
                         >
                             Hackathons around the World
                         </motion.h1>
+
+                        <motion.div 
+                            className="flex justify-center mb-8"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.5 }}
+                        >
+                            <div className="bg-gray-800 rounded-lg p-1 flex">
+                                <button
+                                    onClick={() => setViewMode('cards')}
+                                    className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center gap-2 ${
+                                        viewMode === 'cards' 
+                                            ? 'bg-blue-600 text-white' 
+                                            : 'text-gray-400 hover:text-white'
+                                    }`}
+                                >
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                                    </svg>
+                                    
+                                </button>
+                                <button
+                                    onClick={() => setViewMode('lines')}
+                                    className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center gap-2 ${
+                                        viewMode === 'lines' 
+                                            ? 'bg-blue-600 text-white' 
+                                            : 'text-gray-400 hover:text-white'
+                                    }`}
+                                >
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                                    </svg>
+                                    
+                                </button>
+                            </div>
+                        </motion.div>
                     </div>
 
                     <div className="max-w-7xl mx-auto">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
-                            {hackathons.map((hackathon, index) => (
-                                <motion.div
-                                    key={index}
-                                    initial={{ opacity: 0, y: 50 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                                >
-                                    <HackathonCard {...hackathon} />
-                                </motion.div>
-                            ))}
-                        </div>
+                        {viewMode === 'cards' ? (
+                            <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
+                                <div className="flex-1 flex flex-col gap-4">
+                                    {hackathons.filter((_, index) => index % 2 === 0).map((hackathon, index) => (
+                                        <HackathonCard key={index * 2} {...hackathon} />
+                                    ))}
+                                </div>
+                                <div className="flex-1 flex flex-col gap-4">
+                                    {hackathons.filter((_, index) => index % 2 === 1).map((hackathon, index) => (
+                                        <HackathonCard key={index * 2 + 1} {...hackathon} />
+                                    ))}
+                                </div>
+                            </div>
+                        ) : (
+                            <div className="space-y-4">
+                                {hackathons.map((hackathon, index) => (
+                                    <HackathonLine key={index} {...hackathon} />
+                                ))}
+                            </div>
+                        )}
                     </div>
 
                     <motion.div 
                         className="mt-16 text-center px-4"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ duration: 0.8, delay: 0.5 }}
+                        transition={{ duration: 0.5 }}
                     >
                         <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">Ready to Join the Community?</h2>
                         <p className="text-gray-400 mb-8 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
