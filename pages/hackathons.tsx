@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Head from "next/head";
-import { motion } from 'framer-motion';
 import Image from "next/image";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
@@ -38,7 +37,7 @@ const HackathonCard = ({ title, date, location, description, image, logo, landsc
     };
 
     return (
-        <div className="bg-gray-900 border border-gray-700 rounded-lg p-4 sm:p-6 m-2 sm:m-4 hover:border-blue-500 transition-colors duration-300 flex flex-col">
+        <div className="bg-gray-900 border border-gray-700 rounded-lg p-4 sm:p-6 m-2 sm:m-4 flex flex-col">
             {landscapeImage && (
                 <div className="w-full h-32 sm:h-40 mb-4 overflow-hidden rounded-lg relative">
                     <Image src={landscapeImage} fill alt={`${title} landscape`} className="object-cover" />
@@ -96,7 +95,7 @@ const HackathonLine = ({ title, date, location, description, image, logo, landsc
     };
 
     return (
-        <div className="bg-gray-900 border border-gray-700 rounded-lg p-4 hover:border-blue-500 transition-colors duration-300 flex items-center gap-4">
+        <div className="bg-gray-900 border border-gray-700 rounded-lg p-4 flex items-center gap-4">
             <div className="flex items-center gap-4 flex-1">
                 {logo && (
                     <div className="w-12 h-12 flex-shrink-0 rounded overflow-hidden">
@@ -166,29 +165,14 @@ export default function Hackathons() {
             
             <div className="min-h-screen bg-black relative overflow-hidden">
 
-                <motion.div 
-                    className="pt-[6.5rem] pb-16 px-4 sm:px-6 lg:px-8"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1 }}
-                >
+                <div className="pt-[6.5rem] pb-16 px-4 sm:px-6 lg:px-8">
                     <div className="max-w-7xl mx-auto text-center">
 
-                        <motion.h1 
-                            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
-                            initial={{ y: -50 }}
-                            animate={{ y: 0 }}
-                            transition={{ duration: 0.8 }}
-                        >
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                             Hackathons around the World
-                        </motion.h1>
+                        </h1>
 
-                        <motion.div 
-                            className="flex justify-center mb-8"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ duration: 0.5 }}
-                        >
+                        <div className="flex justify-center mb-8">
                             <div className="bg-gray-800 rounded-lg p-1 flex">
                                 <button
                                     onClick={() => setViewMode('cards')}
@@ -217,22 +201,15 @@ export default function Hackathons() {
                                     
                                 </button>
                             </div>
-                        </motion.div>
+                        </div>
                     </div>
 
                     <div className="max-w-7xl mx-auto">
                         {viewMode === 'cards' ? (
-                            <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
-                                <div className="flex-1 flex flex-col gap-4">
-                                    {hackathons.filter((_, index) => index % 2 === 0).map((hackathon, index) => (
-                                        <HackathonCard key={index * 2} {...hackathon} />
-                                    ))}
-                                </div>
-                                <div className="flex-1 flex flex-col gap-4">
-                                    {hackathons.filter((_, index) => index % 2 === 1).map((hackathon, index) => (
-                                        <HackathonCard key={index * 2 + 1} {...hackathon} />
-                                    ))}
-                                </div>
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+                                {hackathons.map((hackathon, index) => (
+                                    <HackathonCard key={index} {...hackathon} />
+                                ))}
                             </div>
                         ) : (
                             <div className="space-y-4">
@@ -243,19 +220,14 @@ export default function Hackathons() {
                         )}
                     </div>
 
-                    <motion.div 
-                        className="mt-16 text-center px-4"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.5 }}
-                    >
+                    <div className="mt-16 text-center px-4">
                         <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">Ready to Join the Community?</h2>
                         <p className="text-gray-400 mb-8 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
                             Do you own a hackathon or know of one that should be featured here? We want to hear from you! Join our community of innovators and help us shape the future of high school hackathons.
                         </p>
                         <LinkButton content="Contact Us" href="/contact" />
-                    </motion.div>
-                </motion.div>
+                    </div>
+                </div>
             </div>
             
             <Footer />

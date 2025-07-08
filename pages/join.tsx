@@ -11,20 +11,20 @@ const Join = () => {
     const [email, setEmail] = useState("");
 
     const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
+        // e.preventDefault();
 
-        const formDataRef = ref(database, "formData");
-        push(formDataRef, {
-            name: name,
-            email: email,
-        })
-            .then(() => {
-                setName("");
-                setEmail("");
-            })
-            .catch((error) => {
-                console.error("Error saving data:", error);
-            });
+        // const formDataRef = ref(database, "formData");
+        // push(formDataRef, {
+        //     name: name,
+        //     email: email,
+        // })
+        //     .then(() => {
+        //         setName("");
+        //         setEmail("");
+        //     })
+        //     .catch((error) => {
+        //         console.error("Error saving data:", error);
+        //     });
     };
 
     return (
