@@ -38,20 +38,6 @@ const HackathonCard = ({ title, date, location, description, image, logo, landsc
 
     return (
         <div className="bg-gray-900 border border-gray-700 rounded-lg p-4 sm:p-6 m-2 sm:m-4 flex flex-col">
-            {landscapeImage && (
-                <div className="w-full h-32 sm:h-40 mb-4 overflow-hidden rounded-lg relative">
-                    <Image 
-                        src={landscapeImage} 
-                        fill 
-                        alt={`${title} landscape`} 
-                        className="object-cover" 
-                        quality={30}
-                        priority={false}
-                        loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                </div>
-            )}
 
             <div className="flex flex-col sm:flex-row justify-between items-start mb-2 gap-2">
                 <div className="flex items-center gap-2 flex-1">
