@@ -40,14 +40,16 @@ const HackathonCard = ({ title, date, location, description, image, logo, landsc
         <div className="bg-gray-900 border border-gray-700 rounded-lg p-4 sm:p-6 m-2 sm:m-4 flex flex-col">
             {landscapeImage && (
                 <div className="w-full h-32 sm:h-40 mb-4 overflow-hidden rounded-lg relative">
-                    <Image src={landscapeImage} fill alt={`${title} landscape`} className="object-cover" />
+                    <Image 
+                        src={landscapeImage} 
+                        fill 
+                        alt={`${title} landscape`} 
+                        className="object-cover" 
+                        quality={30}
+                        priority={false}
+                        loading="lazy"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                </div>
-            )}
-
-            {image && !landscapeImage && (
-                <div className="w-full h-40 sm:h-48 mb-4 overflow-hidden rounded-lg">
-                    <Image src={image} width={400} height={200} alt={title} className="w-full h-full object-cover" />
                 </div>
             )}
 
@@ -55,7 +57,15 @@ const HackathonCard = ({ title, date, location, description, image, logo, landsc
                 <div className="flex items-center gap-2 flex-1">
                     {logo && (
                         <div className="w-10 h-10 flex-shrink-0 rounded overflow-hidden">
-                            <Image src={logo} width={40} height={40} alt={`${title} logo`} className="w-full h-full object-contain opacity-60" />
+                            <Image 
+                                src={logo} 
+                                width={40} 
+                                height={40} 
+                                alt={`${title} logo`} 
+                                className="w-full h-full object-contain opacity-60"
+                                quality={50}
+                                loading="lazy"
+                            />
                         </div>
                     )}
                     <h2 className="text-xl sm:text-2xl text-white font-bold leading-tight">{title}</h2>
@@ -75,7 +85,7 @@ const HackathonCard = ({ title, date, location, description, image, logo, landsc
     );
 };
 
-const HackathonLine = ({ title, date, location, description, image, logo, landscapeImage, registrationLink, status }: HackathonProps) => {
+const HackathonLine = ({ title, date, location, registrationLink, status }: HackathonProps) => {
     const getStatusColor = () => {
         switch (status) {
             case 'upcoming': return 'text-green-400';
@@ -97,11 +107,6 @@ const HackathonLine = ({ title, date, location, description, image, logo, landsc
     return (
         <div className="bg-gray-900 border border-gray-700 rounded-lg p-4 flex items-center gap-4">
             <div className="flex items-center gap-4 flex-1">
-                {logo && (
-                    <div className="w-12 h-12 flex-shrink-0 rounded overflow-hidden">
-                        <Image src={logo} width={48} height={48} alt={`${title} logo`} className="w-full h-full object-contain opacity-60" />
-                    </div>
-                )}
                 <div className="flex-1 min-w-0">
                     <h3 className="text-lg font-bold text-white leading-tight truncate">{title}</h3>
                     <p className="text-gray-400 text-sm">{date} • {location}</p>
@@ -125,8 +130,28 @@ export default function Hackathons() {
     
     const hackathons: HackathonProps[] = [
         {
+            title: "Hack the Nest",
+            date: "September 20-21",
+            location: "Tysons Corner, VA",
+            description: "This September, join 300 hackers for the DMV area's largest high school hackathon. Hack the Nest is a collaborative coding event where participants (also called hackers) bring their innovative ideas to life in just one weekend. Whether it's 2am-debugging with cookies or karaoke, our ultimate goal is to host an unforgettable experience for an audience normally barred from hackathons.",
+            logo: "/Hack_the_Nest_Logo.webp",
+            landscapeImage: "/hackthenestbackground.png",
+            registrationLink: "https://hackthenest.org",
+            status: 'upcoming'
+        },
+        {
+            title: "Hack the Colloseum",
+            date: "October 18",
+            location: "Ellicott City, MD",
+            description: "Hack the Colosseum envisions a vibrant and collaborative community of student programmers. By bringing students from diverse backgrounds and experiences together, we aim to cultivate an innovative and supportive learning environment that inspires creativity and encourages growth. Through hands-on workshops, mentoring, and team challenges, we strive to inspire the next generation of tech leaders and innovators here in the DMV.",
+            logo: "/hackthecolosseum.png",
+            landscapeImage: "/hackthecolosseumbanner.png",
+            registrationLink: "https://hackathon.glenelg-computing.org/",
+            status: 'upcoming'
+        },
+        {
             title: "shady.Hacks 2025-2026",
-            date: "December 1-2, 2025",
+            date: "December 1",
             location: "Pittsburgh, PA",
             description: "This December, join us at Shady Side Academy for a Saturday filled with innovation and creativity. Our high school hackathon brings together the brightest young minds in Pittsburgh to compete, compute, and connect. Build innovative solutions and network with peers.",
             logo: "/ssahack.png",
@@ -135,13 +160,13 @@ export default function Hackathons() {
             status: 'upcoming'
         },
         {
-            title: "Hack the Nest",
-            date: "April",
-            location: "Tysons Corner, VA",
-            description: "This April, join 200 hackers for the DMV area's largest high school hackathon. Hack the Nest is a collaborative coding event where participants (also called hackers) bring their innovative ideas to life in just one weekend. Whether it's 2am-debugging with cookies or karaoke, our ultimate goal is to host an unforgettable experience for an audience normally barred from hackathons.",
-            logo: "/Hack_the_Nest_Logo.webp",
-            landscapeImage: "/hackthenestbackground.png",
-            registrationLink: "https://hackthenest.org",
+            title: "QuHacks",
+            date: "December 14",
+            location: "Laurel, MD",
+            description: "QuHacks is a day-long hackathon by students, for students. Join us for a day of creation, innovation, and fun with fellow middle and high schoolers interested in coding. From seasoned coding veterans to first-time programmers, all are welcome to join. Discover your ability to create change by developing technology to solve real-world problems, attend workshops, and meet some new friends. We can't wait to see you there!",
+            logo: "/quhacks.png",
+            landscapeImage: "/quhacksbanner.png",
+            registrationLink: "https://quhacks.tech/",
             status: 'upcoming'
         },
         {
@@ -153,7 +178,7 @@ export default function Hackathons() {
             landscapeImage: "/hacknabanner.jpg",
             registrationLink: "https://hackna.org",
             status: 'upcoming'
-        }
+        },
     ];
 
     return (
@@ -176,29 +201,29 @@ export default function Hackathons() {
                             <div className="bg-gray-800 rounded-lg p-1 flex">
                                 <button
                                     onClick={() => setViewMode('cards')}
-                                    className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center gap-2 ${
+                                    className={`px-4 py-2 rounded-md text-sm font-medium flex items-center gap-2 ${
                                         viewMode === 'cards' 
                                             ? 'bg-blue-600 text-white' 
-                                            : 'text-gray-400 hover:text-white'
+                                            : 'text-gray-400'
                                     }`}
                                 >
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                                     </svg>
-                                    
+                                    Cards
                                 </button>
                                 <button
                                     onClick={() => setViewMode('lines')}
-                                    className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center gap-2 ${
+                                    className={`px-4 py-2 rounded-md text-sm font-medium flex items-center gap-2 ${
                                         viewMode === 'lines' 
                                             ? 'bg-blue-600 text-white' 
-                                            : 'text-gray-400 hover:text-white'
+                                            : 'text-gray-400'
                                     }`}
                                 >
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
                                     </svg>
-                                    
+                                    Lines
                                 </button>
                             </div>
                         </div>
