@@ -986,6 +986,58 @@ const Recap = (): JSX.Element => {
     )
 }
 
+const ContactTeam = (): JSX.Element => {
+    return (
+        <div className="text-white bg-black">
+            <div className="flex items-center">
+                <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Contact & Team</h1>
+                <div className="border-t border-white flex-grow"></div>
+            </div>
+            <div className="p-4">
+                <div className="max-w-7xl mx-auto">
+                    {/* Contact Section */}
+                    <div className="mb-12">
+                        <h2 className="text-3xl text-yellow-500 mb-6">Get in Touch</h2>
+                        <div className="flex flex-col sm:flex-row gap-4 mb-6">
+                            <a href="mailto:contact@joinsilicon.org" className="flex items-center gap-2 text-white hover:text-yellow-500 transition-colors">
+                                <FontAwesomeIcon icon={faEnvelope} className="w-5 h-5" />
+                                contact@joinsilicon.org
+                            </a>
+                            <a href="https://www.instagram.com/ssa_hack/" className="flex items-center gap-2 text-white hover:text-yellow-500 transition-colors">
+                                <FontAwesomeIcon icon={faInstagram} className="w-5 h-5" />
+                                @ssa_hack
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* Leadership Section */}
+                    <div className="mb-8">
+                        <h2 className="text-3xl text-yellow-500 mb-6">Leadership</h2>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                            <Person image="/vivan.png" name="Vivan Poddar" position="Executive Director" text="" linkedin="https://www.linkedin.com/in/vivanpoddar" email="mailto:vivanneil@outlook.com" />
+                            <Person image="/thomas.png" name="Thomas Wang" position="Operations Director" text="" linkedin="https://www.linkedin.com/in/thomas-jichen-wang-a0b427268/" email="mailto:wangthomas19@outlook.com" />
+                            <Person image="/boden.png" name="Boden Moraski" position="Outreach Director" text="" linkedin="https://www.linkedin.com/in/boden-moraski/overlay/contact-info/" email="bodenmoraski@gmail.com" />
+                        </div>
+                    </div>
+
+                    {/* Operations Team Section */}
+                    <div>
+                        <h2 className="text-3xl text-yellow-500 mb-6">Operations Team</h2>
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                            <Person image="" name="Abigail Mullin" position="Human Resources" text="" linkedin="" email="" />
+                            <Person image="" name="Faaris Kamal" position="Finances" text="" linkedin="" email="" />
+                            <Person image="" name="Samaira Bhat" position="" text="" linkedin="" email="" />
+                            <Person image="" name="Raneem Wahdan" position="" text="" linkedin="" email="" />
+                            <Person image="" name="Suhaan Tammana" position="" text="" linkedin="" email="" />
+                            <Person image="" name="Regan Mulderig" position="Concessions" text="" linkedin="" email="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 const Ssahack = () => {
     return (
         <>
@@ -1004,6 +1056,7 @@ const Ssahack = () => {
                 <Masterclass />
                 <Recap />
                 <Questions />
+                <ContactTeam />
                 <Sponsors />
             </div>
             <Footer />
