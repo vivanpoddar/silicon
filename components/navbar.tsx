@@ -15,6 +15,7 @@ interface NavbarProps {
 export default function Navbar({ current }: NavbarProps) { 
     const navigation = [
         { name: 'Home', href: '/', current: current === 'Home' },
+        { name: 'All Hackathons', href: '/hackathons', current: current === 'Hackathons' },
         { name: 'Hackathons', href: 'hackathons', current: current === 'Hackathons' },
         { name: 'About', href: 'about', current: current === 'About' },
     ]
@@ -80,7 +81,7 @@ export default function Navbar({ current }: NavbarProps) {
                                             )}
                                             aria-current={item.current ? 'page' : undefined}
                                         >
-                                            {item.name} ▼
+                                            Hosted on Silicon ↓
                                         </button>
                                     </div>
                                 ) : (
@@ -113,17 +114,6 @@ export default function Navbar({ current }: NavbarProps) {
                                 className="border-b border-t border-gray-700 overflow-hidden"
                             >
                                 <div className="flex justify-center items-center h-12 space-x-6">
-                                    <Link href="/hackathons">
-                                        <motion.div
-                                            whileHover={{ backgroundColor: '#FFFFFF', color: '#000000' }}
-                                            transition={{ duration: 0.2 }}
-                                            className="px-3 py-1 rounded text-sm font-medium text-gray-300 hover:text-white"
-                                            onClick={() => setShowHackathonMenu(false)}
-                                        >
-                                            All Hackathons
-                                        </motion.div>
-                                    </Link>
-                                    
                                     <div className="flex items-center space-x-2">
                                         <span className="text-gray-400 text-sm font-medium">Sites</span>
                                         <div className="h-6 border-l border-gray-500"></div>
@@ -180,7 +170,7 @@ export default function Navbar({ current }: NavbarProps) {
                                                                     'w-full text-left right-0 px-3 py-2 rounded text-sm font-medium text-black hover:bg-gray-100 transition-colors duration-200'
                                                                 )}
                                                             >
-                                                                &gt; {item.name} {showHackathonMenu ? '▲' : '▼'}
+                                                                &gt; More {showHackathonMenu ? '▲' : '▼'}
                                                             </button>
                                                             
                                                             <AnimatePresence>
@@ -192,15 +182,6 @@ export default function Navbar({ current }: NavbarProps) {
                                                                         transition={{ duration: 0.2, ease: "easeInOut" }}
                                                                         className="ml-4 mt-2 space-y-1 overflow-hidden"
                                                                     >
-                                                                        <Link href="/hackathons">
-                                                                            <div
-                                                                                className="px-3 py-1 rounded text-sm font-medium text-gray-600 hover:bg-gray-100 block"
-                                                                                onClick={closeModal}
-                                                                            >
-                                                                                → All Hackathons
-                                                                            </div>
-                                                                        </Link>
-                                                                        
                                                                         <div className="px-3 py-1 text-xs text-gray-500 font-medium">Sites:</div>
                                                                         
                                                                         {hackathonSublinks.map((sublink) => (
