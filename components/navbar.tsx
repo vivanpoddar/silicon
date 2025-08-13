@@ -1,6 +1,6 @@
 import React, { Fragment, useRef, useState } from 'react'
 import { Disclosure, Menu, Transition, Dialog} from '@headlessui/react'
-import {motion} from 'framer-motion'
+import {motion, AnimatePresence} from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -15,13 +15,17 @@ interface NavbarProps {
 export default function Navbar({ current }: NavbarProps) { 
     const navigation = [
         { name: 'Home', href: '/', current: current === 'Home' },
-        { name: 'shady.Hacks', href: 'shadyhacks', current: current === 'shady.Hacks' },
         { name: 'Hackathons', href: 'hackathons', current: current === 'Hackathons' },
         { name: 'About', href: 'about', current: current === 'About' },
         { name: 'Contact', href: 'contact', current: current === 'Contact' },
     ]
+
+    const hackathonSublinks = [
+        { name: 'shady.Hacks', href: '/shadyhacks' },
+    ]
     
     let [isOpen, setIsOpen] = useState(false)
+    let [showHackathonMenu, setShowHackathonMenu] = useState(false)
 
     function closeModal() {
         setIsOpen(false)
@@ -55,22 +59,80 @@ export default function Navbar({ current }: NavbarProps) {
                                 <img src="/menu.svg" className='md:hidden h-8 w-8 mr-4 border p-1' style={{ filter: 'invert(100%)' }}></img>
                             </button>
                             {navigation.map((item) => (
-                                <Link href={item.href} key={item.name}>
-                                    <motion.div
-                                        whileHover={{ backgroundColor: '#FFFFFF', color: '#000000' }}
-                                        transition={{ duration: 0.25 }}
-                                        className={classNames(
-                                            item.current ? 'border' : '',
-                                            'hidden md:block right-0 px-3 py-2 rounded text-sm font-medium text-white'
-                                        )}
-                                        aria-current={item.current ? 'page' : undefined}
-                                    >
-                                        {item.name}
-                                    </motion.div>
-                                </Link>
+                                item.name === 'Hackathons' ? (
+                                    <div key={item.name} className="relative">
+                                        <button
+                                            onClick={() => setShowHackathonMenu(!showHackathonMenu)}
+                                            className={classNames(
+                                                item.current ? 'border' : '',
+                                                'hidden md:block right-0 px-3 py-2 rounded text-sm font-medium text-white hover:bg-white hover:text-black transition-colors duration-200'
+                                            )}
+                                            aria-current={item.current ? 'page' : undefined}
+                                        >
+                                            {item.name} ▼
+                                        </button>
+                                    </div>
+                                ) : (
+                                    <Link href={item.href} key={item.name}>
+                                        <motion.div
+                                            whileHover={{ backgroundColor: '#FFFFFF', color: '#000000' }}
+                                            transition={{ duration: 0.25 }}
+                                            className={classNames(
+                                                item.current ? 'border' : '',
+                                                'hidden md:block right-0 px-3 py-2 rounded text-sm font-medium text-white'
+                                            )}
+                                            aria-current={item.current ? 'page' : undefined}
+                                        >
+                                            {item.name}
+                                        </motion.div>
+                                    </Link>
+                                )
                             ))}
                         </div>
                     </div>
+
+                    {/* Secondary Hackathon Navbar */}
+                    <AnimatePresence>
+                        {showHackathonMenu && (
+                            <motion.div 
+                                initial={{ opacity: 0, height: 0 }}
+                                animate={{ opacity: 1, height: 'auto' }}
+                                exit={{ opacity: 0, height: 0 }}
+                                transition={{ duration: 0.2, ease: "easeInOut" }}
+                                className="border-b border-t border-gray-700 overflow-hidden"
+                            >
+                                <div className="flex justify-center items-center h-12 space-x-6">
+                                    <Link href="/hackathons">
+                                        <motion.div
+                                            whileHover={{ backgroundColor: '#FFFFFF', color: '#000000' }}
+                                            transition={{ duration: 0.2 }}
+                                            className="px-3 py-1 rounded text-sm font-medium text-gray-300 hover:text-white"
+                                            onClick={() => setShowHackathonMenu(false)}
+                                        >
+                                            All Hackathons
+                                        </motion.div>
+                                    </Link>
+                                    
+                                    <div className="flex items-center space-x-2">
+                                        <span className="text-gray-400 text-sm font-medium">Sites</span>
+                                        <div className="h-6 border-l border-gray-500"></div>
+                                        {hackathonSublinks.map((sublink) => (
+                                            <Link href={sublink.href} key={sublink.name}>
+                                                <motion.div
+                                                    whileHover={{ backgroundColor: '#FFFFFF', color: '#000000' }}
+                                                    className="px-2 border border-gray-500 py-1 rounded text-sm font-medium text-gray-500"
+                                                    onClick={() => setShowHackathonMenu(false)}
+                                                >
+                                                    {sublink.name}
+                                                </motion.div>
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </div>
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
+
                     <Transition appear show={isOpen} as={Fragment}>
                         <Dialog as="div" className="relative z-10" onClose={closeModal}>
                             <Transition.Child
