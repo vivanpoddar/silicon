@@ -132,7 +132,7 @@ export default function Hackathons() {
             description: "Hack the Colosseum envisions a vibrant and collaborative community of student programmers. By bringing students from diverse backgrounds and experiences together, we aim to cultivate an innovative and supportive learning environment that inspires creativity and encourages growth. Through hands-on workshops, mentoring, and team challenges, we strive to inspire the next generation of tech leaders and innovators here in the DMV.",
             logo: "/hackthecolosseum.png",
             landscapeImage: "/hackthecolosseumbanner.png",
-            registrationLink: "https://hackathon.glenelg-computing.org/",
+            registrationLink: "https://hack-the-colosseum.devpost.com/",
             status: 'upcoming'
         },
         {
