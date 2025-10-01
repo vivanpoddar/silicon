@@ -9,7 +9,7 @@ interface HackathonProps {
     title: string;
     date: string;
     location: string;
-    description: string;
+    description?: string;
     image?: string;
     logo?: string;
     landscapeImage?: string;
@@ -156,15 +156,43 @@ export default function Hackathons() {
             status: 'upcoming'
         },
         {
-            title: "HackNA",
-            date: "March",
-            location: "Wexford, PA",
-            description: "HackNA is a high school hackathon, hosted by the team from North Allegheny Senior High School. During the competition, you will create a software or hardware project from scratch based on a central theme revealed at the opening ceremony. No prior experience is required – we welcome anyone interested and will be providing workshops and mentor expertise to help you get started! At the end of the competition, teams will pitch their project to a panel of judges in a chance to win sponsored prizes and rewards.",
-            logo: "hacknalogo.svg",
-            landscapeImage: "/hacknabanner.jpg",
-            registrationLink: "https://hackna.org",
+            title: "Synthax",
+            date: "November 15-16",
+            location: "Bengaluru, KA, India",
+            description: "Synthax is a space where students explore, code, and build together. Its a collaborative tech playground for all skill levels, from total beginners to curious creators.",
+            logo: "/synthaxlogo.png",
+            landscapeImage: "https://d112y698adiu2z.cloudfront.net/photos/production/challenge_photos/002/681/658/datas/full_width.png",
+            registrationLink: "https://synthax.tech",
             status: 'upcoming'
         },
+    ];
+
+    const comingSoonHackathons = [
+        {
+            title: "Silicon Georgia",
+            date: "Spring 2026",
+            location: "Augusta, GA",
+            status: 'upcoming' as const
+        },
+        {
+            title: "Parkland High School",
+            date: "Spring 2026",
+            location: "Allentown, PA",
+            status: 'upcoming' as const
+        },
+        {
+            title: "Fox Chapel High School",
+            date: "Winter 2025", 
+            location: "Pittsburgh, PA",
+            status: 'upcoming' as const
+        },
+        {
+            title: "Franklin Regional High School",
+            date: "Spring 2026",
+            location: "Murraysville, PA", 
+            description: "Girls only hackathon at Franklin Regional High School.",
+            status: 'upcoming' as const
+        }
     ];
 
     return (
@@ -229,6 +257,33 @@ export default function Hackathons() {
                                 ))}
                             </div>
                         )}
+                    </div>
+
+                    {/* Coming Soon Section */}
+                    <div className="mt-16 max-w-7xl mx-auto">
+                        <div className="text-center mb-8">
+                            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">Coming Soon</h2>
+                            <p className="text-gray-400 text-sm sm:text-base">
+                                Exciting hackathons in development. Stay tuned for registration details!
+                            </p>
+                        </div>
+                        
+                        <div className="space-y-4">
+                            {comingSoonHackathons.map((hackathon, index) => (
+                                <div key={index} className="bg-gray-900 border border-gray-700 rounded-lg p-4 sm:p-6 opacity-75">
+                                    <div className="flex flex-col sm:flex-row justify-between items-start mb-2 gap-2">
+                                        <h3 className="text-xl sm:text-2xl text-white font-bold leading-tight">{hackathon.title}</h3>
+                                        <span className="text-sm font-semibold text-blue-400 flex-shrink-0">
+                                            Coming Soon
+                                        </span>
+                                    </div>
+                                    <p className="text-gray-400 text-sm sm:text-base">{hackathon.date} • {hackathon.location}</p>
+                                    {hackathon.description && (
+                                        <p className="text-gray-300 text-sm sm:text-base leading-relaxed">{hackathon.description}</p>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
                     </div>
 
                     <div className="mt-16 text-center px-4">
