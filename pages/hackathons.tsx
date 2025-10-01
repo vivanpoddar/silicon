@@ -156,6 +156,16 @@ export default function Hackathons() {
             status: 'upcoming'
         },
         {
+            title: "HackNA",
+            date: "March",
+            location: "Wexford, PA",
+            description: "HackNA is a high school hackathon, hosted by the team from North Allegheny Senior High School. During the competition, you will create a software or hardware project from scratch based on a central theme revealed at the opening ceremony. No prior experience is required – we welcome anyone interested and will be providing workshops and mentor expertise to help you get started! At the end of the competition, teams will pitch their project to a panel of judges in a chance to win sponsored prizes and rewards.",
+            logo: "hacknalogo.svg",
+            landscapeImage: "/hacknabanner.jpg",
+            registrationLink: "https://hackna.org",
+            status: 'upcoming'
+        },
+        {
             title: "Synthax",
             date: "November 15-16",
             location: "Bengaluru, KA, India",
