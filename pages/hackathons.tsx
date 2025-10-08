@@ -123,7 +123,7 @@ export default function Hackathons() {
             logo: "/Hack_the_Nest_Logo.webp",
             landscapeImage: "/hackthenestbackground.png",
             registrationLink: "https://hackthenest.org",
-            status: 'upcoming'
+            status: 'completed'
         },
         {
             title: "Hack the Colosseum",
