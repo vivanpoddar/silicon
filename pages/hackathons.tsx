@@ -175,6 +175,15 @@ export default function Hackathons() {
             registrationLink: "https://synthax.tech",
             status: 'upcoming'
         },
+        {
+            title: "Hack the Land",
+            date: "July 25-26",
+            location: "Cleveland, OH",
+            description: "This July, Join over 100+ teen hackers in Cleveland, Ohio at our first high-school hackathon organized by high-schoolers! Hack the Land is a social coding/engineering event, where teen hackers/participants turn their ideas to reality in just one weekend. Whether it's 2am-debugging with cookies or karaoke, our ultimate goal is to host an unforgettable experience for participants.",
+            logo: "/HTL.svg",
+            registrationLink: "https://hacktheland.xyz/",
+            status: 'upcoming'
+        },
     ];
 
     const comingSoonHackathons = [
