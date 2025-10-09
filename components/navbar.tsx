@@ -16,7 +16,7 @@ export default function Navbar({ current }: NavbarProps) {
     const navigation = [
         { name: 'Home', href: '/', current: current === 'Home' },
         { name: 'All Hackathons', href: '/hackathons', current: current === 'Hackathons' },
-        { name: 'Hackathons', href: 'hackathons', current: current === 'Hackathons' },
+        { name: 'Hackathons', href: 'list', current: current === 'All Hackathons' },
         { name: 'About', href: 'about', current: current === 'About' },
     ]
 

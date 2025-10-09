@@ -41,7 +41,8 @@ const Intro = (): JSX.Element => {
               >
                 Silicon League
               </motion.h1>
-              <motion.h2 
+              <div>
+              <motion.h2
                 className="text-white text-xl md:text-4xl italic tracking-wide"
                 initial={{ opacity: 0, translateY: 20 }}
                 animate={{ opacity: 1, translateY: 0 }}
@@ -49,6 +50,15 @@ const Intro = (): JSX.Element => {
               >
                 Compete. Compute. Connect.
               </motion.h2>
+              <motion.h2
+                className="text-white text-xl text-bold tracking-wide"
+                initial={{ opacity: 0, translateY: 20 }}
+                animate={{ opacity: 1, translateY: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                11 locations. 1500+ students. 1 global championship.
+              </motion.h2>
+              </div>
               <motion.div
                 initial={{ opacity: 0, translateY: 100 }}
                 animate={{ opacity: 1, translateY: 0 }}
@@ -485,7 +495,7 @@ const Panel2 = (): JSX.Element => {
             Get marketing and sponsorship outreach for your hackathon 
           </li>
           <li>
-            Benefit from internship award opportunities for your winners
+            Get involved in the leadership of the global championship.
           </li>
           <p>
             What do we want in return? <strong>Nominate your top winners to our global championship.</strong>
@@ -504,7 +514,7 @@ const Panel2 = (): JSX.Element => {
             Exclusive <strong>scholarship opportunities</strong> and university partnerships
           </li>
           <li>
-            Mentorship from industry leaders at <strong>Amazon, CMU, University of Pittsburgh</strong>
+            Mentorship from industry leaders at <strong>Amazon, Microsoft, CMU, and Bay Area startups</strong>
           </li>
           <li>
             Meet a global network of brilliant peers passionate about technology
@@ -711,16 +721,16 @@ const Panel3 = (): JSX.Element => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl w-full z-10">
-        <div className="bg-gray-900/90 p-6 rounded-2xl border-l-4 border-cyan-400 flex items-center">
+        <div className="bg-gray-900/90 p-6 rounded-2xl flex items-center">
           <span className="text-gray-200 text-lg">Challenges designed for <strong>your skill level</strong>—no experience required</span>
         </div>
-        <div className="bg-gray-800/90 p-6 rounded-2xl border-l-4 border-purple-400 flex items-center">
+        <div className="bg-gray-800/90 p-6 rounded-2xl flex items-center">
           <span className="text-gray-200 text-lg">Workshops &amp; mentorship from <strong>industry pros</strong> to help you grow</span>
         </div>
-        <div className="bg-gray-900/90 p-6 rounded-2xl border-l-4 border-blue-400 flex items-center">
+        <div className="bg-gray-900/90 p-6 rounded-2xl flex items-center">
           <span className="text-gray-200 text-lg">Team up with friends or go solo—<strong>everyone belongs</strong></span>
         </div>
-        <div className="bg-gray-800/90 p-6 rounded-2xl border-l-4 border-cyan-400 flex items-center">
+        <div className="bg-gray-800/90 p-6 rounded-2xl flex items-center">
           <span className="text-gray-200 text-lg">Beginner tracks, <strong>safe community</strong>, and a focus on learning</span>
         </div>
       </div>
@@ -855,7 +865,7 @@ const Panel4 = (): JSX.Element => {
       <div className="flex-1 flex items-center justify-center relative z-10 py-12 md:py-0">
         <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-gray-700/40">
           <Image
-            src="/winner.jpg"
+            src="/winner.webp"
             width={500}
             height={400}
             alt="Championship community"
