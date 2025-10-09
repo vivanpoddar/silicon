@@ -33,7 +33,10 @@ const Footer = (): JSX.Element => {
                     </ul>
                 </div>
                 <hr className="my-4 text-white border-gray-700" />
-                <span className="block text-sm text-white">Built by Vivan Poddar with Next.js and React.<br/></span>
+                <span className="block text-sm text-white">
+                    Issues? <a href="mailto:contact@joinsilicon.org" className="underline">Contact</a>.<br/>
+                    &copy; 2025-2026 Silicon League. All Rights Reserved.
+                </span>
             </div>
         </footer>
     )
