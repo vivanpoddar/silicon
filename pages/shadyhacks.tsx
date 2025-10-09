@@ -211,7 +211,7 @@ const Panel2 = (): JSX.Element => {
             </div>
             <div className="z-10 xl:w-1/2 h-1/2 xl:h-full flex flex-col items-center justify-center xl:p-24">
                 <h1 className="xl:text-7xl text-white text-center mx-10 sm:mx-0 pb-4 md:px-0 text-2xl">The first highschool hackathon in the city of Pittsburgh.</h1>
-                <LinkButton content="Claim your spot at shady.Hacks 2025" href="https://forms.gle/1NkPHxKgb2HsR9b5A" />
+                <LinkButton content="View our hackathons" href="www.joinsilicon.org/hackathons" />
             </div>
             <div className="z-10 xl:w-1/2 h-1/2 xl:h-full flex items-center justify-center">
                 <div className='xl:h-1/2 xl:w-3/4 flex items-center justify-center'>
