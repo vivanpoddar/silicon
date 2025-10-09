@@ -16,19 +16,13 @@ const Footer = (): JSX.Element => {
                             <Link href="/" className="hover:underline me-4 md:me-6 text-white">Silicon League</Link>
                         </li>
                         <li>
-                            <Link href="/shadyhacks" className="hover:underline me-4 md:me-6 text-white">shady.Hacks</Link>
-                        </li>
-                        <li>
-                            <Link href="/shadyhacks" className="hover:underline me-4 md:me-6 text-white">Hackathons</Link>
+                            <Link href="/hackathons" className="hover:underline me-4 md:me-6 text-white">Hackathons</Link>
                         </li>
                         <li>
                             <Link href="/contact" className="hover:underline me-4 md:me-6 text-white">Contact</Link>
                         </li>
                         <li>
-                            <Link href="/shadyhacks" className="hover:underline me-4 md:me-6 text-white">About</Link>
-                        </li>
-                        <li>
-                            <Link href="/join" className="hover:underline text-white">Join</Link>
+                            <Link href="/about" className="hover:underline me-4 md:me-6 text-white">About</Link>
                         </li>
                     </ul>
                 </div>
