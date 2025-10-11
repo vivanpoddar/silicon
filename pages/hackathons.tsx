@@ -136,6 +136,16 @@ export default function Hackathons() {
             status: 'upcoming'
         },
         {
+            title: "Synthax",
+            date: "November 15-16",
+            location: "Bengaluru, KA, India",
+            description: "Synthax is a space where students explore, code, and build together. Its a collaborative tech playground for all skill levels, from total beginners to curious creators.",
+            logo: "/synthaxlogo.png",
+            landscapeImage: "https://d112y698adiu2z.cloudfront.net/photos/production/challenge_photos/002/681/658/datas/full_width.png",
+            registrationLink: "https://synthax.tech",
+            status: 'upcoming'
+        },
+        {
             title: "shady.Hacks",
             date: "December 1",
             location: "Pittsburgh, PA",
@@ -156,6 +166,15 @@ export default function Hackathons() {
             status: 'upcoming'
         },
         {
+            title: "Hack the Ram",
+            date: "January",
+            location: "Gibsonia, PA",
+            description: "Hack the Ram is a FREE, 12-hour invention marathon hosted at Pine-Richland High School. Participants with any level of programming or hardware experience are invited to work together and create a technology project from scratch. This event is open to all 6th to 12th grade students in the Pittsburgh area. We will have multiple seminars throughout the day to help you either learn how to code for the first time or fine tune your skills. Best of all, there will be free food, drinks, and t shirts for all of our participants. Bring your friends and prepare for an amazing weekend!",
+            logo: "/htrlogo.png",
+            registrationLink: "https://hacktheram.com/",
+            status: 'upcoming'
+        },
+        {
             title: "HackNA",
             date: "March",
             location: "Wexford, PA",
@@ -163,16 +182,6 @@ export default function Hackathons() {
             logo: "hacknalogo.svg",
             landscapeImage: "/hacknabanner.jpg",
             registrationLink: "https://hackna.org",
-            status: 'upcoming'
-        },
-        {
-            title: "Synthax",
-            date: "November 15-16",
-            location: "Bengaluru, KA, India",
-            description: "Synthax is a space where students explore, code, and build together. Its a collaborative tech playground for all skill levels, from total beginners to curious creators.",
-            logo: "/synthaxlogo.png",
-            landscapeImage: "https://d112y698adiu2z.cloudfront.net/photos/production/challenge_photos/002/681/658/datas/full_width.png",
-            registrationLink: "https://synthax.tech",
             status: 'upcoming'
         },
         {
