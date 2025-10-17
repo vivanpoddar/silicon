@@ -193,15 +193,18 @@ export default function Hackathons() {
             registrationLink: "https://hacktheland.xyz/",
             status: 'upcoming'
         },
+        {
+            title: "Silicon Georgia",
+            date: "April 9",
+            location: "Augusta, GA",
+            description: "Silicon Georgia is Silicon's first member hackathon in the state of Georgia. Competitors attend completely free of cost (lunch included!) and have the opportunity to win cash prizes and more. During the competition, you will create some sort of project using skills in Computer Science and Engineering to solve a problem which will be announced at the start of the hackathon.  ",
+            registrationLink: "https://forms.gle/pawjn23DDoRnnjyr6",
+            status: 'upcoming'
+        },
+        
     ];
 
     const comingSoonHackathons = [
-        {
-            title: "Silicon Georgia",
-            date: "Spring 2026",
-            location: "Augusta, GA",
-            status: 'upcoming' as const
-        },
         {
             title: "Parkland High School",
             date: "Spring 2026",
