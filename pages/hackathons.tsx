@@ -201,16 +201,18 @@ export default function Hackathons() {
             registrationLink: "https://forms.gle/pawjn23DDoRnnjyr6",
             status: 'upcoming'
         },
-        
+        {
+            title: "Parkland CS Hackathon",
+            date: "April 9",
+            location: "Allentown, PA",
+            logo: "phs.jpg",
+            description: "Hackathon launched by the Computer Science club at Parkland High School. Competitors attend completely free of cost (lunch included!) and have the opportunity to win cash prizes and more. During the competition, you will create some sort of project using skills in Computer Science and Engineering to solve a problem which will be announced at the start of the hackathon.  ",
+            registrationLink: "https://forms.gle/pawjn23DDoRnnjyr6",
+            status: 'upcoming'
+        },
     ];
 
     const comingSoonHackathons = [
-        {
-            title: "Parkland High School",
-            date: "Spring 2026",
-            location: "Allentown, PA",
-            status: 'upcoming' as const
-        },
         {
             title: "Fox Chapel High School",
             date: "Winter 2025", 
