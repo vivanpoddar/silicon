@@ -210,6 +210,15 @@ export default function Hackathons() {
             registrationLink: "https://forms.gle/pawjn23DDoRnnjyr6",
             status: 'upcoming'
         },
+                {
+            title: "Bug Bash",
+            date: "Nov 7-9",
+            location: "Bengalura, KA, India",
+            logo: "/bugbash.jpeg",
+                    description: "Bug Bash 2025 is Bengaluru's overnight student hackathon where aviation, AI, hardware, fintech, health, and immersive media builders sprint side by side. Sign up solo and we'll slot you into a squad of 3-5 so every team ships something real by dawn.",
+                    registrationLink: "https://www.bugbash.me/",
+            status: 'upcoming'
+        },
     ];
 
     const comingSoonHackathons = [
