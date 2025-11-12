@@ -40,32 +40,35 @@ const HackathonCard = ({ title, date, location, description, image, logo, landsc
         <div className="bg-gray-900 border border-gray-700 rounded-lg p-4 sm:p-6 m-2 sm:m-4 flex flex-col">
 
             <div className="flex flex-col sm:flex-row justify-between items-start mb-2 gap-2">
-                <div className="flex items-center gap-2 flex-1">
-                    {logo && (
-                        <div className="w-10 h-10 flex-shrink-0 rounded overflow-hidden">
-                            <Image 
-                                src={logo} 
-                                width={40} 
-                                height={40} 
-                                alt={`${title} logo`} 
-                                className="w-full h-full object-contain opacity-60"
-                                quality={50}
-                                loading="lazy"
-                            />
-                        </div>
-                    )}
-                    <h2 className="text-xl sm:text-2xl text-white font-bold leading-tight">{title}</h2>
+            <div className="flex items-center gap-2 flex-1">
+                {logo && (
+                <div className="w-10 h-10 flex-shrink-0 rounded overflow-hidden">
+                    <Image 
+                    src={logo} 
+                    width={40} 
+                    height={40} 
+                    alt={`${title} logo`} 
+                    className="w-full h-full object-contain opacity-60"
+                    quality={50}
+                    loading="lazy"
+                    />
                 </div>
-                <span className={`text-sm font-semibold ${getStatusColor()} flex-shrink-0`}>
-                    {getStatusText()}
-                </span>
+                )}
+                <h2 className="text-xl sm:text-2xl text-white font-bold leading-tight">{title}</h2>
+            </div>
+            <span className={`text-sm font-semibold ${getStatusColor()} flex-shrink-0`}>
+                {getStatusText()}
+            </span>
             </div>
             <p className="text-gray-400 mb-2 text-sm sm:text-base">{date} • {location}</p>
             <p className="text-gray-300 mb-4 text-sm sm:text-base leading-relaxed">{description}</p>
-            {registrationLink && status === 'upcoming' && (
-                <div className="w-full">
-                    <LinkButton content="Register Now" href={registrationLink} />
-                </div>
+            {registrationLink && (
+            <div className="w-full">
+                <LinkButton 
+                content={status === 'completed' ? "Learn More" : "Register Now"} 
+                href={registrationLink} 
+                />
+            </div>
             )}
         </div>
     );
@@ -133,7 +136,16 @@ export default function Hackathons() {
             logo: "/hackthecolosseum.png",
             landscapeImage: "/hackthecolosseumbanner.png",
             registrationLink: "https://hack-the-colosseum.devpost.com/",
-            status: 'upcoming'
+            status: 'completed'
+        },
+        {
+            title: "Bug Bash",
+            date: "Nov 7-9",
+            location: "Bengaluru, KA, India",
+            logo: "/bugbash.jpeg",
+            description: "Bug Bash 2025 is Bengaluru's overnight student hackathon where aviation, AI, hardware, fintech, health, and immersive media builders sprint side by side. Sign up solo and we'll slot you into a squad of 3-5 so every team ships something real by dawn.",
+            registrationLink: "https://www.bugbash.me/",
+            status: 'completed'
         },
         {
             title: "Synthax",
@@ -208,15 +220,6 @@ export default function Hackathons() {
             logo: "/phs.jpg",
             description: "Hackathon launched by the Computer Science club at Parkland High School. Competitors attend completely free of cost (lunch included!) and have the opportunity to win cash prizes and more. During the competition, you will create some sort of project using skills in Computer Science and Engineering to solve a problem which will be announced at the start of the hackathon.  ",
             registrationLink: "https://forms.gle/pawjn23DDoRnnjyr6",
-            status: 'upcoming'
-        },
-                {
-            title: "Bug Bash",
-            date: "Nov 7-9",
-            location: "Bengalura, KA, India",
-            logo: "/bugbash.jpeg",
-                    description: "Bug Bash 2025 is Bengaluru's overnight student hackathon where aviation, AI, hardware, fintech, health, and immersive media builders sprint side by side. Sign up solo and we'll slot you into a squad of 3-5 so every team ships something real by dawn.",
-                    registrationLink: "https://www.bugbash.me/",
             status: 'upcoming'
         },
     ];
