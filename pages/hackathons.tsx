@@ -159,7 +159,7 @@ export default function Hackathons() {
         },
         {
             title: "shady.Hacks",
-            date: "December 1",
+            date: "January 31",
             location: "Pittsburgh, PA",
             description: "This December, join us at Shady Side Academy for a Saturday filled with innovation and creativity. Our high school hackathon brings together the brightest young minds in Pittsburgh to compete, compute, and connect. Build innovative solutions and network with peers.",
             logo: "/ssahack.png",
