@@ -235,7 +235,14 @@ export default function Hackathons() {
             title: "Franklin Regional High School",
             date: "Spring 2026",
             location: "Murraysville, PA", 
-            description: "Girls only hackathon at Franklin Regional High School.",
+            description: "",
+            status: 'upcoming' as const
+        },
+        {
+            title: "Sewickley Academy",
+            date: "Spring 2026",
+            location: "Sewickley, PA",
+            description: "",
             status: 'upcoming' as const
         }
     ];
