@@ -56,7 +56,7 @@ const Intro = (): JSX.Element => {
                 animate={{ opacity: 1, translateY: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                11 locations. 1500+ students. 1 global championship.
+                15 locations. 2000+ students. 1 global championship.
               </motion.h2>
               </div>
               <motion.div
