@@ -231,7 +231,7 @@ const Content = (): JSX.Element => {
             <div className="z-10 w-screen flex flex-col">
                 <div className="flex xl:flex-row flex-col-reverse h-full w-full">
                     <div className="xl:w-1/2 h-full flex flex-col items-center justify-center">
-                        <span className="text-center pb-4 text-4xl text-yellow-500"><b> Apr 5, 2025</b></span>
+                        {/* <span className="text-center pb-4 text-4xl text-yellow-500"><b> Apr 5, 2025</b></span> */}
                         <div className="flex xl:text-4xl items-center justify-center">
                             <div className="flex flex-col space-y-8">
                                 <span className="text-right">9:00 AM</span>
@@ -1014,7 +1014,7 @@ const ContactTeam = (): JSX.Element => {
                     <div className="mb-8">
                         <h2 className="text-3xl text-yellow-500 mb-6">Leadership</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                            <Person image="/vivan.png" name="Vivan Poddar" position="Executive Director/Founder" text="" linkedin="https://www.linkedin.com/in/vivanpoddar" email="mailto:vivanneil@outlook.com" />
+                            <Person image="/vivan.png" name="Vivan Poddar" position="Executive Director" text="" linkedin="https://www.linkedin.com/in/vivanpoddar" email="mailto:vivanneil@outlook.com" />
                             <Person image="/thomas.png" name="Thomas Wang" position="Operations Director" text="" linkedin="https://www.linkedin.com/in/thomas-jichen-wang-a0b427268/" email="mailto:wangthomas19@outlook.com" />
                             <Person image="/boden.png" name="Boden Moraski" position="Outreach Director" text="" linkedin="https://www.linkedin.com/in/boden-moraski/overlay/contact-info/" email="bodenmoraski@gmail.com" />
                         </div>
@@ -1046,7 +1046,7 @@ const Ssahack = () => {
             </Head>
             <Navbar current="shady.Hacks" />
             <div className="">
-                <Notification text="Less than one week away from shady.Hacks 2025!"/>
+                {/* <Notification text="Less than one week away from shady.Hacks 2025!"/> */}
                 
                 <Panel1 />
                 <Panel2 />
