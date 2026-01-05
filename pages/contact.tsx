@@ -23,6 +23,7 @@ const Join = () => {
                         <h1 className="text-2xl sm:text-3xl md:text-4xl text-white mb-4">Operations</h1>
                         <div className="border-b w-full mb-6"></div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                            <Person image="" name="Pranav Chandran" position="Finances" text="" linkedin="" email="" />
                             <Person image="" name="Krish Yadav" position="Growth" text="" linkedin="" email="" />
                             <Person image="" name="Daniel Gao" position="Technical" text="" linkedin="" email="" />
                         </div>
