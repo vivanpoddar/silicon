@@ -240,7 +240,7 @@ const Content = (): JSX.Element => {
                         >
                             Schedule
                         </motion.h2>
-                        <span className="text-yellow-500">Late February, TBA</span>
+                        <span className="text-yellow-500">February 24, 2026</span>
 
                         <div className="w-full max-w-xl space-y-1">
                             {[

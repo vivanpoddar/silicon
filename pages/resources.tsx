@@ -123,6 +123,13 @@ const ResourcesPanel = (): JSX.Element => {
           image: "/filepictures/poster.png",
           category: "Canva"
       },
+      {
+          file: "banner",
+          title: "Banner",
+          description: "Printable banner template for event signage and branding",
+          image: "/filepictures/banner.png",
+          category: "Canva"
+      },
     {
       file: "volunteer-outreach-template",
       title: "Volunteer Outreach",
