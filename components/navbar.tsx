@@ -17,8 +17,10 @@ export default function Navbar({ current }: NavbarProps) {
         { name: 'Home', href: '/', current: current === 'Home' },
         { name: 'All Hackathons', href: '/hackathons', current: current === 'Hackathons' },
         { name: 'Hackathons', href: 'list', current: current === 'All Hackathons' },
-        { name: 'Team', href: '/contact', current: current === 'Team' },
+        { name: 'Resources', href: 'resources', current: current === 'Resources' },
         { name: 'About', href: 'about', current: current === 'About' },
+        { name: 'Join', href: 'join', current: current === 'Join' },
+        { name: 'Team', href: '/contact', current: current === 'Team' },
     ]
 
     const hackathonSublinks = [

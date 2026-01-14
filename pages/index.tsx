@@ -296,7 +296,7 @@ const Panel1 = (): JSX.Element => {
               How it works
             </h1>
             <div className="flex justify-center">
-              <span className="inline-block w-24 h-1 bg-gradient-to-r from-purple-500 via-blue-400 to-cyan-400 rounded-full" />
+              <span className="inline-block w-24 h-px bg-white" />
             </div>
           </div>
           <div className="bg-gradient-to-br from-gray-900/80 via-gray-800/80 to-gray-900/60 p-6 sm:p-8 rounded-2xl border border-gray-700/60 shadow-xl backdrop-blur-md">
@@ -477,7 +477,7 @@ const Panel2 = (): JSX.Element => {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 tracking-tight">
             Why participate?
           </h1>
-          <span className="block w-20 h-1 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 rounded-full mt-2" />
+          <span className="block w-20 h-px bg-gray-900 mt-2" />
           </div>
           <div className="flex flex-col md:flex-row gap-6">
           <div className="flex-1 bg-gray-100/90 p-6 rounded-2xl border border-gray-300 shadow-md">
@@ -523,7 +523,7 @@ const Panel2 = (): JSX.Element => {
           </div>
           </div>
           <div className="text-center">
-          <LinkButton content="Become a member today" href="/contact" />
+          <LinkButton content="Full benefits list? Contact our team" href="/contact" />
           </div>
         </div>
         </div>
@@ -714,7 +714,7 @@ const Panel3 = (): JSX.Element => {
         <h1 className="text-3xl sm:text-5xl md:text-6xl text-white font-extrabold tracking-tight drop-shadow-lg text-center">
           What sets hackathons apart?
         </h1>
-        <span className="inline-block w-24 h-1 bg-gradient-to-r from-cyan-400 via-purple-500 to-blue-400 rounded-full mt-4" />
+        <span className="inline-block w-24 h-px bg-white mt-4" />
         <p className="text-gray-300 text-lg sm:text-2xl mt-6 max-w-2xl text-center">
           Want to build real-world skills, make friends, and have fun? Hackathons are the perfect way to do it. We want you to find a new passion in computer science.
         </p>
@@ -881,7 +881,7 @@ const Panel4 = (): JSX.Element => {
               The Championship Experience
             </h1>
             <div className="flex justify-center">
-              <span className="inline-block w-24 h-1 bg-gradient-to-r from-purple-500 via-blue-400 to-cyan-400 rounded-full" />
+              <span className="inline-block w-24 h-px bg-white" />
             </div>
           </div>
           <div className="bg-gradient-to-br from-gray-900/80 via-gray-800/80 to-gray-900/60 p-6 sm:p-8 rounded-2xl border border-gray-700/60 shadow-xl backdrop-blur-md">
