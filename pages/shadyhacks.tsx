@@ -273,7 +273,7 @@ const Content = (): JSX.Element => {
                     <div className="xl:w-1/2 pb-24 xl:pb-0 px-8 flex items-center justify-center relative">
                         <div className="xl:p-24">
                             <h1 className="text-blue-500 text-xl italic xl:text-4xl xl:pb-4">6 hours to solve one problem.</h1>
-                            <p className="text-lg pb-2">We&apos;re excited to welcome you to shady.Hacks 2026. shady.Hacks is an annual hackathon dedicated to empowering students and innovators around the Pittsburgh area to increase exposure to the field of computer science and entrepreneurship. Join shady.Hacks to meet like-minded individuals, learn new skills, and create something amazing. During the event, you will have 6 hours to create a project to a project that addresses one critical issue that will be announced at the start of the event. It will be broad, and we aim for your creativity to run freely. At the end of the event, competitors will present their projects to a panel of judges. The best projects will win prizes offered by our sponsors. Participants will receive complementary shirts, certificates, and other goodies. Register now to secure your spot at shady.Hacks 2025. See the FAQ and handbook for more info.
+                            <p className="text-lg pb-2">We&apos;re excited to welcome you to shady.Hacks 2026. shady.Hacks is an annual hackathon dedicated to empowering students and innovators around the Pittsburgh area to increase exposure to the field of computer science and entrepreneurship. Join shady.Hacks to meet like-minded individuals, learn new skills, and create something amazing. During the event, you will have 6 hours to create a project to a project that addresses one critical issue that will be announced at the start of the event. It will be broad, and we aim for your creativity to run freely. At the end of the event, competitors will present their projects to a panel of judges. The best projects will win prizes offered by our sponsors. Participants will receive complementary shirts, certificates, and other goodies. Register now to secure your spot at shady.Hacks 2026. See the FAQ and handbook for more info.
                             </p>
                             <LinkButton content="Learn more in the handbook" href="#" />
                         </div>
@@ -526,7 +526,7 @@ const Prizes = (): JSX.Element => {
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>Internship, providing organization is tentative for 2025.</p>
+                                        <p>Internship, providing organization is tentative for 2026.</p>
                                     </div>
 
                                     <div className="mt-4">
@@ -1108,7 +1108,7 @@ const Ssahack = () => {
     return (
         <>
             <Head>
-                <title>shady.Hacks 2025</title>
+                <title>shady.Hacks 2026</title>
             </Head>
             <Navbar current="shady.Hacks" />
             <div className="">
