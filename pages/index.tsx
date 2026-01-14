@@ -324,7 +324,7 @@ const Panel1 = (): JSX.Element => {
 
 const Panel2 = (): JSX.Element => {
   return (
-    <motion.div className="relative w-full min-h-screen flex flex-col md:flex-row items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-100 overflow-hidden py-12 md:py-0">
+    <motion.div className="relative w-full min-h-[125vh] flex flex-col md:flex-row items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-100 overflow-hidden py-12 md:py-0">
       <motion.div 
         className="absolute top-10 right-10 w-[350px] h-[350px] bg-blue-300 opacity-25 rounded-full blur-3xl pointer-events-none"
         animate={{
@@ -485,21 +485,20 @@ const Panel2 = (): JSX.Element => {
           For hackathon organizers
             </h3>
             <ul className="space-y-2 text-gray-700 text-base list-disc pl-6">
-          <li>
-            Connect with a global network of hackathons and developers
-          </li>
-          <li>
-            Get access to templates, guides, mentorship, and best practices
-          </li>
-          <li>
-            Get marketing and sponsorship outreach for your hackathon 
-          </li>
-          <li>
-            Get involved in the leadership of the global championship.
-          </li>
-          <p>
-            What do we want in return? <strong>Nominate your top winners to our global championship.</strong>
-          </p>
+          <li>Getting started</li>
+          <li>Promotion on our socials and website</li>
+          <li>Fundraising help</li>
+          <li>Web Design + Hosting</li>
+          <li>Marketing</li>
+          <li>Registration handling</li>
+          <li>A shared sponsor directory</li>
+          <li>A shared masterclass directory</li>
+          <li>Free Canva Pro</li>
+          <li>Included masterclass with BhashaX</li>
+          <li>Bonus email/spreadsheet templates</li>
+          <li>Exclusive networking opportunities for hackathon organizers</li>
+          <li>Access the ability to take tax-free donations with Silicon League's non-profit status</li>
+          <li>What do we want in return? <strong>Nominate your top winners to our global championship.</strong></li>
             </ul>
           </div>
           <div className="flex-1 bg-white/90 p-6 rounded-2xl border border-gray-200 shadow-md">
@@ -508,7 +507,7 @@ const Panel2 = (): JSX.Element => {
             </h3>
             <ul className="space-y-2 text-gray-700 text-base list-disc pl-6">
           <li>
-            College applications that <strong>stand out</strong> with the portfolios you build through hackathons.
+            College applications that <strong>stand out</strong> with the portfolios you build through hackathons
           </li>
           <li>
             Exclusive <strong>scholarship opportunities</strong> and university partnerships
@@ -518,6 +517,21 @@ const Panel2 = (): JSX.Element => {
           </li>
           <li>
             Meet a global network of brilliant peers passionate about technology
+          </li>
+          <li>
+            Build real-world projects and gain <strong>hands-on coding experience</strong>
+          </li>
+          <li>
+            Win <strong>prizes, certificates, and recognition</strong> for your achievements
+          </li>
+          <li>
+            Learn cutting-edge technologies like <strong>AI, web development, and mobile apps</strong>
+          </li>
+          <li>
+            Develop teamwork, problem-solving, and <strong>presentation skills</strong>
+          </li>
+          <li>
+            Access to <strong>free workshops, masterclasses, and resources</strong>
           </li>
             </ul>
           </div>
