@@ -21,6 +21,7 @@ export default function Navbar({ current }: NavbarProps) {
         { name: 'About', href: 'about', current: current === 'About' },
         { name: 'Join', href: 'join', current: current === 'Join' },
         { name: 'Team', href: '/contact', current: current === 'Team' },
+        { name: 'Championship', href: '#', current: false, comingSoon: true },
     ]
 
     const hackathonSublinks = [
@@ -87,6 +88,12 @@ export default function Navbar({ current }: NavbarProps) {
                                         >
                                             Hosted on Silicon ↓
                                         </button>
+                                    </div>
+                                ) : item.comingSoon ? (
+                                    <div key={item.name} className="hidden md:block">
+                                        <div className="px-3 py-2 rounded text-sm font-medium text-gray-500 cursor-not-allowed">
+                                            {item.name} <span className="text-xs">(Coming Soon)</span>
+                                        </div>
                                     </div>
                                 ) : (
                                     <Link href={item.href} key={item.name}>
@@ -216,6 +223,10 @@ export default function Navbar({ current }: NavbarProps) {
                                                                     </motion.div>
                                                                 )}
                                                             </AnimatePresence>
+                                                        </div>
+                                                    ) : item.comingSoon ? (
+                                                        <div key={item.name} className="px-3 py-2 rounded text-sm font-medium text-gray-400 cursor-not-allowed">
+                                                            &gt; {item.name} <span className="text-xs">(Coming Soon)</span>
                                                         </div>
                                                     ) : (
                                                         <Link href={item.href} key={item.name}>
