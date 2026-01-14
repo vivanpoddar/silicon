@@ -25,7 +25,7 @@ interface QuestionProps {
 
 const Question = ({ question, answer }: QuestionProps) => {
     return (
-        <div className="border p-4 m-4">
+        <div className="border border-gray-800 p-4 m-4">
             <h1 className="text-xl md:text-3xl text-blue-500">{question}</h1>
             <p className="text-sm md:text-lg">{answer}</p>
         </div>
@@ -127,10 +127,10 @@ const Panel1 = (): JSX.Element => {
                         <a href="https://photos.google.com/share/AF1QipOQiYLZIbpk57qZWq49Y-rL0xRnqVo0glFUySvHSEUEGUtcjJjtQ0PbMZTszdOFNA?key=cXpvWl9aMGtqeUFuaHNTQm5PUU1DOXZZbWQ0OTNB" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">2025 Pictures</a>
                         <a href="https://drive.google.com/file/d/1X0Jd8n0rW3EhQhP_2tSPOMt7C3oB6zjz/view" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">Sponsor Info</a>
                         <a href="https://drive.google.com/drive/folders/1ixl2A1D_IjwNvjAvrnPSLaW9Bwja_usN?usp=drive_link" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">Web Development</a>
-                        <a href="https://www.instagram.com/ssa_hack/" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">
+                        <a href="https://www.instagram.com/thesiliconleague/" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">
                             Instagram
                         </a>
-                        <a href="https://docs.google.com/spreadsheets/d/1czqJASUVv4osy-QzJjEv47Oe3O1dsVbYxdkkwsTscTU/edit?usp=sharing" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">
+                        <a href="https://docs.google.com/spreadsheets/d/1wXB93m7wPErze8GxdQHQOoTyvcktNJrRKTMk5XTuRj4/edit?usp=sharing" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">
                             2025 Scores
                         </a>
                     </div>
@@ -211,7 +211,7 @@ const Panel2 = (): JSX.Element => {
             </div>
             <div className="z-10 xl:w-1/2 h-1/2 xl:h-full flex flex-col items-center justify-center xl:p-24">
                 <h1 className="xl:text-7xl text-white text-center mx-10 sm:mx-0 pb-4 md:px-0 text-2xl">The first highschool hackathon in the city of Pittsburgh.</h1>
-                <LinkButton content="View our hackathons" href="www.joinsilicon.org/hackathons" />
+                <LinkButton content="See more pictures" href="https://photos.app.goo.gl/9kLtfuVwpkReWeDy9" />
             </div>
             <div className="z-10 xl:w-1/2 h-1/2 xl:h-full flex items-center justify-center">
                 <div className='xl:h-1/2 xl:w-3/4 flex items-center justify-center'>
@@ -230,39 +230,50 @@ const Content = (): JSX.Element => {
             </div>
             <div className="z-10 w-screen flex flex-col">
                 <div className="flex xl:flex-row flex-col-reverse h-full w-full">
-                    <div className="xl:w-1/2 h-full flex flex-col items-center justify-center">
-                        {/* <span className="text-center pb-4 text-4xl text-yellow-500"><b> Apr 5, 2025</b></span> */}
-                        <div className="flex xl:text-4xl items-center justify-center">
-                            <div className="flex flex-col space-y-8">
-                                <span className="text-right">9:00 AM</span>
-                                <span className="text-right">9:10 AM</span>
-                                <span className="text-right">10:20 AM</span>
-                                <span className="text-right">12:00 PM</span>
-                                <span className="text-right">12:30 PM</span>
-                                <span className="text-right">4:30 PM</span>
-                                <span className="text-right">5:30 PM</span>
-                                <span className="text-right">6:00 PM</span>
-                            </div>
-                            <div className="h-full self-center border border-white mx-4"></div>
-                            <div className="flex flex-col space-y-8">
-                                <span>Opening Ceremony</span>
-                                <span>Web Development</span>
-                                <span>AI Ignition with Python</span>
-                                <span>Lunch Opens</span>
-                                <span>Special Guest Masterclass</span>
-                                <span>Judging</span>
-                                <div className="flex flex-col">
-                                    <p className="text-[0.7em]/[1]">Closing Speech</p>
-                                    <p className="text-[0.3em]/[1] text-gray-400">featuring State Representative Arvind Venkat</p>
-                                </div>
-                                <span>Teams Leave </span>
-                            </div>
+                    <div className="xl:w-1/2 h-full flex flex-col items-center justify-center px-4">
+                        <motion.h2 
+                            initial={{ opacity: 0, y: -20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6 }}
+                            viewport={{ once: true }}
+                            className="flex text-center text-2xl xl:text-4xl text-white font-light tracking-wider"
+                        >
+                            Schedule
+                        </motion.h2>
+                        <span className="text-yellow-500">Late February, TBA</span>
+
+                        <div className="w-full max-w-xl space-y-1">
+                            {[
+                                { time: "9:00 AM", event: "Opening Ceremony", delay: 0.1 },
+                                { time: "9:30 AM", event: "Masterclass 1", delay: 0.2 },
+                                { time: "10:00 AM", event: "Masterclass 2", delay: 0.3 },
+                                { time: "12:00 PM", event: "Lunch Opens", delay: 0.4 },
+                                { time: "12:15 PM", event: "Games", delay: 0.3 },
+                                { time: "12:45 PM", event: "Special Guest Masterclass", delay: 0.5 },
+                                { time: "4:45 PM", event: "Hacking Ends", delay: 0.6 },
+                                { time: "5:00 PM", event: "Judging", delay: 0.6 },
+                                { time: "6:00 PM", event: "Closing Ceremony", delay: 0.7 },
+                                { time: "7:00 PM", event: "Teams Leave", delay: 0.8 }
+                            ].map((item, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, x: -30 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.2}}
+                                    viewport={{ once: true }}
+                                    whileHover={{ x: 10 }}
+                                    className="flex items-center justify-between border-b border-gray-800 py-4 transition-all"
+                                >
+                                    <span className="text-gray-400 text-sm sm:text-base font-mono w-24">{item.time}</span>
+                                    <span className="text-white text-base sm:text-lg flex-grow text-right">{item.event}</span>
+                                </motion.div>
+                            ))}
                         </div>
                     </div>
                     <div className="xl:w-1/2 pb-24 xl:pb-0 px-8 flex items-center justify-center relative">
                         <div className="xl:p-24">
                             <h1 className="text-blue-500 text-xl italic xl:text-4xl xl:pb-4">6 hours to solve one problem.</h1>
-                            <p className="text-lg pb-2">We&apos;re excited to welcome you to shady.Hacks 2025. shady.Hacks is an annual hackathon dedicated to empowering students and innovators around the Pittsburgh area to increase exposure to the field of computer science and entrepreneurship. Join shady.Hacks to meet like-minded individuals, learn new skills, and create something amazing. During the event, you will have 6 hours to create a project to a project that addresses one critical issue that will be announced at the start of the event. It will be broad, and we aim for your creativity to run freely. At the end of the event, competitors will present their projects to a panel of judges. The best projects will win prizes offered by our sponsors. Participants will receive complementary shirts, certificates, and other goodies. Register now to secure your spot at shady.Hacks 2025. See the FAQ and handbook for more info.
+                            <p className="text-lg pb-2">We&apos;re excited to welcome you to shady.Hacks 2026. shady.Hacks is an annual hackathon dedicated to empowering students and innovators around the Pittsburgh area to increase exposure to the field of computer science and entrepreneurship. Join shady.Hacks to meet like-minded individuals, learn new skills, and create something amazing. During the event, you will have 6 hours to create a project to a project that addresses one critical issue that will be announced at the start of the event. It will be broad, and we aim for your creativity to run freely. At the end of the event, competitors will present their projects to a panel of judges. The best projects will win prizes offered by our sponsors. Participants will receive complementary shirts, certificates, and other goodies. Register now to secure your spot at shady.Hacks 2025. See the FAQ and handbook for more info.
                             </p>
                             <LinkButton content="Learn more in the handbook" href="#" />
                         </div>
@@ -278,7 +289,7 @@ const Masterclass = (): JSX.Element => {
         <div >
             <div className="text-white bg-black">
                 <div className="flex items-center">
-                    <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Masterclass</h1>
+                    <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Masterclass (2025)</h1>
                     <div className="border-t border-white flex-grow"></div>
                 </div>
                 <div className="p-4">
@@ -310,10 +321,12 @@ const Questions = (): JSX.Element => {
                     <div className="border-t border-white flex-grow"></div>
                 </div>
                 <div className="p-4">
+                    <Question question="How much does attending cost?" answer="Nothing." />
                     <Question question="Is lunch included?" answer="Lunch is included in your registration! Lunch will be cheese/pepperoni pizza or salad, water, and a snack. Feel free to bring your own lunch if desired. We will also be running a paid concession stand during the event." />
+                    <Question question="How can I stay up-to-date on changes to the schedule/competition?" answer="Check your email, our socials, or our website. Any updates and important information will be posted there." />
                     <Question question="Technology and devices included?" answer="We will provide 3D Printers, Arduinos, MakeyMakey's, Assorted Censors, Controllers, Phones, VR Headsets, Laptops and more. You are welcome to bring any hardware and software you'd like to succeed!" />
                     <Question question="I am a middle schooler. Can I succeed in this hackathon?" answer="No worries about skill gaps here. We will be hosting masterclasses that are tailored to beginners and younger competitors that will bring you up to speed. In addition, we provide novice awards for people getting into the space." />
-                    <Question question="What is a hackathon?" answer="Our hackathon is a 6-hour event where students come together to create a project that solves a problem. Students can work individually or in teams of up to 4 people. At the end of the 6 hours, students will present their projects to a panel of judges. The best projects will win prizes!" />
+                    <Question question="What is a hackathon?" answer="Our hackathon is a 10-hour event where students come together to create a project that solves a problem. Students can work individually or in teams of up to 4 people. At the end of the 6 hours, students will present their projects to a panel of judges. The best projects will win prizes!" />
                     <Question question="Who can participate?" answer="Any middle or high school student can participate! You do not need to have any prior experience with coding or hackathons. We will be hosting workshops to help you get started on your project." />
                 </div>
             </div>
@@ -411,7 +424,7 @@ const Prizes = (): JSX.Element => {
                         <p className="text-xs text-gray-400 italic">(Click me)</p>
                     </button>
                     <button className="h-28 border flex border-black flex-col justify-center bg-gray-900  text-center items-center rounded-xl" onClick={() => set2024Open(true)}>
-                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#1C6FF8, #FEF720']}>2024 hacker()</LinearGradient></h1>
+                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#1C6FF8, #FEF720']}>2026 hacker()</LinearGradient></h1>
                         <p className="text-xs text-gray-400 italic">(Click me)</p>
                     </button>
                 </div>
@@ -988,49 +1001,102 @@ const Recap = (): JSX.Element => {
 
 const ContactTeam = (): JSX.Element => {
     return (
-        <div className="text-white bg-black">
-            <div className="flex items-center">
-                <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Contact & Team</h1>
+        <div className="text-white bg-black py-16 w-screen">
+            <div className="flex items-center mb-12 px-4">
+                <h1 className="text-5xl text-white pr-4 tracking-widest font-light">Contact & Team</h1>
                 <div className="border-t border-white flex-grow"></div>
             </div>
-            <div className="p-4">
-                <div className="max-w-7xl mx-auto">
-                    {/* Contact Section */}
-                    <div className="mb-12">
-                        <h2 className="text-3xl text-yellow-500 mb-6">Get in Touch</h2>
-                        <div className="flex flex-col sm:flex-row gap-4 mb-6">
-                            <a href="mailto:contact@joinsilicon.org" className="flex items-center gap-2 text-white hover:text-yellow-500 transition-colors">
-                                <FontAwesomeIcon icon={faEnvelope} className="w-5 h-5" />
-                                contact@joinsilicon.org
-                            </a>
-                            <a href="https://www.instagram.com/ssa_hack/" className="flex items-center gap-2 text-white hover:text-yellow-500 transition-colors">
-                                <FontAwesomeIcon icon={faInstagram} className="w-5 h-5" />
-                                @ssa_hack
-                            </a>
-                        </div>
+            <div className="px-4">
+                {/* Get in Touch Section */}
+                <div className="mb-16">
+                    <div className="flex items-center mb-6">
+                        <h2 className="text-2xl text-white font-light tracking-wide">Get in Touch</h2>
+                        <div className="border-t border-gray-800 flex-grow ml-4"></div>
                     </div>
-
-                    {/* Leadership Section */}
-                    <div className="mb-8">
-                        <h2 className="text-3xl text-yellow-500 mb-6">Leadership</h2>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                            <Person image="/vivan.png" name="Vivan Poddar" position="Executive Director" text="" linkedin="https://www.linkedin.com/in/vivanpoddar" email="mailto:vivanneil@outlook.com" />
-                            <Person image="/thomas.png" name="Thomas Wang" position="Operations Director" text="" linkedin="https://www.linkedin.com/in/thomas-jichen-wang-a0b427268/" email="mailto:wangthomas19@outlook.com" />
-                            <Person image="/boden.png" name="Boden Moraski" position="Outreach Director" text="" linkedin="https://www.linkedin.com/in/boden-moraski/overlay/contact-info/" email="bodenmoraski@gmail.com" />
-                        </div>
+                    <div className="flex flex-col sm:flex-row gap-6">
+                        <a 
+                            href="mailto:contact@joinsilicon.org" 
+                            className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors border-b border-gray-800 pb-3"
+                        >
+                            <FontAwesomeIcon icon={faEnvelope} className="w-4 h-4" />
+                            <span className="text-sm">contact@joinsilicon.org</span>
+                        </a>
+                        <a 
+                            href="https://www.instagram.com/ssa_hack/" 
+                            className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors border-b border-gray-800 pb-3"
+                        >
+                            <FontAwesomeIcon icon={faInstagram} className="w-4 h-4" />
+                            <span className="text-sm">@ssa_hack</span>
+                        </a>
                     </div>
+                </div>
 
-                    {/* Operations Team Section */}
-                    <div>
-                        <h2 className="text-3xl text-yellow-500 mb-6">Operations Team</h2>
-                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                            <Person image="" name="Abigail Mullin" position="Human Resources" text="" linkedin="" email="" />
-                            <Person image="" name="Faaris Kamal" position="Finances" text="" linkedin="" email="" />
-                            <Person image="" name="Samaira Bhat" position="" text="" linkedin="" email="" />
-                            <Person image="" name="Raneem Wahdan" position="" text="" linkedin="" email="" />
-                            <Person image="" name="Suhaan Tammana" position="" text="" linkedin="" email="" />
-                            <Person image="" name="Regan Mulderig" position="Concessions" text="" linkedin="" email="" />
-                        </div>
+                {/* Leadership Section */}
+                <div className="mb-16">
+                    <div className="flex items-center mb-8">
+                        <h2 className="text-2xl text-white font-light tracking-wide">Leadership</h2>
+                        <div className="border-t border-gray-800 flex-grow ml-4"></div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        {[
+                            { image: "/vivan.png", name: "Vivan Poddar", position: "Executive Director", linkedin: "https://www.linkedin.com/in/vivanpoddar", email: "mailto:vivanneil@outlook.com" },
+                            { image: "/thomas.png", name: "Thomas Wang", position: "Operations Director", linkedin: "https://www.linkedin.com/in/thomas-jichen-wang-a0b427268/", email: "mailto:wangthomas19@outlook.com" },
+                            { image: "/boden.png", name: "Boden Moraski", position: "Outreach Director", linkedin: "https://www.linkedin.com/in/boden-moraski/overlay/contact-info/", email: "bodenmoraski@gmail.com" }
+                        ].map((leader, index) => (
+                            <div
+                                key={index}
+                                className="border border-gray-800 p-6 transition-all duration-200 hover:border-gray-600"
+                            >
+                                <h3 className="text-white text-lg font-medium mb-1">{leader.name}</h3>
+                                <p className="text-gray-400 text-sm mb-4">{leader.position}</p>
+                                <div className="flex gap-3">
+                                    {leader.email && (
+                                        <a
+                                            href={leader.email}
+                                            className="text-gray-400 hover:text-white transition-colors"
+                                        >
+                                            <FontAwesomeIcon icon={faEnvelope} className="w-4 h-4" />
+                                        </a>
+                                    )}
+                                    {leader.linkedin && (
+                                        <a
+                                            href={leader.linkedin}
+                                            className="text-gray-400 hover:text-white transition-colors"
+                                        >
+                                            <FontAwesomeIcon icon={faUser} className="w-4 h-4" />
+                                        </a>
+                                    )}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Operations Team Section */}
+                <div>
+                    <div className="flex items-center mb-8">
+                        <h2 className="text-2xl text-white font-light tracking-wide">Operations Team</h2>
+                        <div className="border-t border-gray-800 flex-grow ml-4"></div>
+                    </div>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-1">
+                        {[
+                            { name: "Abigail Mullin", position: "Human Resources" },
+                            { name: "Faaris Kamal", position: "Finances" },
+                            { name: "Samaira Bhat", position: "Operations" },
+                            { name: "Raneem Wahdan", position: "Operations" },
+                            { name: "Suhaan Tammana", position: "Operations" },
+                            { name: "Regan Mulderig", position: "Concessions" }
+                        ].map((member, index) => (
+                            <div
+                                key={index}
+                                className="border border-gray-800 p-4 transition-all duration-200 hover:border-gray-600"
+                            >
+                                <h3 className="text-white text-base font-medium">{member.name}</h3>
+                                {member.position && (
+                                    <p className="text-gray-400 text-sm mt-1">{member.position}</p>
+                                )}
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
@@ -1046,7 +1112,7 @@ const Ssahack = () => {
             </Head>
             <Navbar current="shady.Hacks" />
             <div className="">
-                {/* <Notification text="Less than one week away from shady.Hacks 2025!"/> */}
+                <Notification text="shady.Hacks 2026 registrations are open!"/>
                 
                 <Panel1 />
                 <Panel2 />

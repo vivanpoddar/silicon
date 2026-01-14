@@ -23,6 +23,7 @@ export default function Navbar({ current }: NavbarProps) {
 
     const hackathonSublinks = [
         { name: 'shady.Hacks', href: '/shadyhacks' },
+        { name: 'PantherHacks', href: '/' },
     ]
     
     let [isOpen, setIsOpen] = useState(false)
@@ -119,15 +120,21 @@ export default function Navbar({ current }: NavbarProps) {
                                         <span className="text-gray-400 text-sm font-medium">Sites</span>
                                         <div className="h-6 border-l border-gray-500"></div>
                                         {hackathonSublinks.map((sublink) => (
-                                            <Link href={sublink.href} key={sublink.name}>
-                                                <motion.div
-                                                    whileHover={{ backgroundColor: '#FFFFFF', color: '#000000' }}
-                                                    className="px-2 border border-gray-500 py-1 rounded text-sm font-medium text-gray-500"
-                                                    onClick={() => setShowHackathonMenu(false)}
-                                                >
-                                                    {sublink.name}
-                                                </motion.div>
-                                            </Link>
+                                            sublink.name === 'PantherHacks' ? (
+                                                <div key={sublink.name} className="px-2 border border-gray-700 py-1 rounded text-sm font-medium text-gray-700 cursor-not-allowed opacity-60">
+                                                    {sublink.name} <span className="text-xs">(Coming Soon)</span>
+                                                </div>
+                                            ) : (
+                                                <Link href={sublink.href} key={sublink.name}>
+                                                    <motion.div
+                                                        whileHover={{ backgroundColor: '#FFFFFF', color: '#000000' }}
+                                                        className="px-2 border border-gray-500 py-1 rounded text-sm font-medium text-gray-500"
+                                                        onClick={() => setShowHackathonMenu(false)}
+                                                    >
+                                                        {sublink.name}
+                                                    </motion.div>
+                                                </Link>
+                                            )
                                         ))}
                                     </div>
                                 </div>
@@ -186,14 +193,23 @@ export default function Navbar({ current }: NavbarProps) {
                                                                         <div className="px-3 py-1 text-xs text-gray-500 font-medium">Sites:</div>
                                                                         
                                                                         {hackathonSublinks.map((sublink) => (
-                                                                            <Link href={sublink.href} key={sublink.name}>
+                                                                            sublink.name === 'PantherHacks' ? (
                                                                                 <div
-                                                                                    className="px-3 py-1 ml-2 border border-gray-300 rounded text-sm font-medium text-gray-600 hover:bg-gray-100 block"
-                                                                                    onClick={closeModal}
+                                                                                    key={sublink.name}
+                                                                                    className="px-3 py-1 ml-2 border border-gray-300 rounded text-sm font-medium text-gray-400 cursor-not-allowed opacity-60 block"
                                                                                 >
-                                                                                    → {sublink.name}
+                                                                                    → {sublink.name} <span className="text-xs">(Coming Soon)</span>
                                                                                 </div>
-                                                                            </Link>
+                                                                            ) : (
+                                                                                <Link href={sublink.href} key={sublink.name}>
+                                                                                    <div
+                                                                                        className="px-3 py-1 ml-2 border border-gray-300 rounded text-sm font-medium text-gray-600 hover:bg-gray-100 block"
+                                                                                        onClick={closeModal}
+                                                                                    >
+                                                                                        → {sublink.name}
+                                                                                    </div>
+                                                                                </Link>
+                                                                            )
                                                                         ))}
                                                                     </motion.div>
                                                                 )}

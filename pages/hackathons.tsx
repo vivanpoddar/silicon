@@ -155,7 +155,7 @@ export default function Hackathons() {
             logo: "/synthaxlogo.png",
             landscapeImage: "https://d112y698adiu2z.cloudfront.net/photos/production/challenge_photos/002/681/658/datas/full_width.png",
             registrationLink: "https://synthax.tech",
-            status: 'upcoming'
+            status: 'completed'
         },
         {
             title: "shady.Hacks",
@@ -165,7 +165,7 @@ export default function Hackathons() {
             logo: "/ssahack.png",
             landscapeImage: "/shadysidepic.jpg",
             registrationLink: "/shadyhacks",
-            status: 'upcoming'
+            status: 'completed'
         },
         {
             title: "QuHacks",
@@ -175,7 +175,7 @@ export default function Hackathons() {
             logo: "/quhacks.png",
             landscapeImage: "/quhacksbanner.png",
             registrationLink: "https://quhacks.tech/",
-            status: 'upcoming'
+            status: 'completed'
         },
         {
             title: "Hack the Ram",
