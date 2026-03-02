@@ -21,7 +21,6 @@ export default function Navbar({ current }: NavbarProps) {
         { name: 'About', href: 'about', current: current === 'About' },
         { name: 'Join', href: 'join', current: current === 'Join' },
         { name: 'Team', href: '/contact', current: current === 'Team' },
-        { name: 'Championship', href: '#', current: false, comingSoon: true },
     ]
 
     const hackathonSublinks = [
@@ -30,21 +29,42 @@ export default function Navbar({ current }: NavbarProps) {
     ]
     
     let [isOpen, setIsOpen] = useState(false)
-    let [showHackathonMenu, setShowHackathonMenu] = useState(false)
-    let [isDesktop, setIsDesktop] = useState(false)
+    let [showDesktopHackathonMenu, setShowDesktopHackathonMenu] = useState(false)
+    let [showMobileHackathonMenu, setShowMobileHackathonMenu] = useState(false)
+    let [showDesktopNavbar, setShowDesktopNavbar] = useState(false)
 
     useEffect(() => {
-        const checkScreenSize = () => {
-            setIsDesktop(window.innerWidth >= 768)
+        const mediaQuery = window.matchMedia('(min-width: 1050px)')
+
+        const checkScreenSize = (matches: boolean) => {
+            setShowDesktopNavbar(matches)
+
+            // Keep desktop-only submenu closed when leaving desktop width.
+            if (!matches) {
+                setShowDesktopHackathonMenu(false)
+                setIsOpen(false)
+            }
         }
-        
-        checkScreenSize()
-        window.addEventListener('resize', checkScreenSize)
-        
-        return () => window.removeEventListener('resize', checkScreenSize)
+
+        // Sync once on mount.
+        checkScreenSize(mediaQuery.matches)
+
+        const handleChange = (event: MediaQueryListEvent) => {
+            checkScreenSize(event.matches)
+        }
+
+        if (typeof mediaQuery.addEventListener === 'function') {
+            mediaQuery.addEventListener('change', handleChange)
+            return () => mediaQuery.removeEventListener('change', handleChange)
+        }
+
+        // Fallback for older Safari versions.
+        mediaQuery.addListener(handleChange)
+        return () => mediaQuery.removeListener(handleChange)
     }, [])
 
     function closeModal() {
+        setShowMobileHackathonMenu(false)
         setIsOpen(false)
     }
 
@@ -71,52 +91,51 @@ export default function Navbar({ current }: NavbarProps) {
                                 <h1 className='pl-2 text-3xl text-white font-medium'>Silicon</h1>                             
                             </div>
                         </Link>
-                        <div className="absolute md:left-0 right-0 md:ml-auto md:mr-auto md:flex md:space-x-4 items-center justify-center">
-                            <button onClick={openModal} type="button">
-                                <img src="/menu.svg" className='md:hidden h-8 w-8 mr-4 border p-1' style={{ filter: 'invert(100%)' }}></img>
-                            </button>
-                            {navigation.map((item) => (
-                                item.name === 'Hackathons' ? (
-                                    <div key={item.name} className="relative">
-                                        <button
-                                            onClick={() => setShowHackathonMenu(!showHackathonMenu)}
-                                            className={classNames(
-                                                item.current ? 'border' : '',
-                                                'hidden md:block right-0 px-3 py-2 rounded text-sm font-medium text-white hover:bg-white hover:text-black transition-colors duration-200'
-                                            )}
-                                            aria-current={item.current ? 'page' : undefined}
-                                        >
-                                            Hosted on Silicon ↓
-                                        </button>
-                                    </div>
-                                ) : item.comingSoon ? (
-                                    <div key={item.name} className="hidden md:block">
-                                        <div className="px-3 py-2 rounded text-sm font-medium text-gray-500 cursor-not-allowed">
-                                            {item.name} <span className="text-xs">(Coming Soon)</span>
+                        {showDesktopNavbar ? (
+                            <div className="absolute left-0 right-0 ml-auto mr-auto flex space-x-4 items-center justify-center">
+                                {navigation.map((item) => (
+                                    item.name === 'Hackathons' ? (
+                                        <div key={item.name} className="relative">
+                                            <button
+                                                onClick={() => setShowDesktopHackathonMenu(!showDesktopHackathonMenu)}
+                                                className={classNames(
+                                                    item.current ? 'border' : '',
+                                                    'right-0 px-3 py-2 rounded text-sm font-medium text-white hover:bg-white hover:text-black transition-colors duration-200'
+                                                )}
+                                                aria-current={item.current ? 'page' : undefined}
+                                            >
+                                                Hosted on Silicon ↓
+                                            </button>
                                         </div>
-                                    </div>
-                                ) : (
-                                    <Link href={item.href} key={item.name}>
-                                        <motion.div
-                                            whileHover={{ backgroundColor: '#FFFFFF', color: '#000000' }}
-                                            transition={{ duration: 0.25 }}
-                                            className={classNames(
-                                                item.current ? 'border' : '',
-                                                'hidden md:block right-0 px-3 py-2 rounded text-sm font-medium text-white'
-                                            )}
-                                            aria-current={item.current ? 'page' : undefined}
-                                        >
-                                            {item.name}
-                                        </motion.div>
-                                    </Link>
-                                )
-                            ))}
-                        </div>
+                                    ) : (
+                                        <Link href={item.href} key={item.name}>
+                                            <motion.div
+                                                whileHover={{ backgroundColor: '#FFFFFF', color: '#000000' }}
+                                                transition={{ duration: 0.25 }}
+                                                className={classNames(
+                                                    item.current ? 'border' : '',
+                                                    'right-0 px-3 py-2 rounded text-sm font-medium text-white'
+                                                )}
+                                                aria-current={item.current ? 'page' : undefined}
+                                            >
+                                                {item.name}
+                                            </motion.div>
+                                        </Link>
+                                    )
+                                ))}
+                            </div>
+                        ) : (
+                            <div className="absolute right-0 mr-4">
+                                <button onClick={openModal} type="button">
+                                    <img src="/menu.svg" className='h-8 w-8 border p-1' style={{ filter: 'invert(100%)' }}></img>
+                                </button>
+                            </div>
+                        )}
                     </div>
 
                     {/* Secondary Hackathon Navbar - Desktop Only */}
                     <AnimatePresence>
-                        {showHackathonMenu && isDesktop && (
+                        {showDesktopHackathonMenu && (
                             <motion.div 
                                 initial={{ opacity: 0, height: 0 }}
                                 animate={{ opacity: 1, height: 'auto' }}
@@ -138,7 +157,7 @@ export default function Navbar({ current }: NavbarProps) {
                                                     <motion.div
                                                         whileHover={{ backgroundColor: '#FFFFFF', color: '#000000' }}
                                                         className="px-2 border border-gray-500 py-1 rounded text-sm font-medium text-gray-500"
-                                                        onClick={() => setShowHackathonMenu(false)}
+                                                        onClick={() => setShowDesktopHackathonMenu(false)}
                                                     >
                                                         {sublink.name}
                                                     </motion.div>
@@ -181,17 +200,17 @@ export default function Navbar({ current }: NavbarProps) {
                                                     item.name === 'Hackathons' ? (
                                                         <div key={item.name} className="mb-2">
                                                             <button
-                                                                onClick={() => setShowHackathonMenu(!showHackathonMenu)}
+                                                                onClick={() => setShowMobileHackathonMenu(!showMobileHackathonMenu)}
                                                                 className={classNames(
                                                                     item.current ? 'border' : '',
                                                                     'w-full text-left right-0 px-3 py-2 rounded text-sm font-medium text-black hover:bg-gray-100 transition-colors duration-200'
                                                                 )}
                                                             >
-                                                                &gt; More {showHackathonMenu ? '▲' : '▼'}
+                                                                &gt; More {showMobileHackathonMenu ? '▲' : '▼'}
                                                             </button>
                                                             
                                                             <AnimatePresence>
-                                                                {showHackathonMenu && (
+                                                                {showMobileHackathonMenu && (
                                                                     <motion.div
                                                                         initial={{ opacity: 0, height: 0 }}
                                                                         animate={{ opacity: 1, height: 'auto' }}
@@ -223,10 +242,6 @@ export default function Navbar({ current }: NavbarProps) {
                                                                     </motion.div>
                                                                 )}
                                                             </AnimatePresence>
-                                                        </div>
-                                                    ) : item.comingSoon ? (
-                                                        <div key={item.name} className="px-3 py-2 rounded text-sm font-medium text-gray-400 cursor-not-allowed">
-                                                            &gt; {item.name} <span className="text-xs">(Coming Soon)</span>
                                                         </div>
                                                     ) : (
                                                         <Link href={item.href} key={item.name}>
