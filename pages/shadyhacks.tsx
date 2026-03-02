@@ -44,9 +44,9 @@ const Panel1 = (): JSX.Element => {
     }, []);
 
     return (
-        <div className="bg-gradient-to-b from-blue-500 to-black h-screen w-screen">
+        <div className="relative bg-gradient-to-b from-blue-500 to-black min-h-[115vh] w-screen">
             <Particles
-                style={{ position: "absolute" }}
+                style={{ position: "absolute", inset: 0 }}
                 id="tsparticles"
                 init={particlesInit}
                 loaded={particlesLoaded}
@@ -113,29 +113,31 @@ const Panel1 = (): JSX.Element => {
                     },
                 }}
             />
-            <div className="absolute w-full h-full flex items-center justify-center flex-col px-4">
-                <div className="w-full max-w-lg mb-4">
-                    <Image priority={true} className="w-full h-auto" src="/ssahack.png" alt="shady.Hacks" width={600} height={100}></Image>
-                </div>
-                <div className="border-t border-white w-3/4 sm:w-1/2 mb-4"></div>
-                <TypeIt className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-6">Hack for a <span className="text-yellow-500 italic">purpose.</span></TypeIt>
-                <div className="w-full max-w-4xl">
-                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4">
-                        <a href="https://forms.gle/1NkPHxKgb2HsR9b5A" className="text-center border text-yellow-500 font-medium py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl border-yellow-500 rounded hover:bg-yellow-500 hover:text-black transition-colors">Sign Up</a>
-                        <a href="https://shadysideacademy-my.sharepoint.com/:w:/g/personal/26poddarv_shadysideacademy_org/EejCBZMdudNHoMtI7kxiPEEBrONOyJj2c5hBZFD8FIIWSw?e=uwkxSG" className="text-center border border-yellow-500 text-yellow-500 font-medium py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-yellow-500 hover:text-black transition-colors">Handbook</a>
-                        <a href="mailto:contact@joinsilicon.org" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">Contact</a>
-                        <a href="https://photos.google.com/share/AF1QipOQiYLZIbpk57qZWq49Y-rL0xRnqVo0glFUySvHSEUEGUtcjJjtQ0PbMZTszdOFNA?key=cXpvWl9aMGtqeUFuaHNTQm5PUU1DOXZZbWQ0OTNB" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">2025 Pictures</a>
-                        <a href="https://drive.google.com/file/d/1X0Jd8n0rW3EhQhP_2tSPOMt7C3oB6zjz/view" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">Sponsor Info</a>
-                        <a href="https://drive.google.com/drive/folders/1ixl2A1D_IjwNvjAvrnPSLaW9Bwja_usN?usp=drive_link" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">Web Development</a>
-                        <a href="https://www.instagram.com/thesiliconleague/" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">
-                            Instagram
-                        </a>
-                        <a href="https://docs.google.com/spreadsheets/d/1wXB93m7wPErze8GxdQHQOoTyvcktNJrRKTMk5XTuRj4/edit?usp=sharing" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">
-                            2025 Scores
-                        </a>
+            <div className="relative z-10 w-full min-h-[115vh] flex flex-col px-4 pt-16 pb-6">
+                <div className="flex-1 flex items-center justify-center flex-col">
+                    <div className="w-full max-w-lg mb-4">
+                        <Image priority={true} className="w-full h-auto" src="/ssahack.png" alt="shady.Hacks" width={600} height={100}></Image>
+                    </div>
+                    <div className="border-t border-white w-3/4 sm:w-1/2 mb-4"></div>
+                    <TypeIt className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-6">Hack for a <span className="text-yellow-500 italic">purpose.</span></TypeIt>
+                    <div className="w-full max-w-4xl">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4">
+                            <a href="https://forms.gle/1NkPHxKgb2HsR9b5A" className="text-center border text-yellow-500 font-medium py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl border-yellow-500 rounded hover:bg-yellow-500 hover:text-black transition-colors">Sign Up</a>
+                            <a href="https://shadysideacademy-my.sharepoint.com/:w:/g/personal/26poddarv_shadysideacademy_org/EejCBZMdudNHoMtI7kxiPEEBrONOyJj2c5hBZFD8FIIWSw?e=uwkxSG" className="text-center border border-yellow-500 text-yellow-500 font-medium py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-yellow-500 hover:text-black transition-colors">Handbook</a>
+                            <a href="mailto:contact@joinsilicon.org" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">Contact</a>
+                            <a href="https://photos.google.com/share/AF1QipOQiYLZIbpk57qZWq49Y-rL0xRnqVo0glFUySvHSEUEGUtcjJjtQ0PbMZTszdOFNA?key=cXpvWl9aMGtqeUFuaHNTQm5PUU1DOXZZbWQ0OTNB" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">2025 Pictures</a>
+                            <a href="https://drive.google.com/file/d/1X0Jd8n0rW3EhQhP_2tSPOMt7C3oB6zjz/view" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">Sponsor Info</a>
+                            <a href="https://drive.google.com/drive/folders/1ixl2A1D_IjwNvjAvrnPSLaW9Bwja_usN?usp=drive_link" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">Web Development</a>
+                            <a href="https://www.instagram.com/thesiliconleague/" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">
+                                Instagram
+                            </a>
+                            <a href="https://docs.google.com/spreadsheets/d/1wXB93m7wPErze8GxdQHQOoTyvcktNJrRKTMk5XTuRj4/edit?usp=sharing" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">
+                                2025 Scores
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div className="absolute bottom-8 rounded-lg p-4 text-center">
+                <div className="mt-auto pt-4 rounded-lg p-4 text-center">
                     <h1 className='pb-2 text-white text-sm sm:text-base'>Learn more</h1>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6 sm:h-8 sm:w-8 mx-auto text-white animate-bounce">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
