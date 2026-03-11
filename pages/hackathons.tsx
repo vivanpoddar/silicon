@@ -158,16 +158,6 @@ export default function Hackathons() {
             status: 'completed'
         },
         {
-            title: "shady.Hacks",
-            date: "December 1",
-            location: "Pittsburgh, PA",
-            description: "This December, join us at Shady Side Academy for a Saturday filled with innovation and creativity. Our high school hackathon brings together the brightest young minds in Pittsburgh to compete, compute, and connect. Build innovative solutions and network with peers.",
-            logo: "/ssahack.png",
-            landscapeImage: "/shadysidepic.jpg",
-            registrationLink: "/shadyhacks",
-            status: 'completed'
-        },
-        {
             title: "QuHacks",
             date: "December 14",
             location: "Laurel, MD",
@@ -184,7 +174,7 @@ export default function Hackathons() {
             description: "Hack the Ram is a FREE, 12-hour invention marathon hosted at Pine-Richland High School. Participants with any level of programming or hardware experience are invited to work together and create a technology project from scratch. This event is open to all 6th to 12th grade students in the Pittsburgh area. We will have multiple seminars throughout the day to help you either learn how to code for the first time or fine tune your skills. Best of all, there will be free food, drinks, and t shirts for all of our participants. Bring your friends and prepare for an amazing weekend!",
             logo: "/htrlogo.png",
             registrationLink: "https://hacktheram.com/",
-            status: 'upcoming'
+            status: 'completed'
         },
         {
             title: "HackNA",
@@ -194,7 +184,16 @@ export default function Hackathons() {
             logo: "hacknalogo.svg",
             landscapeImage: "/hacknabanner.jpg",
             registrationLink: "https://hackna.org",
-            status: 'upcoming'
+            status: 'completed'
+        },
+        {
+            title: "Fox Chapel HS",
+            date: "March 7",
+            location: "Pittsburgh, PA",
+            description: "Fox Chapel High School is hosting their first-ever hackathon in collaboration with the Silicon League. Sign up today for our online hackathon taking place on March 7, 2026 hosted by students from Fox Chapel High School.",
+            logo: "/fox-chapel.png",
+            registrationLink: "/fchacks.org",
+            status: 'completed'
         },
         {
             title: "Hack the Land",
@@ -221,6 +220,16 @@ export default function Hackathons() {
             description: "Hackathon launched by the Computer Science club at Parkland High School. Competitors attend completely free of cost (lunch included!) and have the opportunity to win cash prizes and more. During the competition, you will create some sort of project using skills in Computer Science and Engineering to solve a problem which will be announced at the start of the hackathon.  ",
             registrationLink: "https://forms.gle/pawjn23DDoRnnjyr6",
             status: 'upcoming'
+        },
+        {
+            title: "shady.Hacks",
+            date: "May 2",
+            location: "Pittsburgh, PA",
+            description: "This December, join us at Shady Side Academy for a Saturday filled with innovation and creativity. Our high school hackathon brings together the brightest young minds in Pittsburgh to compete, compute, and connect. Build innovative solutions and network with peers.",
+            logo: "/ssahack.png",
+            landscapeImage: "/shadysidepic.jpg",
+            registrationLink: "/shadyhacks",
+            status: 'completed'
         },
     ];
 
