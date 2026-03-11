@@ -177,6 +177,15 @@ export default function Hackathons() {
             status: 'completed'
         },
         {
+            title: "Parkland CS Hackathon",
+            date: "Feburary",
+            location: "Allentown, PA",
+            logo: "/phs.jpg",
+            description: "Hackathon launched by the Computer Science club at Parkland High School. Competitors attend completely free of cost (lunch included!) and have the opportunity to win cash prizes and more. During the competition, you will create some sort of project using skills in Computer Science and Engineering to solve a problem which will be announced at the start of the hackathon.  ",
+            registrationLink: "https://forms.gle/pawjn23DDoRnnjyr6",
+            status: 'upcoming'
+        },
+        {
             title: "HackNA",
             date: "March",
             location: "Wexford, PA",
@@ -213,15 +222,6 @@ export default function Hackathons() {
             status: 'upcoming'
         },
         {
-            title: "Parkland CS Hackathon",
-            date: "April 9",
-            location: "Allentown, PA",
-            logo: "/phs.jpg",
-            description: "Hackathon launched by the Computer Science club at Parkland High School. Competitors attend completely free of cost (lunch included!) and have the opportunity to win cash prizes and more. During the competition, you will create some sort of project using skills in Computer Science and Engineering to solve a problem which will be announced at the start of the hackathon.  ",
-            registrationLink: "https://forms.gle/pawjn23DDoRnnjyr6",
-            status: 'upcoming'
-        },
-        {
             title: "shady.Hacks",
             date: "May 2",
             location: "Pittsburgh, PA",
@@ -229,17 +229,11 @@ export default function Hackathons() {
             logo: "/ssahack.png",
             landscapeImage: "/shadysidepic.jpg",
             registrationLink: "/shadyhacks",
-            status: 'completed'
+            status: 'upcoming'
         },
     ];
 
     const comingSoonHackathons = [
-        {
-            title: "Fox Chapel High School",
-            date: "Winter 2025", 
-            location: "Pittsburgh, PA",
-            status: 'upcoming' as const
-        },
         {
             title: "Franklin Regional High School",
             date: "Spring 2026",
