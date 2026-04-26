@@ -584,7 +584,7 @@ const Prizes = (): JSX.Element => {
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>$150</p>
+                                        <p>$50</p>
                                     </div>
 
                                     <div className="mt-4">
@@ -641,7 +641,7 @@ const Prizes = (): JSX.Element => {
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>$150</p>
+                                        <p>$50</p>
                                     </div>
 
                                     <div className="mt-4">
@@ -697,7 +697,7 @@ This award recognizes projects that make you go &quot;Wow!&quot; Judged primaril
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>$150</p>
+                                        <p>$50</p>
                                     </div>
 
                                     <div className="mt-4">
@@ -755,7 +755,7 @@ This award recognizes projects that make you go &quot;Wow!&quot; Judged primaril
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>$100</p>
+                                        <p>$50</p>
                                     </div>
                                     <div className="mt-4">
                                         <button
@@ -811,7 +811,7 @@ This award recognizes projects that make you go &quot;Wow!&quot; Judged primaril
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>$100</p>
+                                        <p>$50</p>
                                     </div>
 
                                     <div className="mt-4">
