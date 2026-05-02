@@ -1114,7 +1114,7 @@ const Ssahack = () => {
             </Head>
             <Navbar current="shady.Hacks" />
             <div className="">
-                <Notification text="shady.Hacks 2026 registrations are open!"/>
+                <Notification text="We regret to inform you that shady.Hacks 2026 has been postponed. Check your email for more information."/>
                 
                 <Panel1 />
                 <Panel2 />
