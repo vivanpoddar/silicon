@@ -211,7 +211,7 @@ export default function Hackathons() {
             description: "This July, Join over 100+ teen hackers in Cleveland, Ohio at our first high-school hackathon organized by high-schoolers! Hack the Land is a social coding/engineering event, where teen hackers/participants turn their ideas to reality in just one weekend. Whether it's 2am-debugging with cookies or karaoke, our ultimate goal is to host an unforgettable experience for participants.",
             logo: "/HTL.svg",
             registrationLink: "https://hacktheland.xyz/",
-            status: 'upcoming'
+            status: 'completed'
         },
         {
             title: "Silicon Georgia",
@@ -219,7 +219,7 @@ export default function Hackathons() {
             location: "Augusta, GA",
             description: "Silicon Georgia is Silicon's first member hackathon in the state of Georgia. Competitors attend completely free of cost (lunch included!) and have the opportunity to win cash prizes and more. During the competition, you will create some sort of project using skills in Computer Science and Engineering to solve a problem which will be announced at the start of the hackathon.  ",
             registrationLink: "https://forms.gle/pawjn23DDoRnnjyr6",
-            status: 'upcoming'
+            status: 'completed'
         },
         {
             title: "shady.Hacks",
@@ -229,21 +229,21 @@ export default function Hackathons() {
             logo: "/ssahack.png",
             landscapeImage: "/shadysidepic.jpg",
             registrationLink: "/shadyhacks",
-            status: 'upcoming'
+            status: 'completed'
         },
     ];
 
     const comingSoonHackathons = [
         {
             title: "Franklin Regional High School",
-            date: "Spring 2026",
+            date: "Fall 2026",
             location: "Murraysville, PA", 
             description: "",
-            status: 'upcoming' as const
+            status: 'completed' as const
         },
         {
             title: "Sewickley Academy",
-            date: "Spring 2026",
+            date: "Fall 2026",
             location: "Sewickley, PA",
             description: "",
             status: 'upcoming' as const

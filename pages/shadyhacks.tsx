@@ -151,7 +151,6 @@ const Panel1 = (): JSX.Element => {
 const Carousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const images = [
-        { src: '/DSC_9628.jpg', alt: 'Image 3' },
         { src: '/DS307067.jpg', alt: 'Image 1' },
         { src: '/DS307074.jpg', alt: 'Image 1' },
         { src: '/DS307084.jpg', alt: 'Image 1' },
@@ -528,7 +527,7 @@ const Prizes = (): JSX.Element => {
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>Internship, providing organization is tentative for 2026.</p>
+                                        <p>Internship, providing organization is tentative for 2027.</p>
                                     </div>
 
                                     <div className="mt-4">
@@ -584,7 +583,7 @@ const Prizes = (): JSX.Element => {
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>$50</p>
+                                        <p>$500</p>
                                     </div>
 
                                     <div className="mt-4">
@@ -641,7 +640,7 @@ const Prizes = (): JSX.Element => {
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>$50</p>
+                                        <p>$500</p>
                                     </div>
 
                                     <div className="mt-4">
@@ -697,7 +696,7 @@ This award recognizes projects that make you go &quot;Wow!&quot; Judged primaril
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>$50</p>
+                                        <p>$500</p>
                                     </div>
 
                                     <div className="mt-4">
@@ -755,7 +754,7 @@ This award recognizes projects that make you go &quot;Wow!&quot; Judged primaril
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>$50</p>
+                                        <p>$200</p>
                                     </div>
                                     <div className="mt-4">
                                         <button
@@ -811,7 +810,7 @@ This award recognizes projects that make you go &quot;Wow!&quot; Judged primaril
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>$50</p>
+                                        <p>$200</p>
                                     </div>
 
                                     <div className="mt-4">
@@ -867,7 +866,7 @@ This award celebrates the team that has shown the most remarkable improvement in
                                             <div className="pr-2 pt-2 text-xl">Prize</div>
                                             <div className="w-full border-b border-black"></div>
                                         </div>
-                                        <p>$75 in discounts from the <a href="https://artofproblemsolving.com/" target="_blank" className="underline" rel="noopener noreferrer">Art of Problem Solving</a></p>
+                                        <p>$100 in discounts from the <a href="https://artofproblemsolving.com/" target="_blank" className="underline" rel="noopener noreferrer">Art of Problem Solving</a></p>
                                     </div>
 
                                     <div className="mt-4">

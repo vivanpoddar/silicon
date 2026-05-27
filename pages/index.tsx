@@ -324,7 +324,7 @@ const Panel1 = (): JSX.Element => {
 
 const Panel2 = (): JSX.Element => {
   return (
-    <motion.div className="relative w-full min-h-[125vh] flex flex-col md:flex-row items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-100 overflow-hidden py-12 md:py-0">
+    <motion.div className="relative w-full min-h-[150vh] flex flex-col md:flex-row items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-100 overflow-hidden py-12 md:py-0">
       <motion.div 
         className="absolute top-10 right-10 w-[350px] h-[350px] bg-blue-300 opacity-25 rounded-full blur-3xl pointer-events-none"
         animate={{
