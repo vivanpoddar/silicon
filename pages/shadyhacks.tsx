@@ -1037,11 +1037,51 @@ const ContactTeam = (): JSX.Element => {
                         <h2 className="text-2xl text-white font-light tracking-wide">Leadership</h2>
                         <div className="border-t border-gray-800 flex-grow ml-4"></div>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-xl">
                         {[
-                            { image: "/vivan.png", name: "Vivan Poddar", position: "Executive Director", linkedin: "https://www.linkedin.com/in/vivanpoddar", email: "mailto:vivanneil@outlook.com" },
-                            { image: "/thomas.png", name: "Thomas Wang", position: "Operations Director", linkedin: "https://www.linkedin.com/in/thomas-jichen-wang-a0b427268/", email: "mailto:wangthomas19@outlook.com" },
-                            { image: "/boden.png", name: "Boden Moraski", position: "Outreach Director", linkedin: "https://www.linkedin.com/in/boden-moraski/overlay/contact-info/", email: "bodenmoraski@gmail.com" }
+                            { name: "Boden Moraski", position: "Executive Director", linkedin: "https://www.linkedin.com/in/boden-moraski", email: "bodenmoraski@gmail.com" }
+                        ].map((leader, index) => (
+                            <div
+                                key={index}
+                                className="border border-gray-800 p-6 transition-all duration-200 hover:border-gray-600"
+                            >
+                                <h3 className="text-white text-lg font-medium mb-1">{leader.name}</h3>
+                                <p className="text-gray-400 text-sm mb-4">{leader.position}</p>
+                                <div className="flex gap-3">
+                                    {leader.email && (
+                                        <a
+                                            href={leader.email.startsWith('mailto:') ? leader.email : `mailto:${leader.email}`}
+                                            className="text-gray-400 hover:text-white transition-colors"
+                                        >
+                                            <FontAwesomeIcon icon={faEnvelope} className="w-4 h-4" />
+                                        </a>
+                                    )}
+                                    {leader.linkedin && (
+                                        <a
+                                            href={leader.linkedin}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-gray-400 hover:text-white transition-colors"
+                                        >
+                                            <FontAwesomeIcon icon={faUser} className="w-4 h-4" />
+                                        </a>
+                                    )}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Founders Section */}
+                <div className="mb-16">
+                    <div className="flex items-center mb-8">
+                        <h2 className="text-2xl text-white font-light tracking-wide">Founders</h2>
+                        <div className="border-t border-gray-800 flex-grow ml-4"></div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {[
+                            { name: "Vivan Poddar", position: "Founder", linkedin: "https://www.linkedin.com/in/vivanpoddar", email: "vivanneil@outlook.com" },
+                            { name: "Thomas Wang", position: "Founder", linkedin: "https://www.linkedin.com/in/thomas-jichen-wang-a0b427268/", email: "wangthomas19@outlook.com" }
                         ].map((leader, index) => (
                             <div
                                 key={index}
