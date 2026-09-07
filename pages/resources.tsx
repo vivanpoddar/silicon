@@ -1,5 +1,7 @@
 import Navbar from '@/components/navbar'
+import Footer from '@/components/footer'
 import Image from 'next/image'
+import Head from 'next/head'
 
 const ResourcesPanel = (): JSX.Element => {
   const resources = [
@@ -243,6 +245,9 @@ const ResourcesPanel = (): JSX.Element => {
 
   return (
     <>
+        <Head>
+            <title>Silicon | Resources</title>
+        </Head>
         <Navbar current="Resources" />
         <div className="w-screen min-h-screen bg-white py-20 mt-8 px-4">
             <div className="max-w-7xl mx-auto">
@@ -287,6 +292,7 @@ const ResourcesPanel = (): JSX.Element => {
                 </div>
             </div>
         </div>
+        <Footer />
     </>
   )
 }

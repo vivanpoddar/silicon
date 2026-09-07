@@ -1,73 +1,9 @@
-import { Inter } from 'next/font/google'
 import Navbar from '../components/navbar'
 import LinkButton from '../components/linkbutton'
 import Footer from '../components/footer'
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
 import Head from 'next/head'
-
-import { motion, useScroll, useTransform, useSpring } from "framer-motion"
-import Link from 'next/link'
-
-const inter = Inter({ subsets: ['latin'] })
-
-const Intro = (): JSX.Element => {
-  return (
-    <>
-      <Head>
-        <title>Silicon | Home</title>
-      </Head>
-      <motion.div className="h-screen w-screen flex flex-col bg-black items-center justify-center relative overflow-hidden">
-        <video
-          autoPlay
-          playsInline
-          muted
-          loop
-          disablePictureInPicture
-          className="absolute w-full h-full z-0 object-cover opacity-70"
-        >
-          <source src="https://github.com/vivanpoddar/silicon/raw/refs/heads/main/public/videoplayback.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute w-full h-full z-1 bg-gradient-to-t from-black via-black/50"></div>
-        <div className='z-10 max-w-6xl mx-auto px-6'>
-            <div className="gap-16 flex flex-col items-center justify-center text-center">
-              <motion.h1 
-                className="font-light tracking-tight text-white text-4xl sm:text-6xl md:text-8xl leading-tight"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-              >
-                Compete. <br className="md:hidden" />Compute. <br className="md:hidden" />Connect.
-              </motion.h1>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-              >
-                <Image
-                  src="/image.png"
-                  alt="Silicon"
-                  width={120}
-                  height={120}
-                  className="drop-shadow-2xl"
-                />
-              </motion.div>
-            </div>
-        </div>
-        <motion.div 
-          className="hidden md:block absolute bottom-12 z-10"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-10 w-10 text-white/70 animate-bounce">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-        </motion.div>
-      </motion.div>
-    </>
-  )
-}
+import { motion } from "framer-motion"
 
 const Panel1 = (): JSX.Element => {
   return (
@@ -92,7 +28,7 @@ const Panel1 = (): JSX.Element => {
           <p className='text-gray-400 text-base sm:text-lg leading-relaxed mb-8'>
             Founded by <span className='text-white font-semibold'>two high school students</span> in 2023, Silicon started with shady.Hacks, a local hackathon initiative for the schools of Pittsburgh. We saw the issue: a substantial gap of Computer Science interest—<span className='text-white font-semibold'>then we found out this wasn&apos;t just a local issue</span>.
           </p>
-          <LinkButton content="Claim your spot at shady.Hacks 2025" href="http://localhost:3000/shadyhacks" />
+          <LinkButton content="Claim your spot at shady.Hacks 2027" href="/shadyhacks" />
         </motion.div>
       </div>
       <div className="md:w-1/2 flex items-center justify-center p-8 md:p-12">
@@ -235,9 +171,12 @@ const Panel4 = (): JSX.Element => {
   )
 }
 
-export default function Home() {
+export default function About() {
 	return (
 		<>
+			<Head>
+				<title>Silicon | About</title>
+			</Head>
 			<Navbar current="About" />
 			<Panel1 />
 			<Panel2 />

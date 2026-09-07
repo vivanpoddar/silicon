@@ -8,7 +8,7 @@ const Footer = (): JSX.Element => {
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <Link href="/" className="flex items-center w-auto mb-4 space-x-2 rtl:space-x-reverse">
                         <div className="h-10 w-10">
-                            <Image src="/image.png" width={32} height={64} layout="responsive" alt="Silicon" />
+                            <Image src="/image.png" width={32} height={32} className="h-10 w-10 object-contain" alt="Silicon" />
                         </div>
                     </Link>
                     <ul className="flex flex-wrap items-center mb-6 text-sm font-medium">

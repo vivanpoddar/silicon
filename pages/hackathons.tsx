@@ -126,7 +126,7 @@ export default function Hackathons() {
             logo: "/Hack_the_Nest_Logo.webp",
             landscapeImage: "/hackthenestbackground.png",
             registrationLink: "https://hackthenest.org",
-            status: 'completed'
+            status: 'upcoming'
         },
         {
             title: "Hack the Colosseum",
@@ -136,16 +136,16 @@ export default function Hackathons() {
             logo: "/hackthecolosseum.png",
             landscapeImage: "/hackthecolosseumbanner.png",
             registrationLink: "https://hack-the-colosseum.devpost.com/",
-            status: 'completed'
+            status: 'upcoming'
         },
         {
             title: "Bug Bash",
             date: "Nov 7-9",
             location: "Bengaluru, KA, India",
             logo: "/bugbash.jpeg",
-            description: "Bug Bash 2025 is Bengaluru's overnight student hackathon where aviation, AI, hardware, fintech, health, and immersive media builders sprint side by side. Sign up solo and we'll slot you into a squad of 3-5 so every team ships something real by dawn.",
+            description: "Bug Bash is Bengaluru's overnight student hackathon where aviation, AI, hardware, fintech, health, and immersive media builders sprint side by side. Sign up solo and we'll slot you into a squad of 3-5 so every team ships something real by dawn.",
             registrationLink: "https://www.bugbash.me/",
-            status: 'completed'
+            status: 'upcoming'
         },
         {
             title: "Synthax",
@@ -155,7 +155,7 @@ export default function Hackathons() {
             logo: "/synthaxlogo.png",
             landscapeImage: "https://d112y698adiu2z.cloudfront.net/photos/production/challenge_photos/002/681/658/datas/full_width.png",
             registrationLink: "https://synthax.tech",
-            status: 'completed'
+            status: 'upcoming'
         },
         {
             title: "QuHacks",
@@ -165,7 +165,7 @@ export default function Hackathons() {
             logo: "/quhacks.png",
             landscapeImage: "/quhacksbanner.png",
             registrationLink: "https://quhacks.tech/",
-            status: 'completed'
+            status: 'upcoming'
         },
         {
             title: "Hack the Ram",
@@ -174,7 +174,7 @@ export default function Hackathons() {
             description: "Hack the Ram is a FREE, 12-hour invention marathon hosted at Pine-Richland High School. Participants with any level of programming or hardware experience are invited to work together and create a technology project from scratch. This event is open to all 6th to 12th grade students in the Pittsburgh area. We will have multiple seminars throughout the day to help you either learn how to code for the first time or fine tune your skills. Best of all, there will be free food, drinks, and t shirts for all of our participants. Bring your friends and prepare for an amazing weekend!",
             logo: "/htrlogo.png",
             registrationLink: "https://hacktheram.com/",
-            status: 'completed'
+            status: 'upcoming'
         },
         {
             title: "Parkland CS Hackathon",
@@ -183,26 +183,26 @@ export default function Hackathons() {
             logo: "/phs.jpg",
             description: "Hackathon launched by the Computer Science club at Parkland High School. Competitors attend completely free of cost (lunch included!) and have the opportunity to win cash prizes and more. During the competition, you will create some sort of project using skills in Computer Science and Engineering to solve a problem which will be announced at the start of the hackathon.  ",
             registrationLink: "https://forms.gle/pawjn23DDoRnnjyr6",
-            status: 'completed'
+            status: 'upcoming'
         },
         {
             title: "HackNA",
             date: "March",
             location: "Wexford, PA",
             description: "HackNA is a high school hackathon, hosted by the team from North Allegheny Senior High School. During the competition, you will create a software or hardware project from scratch based on a central theme revealed at the opening ceremony. No prior experience is required – we welcome anyone interested and will be providing workshops and mentor expertise to help you get started! At the end of the competition, teams will pitch their project to a panel of judges in a chance to win sponsored prizes and rewards.",
-            logo: "hacknalogo.svg",
+            logo: "/hacknalogo.svg",
             landscapeImage: "/hacknabanner.jpg",
             registrationLink: "https://hackna.org",
-            status: 'completed'
+            status: 'upcoming'
         },
         {
             title: "Fox Chapel HS",
             date: "March 7",
             location: "Pittsburgh, PA",
-            description: "Fox Chapel High School is hosting their first-ever hackathon in collaboration with the Silicon League. Sign up today for our online hackathon taking place on March 7, 2026 hosted by students from Fox Chapel High School.",
+            description: "Fox Chapel High School is hosting their first-ever hackathon in collaboration with the Silicon League. Sign up today for our online hackathon hosted by students from Fox Chapel High School.",
             logo: "/fox-chapel.png",
-            registrationLink: "/fchacks.org",
-            status: 'completed'
+            registrationLink: "https://fchacks.org",
+            status: 'upcoming'
         },
         {
             title: "Hack the Land",
@@ -211,7 +211,7 @@ export default function Hackathons() {
             description: "This July, Join over 100+ teen hackers in Cleveland, Ohio at our first high-school hackathon organized by high-schoolers! Hack the Land is a social coding/engineering event, where teen hackers/participants turn their ideas to reality in just one weekend. Whether it's 2am-debugging with cookies or karaoke, our ultimate goal is to host an unforgettable experience for participants.",
             logo: "/HTL.svg",
             registrationLink: "https://hacktheland.xyz/",
-            status: 'completed'
+            status: 'upcoming'
         },
         {
             title: "Silicon Georgia",
@@ -219,17 +219,17 @@ export default function Hackathons() {
             location: "Augusta, GA",
             description: "Silicon Georgia is Silicon's first member hackathon in the state of Georgia. Competitors attend completely free of cost (lunch included!) and have the opportunity to win cash prizes and more. During the competition, you will create some sort of project using skills in Computer Science and Engineering to solve a problem which will be announced at the start of the hackathon.  ",
             registrationLink: "https://forms.gle/pawjn23DDoRnnjyr6",
-            status: 'completed'
+            status: 'upcoming'
         },
         {
             title: "shady.Hacks",
-            date: "May 2",
+            date: "May 2027",
             location: "Pittsburgh, PA",
-            description: "This December, join us at Shady Side Academy for a Saturday filled with innovation and creativity. Our high school hackathon brings together the brightest young minds in Pittsburgh to compete, compute, and connect. Build innovative solutions and network with peers.",
+            description: "This May, join us at Shady Side Academy for a Saturday filled with innovation and creativity. Our high school hackathon brings together the brightest young minds in Pittsburgh to compete, compute, and connect. Build innovative solutions and network with peers.",
             logo: "/ssahack.png",
             landscapeImage: "/shadysidepic.jpg",
             registrationLink: "/shadyhacks",
-            status: 'completed'
+            status: 'upcoming'
         },
     ];
 
@@ -239,7 +239,7 @@ export default function Hackathons() {
             date: "Fall 2026",
             location: "Murraysville, PA", 
             description: "",
-            status: 'completed' as const
+            status: 'upcoming' as const
         },
         {
             title: "Sewickley Academy",

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faGlobe, faUser } from "@fortawesome/free-solid-svg-icons";
 import { TailSpin } from "react-loader-spinner";
 import { useState } from "react";
 
@@ -9,12 +8,13 @@ interface PersonProps {
     image?: string;
     position: string;
     text: string;
-    linkedin: string;
-    email: string;
+    linkedin?: string;
+    email?: string;
+    website?: string;
     name: string;
 };
 
-const Person = ({ image, position, text, name, linkedin, email }: PersonProps) => {
+const Person = ({ image, position, text, name, linkedin, email, website }: PersonProps) => {
     const [isLoading, setIsLoading] = useState(true);
 
     return (
@@ -30,7 +30,7 @@ const Person = ({ image, position, text, name, linkedin, email }: PersonProps) =
                         src={image} 
                         fill
                         alt={name} 
-                        className="object-cover"
+                        className="object-cover object-top"
                         onLoad={() => setIsLoading(false)} 
                     />
                 </div>
@@ -41,22 +41,35 @@ const Person = ({ image, position, text, name, linkedin, email }: PersonProps) =
                 {text && <p className="text-sm text-gray-300">{text}</p>}
                 <div className="flex space-x-3 pt-2">
                     {email && (
-                        <button 
-                            onClick={() => window.location.href = `mailto:${email}`}
+                        <a 
+                            href={email.startsWith('mailto:') ? email : `mailto:${email}`}
                             className="p-2 rounded-full hover:bg-gray-700 transition-colors duration-200"
                             aria-label={`Email ${name}`}
                         >
                             <FontAwesomeIcon className="text-white text-sm" icon={faEnvelope} />
-                        </button>
+                        </a>
+                    )}
+                    {website && (
+                        <a 
+                            href={website.startsWith('http') ? website : `https://${website}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-2 rounded-full hover:bg-gray-700 transition-colors duration-200"
+                            aria-label={`${name}'s website`}
+                        >
+                            <FontAwesomeIcon className="text-white text-sm" icon={faGlobe} />
+                        </a>
                     )}
                     {linkedin && (
-                        <button 
-                            onClick={() => window.location.href = linkedin}
+                        <a 
+                            href={linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="p-2 rounded-full hover:bg-gray-700 transition-colors duration-200"
                             aria-label={`LinkedIn profile of ${name}`}
                         >
                             <FontAwesomeIcon className="text-white text-sm" icon={faUser} />
-                        </button>
+                        </a>
                     )}
                 </div>
             </div>

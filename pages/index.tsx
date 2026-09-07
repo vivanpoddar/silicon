@@ -1,15 +1,9 @@
-import { Inter } from 'next/font/google'
 import Navbar from '../components/navbar'
 import LinkButton from '../components/linkbutton'
 import Footer from '../components/footer'
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
 import Head from 'next/head'
-
-import { motion, useScroll, useTransform, useSpring } from "framer-motion"
-import Link from 'next/link'
-
-const inter = Inter({ subsets: ['latin'] })
+import { motion } from "framer-motion"
 
 const Intro = (): JSX.Element => {
   return (
@@ -51,7 +45,7 @@ const Intro = (): JSX.Element => {
                 Compete. Compute. Connect.
               </motion.h2>
               <motion.h2
-                className="text-white text-xl text-bold tracking-wide"
+                className="text-white text-xl font-bold tracking-wide"
                 initial={{ opacity: 0, translateY: 20 }}
                 animate={{ opacity: 1, translateY: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -900,7 +894,7 @@ const Panel4 = (): JSX.Element => {
           </div>
           <div className="bg-gradient-to-br from-gray-900/80 via-gray-800/80 to-gray-900/60 p-6 sm:p-8 rounded-2xl border border-gray-700/60 shadow-xl backdrop-blur-md">
             <p className="text-gray-200 text-lg sm:text-xl leading-relaxed text-center mb-6">
-              Our championship, taking place in May TBA, is a <span className="font-semibold text-white">celebration of young innovation</span> aiming to support the top hackathon competitors. Competitors receive free goodies and will experience <span className="font-semibold text-white">one week of creative coding</span> with industry mentorship, multiple skill tracks, and the chance to compete with the best of the best of high school Computer Science talent.
+              Our championship, date to be announced, is a <span className="font-semibold text-white">celebration of young innovation</span> aiming to support the top hackathon competitors. Competitors receive free goodies and will experience <span className="font-semibold text-white">one week of creative coding</span> with industry mentorship, multiple skill tracks, and the chance to compete with the best of the best of high school Computer Science talent.
             </p>
           </div>
           <div className="text-center">

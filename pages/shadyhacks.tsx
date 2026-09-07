@@ -16,7 +16,6 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { LinearGradient } from "react-text-gradients";
-import Notification from "../components/notification";
 
 interface QuestionProps {
     question: string;
@@ -125,14 +124,14 @@ const Panel1 = (): JSX.Element => {
                             <a href="https://forms.gle/1NkPHxKgb2HsR9b5A" className="text-center border text-yellow-500 font-medium py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl border-yellow-500 rounded hover:bg-yellow-500 hover:text-black transition-colors">Sign Up</a>
                             <a href="https://shadysideacademy-my.sharepoint.com/:w:/g/personal/26poddarv_shadysideacademy_org/EejCBZMdudNHoMtI7kxiPEEBrONOyJj2c5hBZFD8FIIWSw?e=uwkxSG" className="text-center border border-yellow-500 text-yellow-500 font-medium py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-yellow-500 hover:text-black transition-colors">Handbook</a>
                             <a href="mailto:contact@joinsilicon.org" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">Contact</a>
-                            <a href="https://photos.google.com/share/AF1QipOQiYLZIbpk57qZWq49Y-rL0xRnqVo0glFUySvHSEUEGUtcjJjtQ0PbMZTszdOFNA?key=cXpvWl9aMGtqeUFuaHNTQm5PUU1DOXZZbWQ0OTNB" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">2025 Pictures</a>
+                            <a href="https://photos.google.com/share/AF1QipOQiYLZIbpk57qZWq49Y-rL0xRnqVo0glFUySvHSEUEGUtcjJjtQ0PbMZTszdOFNA?key=cXpvWl9aMGtqeUFuaHNTQm5PUU1DOXZZbWQ0OTNB" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">Pictures</a>
                             <a href="https://drive.google.com/file/d/1X0Jd8n0rW3EhQhP_2tSPOMt7C3oB6zjz/view" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">Sponsor Info</a>
                             <a href="https://drive.google.com/drive/folders/1ixl2A1D_IjwNvjAvrnPSLaW9Bwja_usN?usp=drive_link" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">Web Development</a>
                             <a href="https://www.instagram.com/thesiliconleague/" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">
                                 Instagram
                             </a>
                             <a href="https://docs.google.com/spreadsheets/d/1wXB93m7wPErze8GxdQHQOoTyvcktNJrRKTMk5XTuRj4/edit?usp=sharing" className="text-center border text-white py-2 px-2 sm:py-3 sm:px-3 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl rounded hover:bg-white hover:text-black transition-colors">
-                                2025 Scores
+                                Scores
                             </a>
                         </div>
                     </div>
@@ -170,7 +169,7 @@ const Carousel = () => {
     };
 
     return (
-        <div className="items-center justify-center mx-8 relative w-half max-w-lg xl:max-w-4xl">
+        <div className="items-center justify-center mx-8 relative w-full max-w-lg xl:max-w-4xl">
             <div className="overflow-hidden relative rounded-xl border-4 border-black">
             <div
                 className="flex transition-transform duration-500"
@@ -208,7 +207,7 @@ const Panel2 = (): JSX.Element => {
     return (
         <div className="border-b relative h-[100vh] xl:h-screen w-screen flex flex-col-reverse xl:flex-row bg-black">
             <div className="absolute w-full h-full">
-                <Image src="/scribble.svg" alt="wave" layout="fill" objectFit="cover" />
+                <Image src="/scribble.svg" alt="wave" fill className="object-cover" />
             </div>
             <div className="z-10 xl:w-1/2 h-1/2 xl:h-full flex flex-col items-center justify-center xl:p-24">
                 <h1 className="xl:text-7xl text-white text-center mx-10 sm:mx-0 pb-4 md:px-0 text-2xl">The first highschool hackathon in the city of Pittsburgh.</h1>
@@ -241,7 +240,7 @@ const Content = (): JSX.Element => {
                         >
                             Schedule
                         </motion.h2>
-                        <span className="text-yellow-500">May 02, 2026</span>
+                        <span className="text-yellow-500">May 2027</span>
 
                         <div className="w-full max-w-xl space-y-1">
                             {[
@@ -274,9 +273,9 @@ const Content = (): JSX.Element => {
                     <div className="xl:w-1/2 pb-24 xl:pb-0 px-8 flex items-center justify-center relative">
                         <div className="xl:p-24">
                             <h1 className="text-blue-500 text-xl italic xl:text-4xl xl:pb-4">6 hours to solve one problem.</h1>
-                            <p className="text-lg pb-2">We&apos;re excited to welcome you to shady.Hacks 2026. shady.Hacks is an annual hackathon dedicated to empowering students and innovators around the Pittsburgh area to increase exposure to the field of computer science and entrepreneurship. Join shady.Hacks to meet like-minded individuals, learn new skills, and create something amazing. During the event, you will have 6 hours to create a project to a project that addresses one critical issue that will be announced at the start of the event. It will be broad, and we aim for your creativity to run freely. At the end of the event, competitors will present their projects to a panel of judges. The best projects will win prizes offered by our sponsors. Participants will receive complementary shirts, certificates, and other goodies. Register now to secure your spot at shady.Hacks 2026. See the FAQ and handbook for more info.
+                            <p className="text-lg pb-2">We&apos;re excited to welcome you to shady.Hacks 2027. shady.Hacks is an annual hackathon dedicated to empowering students and innovators around the Pittsburgh area to increase exposure to the field of computer science and entrepreneurship. Join shady.Hacks to meet like-minded individuals, learn new skills, and create something amazing. During the event, you will have 6 hours to create a project that addresses one critical issue that will be announced at the start of the event. It will be broad, and we aim for your creativity to run freely. At the end of the event, competitors will present their projects to a panel of judges. The best projects will win prizes offered by our sponsors. Participants will receive complementary shirts, certificates, and other goodies. Register now to secure your spot at shady.Hacks 2027. See the FAQ and handbook for more info.
                             </p>
-                            <LinkButton content="Learn more in the handbook" href="#" />
+                            <LinkButton content="Learn more in the handbook" href="https://shadysideacademy-my.sharepoint.com/:w:/g/personal/26poddarv_shadysideacademy_org/EejCBZMdudNHoMtI7kxiPEEBrONOyJj2c5hBZFD8FIIWSw?e=uwkxSG" />
                         </div>
                     </div>
                 </div>
@@ -290,7 +289,7 @@ const Masterclass = (): JSX.Element => {
         <div >
             <div className="text-white bg-black">
                 <div className="flex items-center">
-                    <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Masterclass (2025)</h1>
+                    <h1 className="text-5xl text-white pr-4 pl-4 tracking-widest font-light">Masterclass</h1>
                     <div className="border-t border-white flex-grow"></div>
                 </div>
                 <div className="p-4">
@@ -327,7 +326,7 @@ const Questions = (): JSX.Element => {
                     <Question question="How can I stay up-to-date on changes to the schedule/competition?" answer="Check your email, our socials, or our website. Any updates and important information will be posted there." />
                     <Question question="Technology and devices included?" answer="We will provide 3D Printers, Arduinos, MakeyMakey's, Assorted Censors, Controllers, Phones, VR Headsets, Laptops and more. You are welcome to bring any hardware and software you'd like to succeed!" />
                     <Question question="I am a middle schooler. Can I succeed in this hackathon?" answer="No worries about skill gaps here. We will be hosting masterclasses that are tailored to beginners and younger competitors that will bring you up to speed. In addition, we provide novice awards for people getting into the space." />
-                    <Question question="What is a hackathon?" answer="Our hackathon is a 10-hour event where students come together to create a project that solves a problem. Students can work individually or in teams of up to 4 people. At the end of the 6 hours, students will present their projects to a panel of judges. The best projects will win prizes!" />
+                    <Question question="What is a hackathon?" answer="Our hackathon is a 6-hour event where students come together to create a project that solves a problem. Students can work individually or in teams of up to 4 people. At the end of the 6 hours, students will present their projects to a panel of judges. The best projects will win prizes!" />
                     <Question question="Who can participate?" answer="Any middle or high school student can participate! You do not need to have any prior experience with coding or hackathons. We will be hosting workshops to help you get started on your project." />
                 </div>
             </div>
@@ -352,14 +351,14 @@ const Person = ({ image, position, text, name, linkedin, email }: PersonProps) =
             <p className="text-white md:text-base text-sm">{text}</p>
             <div className="flex space-x-4">
                 {email && (
-                    <button onClick={() => window.location.href = `mailto:${email}`}>
+                    <a href={email.startsWith('mailto:') ? email : `mailto:${email}`}>
                         <FontAwesomeIcon className="text-white" icon={faEnvelope} />
-                    </button>
+                    </a>
                 )}
                 {linkedin && (
-                    <button onClick={() => window.location.href = linkedin}>
+                    <a href={linkedin} target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon className="text-white" icon={faUser} />
-                    </button>
+                    </a>
                 )}
             </div>
         </div>
@@ -425,7 +424,7 @@ const Prizes = (): JSX.Element => {
                         <p className="text-xs text-gray-400 italic">(Click me)</p>
                     </button>
                     <button className="h-28 border flex border-black flex-col justify-center bg-gray-900  text-center items-center rounded-xl" onClick={() => set2024Open(true)}>
-                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#1C6FF8, #FEF720']}>2026 hacker()</LinearGradient></h1>
+                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#1C6FF8, #FEF720']}>2027 hacker()</LinearGradient></h1>
                         <p className="text-xs text-gray-400 italic">(Click me)</p>
                     </button>
                 </div>
@@ -517,7 +516,7 @@ const Prizes = (): JSX.Element => {
                                         as="h3"
                                         className="text-lg font-medium leading-6 text-gray-900"
                                     >
-                                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to left', '#17acff, #ff68f0']}>2024 Compute Award</LinearGradient></h1>
+                                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to left', '#17acff, #ff68f0']}>Compute Award</LinearGradient></h1>
                                     </Dialog.Title>
                                     <div className="mt-2">
                                         <p className="text-sm text-gray-500">
@@ -659,7 +658,7 @@ const Prizes = (): JSX.Element => {
                 </Dialog>
             </Transition>
             <Transition appear show={isBreakthroughOpen} as={Fragment}>
-                <Dialog as="div" className="relative z-10" onClose={() => setInnovateOpen(false)}>
+                <Dialog as="div" className="relative z-10" onClose={() => setBreakthroughOpen(false)}>
                     <Transition.Child
                         as={Fragment}
                         enter="ease-out duration-300"
@@ -913,7 +912,7 @@ This award celebrates the team that has shown the most remarkable improvement in
                                         as="h3"
                                         className="text-lg font-medium leading-6 text-gray-900"
                                     >
-                                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#1C6FF8, #FEF720']}>2024 hacker()</LinearGradient></h1>
+                                        <h1 className="font-bold md:text-2xl"><LinearGradient gradient={['to right', '#1C6FF8, #FEF720']}>2027 hacker()</LinearGradient></h1>
                                         <p className="text-xs text-gray-800">Presented by Perkin Showalter &apos;26</p>
                                     </Dialog.Title>
                                     <div className="mt-2">
@@ -1053,7 +1052,7 @@ const ContactTeam = (): JSX.Element => {
                                 <div className="flex gap-3">
                                     {leader.email && (
                                         <a
-                                            href={leader.email}
+                                            href={leader.email.startsWith('mailto:') ? leader.email : `mailto:${leader.email}`}
                                             className="text-gray-400 hover:text-white transition-colors"
                                         >
                                             <FontAwesomeIcon icon={faEnvelope} className="w-4 h-4" />
@@ -1062,6 +1061,8 @@ const ContactTeam = (): JSX.Element => {
                                     {leader.linkedin && (
                                         <a
                                             href={leader.linkedin}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             className="text-gray-400 hover:text-white transition-colors"
                                         >
                                             <FontAwesomeIcon icon={faUser} className="w-4 h-4" />
@@ -1109,12 +1110,10 @@ const Ssahack = () => {
     return (
         <>
             <Head>
-                <title>shady.Hacks 2026</title>
+                <title>shady.Hacks 2027</title>
             </Head>
             <Navbar current="shady.Hacks" />
             <div className="">
-                <Notification text="We regret to inform you that shady.Hacks 2026 has been postponed. Check your email for more information."/>
-                
                 <Panel1 />
                 <Panel2 />
                 <Content />

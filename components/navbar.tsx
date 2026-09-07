@@ -1,5 +1,5 @@
-import React, { Fragment, useRef, useState, useEffect } from 'react'
-import { Disclosure, Menu, Transition, Dialog} from '@headlessui/react'
+import React, { Fragment, useState, useEffect } from 'react'
+import { Disclosure, Transition, Dialog} from '@headlessui/react'
 import {motion, AnimatePresence} from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -15,12 +15,12 @@ interface NavbarProps {
 export default function Navbar({ current }: NavbarProps) { 
     const navigation = [
         { name: 'Home', href: '/', current: current === 'Home' },
-        { name: 'All Hackathons', href: '/hackathons', current: current === 'Hackathons' },
-        { name: 'Hackathons', href: 'list', current: current === 'All Hackathons' },
-        { name: 'Resources', href: 'resources', current: current === 'Resources' },
-        { name: 'About', href: 'about', current: current === 'About' },
-        { name: 'Join', href: 'join', current: current === 'Join' },
-        { name: 'Team', href: '/contact', current: current === 'Team' },
+        { name: 'All Hackathons', href: '/hackathons', current: current === 'Hackathons' || current === 'All Hackathons' },
+        { name: 'Hackathons', href: '/hackathons', current: current === 'Hosted' },
+        { name: 'Resources', href: '/resources', current: current === 'Resources' },
+        { name: 'About', href: '/about', current: current === 'About' },
+        { name: 'Join', href: '/join', current: current === 'Join' },
+        { name: 'Team', href: '/contact', current: current === 'Team' || current === 'Contact' },
     ]
 
     const hackathonSublinks = [
@@ -76,7 +76,7 @@ export default function Navbar({ current }: NavbarProps) {
         <Disclosure as="nav" className="fixed top-0 w-full z-20 border-b bg-black" >
             {({ open }) => (
                 <>
-                    <div className="flex justify-between items-center h-16 ml-4 mr-4 w-full">
+                    <div className="flex justify-between items-center h-16 px-4 w-full">
                         <Link href="/" key="Home">
                             <div className="flex items-center">
                                 <div className='h-8 w-8'>
@@ -84,8 +84,8 @@ export default function Navbar({ current }: NavbarProps) {
                                         src="/image.png"
                                         alt="Silicon"
                                         width={32}
-                                        height={64}
-                                        layout="responsive"
+                                        height={32}
+                                        className="h-8 w-8 object-contain"
                                     />     
                                 </div>
                                 <h1 className='pl-2 text-3xl text-white font-medium'>Silicon</h1>                             
@@ -126,8 +126,8 @@ export default function Navbar({ current }: NavbarProps) {
                             </div>
                         ) : (
                             <div className="absolute right-0 mr-4">
-                                <button onClick={openModal} type="button">
-                                    <img src="/menu.svg" className='h-8 w-8 border p-1' style={{ filter: 'invert(100%)' }}></img>
+                                <button onClick={openModal} type="button" aria-label="Open menu">
+                                    <img src="/menu.svg" alt="" className='h-8 w-8 border p-1' style={{ filter: 'invert(100%)' }} />
                                 </button>
                             </div>
                         )}

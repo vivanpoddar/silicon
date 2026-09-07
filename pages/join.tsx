@@ -11,26 +11,36 @@ const Join = () => {
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
     const [discord, setDiscord] = useState("");
+    const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
     const handleSubmit = (e: React.FormEvent) => {
-        // e.preventDefault();
+        e.preventDefault();
 
-        // const formDataRef = ref(database, "formData");
-        // push(formDataRef, {
-        //     name: name,
-        //     email: email,
-        //     phone: phone,
-        //     discord: discord,
-        // })
-        //     .then(() => {
-        //         setName("");
-        //         setEmail("");
-        //         setPhone("");
-        //         setDiscord("");
-        //     })
-        //     .catch((error) => {
-        //         console.error("Error saving data:", error);
-        //     });
+        if (!database) {
+            setStatus("error");
+            return;
+        }
+
+        setStatus("submitting");
+
+        const formDataRef = ref(database, "formData");
+        push(formDataRef, {
+            name: name,
+            email: email,
+            phone: phone,
+            discord: discord,
+        })
+            .then(() => {
+                setName("");
+                setEmail("");
+                setPhone("");
+                setDiscord("");
+                setStatus("success");
+            })
+            .catch((error) => {
+                console.error("Error saving data:", error);
+                setStatus("error");
+            });
     };
 
     return (
@@ -120,13 +130,20 @@ const Join = () => {
                         <div className="pt-6">
                             <motion.button
                                 type="submit"
+                                disabled={status === "submitting"}
                                 whileHover={{ backgroundColor: '#FFFFFF', color: '#000000' }}
                                 whileTap={{ scale: 0.98 }}
                                 transition={{ duration: 0.2 }}
-                                className="w-full border border-white py-4 rounded text-base font-light tracking-wide text-white transition-all duration-200"
+                                className="w-full border border-white py-4 rounded text-base font-light tracking-wide text-white transition-all duration-200 disabled:opacity-50"
                             >
-                                Submit
+                                {status === "submitting" ? "Submitting..." : "Submit"}
                             </motion.button>
+                            {status === "success" && (
+                                <p className="text-green-400 text-sm text-center pt-2">Thanks — your response was submitted.</p>
+                            )}
+                            {status === "error" && (
+                                <p className="text-red-400 text-sm text-center pt-2">Something went wrong. Please try again or email contact@joinsilicon.org.</p>
+                            )}
                         </div>
                     </motion.form>
                 </div>
