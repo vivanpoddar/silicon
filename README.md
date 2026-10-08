@@ -1,5 +1,7 @@
 View the site at: https://www.joinsilicon.org/
 
+Silicon Hackathon League's landing site. We have 15 hackathons in 8 states with 2000+ competitors, sponsored by IBM, AWS, CMU etc.
+
 ## Getting Started
 
 First, run the development server:
